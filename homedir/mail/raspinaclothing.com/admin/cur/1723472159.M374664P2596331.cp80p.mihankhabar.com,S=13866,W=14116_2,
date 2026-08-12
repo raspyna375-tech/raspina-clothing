@@ -1,0 +1,250 @@
+Return-Path: <bounces+426085-dfee-admin=raspinaclothing.com@bounces.catalogmachine.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id MUSzFR8ZumbrnScAyIPyJQ
+	(envelope-from <bounces+426085-dfee-admin=raspinaclothing.com@bounces.catalogmachine.com>)
+	for <admin@raspinaclothing.com>; Mon, 12 Aug 2024 17:45:59 +0330
+Return-path: <bounces+426085-dfee-admin=raspinaclothing.com@bounces.catalogmachine.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Mon, 12 Aug 2024 17:45:59 +0330
+Received: from o1.ptr5104.catalogmachine.com ([149.72.121.173]:21782)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <bounces+426085-dfee-admin=raspinaclothing.com@bounces.catalogmachine.com>)
+	id 1sdVpu-00AeDt-2B
+	for admin@raspinaclothing.com;
+	Mon, 12 Aug 2024 17:45:59 +0330
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=catalogmachine.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:to:
+	cc:content-type:from:subject:to;
+	s=s1; bh=NQ7rGPWes1hd4IT3PJf8PQmI5kR2nhsoS+Z1wZBGOig=;
+	b=D5huvld/sbZNGKz5x+9P+N6PdeOcPI9KJjM3/azsV728hgI9m6gBK5dYd5jQUQSs+eLR
+	FFrdOX7H+7arw/9W/+BH94A2HKl5x+kLVzMaincRhuZ2Sxa0AuM+KD9B+SETe0smvyMi/f
+	wcj49oV4nGNn4XX+3qyiF66hErfYjCSOqYSZ1fTOOkCXviIdzOWvmoO4eaHSKbSiZywXC4
+	fmQBFxiW1DF4qKkA8cZdwNwcJmhPA33pGon4Ze2zq3c6VnPGyX6FOZWioX9UYMfwxYAG54
+	kvYKwLNdj5U9+yWKUDjea8Xnf+HZ+zNSXvGs+vTm34Uv/R4brt3yH/Sd8seFgsmg==
+Received: by recvd-975fc6d4d-mnm9r with SMTP id recvd-975fc6d4d-mnm9r-1-66BA18E9-17
+	2024-08-12 14:15:05.354459887 +0000 UTC m=+1184137.612073426
+Received: from NDI2MDg1 (unknown)
+	by geopod-ismtpd-38 (SG) with HTTP
+	id 3AeCf-MdQKSLxMPDTJA0BA
+	Mon, 12 Aug 2024 14:15:05.305 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Mon, 12 Aug 2024 14:15:05 +0000 (UTC)
+From: Catalog Machine <contact@catalogmachine.com>
+Mime-Version: 1.0
+Message-ID: <3AeCf-MdQKSLxMPDTJA0BA@geopod-ismtpd-38>
+Subject: Getting Started with Catalog Machine
+X-SG-EID: 
+ =?us-ascii?Q?u001=2ERkcZajDwPIIqw1Fdhl4H9yBHUf91rNRtjNVu1jFEErNajvtVY38G+uFnM?=
+ =?us-ascii?Q?T+eiR78FcZeiw+vmpuC1VQLw=2FlNrYTiao=2FvuZgm?=
+ =?us-ascii?Q?SqUe1N=2FRB+XntDCUZQkp1CER8xWSBCOvYVoTb4P?=
+ =?us-ascii?Q?GOvIuvY8Y+2bOtzSVPph1Ra+L0owNjopvuJHrTO?=
+ =?us-ascii?Q?0+gN2JexDMMzAYKOS=2F4scHDiCJ6EXy+j56difwl?=
+ =?us-ascii?Q?+Xx1WyKH9hFC3c2QQLsT3Uz0jmA3Eu3dxu+sOjE?= =?us-ascii?Q?Bs5n?=
+X-SG-ID: u001.SdBcvi+Evd/bQef8eZF3BnvAFkIFo/P9YWpmM7kkYQcNm5s5JYstJidh3DKr6DzR
+To: admin@raspinaclothing.com
+X-Entity-ID: u001.Ha4cGm/hcj5ysTXto+zFcA==
+X-Spam-Status: No, score=-2.7
+X-Spam-Score: -26
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Welcome to Catalog Machine Welcome to Catalog Machine Hi Admin,
+    you are all ready to make your first online product catalog. 
+ Content analysis details:   (-2.7 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: catalogmachine.com]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [149.72.121.173 listed in bl.score.senderscore.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  1.1 KAM_REALLYHUGEIMGSRC   RAW: Spam with image tags with ridiculously
+                              huge http urls
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+X-Spam-Flag: NO
+
+<html>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+    <title>Welcome to Catalog Machine</title>
+</head>
+<body style=3D"font-family: sans-serif;">
+    <div style=3D"width: 850px; margin: 0 auto;text-align: center;">
+        <div style=3D"padding: 30px 0">
+            <a href=3D"http://url8654.catalogmachine.com/ls/click?upn=3Du00=
+1.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7HLRnZ0ffcJz3SufBsokrJBOWoIwpp9NV_A3=
+nRQoop3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z0cWhvMgfAnH0AJqcyNNo-2F=
+63TEUAL6hrJy64yjgCEAPkf1x4loDWxey4an4xe-2BWruUvuZamh-2FIjyHK6EbqJoAzb2kJvhv=
+anVfHIxTDQsYvMg8tjvRBwzv46eLWv21it3sbu6jMjEjikBon2H1BXQb14pAbDE4ZTVvlAyiaK2=
+HUpgVY-2F2EKGAnsfeh-2BFigO73RDBPHoKU5-2FCyc8h" style=3D"border: none; text-=
+decoration: none">
+                <img src=3D"https://www.catalogmachine.com/client/images/lo=
+go.gif" style=3D"border-style: none" />
+            </a>
+        </div>
+        <div style=3D"background: #f7f7f7; padding: 30px;">
+            <div style=3D"width: 700px; background-color: #ffffff; margin: =
+0 auto; box-shadow: 2px 2px 15px #999; color: #555; padding: 50px 30px;">
+               =20
+<div style=3D"font-size: 36px; font-weight: bold;">
+    Welcome to <span style=3D"color: #ec6d1a;">Catalog Machine</span>
+</div>
+<div style=3D"padding: 40px 30px; font-size: 20px;">
+    Hi <strong>Admin</strong>, you are all ready to make your first online =
+product catalog.
+</div>
+<div style=3D"margin-left: 80px; font-size: 24px; line-height: 36px">
+    <ol style=3D"text-align: left; margin: 0 auto;">
+        <li>
+            <a href=3D"http://url8654.catalogmachine.com/ls/click?upn=3Du00=
+1.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7HLRnZ0f7pcKzIGO3iMdsFYVSNazTZXtLztE=
+hIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZHcTKYYlWNj8M48Z-2FmwbpQuZmAyMBgf82mA=
+9XkU3ABNTg-3D-3DV5QM_A3nRQoop3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z=
+0cWhvMgfAnH0AJqcyNNo-2F63TEUAL6hrJy643PmfVw17xmife-2BxGTrFrOCeodhoD1QQliVP1=
+tfJRGDMOWWPhjM4GTpTF-2FKt2nR4hXJmMwHLtAkKVoBJQD6vM6WNVabZJVr9BC6D7rTi0gMzUg=
+pjvN9-2BJEJ08-2BkxpHJbOmwZM4QVQOHa7xd-2FXV9G9p33BHfMi8sBsxnJkfKxCZk1">Add</=
+a> products with custom fields
+            <span style=3D"font-size: 16px"> | <a href=3D"http://url8654.ca=
+talogmachine.com/ls/click?upn=3Du001.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7=
+HLRnZ0f7pcKzIGO3iMdsFYVSNazTZXtLztEhIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZG=
+ncYWrA5m5YkI3vrA0VcmfT1lcmlvCikWbGmumCwvXv4q0OXUk77HUPpxQ4zMfT96F4g9Mxry3el=
+SIqzF3l5dImk2a_A3nRQoop3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z0cWhvM=
+gfAnH0AJqcyNNo-2F63TEUAL6hrJy641g15VJm2j-2BRfBUh5UnoPDrpRY5kJXp8MNnDqSm4yXs=
+BG5qEuJ2GhrxZ0LcL2MhbKjwFWxhvME7kyzcGld1sIe8JQWBkelynKv9YGmVgJUBXYBWp0wsVsc=
+Hl0VKpDXEi4u8tId-2BdVDO0d4ZjFe3FFMFYX3ByacNZKe2Qel1e3b-2Fe" target=3D"help"=
+>learn how</a></span>
+            <div>
+                <div style=3D"font-size: 14px;">Import from Shopify, Etsy, =
+eBay, Magento, PrestaShop, WooCommerce or CSV.</div>
+            </div>
+        </li>
+        <li>
+            <a href=3D"http://url8654.catalogmachine.com/ls/click?upn=3Du00=
+1.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7HLRnZ0f7pcKzIGO3iMdsFYVSNazTZXtLztE=
+hIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZHcTKYYlWNj8M48Z-2FmwbpQuBm1vkXdziQud=
+pXaMtuAf5w-3D-3Doxql_A3nRQoop3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z=
+0cWhvMgfAnH0AJqcyNNo-2F63TEUAL6hrJy647G5oyXewfMPG-2Bz748ZJwfmBMh8BEN7uOeno0=
+kbPbhPGrNR7hQYybm-2F-2BeL5XD4B-2BqCh1GIgQcx-2B0-2F-2F12D0rxemOpC3hFcnVHnJIW=
+DqWRYyYw0F6gmsCbKfETK-2FJk1sNuQmMP9V511fv6OdPOxK4SWwpvJp6cIS6D5GQx4QZhZzQu"=
+>Build</a> catalogs, price lists, line sheets, etc.
+            <span style=3D"font-size: 16px;"> | <a href=3D"http://url8654.c=
+atalogmachine.com/ls/click?upn=3Du001.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi=
+7HLRnZ0f7pcKzIGO3iMdsFYVSNazTZXtLztEhIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZ=
+GncYWrA5m5YkI3vrA0VcmfT1lcmlvCikWbGmumCwvXv29hDLn5Xus-2BrAl2uKG5DdgSgCC5z5j=
+UrqkWPzPm24cWOo7xIJSchZET6v8n58HuMQ-3D-3D6hFd_A3nRQoop3xGTTNLdbAlLJQldpRBej=
+Ag-2BM11SUk-2BGK3x8wVLH6z0cWhvMgfAnH0AJqcyNNo-2F63TEUAL6hrJy64-2Fyj7yKMfgB7=
+clYn-2F2tDSIoRVVJz9OVbAqzIFThIGd3SUpXXYXNMR-2BueY3qBA9-2B3w-2FjIWVNjtVWzr1f=
+-2BppnXp02L-2Fr1zCNlgvokuUlVg95smS4IJFsc0uW1vuyFD4FEb-2BpjTTPYN0ya0vlJB-2BA=
+bn1QghJIfxXLagHhbT5vJ0zyVc" target=3D"help">learn how</a></span>
+            <div style=3D"font-size: 14px;">Use custom templates and layout=
+s to easily display your products and images.</div>
+        </li>
+        <li>
+            <a href=3D"http://url8654.catalogmachine.com/ls/click?upn=3Du00=
+1.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7HLRnZ0f7pcKzIGO3iMdsFYVSNazTZXtLztE=
+hIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZHcTKYYlWNj8M48Z-2FmwbpQuBm1vkXdziQud=
+pXaMtuAf5w-3D-3DYwNm_A3nRQoop3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z=
+0cWhvMgfAnH0AJqcyNNo-2F63TEUAL6hrJy64ygOXy8BxIzU1Fn2a2aHLFfb8bM47O1q8vAF-2B=
+WoPXpyioYfDiaVW-2BOiI1UD6TMVGDlVbVf05alnyY3wrMV4pit50d9Df205AAYEnatHpCYNCh0=
+pjL1vUtvW65V3pJzOqdM-2B2y9hfp-2BgZNkkpZEm-2BjikTcGBRQeSM6xahK-2BVU0nuh">Sha=
+re</a> online & pdf catalogs
+            <span style=3D"font-size: 16px;"> | <a href=3D"http://url8654.c=
+atalogmachine.com/ls/click?upn=3Du001.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi=
+7HLRnZ0f7pcKzIGO3iMdsFYVSNazTZXtLztEhIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZ=
+GncYWrA5m5YkI3vrA0VcmfT1lcmlvCikWbGmumCwvXvxZDfpDz7hZ4UgQbRmGDN39oVdeizKv-2=
+BdO9ndjUr2K7De3OS_A3nRQoop3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z0cW=
+hvMgfAnH0AJqcyNNo-2F63TEUAL6hrJy640S96scOKsEIdyRzx042EgpoJRHkbn-2Fy8Tt9NbCK=
+7Pp8fr92JASV7EgCSpFUFGVkDUKkI5F40CvSDVRtDs2VxugNC1-2FLF-2BHsqdFczI4PRnEq9Fu=
+XarieMf-2Fi-2F-2Fu-2FtA7GnL17-2FZr83qgrnftmH0s-2Bn-2B-2BbxHmxiQPBCf8nfGMgec=
+w6" target=3D"help">learn how</a></span>
+            <div style=3D"font-size: 14px;">Email, social media share, down=
+load, print or embed into your website. <br/>Receive orders / requests</div=
+>
+        </li>
+    </ol>
+</div>
+<div style=3D"height: 60px; margin-top: 50px;">
+    <a target=3D"_blank" href=3D"http://url8654.catalogmachine.com/ls/click=
+?upn=3Du001.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7HLRnZ0f7pcKzIGO3iMdsFYVSN=
+azTZXtLztEhIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZHIzvEyfpU6lMxUev217BatyXQV=
+LRKehf7b71BrkywouKPoaXXYNbSADEsbmNtY987-2Bffd-2FkLD0pLGFQnXDfysxdDCh_A3nRQo=
+op3xGTTNLdbAlLJQldpRBejAg-2BM11SUk-2BGK3x8wVLH6z0cWhvMgfAnH0AJqcyNNo-2F63TE=
+UAL6hrJy647IxmT9n2DFg1QKT6kHgPfpDTXK-2B-2BeFA8dY3Cv-2FUekZPYNgvPNJ1vEuTcuz1=
+vEozgIsI5yWFiw0lWt70AZGXB-2F1WbY6aaZEmoBD1UzWey7UKRroDQOfRd99a0bphQ9KaR-2BX=
+GsUC7xUwWH1wG0eWc-2Bkw8r2-2Fx7ZNj0SzVv8joblXr" style=3D"text-align: center;=
+ font-size: 16px; color: #ffffff; text-decoration: none; display: block" ta=
+rget=3D"_blank">
+        <div style=3D"width: 200px; margin: 40px auto; background-color: #2=
+888e5; padding: 10px 15px; border-radius: 6px; box-shadow: 1px 1px 5px #286=
+8a4;">
+            Start Catalog Machine
+        </div>
+    </a>
+</div>
+
+
+
+                <div style=3D"padding-top: 30px; font-size: 16px;">
+                    <strong>Have questions?</strong><br /><br />
+                    Check out our <a href=3D"http://url8654.catalogmachine.=
+com/ls/click?upn=3Du001.77yZDa81XF0U5eNLpyqK-2BLLJOwlpilPyRZi7HLRnZ0f7pcKzI=
+GO3iMdsFYVSNazTZXtLztEhIDvMRCy-2BPr0dn0qS1RTy-2FcSKz7A2FNqZLZGncYWrA5m5YkI3=
+vrA0Vcmfi0sEu5cYccb9e9XUlmYgWA-3D-3D4A2s_A3nRQoop3xGTTNLdbAlLJQldpRBejAg-2B=
+M11SUk-2BGK3x8wVLH6z0cWhvMgfAnH0AJqcyNNo-2F63TEUAL6hrJy64701nxsClWbFsw4NeUh=
+Xhnrf6-2F-2BiW8c2ztWOA9-2FofqEAZiAswf800ZoNMAfeQEYz98BD-2BnT6WrQvLuUzcGBFwv=
+bpbA1viaEOgqSMxYuprs0kNHEZstRYXXOuzFV9drpl0ZuoKGcDRQdbRGyv6nGquZURxNUasl6cZ=
+Lyxak6NVt71">Help Center</a>
+                    <br />email <a href=3D"mailto:support@catalogmachine.co=
+m">support@catalogmachine.com</a> or talk with us anytime on our in-app mes=
+senger.
+                </div>
+            </div>
+            <div style=3D"text-align: left; padding: 20px 70px;">
+                <div style=3D"padding: 20px 0;">
+                    Thank you!
+                    <br/>
+                    <em>The Catalog Machine Team</em>
+                </div>
+                <div style=3D"font-size: 12px; text-align: center;">
+                   =20
+                </div>
+            </div>
+        </div>
+    </div>
+<img src=3D"http://url8654.catalogmachine.com/wf/open?upn=3Du001.lOrJom8Zyq=
+KWyhVVfwZSivtkwPH5jy-2BbkE9RI7m6oZhw-2FEzpz8w25PU3NTXdGQoFIdmd9Ww0eC4QX-2BP=
+wwAqlHqtPumTbPszdHOgypSzJ-2F4Vub-2B48gYald2My8E5YElGdycTbLKlCkmU6Q89s2Vl7hk=
+FlwQyoA9sCMSETwdh-2FJayu5Cks6NUUtbEJM06fMyPM0-2B-2BJjRlumA8b9MQQ62D-2F5TUmv=
+u-2B8v0-2B5JibedFSH-2ByhGbWAaixVk7Xkb7SqXFESH" alt=3D"" width=3D"1" height=
+=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
+der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
+argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
+padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
+rtant;"/></body>
+</html>

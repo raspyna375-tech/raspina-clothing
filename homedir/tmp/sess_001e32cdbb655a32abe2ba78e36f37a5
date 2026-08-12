@@ -1,0 +1,42 @@
+ PMA_token |s:32:"3668415575542538505e224639444570"; HMAC_secret |s:16:"o@&M7,GonEe8k\1+";auth_type|s:3:"env";browser_access_time|a:1:{s:7:"default";i:1785784119;}encryption_key|s:32:"w1	áºfÜT√óêª‚¸{π˙•úÚv/t.pDÌÛÄ";relation|a:1:{i:1;a:41:{s:7:"version";s:5:"5.2.2";s:4:"user";N;s:2:"db";N;s:8:"bookmark";N;s:15:"central_columns";N;s:11:"column_info";N;s:17:"designer_settings";N;s:16:"export_templates";N;s:8:"favorite";N;s:7:"history";N;s:16:"navigationhiding";N;s:9:"pdf_pages";N;s:6:"recent";N;s:8:"relation";N;s:13:"savedsearches";N;s:12:"table_coords";N;s:10:"table_info";N;s:13:"table_uiprefs";N;s:8:"tracking";N;s:10:"userconfig";N;s:10:"usergroups";N;s:5:"users";N;s:12:"bookmarkwork";b:0;s:8:"mimework";b:0;s:18:"centralcolumnswork";b:0;s:8:"commwork";b:0;s:9:"menuswork";b:0;s:20:"designersettingswork";b:0;s:11:"displaywork";b:0;s:19:"exporttemplateswork";b:0;s:12:"favoritework";b:0;s:7:"navwork";b:0;s:7:"pdfwork";b:0;s:10:"recentwork";b:0;s:7:"relwork";b:0;s:17:"savedsearcheswork";b:0;s:11:"historywork";b:0;s:12:"trackingwork";b:0;s:11:"uiprefswork";b:0;s:14:"userconfigwork";b:0;s:8:"allworks";b:0;}}userconfig|a:2:{s:2:"db";a:2:{s:4:"lang";s:5:"en_GB";s:12:"Console/Mode";s:8:"collapse";}s:2:"ts";i:1785784119;}two_factor_check|b:1;cache|a:2:{s:8:"server_1";a:3:{s:15:"userprefs_mtime";i:1785783042;s:14:"userprefs_type";s:7:"session";s:12:"config_mtime";i:1761176721;}s:17:"server_1_hyxfvjbq";a:16:{s:17:"is_create_db_priv";b:0;s:14:"is_reload_priv";b:0;s:12:"db_to_create";s:0:"";s:30:"dbs_where_create_table_allowed";a:2:{i:0;s:16:"hyxfvjbq\_raclot";i:1;s:19:"hyxfvjbq\_wholesale";}s:11:"dbs_to_test";b:0;s:9:"proc_priv";b:0;s:10:"table_priv";b:0;s:8:"col_priv";b:0;s:7:"db_priv";b:0;s:11:"binary_logs";a:0:{}s:18:"menu-levels-server";a:13:{s:9:"databases";s:9:"Databases";s:3:"sql";s:3:"SQL";s:6:"status";s:6:"Status";s:6:"rights";s:5:"Users";s:6:"export";s:6:"Export";s:6:"import";s:6:"Import";s:8:"settings";s:8:"Settings";s:6:"binlog";s:10:"Binary log";s:11:"replication";s:11:"Replication";s:4:"vars";s:9:"Variables";s:7:"charset";s:8:"Charsets";s:7:"plugins";s:8:"Plug-ins";s:6:"engine";s:7:"Engines";}s:14:"menu-levels-db";a:14:{s:9:"structure";s:9:"Structure";s:3:"sql";s:3:"SQL";s:6:"search";s:6:"Search";s:5:"query";s:5:"Query";s:6:"export";s:6:"Export";s:6:"import";s:6:"Import";s:9:"operation";s:10:"Operations";s:10:"privileges";s:10:"Privileges";s:8:"routines";s:8:"Routines";s:6:"events";s:6:"Events";s:8:"triggers";s:8:"Triggers";s:8:"tracking";s:8:"Tracking";s:8:"designer";s:8:"Designer";s:15:"central_columns";s:15:"Central columns";}s:12:"is_superuser";b:0;s:14:"mysql_cur_user";s:18:"hyxfvjbq@localhost";s:12:"is_grantuser";b:0;s:13:"is_createuser";b:0;}}tmpval|a:14:{s:14:"favoriteTables";a:1:{i:1;a:0:{}}s:12:"recentTables";a:1:{i:1;a:0:{}}s:18:"table_limit_offset";i:0;s:21:"table_limit_offset_db";s:18:"hyxfvjbq_wholesale";s:5:"query";a:2:{s:32:"0ad79561b0ab02c454b94e2711c1b099";a:8:{s:3:"sql";s:784:"-- Raspina Clothing admin schema
+-- Import this after database/schema.sql using the configured table prefix.
+-- Default table prefix is rc_. This file contains no credentials or users.
+
+CREATE TABLE IF NOT EXISTS `rc_admin_users` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(190) NOT NULL,
+    `name` VARCHAR(120) NOT NULL,
+    `password_hash` VARCHAR(255) NOT NULL,
+    `role` VARCHAR(32) NOT NULL DEFAULT 'owner',
+    `is_active` TINYINT(1) NOT NULL DEFAULT 1,
+    `last_login_at` DATETIME NULL,
+    `created_at` DATETIME NOT NULL,
+    `updated_at` DATETIME NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `uq_admin_users_email` (`email`),
+    KEY `idx_admin_users_active` (`is_active`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}s:32:"8c062b70c6a548371f801583c91497f1";a:8:{s:3:"sql";s:680:"CREATE TABLE IF NOT EXISTS `rc_admin_audit` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `admin_user_id` BIGINT UNSIGNED NULL,
+    `action` VARCHAR(100) NOT NULL,
+    `entity_type` VARCHAR(50) NOT NULL,
+    `entity_id` BIGINT UNSIGNED NULL,
+    `ip_hash` CHAR(64) NOT NULL DEFAULT '',
+    `created_at` DATETIME NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `idx_admin_audit_admin_created` (`admin_user_id`, `created_at`),
+    KEY `idx_admin_audit_entity` (`entity_type`, `entity_id`),
+    CONSTRAINT `fk_admin_audit_user` FOREIGN KEY (`admin_user_id`) REFERENCES `rc_admin_users` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";s:12:"repeat_cells";i:100;s:8:"max_rows";i:25;s:3:"pos";i:0;s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;}}s:6:"pftext";s:1:"P";s:18:"relational_display";s:1:"K";s:9:"geoOption";s:4:"GEOM";s:14:"display_binary";b:1;s:12:"display_blob";b:0;s:19:"hide_transformation";b:0;s:3:"pos";i:0;s:8:"max_rows";i:25;s:12:"repeat_cells";i:100;}git_location|N;is_git_revision|b:0;ConfigFile1|a:4:{s:28:"PmaNoRelation_DisableWarning";b:1;s:12:"ShowCreateDb";b:0;s:7:"Console";a:1:{s:4:"Mode";s:8:"collapse";}s:7:"Servers";a:1:{i:1;a:2:{s:7:"only_db";s:0:"";s:7:"hide_db";s:0:"";}}}debug|a:0:{}__upload_status|a:1:{s:7:"handler";s:47:"PhpMyAdmin\Plugins\Import\Upload\UploadNoplugin";}Import_message|a:2:{s:7:"message";N;s:11:"go_back_url";N;}is_multi_query|b:1;sql_history|a:1:{i:0;a:3:{s:2:"db";s:18:"hyxfvjbq_wholesale";s:5:"table";s:0:"";s:8:"sqlquery";s:680:"CREATE TABLE IF NOT EXISTS `rc_admin_audit` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `admin_user_id` BIGINT UNSIGNED NULL,
+    `action` VARCHAR(100) NOT NULL,
+    `entity_type` VARCHAR(50) NOT NULL,
+    `entity_id` BIGINT UNSIGNED NULL,
+    `ip_hash` CHAR(64) NOT NULL DEFAULT '',
+    `created_at` DATETIME NOT NULL,
+    PRIMARY KEY (`id`),
+    KEY `idx_admin_audit_admin_created` (`admin_user_id`, `created_at`),
+    KEY `idx_admin_audit_entity` (`entity_type`, `entity_id`),
+    CONSTRAINT `fk_admin_audit_user` FOREIGN KEY (`admin_user_id`) REFERENCES `rc_admin_users` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";}}errors|a:0:{}

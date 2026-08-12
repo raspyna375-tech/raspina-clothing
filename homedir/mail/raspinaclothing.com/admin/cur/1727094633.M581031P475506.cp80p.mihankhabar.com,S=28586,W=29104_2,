@@ -1,0 +1,518 @@
+Return-Path: <1axbvrpzxyvr0tgooquef4dh3rtbql66xm7vw5-admin=raspinaclothing.com@bf06.eu1.hubspotemail.net>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id AEr4IWlf8WZyQQcAyIPyJQ
+	(envelope-from <1axbvrpzxyvr0tgooquef4dh3rtbql66xm7vw5-admin=raspinaclothing.com@bf06.eu1.hubspotemail.net>)
+	for <admin@raspinaclothing.com>; Mon, 23 Sep 2024 16:00:33 +0330
+Return-path: <1axbvrpzxyvr0tgooquef4dh3rtbql66xm7vw5-admin=raspinaclothing.com@bf06.eu1.hubspotemail.net>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Mon, 23 Sep 2024 16:00:33 +0330
+Received: from bd77el0.bf06.eu1.hubspotemail.net ([143.244.81.38]:19893)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <1axbvrpzxyvr0tgooquef4dh3rtbql66xm7vw5-admin=raspinaclothing.com@bf06.eu1.hubspotemail.net>)
+	id 1ssiCu-001zyU-2M
+	for admin@raspinaclothing.com;
+	Mon, 23 Sep 2024 16:00:33 +0330
+Received: by 172.16.0.13 with SMTP id a089896hoz745wscku27wdwbl657jj7orro82tiabo;
+        Mon, 23 Sep 2024 12:29:41 GMT
+DKIM-Signature: v=1; s=hs2; d=bf06.eu1.hubspotemail.net; 
+        i=@bf06.eu1.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=3ykEdkaem3XbL57lp5PFLenZvqzoXb/cAsJ1tcKlcy4=; 
+        b=N4TE7rsBJzD5V383I9yE60hEY3a42l4r5B1OlXv5QHV5vlfPjOqEzo+WzApXuC
+         VJao5TUpWRKgIuqOFsMajG5yr/uBTGOsXlnEcIy+BZzi0Z4Q7sGYliKoTOOA6TY
+         3umDY8vsmRV2SRm7hqahWLjYLr3vYlUXbn6xJO3oVWkG5ebf1fmrav3zpGEgOzK
+         41qj/y8DCfsV+tOIAdoBkEFKZ2vW6uXAMbLaIG+0AAbUMnfuso7LsYCJYZLo+rB
+         A3vVjWy6AOCJRo1xJGUuBvmAxLq2j3hVbwkwSDgY+vpkWMtdfpPJTMHnupuUpZ4
+         3qb79E4cLjBbCqyDdCMzVEEj7xxA==; q=dns/txt; t=1727094581; 
+        x=1727357381;
+DKIM-Signature: v=1; s=hs1-26040590; d=tidio.net; i=@tidio.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=3ykEdkaem3XbL57lp5PFLenZvqzoXb/cAsJ1tcKlcy4=; 
+        b=oNRpho/V1G7Kqi7hhLyS+qwLzGGfka43ivbDUeBKW99IMOr0pKPj4TdP0LBhzH
+         Lu6zp+Pmd08rerXFtKIZ0SMFqjNSe2xM1lmgJ3WqJTx8LecKWrT6meGeTlFEXqs
+         OwikZYHHmQEarRBRaBfz7+C42sL20yuCjh+rTccYrgRnx7L4QOv2V6MNTPtddyE
+         q/oAT/Xz1p9UpT9zg23usK0AJycipQA/vWJAPAMaxu7LrrMBTre8XyZDTwtbtp9
+         HgaM6MZ5Izhzkzo479N91thRW/6yq85dvojQHYarc2LVQVxBcWofcly2K9s5pBc
+         sIyo+412fccr6CL3Pxm5PmeF2F0g==; q=dns/txt; t=1727094581; 
+        x=1727357381;
+X-HS-Cid: 1axe2qz2fzeabupgc3dnlckblekpiu9t6lzcrd
+List-Unsubscribe: <mailto:1axc2gvjkvydlqb0uu58bo0vpgi13g0aod6dll-admin=raspinaclothing.com@bf06.eu1.hubspotemail.net?subject=unsubscribe>, <https://hs-26040590.s.hubspotemail-eu1.net/subscription-preferences/v2/unsubscribe-all?data=W2nVjwf3Y2x06W2MlLgp32KchDW2p76_G1Q45ZyW4hhRh_36CQPTW2TG4f232xkZ1W1S3ydF3P23hXW3ZYy8R3ZxwJrW1X5CJp2xZZ-BW2qTLNn3_T7VdW2zY7cn3FdtQyW3M8Zmv1_8zsSW2qNjmL4h9-3NW2zKVdB2CLqRPW3ghRHk1NBSD0W1QrJjK22_LQVW3_zHZJ1BP26vW2HDGzt30FkGnW4kM7cf3NQFjsW232dkh1Qfhc3W43PVbR1_vmw6W3Zx4fl3ZXH5QW2CSKdc3g5M_nW43X2Wk2sCrxZW2vTJ6j1NFGS4W1XdJG336mZgRW2HJrZr1LqTzGW3JXTck4mC4rRW2p5VMJ24WcXjW2KppPP36xlblW4hDccc4txW8RW3Zt5Bm1Qs33MW4mrkNq2y04gWW253gSb2TgHzGW2RrKHz1Qs4tzW3bBbYw1S8vyWW4rks_G2CVqdXW1Np1bh2PRGW9W327sJy325kTMW3GM2Xw2KHjSvW2MPN9z2qG-dJW41SvM524Tvl4W2TqBYn4hdXqgW2MFVvG32ysV8W252YjD2PKv_kW2CVpPx1BxFFbW2HzJrH2WwpCTW4r9BY92YlTw30>
+Date: Mon, 23 Sep 2024 14:29:41 +0200
+From: Tidio <support@tidio.net>
+Reply-To: support@tidio.net
+To: admin@raspinaclothing.com
+Message-ID: <1727094493707.5e0a0a78-bd3a-4267-91f4-dcc966368d3c@bf06.eu1.hubspotemail.net>
+Subject: Do you need help setting up Helpdesk? Book a call
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2076158_981514125.1727094581242"
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Spam-Status: No, score=-3.5
+X-Spam-Score: -34
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Hello! It looks like you’ve abandoned setting up your mailbox.
+    We are reaching out because we are committed to helping everyone take full
+    advantage of Tidio's capabilities. We'd like to know your current setup and
+    how we can support you better. If you need help setting up the Helpdesk you
+    can always read this article (https://d33nf804.eu1.hubspotlinks.com/Ctc/RK+113/d33n
+    [...] 
+ Content analysis details:   (-3.5 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: hubspotlinks.com]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [143.244.81.38 listed in bl.score.senderscore.com]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 URI_HEX                URI: URI hostname has long hexadecimal sequence
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+ -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium trust sender
+X-Spam-Flag: NO
+
+------=_Part_2076158_981514125.1727094581242
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello!
+
+It looks like you=E2=80=99ve abandoned setting up your mailbox. We are reac=
+hing out because we are committed to helping everyone take full advantage o=
+f Tidio's capabilities.
+
+We'd like to know your current setup and how we can support you better. If =
+you need help setting up the Helpdesk you can always read this article (htt=
+ps://d33nf804.eu1.hubspotlinks.com/Ctc/RK+113/d33nf804/VW4fBd4qdkdqW3Pm19b7=
+mnmp3W2bnPc75ljCY6MpKrkx7hjrlW50l5tj6lZ3plVJtLBk6XcVV-W2ZbwZt85_BwLW1mVtXh8=
+2x0pLW3dbG8W8VtccTW50PYNl8ktlTYW2jD4_44q7ctsW7QshW46cj_v6V-PRzT80183WV8PDv4=
+4XrJJqW5tTqnZ1zSd4GW4HsRmh5RznV2W8FQH_X4czfPDW8-gK1G5W-dFSW2BjhC04TwzMCN2n-=
+1kLGNDwfW3T_f0Q97Z6MTW6FQvvN47xtcyW6nkDX42qswKwW53mFgp6rsLgCW1GHFm72m-Lb6W1=
+gKXgZ4l-nNnW6S3tHp2NWzWJW2WYpGP1KnQd0W8MpYrX7kF-Q0W43VPkT6XVZfbW2sjs0r1t2xl=
+xW5pxfz225nrg-VgjbBp8KBL4ZVBl0491bYZn3W5fMWDb4hH2l-W7Wd04N779nW3W5gmLps8Hn-=
+LbVLPKTz7mPNx4W58s1Yw5D67NDW7HmhG43MXB0wW5cHdVG2dF09vVKvrZV14WFVzW5llByh2X0=
+T81V1KnXV76-dtwW4Bx1Ht6TZlM0W3YRph56bCZz8W3fHwRC6GWNQMW4cS5zq4jxqXPN5dbK4DS=
+YHGLW8018C96ZZtSqW3NlyNw3p-mjXW1kC7MX6mbJGDN32sZjVbPqTtf6DpHkl04 .)  or boo=
+k a call with our Customer Support Team: Book The Call Now (https://d33nf80=
+4.eu1.hubspotlinks.com/Ctc/RK+113/d33nf804/VW4fBd4qdkdqW3Pm19b7mnmp3W2bnPc7=
+5ljCY6MpKrm03lcq-W7Y8-PT6lZ3phW60qcvB5sVLFjN8j_SZfzZ9KkW8XZyHv3wD88MW1k9DhJ=
+8Vmz3dW8hH_L_6TlYp7W8ZsbHm1yFksMW26wzfF1hyXF_W1_bpbd56PNH1N68H0K_JLG9pW1wNp=
+ZW4MMPrQW7SVkV75VXBb0W5Bjft031v2_BW4MNv3C4FsK1NW7ZX_SJ9hBZFdV6KnTf2GMpJKVkL=
+Sww887zP-W98yssZ6Rp41LW5h8xPk65vK6PW6GWVLs8hjQ41W2fJYmh2Lw8zmW4s_NqK2lxK0JN=
+22vBLG1L4MYW1-qNWK2JX5bjW3FrxHt2wTG-XN3pDBPfNMBngVLk0Zc74YPCMf7N1dPR04 ) .
+
+Looking forward to hearing from you!
+
+Best,
+
+Tidio Support Team
+
+Tidio LLC, 149 New Montgomery, San Francisco, California, USA
+
+Unsubscribe (https://hs-26040590.s.hubspotemail-eu1.net/hs/preferences-cent=
+er/en/direct?data=3DW2nVjwf3Y2wW_W45Pdxl2YfZRqW2PykdY2v-8P7W34BRly4fsKNQW2W=
+NCmv32KfGfW3VyfnB2KqHPsW3SLwyc25dXW1W25gYpc3VK0HvW1Xx3h134lxzHW1Nf2WH1_8yvm=
+W1QB9wH3NFXcsW2FLLGH2Rm-w0W2Kx0w53-0D5zW2CxF3930khvDW45RLQv2F_2TGW4pCJrq4pB=
+NdJW2KFJdG2Tr657W2sCpm249shKDW4mkRlS2KYzf9W21gB_b3JT_P3W1XmM6s4cyVDVW1X7jwP=
+38l-BNW2TjPJq41tZBrW2KQ0Q8258mD5W2TLjNt1SrZ-QW3M4sPK2YCbSwW3VY4ml2CDF0tW1Lv=
+Z-D1Qv_-fW4rgyJ91_mnrBW2RTv_Q3_s-Q-W2PDpkD3bbMVNW3GYwlp2MDJG6W2FTp0l1BDhJBW=
+45FgqL2340g-W2ML-0m2TPzrgW3XX4s83drvsHW3DWCQc2TCfHSW3XwrvM2RjcxYW2FppnK3SH_=
+6BW2RmWQS2vJ9lgW3jp26P2sDfgtW1VfNkF2RJTnJW36g_Zd4cRW_4W2HT__F3NPP1-W3VM-s94=
+mvGzWW34xWvj47DGS1W32sVXx1Zw1Jz0&_hsenc=3Dp2ANqtz-_vnCy0NcV2IsbTHZOKmsfSDrL=
+Nnd6WIqfCvgM8JqMzdhwx4yt5qdi345Qd1fEAIJSfQK-BBRQYBPup2-sCbqX861X7CTUXnBJaRb=
+1WEgObolONtoQ&_hsmi=3D95425652 )
+Manage preferences (https://hs-26040590.s.hubspotemail-eu1.net/hs/preferenc=
+es-center/en/page?data=3DW2nVjwf3Y2wW_W45Pdxl2YfZRqW2PykdY2v-8P7W34BRly4fsK=
+NQW2WNCmv32KfGfW3VyfnB2KqHPsW3SLwyc25dXW1W25gYpc3VK0HvW1Xx3h134lxzHW1Nf2WH1=
+_8yvmW1QB9wH3NFXcsW2FLLGH2Rm-w0W2Kx0w53-0D5zW2CxF3930khvDW45RLQv2F_2TGW4pCJ=
+rq4pBNdJW2KFJdG2Tr657W2sCpm249shKDW4mkRlS2KYzf9W21gB_b3JT_P3W1XmM6s4cyVDVW1=
+X7jwP38l-BNW2TjPJq41tZBrW2KQ0Q8258mD5W2TLjNt1SrZ-QW3M4sPK2YCbSwW3VY4ml2CDF0=
+tW1LvZ-D1Qv_-fW4rgyJ91_mnrBW2RTv_Q3_s-Q-W2PDpkD3bbMVNW3GYwlp2MDJG6W2FTp0l1B=
+DhJBW45FgqL2340g-W2ML-0m2TPzrgW3XX4s83drvsHW3DWCQc2TCfHSW3XwrvM2RjcxYW2Fppn=
+K3SH_6BW2RmWQS2vJ9lgW3jp26P2sDfgtW1VfNkF2RJTnJW36g_Zd4cRW_4W2HT__F3NPP1-W3V=
+M-s94mvGzWW34xWvj47DGS1W32sVXx1Zw1Jz0&_hsenc=3Dp2ANqtz-_vnCy0NcV2IsbTHZOKms=
+fSDrLNnd6WIqfCvgM8JqMzdhwx4yt5qdi345Qd1fEAIJSfQK-BBRQYBPup2-sCbqX861X7CTUXn=
+BJaRb1WEgObolONtoQ&_hsmi=3D95425652 )
+------=_Part_2076158_981514125.1727094581242
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Do you need help setting up Helpdesk? Book a call</title>
+    <meta property=3D"og:title" content=3D"Do you need help setting up Help=
+desk? Book a call">
+    <meta name=3D"twitter:title" content=3D"Do you need help setting up Hel=
+pdesk? Book a call">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #EAF0F6;}
+</style>
+<![endif]-->
+   =20
+     =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"http://26040590.hs-sites-eu1.com/-temporary-slug-6ca2cd62-fde9-47c=
+3-a171-057aceedecae"><meta name=3D"robots" content=3D"noindex,follow"><!--[=
+if !((mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen and (=
+max-width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-=
+stretch-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_=
+main a[x-apple-data-detectors]{color:inherit !important;text-decoration:non=
+e !important;font-size:inherit !important;font-family:inherit !important;fo=
+nt-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#EAF0F6" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+3496d; word-break:break-word">
+   =20
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#eaf0f6" bgcolor=3D"#eaf0f6">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"border-spacing:0 !important; border-c=
+ollapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0; pad=
+ding:0; width:100% !important; min-width:320px !important; height:100% !imp=
+ortant" width=3D"100%" height=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"border-=
+collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans-se=
+rif; font-size:15px; color:#23496d; word-break:break-word; padding-top:20px=
+; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section-0" class=3D"hse-section h=
+se-section-first" style=3D"padding-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#eaf0f6; padding-bottom:10px; padding-top:=
+10px" bgcolor=3D"#eaf0f6">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#eaf0f6">
+      <tr style=3D"background-color:#eaf0f6;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:10px; padding-top:=
+10px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-0-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-spa=
+cing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; mso-tabl=
+e-rspace:0pt">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"bord=
+er-collapse:collapse; mso-line-height-rule:exactly; font-family:Arial, sans=
+-serif; color:#23496d; word-break:break-word; text-align:center; padding:10=
+px 20px; font-size:0px">
+        <img alt=3D"Tidio logo" src=3D"https://hs-26040590.f.hubspotemail-e=
+u1.net/hub/26040590/hubfs/Tidio%20logo.png?width=3D220&amp;upscale=3Dtrue&a=
+mp;name=3DTidio%20logo.png" style=3D"outline:none; text-decoration:none; -m=
+s-interpolation-mode:bicubic; max-width:100%; font-size:16px" width=3D"110"=
+ align=3D"middle" srcset=3D"https://hs-26040590.f.hubspotemail-eu1.net/hub/=
+26040590/hubfs/Tidio%20logo.png?upscale=3Dtrue&amp;width=3D220&amp;upscale=
+=3Dtrue&amp;name=3DTidio%20logo.png 110w, https://hs-26040590.f.hubspotemai=
+l-eu1.net/hub/26040590/hubfs/Tidio%20logo.png?upscale=3Dtrue&amp;width=3D44=
+0&amp;upscale=3Dtrue&amp;name=3DTidio%20logo.png 220w" sizes=3D"(max-width:=
+ 110px) 100vw, 110px">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; background-color:#ffffff; padding-bottom:30px; padding-top:=
+30px" bgcolor=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:30px; padding-top:=
+30px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"border-spacing:0 !important; border-collapse:collapse; mso-=
+table-lspace:0pt; mso-table-rspace:0pt"><tbody><tr><td class=3D"hs_padded" =
+style=3D"border-collapse:collapse; mso-line-height-rule:exactly; font-famil=
+y:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word; =
+padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_=
+wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: i=
+nherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module-1-=
+0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_ric=
+h_text" style=3D"color: inherit; font-size: inherit; line-height: inherit;"=
+ data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text"><p styl=
+e=3D"mso-line-height-rule:exactly; line-height:175%">Hello!</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">It looks like y=
+ou=E2=80=99ve abandoned setting up your mailbox. We are reaching out becaus=
+e we are committed to helping everyone take full advantage of Tidio's capab=
+ilities.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">We'd like to kn=
+ow your current setup and how we can support you better. If you need help s=
+etting up the Helpdesk you can always read <a href=3D"https://d33nf804.eu1.=
+hubspotlinks.com/Ctc/RK+113/d33nf804/VW4fBd4qdkdqW3Pm19b7mnmp3W2bnPc75ljCY6=
+MpKrkx7j7nCW50l5tj6lZ3nBW1__T1w4hjRtwW95lHBt3P5q7fW77db108N21ZtW4WChzR3h32x=
+DW1jrtMS5mxH3YW76DkDN36G37tW2cLpr74sMDV5W29vZHv1Tp_3tW2BXPKX5SHt1fW6gckt-3q=
+6__wW5NQQky3QpFJGMbqWF4LfvTjW6k22TX8gs8ZXVMBvB27YMkSsW70p6Cs5tjGhVN7D2dKHhW=
+QF2Vj4Fnr8qcV61Vc2fNh2GDR6-W8-DhLv6MVRTWW3FnsK_3Vn6lhN1zGhbfPGLx4W7PVFJZ4MF=
+J6yW6wQWxd1bfYBFW7xWWfW1N5H2KVvX0LF6xshhXN1b3j27wMVXTW6WZ-5Q6qQM4bW7q9VwM7Y=
+DHRJW4lQV3-2zFrq6V6ywk28-0S6nV5QCk87CjQGhW42Q5J9400NzkW2P8k2V70G35kW918kCL9=
+j929cW7LBgLg5PsPyBVvhK5v6JSjWzVXrQwN3CPN7xW77CCDc8dmGWgW4Hz2lj4BkSjBW5dcJxx=
+5lRGK4N3RMcVwNsCPXW578bCP8XsQjbN1DswTWgdzw7W3nhGn11PJSN9W1jkRmH2d1nffW4wvn5=
+X93JbHfW2YJ_225MKhCBN47HM2LhSJ2Nf6z25d-04" rel=3D"noopener" style=3D"mso-li=
+ne-height-rule:exactly; color:#00a4bd" data-hs-link-id=3D"0" target=3D"_bla=
+nk">this article</a>&nbsp;or book a call with our Customer Support Team: <a=
+ href=3D"https://d33nf804.eu1.hubspotlinks.com/Ctc/RK+113/d33nf804/VW4fBd4q=
+dkdqW3Pm19b7mnmp3W2bnPc75ljCY6MpKrm03m2ndW7Y8-PT6lZ3l7Vw166y60b2qfW3d2Cnv80=
+JTWcW8bd4Wy4SYmQnW7N_cB27QXr9JW78jy5c9bkrP1W9gwMzY8gTN55VwGFSl3VmKZWW98c_-p=
+8g8W1KW8ryDs16Y2YbPW38gRkf5kt9H4W8RX_tR3kPsCXN9byY8qJMHc2W1fMDr_1VlKCrW4gt5=
+Dj3s87jDW9lyl6S2Xt5pwW4N2lg77V9K-bW4FGq313yYpNQW4lGcSl2hv3zfN3njdL1DvM6qW8p=
+Rpv373Lw1FW5tqcHR1-MtB4W46jPlf6sk4fsN18_LbkLPkkxW3s74gz7CcmwLW4lgsFH808JNcN=
+8PCN4jkxsbKf8CNCN204" rel=3D"noopener" style=3D"mso-line-height-rule:exactl=
+y; color:#00a4bd" data-hs-link-id=3D"0" target=3D"_blank">Book The Call Now=
+</a>.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Looking forward=
+ to hearing from you!</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Best,</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Tidio Support T=
+eam</p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-2" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; border-collapse:collapse; bo=
+rder-spacing:0; padding-bottom:20px; padding-top:20px">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;border-collapse:colla=
+pse;border-spacing:0;">
+      <table align=3D"center" style=3D"border-collapse:collapse;mso-table-l=
+space:0pt;mso-table-rspace:0pt;width:600px;" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;padding-bottom:20px; padding-top:=
+20px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0pt;mso-table-rsp=
+ace:0pt;width:600px">
+<![endif]-->
+<div id=3D"column-2-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-2-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table role=3D"presentation" class=3D"hse-footer hse=
+-secondary" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"bor=
+der-spacing:0 !important; border-collapse:collapse; mso-table-lspace:0pt; m=
+so-table-rspace:0pt; font-family:Arial, sans-serif; font-size:12px; line-he=
+ight:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"border-collapse:collapse=
+; mso-line-height-rule:exactly; font-family:Arial, sans-serif; font-size:15=
+px; color:#23496d; word-break:break-word; text-align:center; margin-bottom:=
+0; line-height:135%; padding:10px 20px">
+        <p style=3D"mso-line-height-rule:exactly; font-family:Arial, sans-s=
+erif; font-size:12px; font-weight:normal; text-decoration:none; font-style:=
+normal; color:#23496d">
+          Tidio LLC, 149 New Montgomery, San Francisco, California, USA
+        </p>
+        <p style=3D"mso-line-height-rule:exactly">
+          <a data-unsubscribe=3D"true" href=3D"https://hs-26040590.s.hubspo=
+temail-eu1.net/hs/preferences-center/en/direct?data=3DW2nVjwf3Y2wW_W45Pdxl2=
+YfZRqW2PykdY2v-8P7W34BRly4fsKNQW2WNCmv32KfGfW3VyfnB2KqHPsW3SLwyc25dXW1W25gY=
+pc3VK0HvW1Xx3h134lxzHW1Nf2WH1_8yvmW1QB9wH3NFXcsW2FLLGH2Rm-w0W2Kx0w53-0D5zW2=
+CxF3930khvDW45RLQv2F_2TGW4pCJrq4pBNdJW2KFJdG2Tr657W2sCpm249shKDW4mkRlS2KYzf=
+9W21gB_b3JT_P3W1XmM6s4cyVDVW1X7jwP38l-BNW2TjPJq41tZBrW2KQ0Q8258mD5W2TLjNt1S=
+rZ-QW3M4sPK2YCbSwW3VY4ml2CDF0tW1LvZ-D1Qv_-fW4rgyJ91_mnrBW2RTv_Q3_s-Q-W2PDpk=
+D3bbMVNW3GYwlp2MDJG6W2FTp0l1BDhJBW45FgqL2340g-W2ML-0m2TPzrgW3XX4s83drvsHW3D=
+WCQc2TCfHSW3XwrvM2RjcxYW2FppnK3SH_6BW2RmWQS2vJ9lgW3jp26P2sDfgtW1VfNkF2RJTnJ=
+W36g_Zd4cRW_4W2HT__F3NPP1-W3VM-s94mvGzWW34xWvj47DGS1W32sVXx1Zw1Jz0&amp;utm_=
+source=3Dhs_email&amp;utm_medium=3Demail&amp;utm_content=3D95425652&amp;_hs=
+enc=3Dp2ANqtz-83zu49YCAdsjjzrqdzC24mDpyUnwpHQ97RFZMw1tp-7EQ8f_4jcWytAZD5Dhv=
+jSHWF6za79QSKLr1Gp_nmgyWMjSBpHIDSVRPwRuIjJ47muLLlee8&amp;_hsmi=3D95425652" =
+style=3D"mso-line-height-rule:exactly; font-family:Helvetica,Arial,sans-ser=
+if; font-size:12px; color:#00a4bd; font-weight:normal; text-decoration:unde=
+rline; font-style:normal" data-hs-link-id=3D"0" target=3D"_blank">Unsubscri=
+be</a>
+          <a data-unsubscribe=3D"true" href=3D"https://hs-26040590.s.hubspo=
+temail-eu1.net/hs/preferences-center/en/page?data=3DW2nVjwf3Y2wW_W45Pdxl2Yf=
+ZRqW2PykdY2v-8P7W34BRly4fsKNQW2WNCmv32KfGfW3VyfnB2KqHPsW3SLwyc25dXW1W25gYpc=
+3VK0HvW1Xx3h134lxzHW1Nf2WH1_8yvmW1QB9wH3NFXcsW2FLLGH2Rm-w0W2Kx0w53-0D5zW2Cx=
+F3930khvDW45RLQv2F_2TGW4pCJrq4pBNdJW2KFJdG2Tr657W2sCpm249shKDW4mkRlS2KYzf9W=
+21gB_b3JT_P3W1XmM6s4cyVDVW1X7jwP38l-BNW2TjPJq41tZBrW2KQ0Q8258mD5W2TLjNt1SrZ=
+-QW3M4sPK2YCbSwW3VY4ml2CDF0tW1LvZ-D1Qv_-fW4rgyJ91_mnrBW2RTv_Q3_s-Q-W2PDpkD3=
+bbMVNW3GYwlp2MDJG6W2FTp0l1BDhJBW45FgqL2340g-W2ML-0m2TPzrgW3XX4s83drvsHW3DWC=
+Qc2TCfHSW3XwrvM2RjcxYW2FppnK3SH_6BW2RmWQS2vJ9lgW3jp26P2sDfgtW1VfNkF2RJTnJW3=
+6g_Zd4cRW_4W2HT__F3NPP1-W3VM-s94mvGzWW34xWvj47DGS1W32sVXx1Zw1Jz0&amp;utm_so=
+urce=3Dhs_email&amp;utm_medium=3Demail&amp;utm_content=3D95425652&amp;_hsen=
+c=3Dp2ANqtz-83zu49YCAdsjjzrqdzC24mDpyUnwpHQ97RFZMw1tp-7EQ8f_4jcWytAZD5DhvjS=
+HWF6za79QSKLr1Gp_nmgyWMjSBpHIDSVRPwRuIjJ47muLLlee8&amp;_hsmi=3D95425652" st=
+yle=3D"mso-line-height-rule:exactly; font-family:Helvetica,Arial,sans-serif=
+; font-size:12px; color:#00a4bd; font-weight:normal; text-decoration:underl=
+ine; font-style:normal" data-hs-link-id=3D"0" target=3D"_blank">Manage pref=
+erences</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d33nf804.eu1.hubspotlinks.com/Cto/RK+113/d33nf804/VW4fB=
+d4qdkdqW3Pm19b7mnmp3W2bnPc75ljCY6VpKr5x8fYyfC316f1" alt=3D"" width=3D"1" he=
+ight=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!impo=
+rtant;width:1px!important;border-width:0!important;margin-top:0!important;m=
+argin-bottom:0!important;margin-right:0!important;margin-left:0!important;p=
+adding-top:0!important;padding-bottom:0!important;padding-right:0!important=
+;padding-left:0!important"></body></html>
+------=_Part_2076158_981514125.1727094581242--
+

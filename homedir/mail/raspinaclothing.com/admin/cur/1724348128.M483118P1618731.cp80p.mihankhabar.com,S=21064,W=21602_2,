@@ -1,0 +1,538 @@
+Return-Path: <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id wIQNHOB2x2YrsxgAyIPyJQ
+	(envelope-from <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>)
+	for <admin@raspinaclothing.com>; Thu, 22 Aug 2024 21:05:28 +0330
+Return-path: <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Thu, 22 Aug 2024 21:05:28 +0330
+Received: from wrqvwvdt.outbound-mail.sendgrid.net ([149.72.152.215]:45600)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>)
+	id 1shBiS-006n91-01
+	for admin@raspinaclothing.com;
+	Thu, 22 Aug 2024 21:05:28 +0330
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gtmetrix.com;
+	h=content-type:from:mime-version:subject:reply-to:to:cc:content-type:
+	from:subject:to;
+	s=s1; bh=WfJGty80TnqPw6ijI1ojAMA6dx0QSmLzQhZHaBwQlPo=;
+	b=YzV4eEUfL+iDYkErdU5MW4ldUmzZlp7Q0kaplXbfHjZmfx+qvO2dJC5FzxJtFn3XqeCM
+	Y/NTuEcklAq/pQAP0OP10pVxro7k4fE8GJe0JkEGf/Ae6wU9DaIS69aeMYVwT5Kbx1xmRd
+	UPicKK+BR7f+eRYizMrVE+PsfvXPVTOdiQ6f65FxYIy3RuwbQa4EXwAn6JLZ1lIvfEV/wm
+	QVt4umvvSz4voBipH64wiUojHe1ZaiHTkDORn/IT8anMFIqwQi3AT4GMMsYNcIdize25/7
+	lJZk2Z+wY6uXElnMfKPkRM9GqULc84jMoSuAQPPqCETQPPjg81B0k0U0CeZ12IKw==
+Received: by recvd-646c4985bf-hbms9 with SMTP id recvd-646c4985bf-hbms9-1-66C776A9-27
+	2024-08-22 17:34:33.524472174 +0000 UTC m=+69192.150505108
+Received: from MzEwODQ0OTY (unknown)
+	by geopod-ismtpd-15 (SG) with HTTP
+	id 2RMjwz0yQYCKczfaRmkvKQ
+	Thu, 22 Aug 2024 17:34:33.430 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=006d9f529cf1072f8b3688f0c374762df269a83261779c3c5df9391745b2
+Date: Thu, 22 Aug 2024 17:34:26 +0000 (UTC)
+From: GTmetrix <feedback@gtmetrix.com>
+Mime-Version: 1.0
+Message-ID: <2RMjwz0yQYCKczfaRmkvKQ@geopod-ismtpd-15>
+Subject: Summer of Speed - 30% off GTmetrix PRO plans
+Reply-To: feedback@gtmetrix.com
+auto-submitted: auto-generated
+x-auto-response-suppress: All
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E931Vi=2Fn2XrHQnuxNMvRqynGQsGSI5olkFC4c4KwRNo5wlg91qoRNYD1tn?=
+ =?us-ascii?Q?pXJL90DKvpKsxKDQX5InRnyToDN6M3RKJuuqLbW?=
+ =?us-ascii?Q?vo7gmL1v5hnoTQxZTAyEYPL7l8q2cWfIvmE7yt8?=
+ =?us-ascii?Q?CQasW3WBrW0nWC6bc7=2FqJsgbgmoJAPVjVzZQVle?=
+ =?us-ascii?Q?X4FTkTUNUxbMYwRSZkByu98z=2FqtvxBMp3vtATBB?=
+ =?us-ascii?Q?ljmoyPUWN7=2FwttN=2Ff2E1+1NlXafQzSQPhbN6PVr?=
+ =?us-ascii?Q?c4NW?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDH6A=2FTz6+u9fLwW?=
+ =?us-ascii?Q?7H9YlHVSTzv399eKRjOklBUf2ioWQ=3D=3D?=
+To: Admin Raspina <admin@raspinaclothing.com>
+X-Entity-ID: u001.WvjOUWp/O94XQqn7S70aaA==
+X-Spam-Status: No, score=-2.8
+X-Spam-Score: -27
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  GTmetrix: Summer of Speed ========================= Take 30%
+    off the first year of a new GTmetrix PRO Yearly plan* with coupon SUMMER2024
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/summer-2024-offer 
+ Content analysis details:   (-2.8 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: gtmetrix.com]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  1.1 KAM_REALLYHUGEIMGSRC   RAW: Spam with image tags with ridiculously
+                              huge http urls
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [149.72.152.215 listed in bl.score.senderscore.com]
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+X-Spam-Flag: NO
+
+--006d9f529cf1072f8b3688f0c374762df269a83261779c3c5df9391745b2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+GTmetrix: Summer of Speed
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Take 30% off the first year of a new GTmetrix PRO Yearly plan* with coupon =
+SUMMER2024
+
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/summer-2024-offe=
+r
+
+Offer ends Sept 6th 2024, 11:59PM PST.
+
+* New PRO subscriptions only. Custom plans not included.
+
+What's new with GTmetrix
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+A new look and feel for GTmetrix
+--------------------------------
+
+We refreshed our design and layouts and added some new features.
+
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/gtmetrix-new-loo=
+k-and-feel
+
+Interaction to Next Paint Explained
+-----------------------------------
+
+We explain what INP is, how it impacts performance, and why GTmetrix
+doesn't track it (yet).
+
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/interaction-to-n=
+ext-paint-explained
+
+We have enhanced GTmetrix Alerts
+--------------------------------
+
+New Alert features - Alerts Log tab, Alerts on History Graphs, and
+Automatic Alert suppression.
+
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/new-alert-log-fe=
+atures
+
+Integrate GTmetrix with Google Sheets, etc
+------------------------------------------
+
+We walk you through how we used GTmetrix to speed up the loading of our
+own report page.
+
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/how-gtmetrix-use=
+d-gtmetrix
+
+
+You're receiving this e-mail because ${user.email} is subscribed to receive=
+ GTmetrix newsletters.
+You can unsubscribe from receiving GTmetrix newsletters by visiting:
+    https://gtmetrix.com/e/l/20240820summerofspeed/4944176/RIYGiW5QK6zYXJ7o=
+/unsubscribe
+
+--006d9f529cf1072f8b3688f0c374762df269a83261779c3c5df9391745b2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!doctype html>
+<html>
+<head>
+  <meta charset=3D"utf-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <meta name=3D"x-apple-disable-message-reformatting">
+  <title>GTmetrix Summer of Speed</title>
+  <style>
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+    div[style*=3D"margin: 16px 0"] {
+      margin: 0 !important;
+    }
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+    a {
+      text-decoration: none;
+    }
+    *[x-apple-data-detectors],
+    .unstyle-auto-detected-links *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    .im {
+      color: inherit !important;
+    }
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+    img.g-img + div {
+      display: none !important;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width:=
+ 374px) {
+      u ~ div .email-container {
+        min-width: 320px !important;
+      }
+    }
+    @media only screen and (min-device-width: 375px) and (max-device-width:=
+ 413px) {
+      u ~ div .email-container {
+        min-width: 375px !important;
+      }
+    }
+    @media only screen and (min-device-width: 414px) {
+      u ~ div .email-container {
+        min-width: 414px !important;
+      }
+    }
+  </style>
+  <style>
+    table {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #646464;
+    }
+    .email-content {
+      padding: 30px !important;
+    }
+    @media screen and (max-width: 480px) {
+      .email-hero-title {
+        font-size: 28px !important;
+        line-height: 31px !important;
+      }
+      .email-hero-desc {
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
+      .email-content {
+        padding: 20px 10px !important;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      .stack-column {
+        display: block !important;
+        width: auto !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      .stack-column {
+        margin-bottom: 25px;
+        padding: 0 !important;
+      }
+      .stack-column:last-child {
+        margin-bottom: 0;
+      }
+      .stack-column-center {
+        text-align: center !important;
+      }
+    }
+
+    .recurly-custom-list span {
+      display: block;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body width=3D"100%" style=3D"margin:0; padding:0; mso-line-height-rule:exa=
+ctly; background:#fff">
+  <div style=3D"background:#fff; font-family:Arial, sans-serif; font-size:1=
+4px; line-height:1.6; color:#646464">
+  <!--[if mso | IE]>
+  <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" bgcolor=3D"#fff">
+  <tr>
+  <td>
+  <![endif]-->
+    <div style=3D"display:none; font-size:1px; line-height:1px; max-height:=
+0; max-width:0; opacity:0; overflow:hidden; mso-hide:all">
+      Take 30% off the first year of a new GTmetrix PRO Yearly plan! Offer =
+ends Sept 6th 2024.
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+
+
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" class=3D"email-container" style=3D"background:#f1f1f1">
+  <tr>
+    <td align=3D"center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px; background:#fff">
+        <tr>
+          <td class=3D"email-content" style=3D"padding:20px 10px;">
+
+
+<div style=3D"text-align:center">
+  <div style=3D"margin:0 0 25px">
+    <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/"><im=
+g src=3D"https://gtmetrix.com/static/email/header-newsletter.png" border=3D=
+"0" width=3D"660" style=3D"max-width:620px; font-size:40px; font-weight:bol=
+d; color:#3e9adc" alt=3D"GTmetrix"></a><br>
+  </div>
+
+  <p>
+    <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/summe=
+r-2024-offer"><img src=3D"https://gtmetrix.com/static/email/20240820/summer=
+-2024-newsletter-promo.png" border=3D"0" style=3D"display:block; width:100%=
+; font-size:28px; text-align:center" alt=3D"Take 30% off the first year of =
+a new GTmetrix PRO Yearly plan"></a>
+  </p>
+
+  <h3 style=3D"font-size:24px; margin-bottom: 15px;">What's new with GTmetr=
+ix</h3>
+
+  <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"100%" bgcolor=3D"#ffffff">
+    <tr>
+      <td style=3D"padding-right:5px; text-align:center; vertical-align:top=
+">
+        <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/g=
+tmetrix-new-look-and-feel"><img src=3D"https://gtmetrix.com/static/email/20=
+240820/gtmetrix-new-look-and-feel.png" border=3D"0" style=3D"display:block;=
+ width:100%; font-size:28px; text-align:center" alt=3D"A new look and feel =
+for GTmetrix"></a>
+        <p><strong>We refreshed our design and layouts</strong> and added s=
+ome new features. <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed=
+/4944176/gtmetrix-new-look-and-feel" style=3D"color: #3c9adc; text-decorati=
+on:underline;">Read more</a></p>
+      </td>
+      <td style=3D"padding-left:5px; text-align:center; vertical-align:top"=
+>
+        <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/i=
+nteraction-to-next-paint-explained"><img src=3D"https://gtmetrix.com/static=
+/email/20240820/interaction-to-next-paint-explained.png" border=3D"0" style=
+=3D"display:block; width:100%; font-size:28px; text-align:center" alt=3D"In=
+teraction to Next Paint (INP) explained"></a>
+        <p><strong>We explain what INP is</strong>, how it impacts performa=
+nce, and why GTmetrix doesn't track it (yet). <a href=3D"https://gtmetrix.c=
+om/e/l/20240820summerofspeed/4944176/interaction-to-next-paint-explained" s=
+tyle=3D"color: #3c9adc; text-decoration:underline;">Read more</a></p>
+      </td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"100%" bgcolor=3D"#ffffff">
+    <tr>
+      <td style=3D"padding-right:5px; text-align:center; vertical-align:top=
+">
+        <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/n=
+ew-alert-log-features"><img src=3D"https://gtmetrix.com/static/email/202408=
+20/new-alert-log-features.png" border=3D"0" style=3D"display:block; width:1=
+00%; font-size:28px; text-align:center" alt=3D"We have enhanced GTmetrix Al=
+erts"></a>
+        <p style=3D"margin-bottom:0"><strong>New Alert features</strong> - =
+Alerts Log tab, Alerts on History Graphs, and Automatic Alert suppression. =
+<a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/new-alert=
+-log-features" style=3D"color: #3c9adc; text-decoration:underline;">Read mo=
+re</a></p>
+      </td>
+      <td style=3D"padding-left:5px; text-align:center; vertical-align:top"=
+>
+        <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/h=
+ow-gtmetrix-used-gtmetrix"><img src=3D"https://gtmetrix.com/static/email/20=
+240820/how-gtmetrix-used-gtmetrix.png" border=3D"0" style=3D"display:block;=
+ width:100%; font-size:28px; text-align:center" alt=3D"How GTmetrix used GT=
+metrix to speed up... GTmetrix!"></a>
+        <p style=3D"margin-bottom:0">We walk you through <strong>how we use=
+d GTmetrix</strong> to speed up the loading of our own report page. <a href=
+=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/how-gtmetrix-use=
+d-gtmetrix" style=3D"color: #3c9adc; text-decoration:underline;">Read more<=
+/a></p>
+      </td>
+    </tr>
+  </table>
+
+  <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; margin:30p=
+x 10px;">
+
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" class=3D"email-container">
+  <tr>
+    <td style=3D"text-align:center;">
+      <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/con=
+tact"><img src=3D"https://gtmetrix.com/static/email/contact-blue.png" borde=
+r=3D"0" width=3D"29" style=3D"max-width:29px" alt=3D"Contact"></a>&nbsp;
+      <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/x">=
+<img src=3D"https://gtmetrix.com/static/email/x-blue.png" border=3D"0" widt=
+h=3D"29" style=3D"max-width:29px" alt=3D"X (formerly Twitter)"></a>&nbsp;
+      <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/fac=
+ebook"><img src=3D"https://gtmetrix.com/static/email/facebook-blue.png" bor=
+der=3D"0" width=3D"29" style=3D"max-width:29px" alt=3D"Facebook"></a>&nbsp;
+      <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/4944176/lin=
+kedin"><img src=3D"https://gtmetrix.com/static/email/linkedin-blue.png" bor=
+der=3D"0" width=3D"29" style=3D"max-width:29px" alt=3D"Linkedin"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px">
+        <tr>
+          <td style=3D"padding-top:5px; font-size:12px; line-height:18px; t=
+ext-align:center">
+            <p style=3D"margin:15px 20px; font-size:11px; line-height:16px"=
+>
+              You're receiving this e-mail because admin@raspinaclothing.co=
+m is subscribed to receive GTmetrix newsletters.<br>You can unsubscribe fro=
+m receiving GTmetrix newsletters by visiting <a href=3D"https://gtmetrix.co=
+m/e/l/20240820summerofspeed/4944176/RIYGiW5QK6zYXJ7o/unsubscribe" style=3D"=
+color: #646464; text-decoration:underline;">this link</a>.
+            </p>
+
+            <p style=3D"margin:15px 0">
+              810 - 181 Bay Street, Bay Wellington Tower, Toronto, ON, M5J =
+2T3, Canada<br>
+              <a href=3D"https://gtmetrix.com/e/l/20240820summerofspeed/494=
+4176/contact" style=3D"color: #646464; text-decoration:underline;">Contact =
+Us</a>
+              &nbsp;|&nbsp; <a href=3D"https://gtmetrix.com/e/l/20240820sum=
+merofspeed/4944176/terms" style=3D"color: #646464; text-decoration:underlin=
+e;">Terms of Service</a>
+              &nbsp;|&nbsp; <a href=3D"https://gtmetrix.com/e/l/20240820sum=
+merofspeed/4944176/privacy" style=3D"color: #646464; text-decoration:underl=
+ine;">Privacy</a>
+            </p>
+
+            <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; =
+margin:15px 10px">
+
+            <p style=3D"margin:15px 0">
+              &copy; 2024 GTmetrix. All Rights Reserved.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+
+
+</div>
+
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+  <!--[if mso | IE]>
+  </td>
+  </tr>
+  </table>
+  <![endif]-->
+  </div>
+<img src=3D"https://u31084496.ct.sendgrid.net/wf/open?upn=3Du001.lOrJom8Zyq=
+KWyhVVfwZSivtkwPH5jy-2BbkE9RI7m6oZjQWUGz3o-2F5RjGjAZ0YeTz1itQBGKw6eI0ozyqUt=
+2LRCgs1IQM6whPxRQYV-2FEzGAPVHQbc8QDV4zwlLfSfJ2D8j2Cr3Ehp-2FSXfuRcQ-2FtYcWIS=
+7QX9F5k4llyklxs-2B7d3x8SCTJB3dPZUVkOob503u6aN3UkxpW7cd2BXX8UWHV7vYrKuF2cdmj=
+-2FbOWCM-2BGp3q3-2BhC9yhLSViCknyz5CNvka5r99dUwww3vGWGqEnOw8uQ-3D-3D" alt=3D=
+"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;wid=
+th:1px !important;border-width:0 !important;margin-top:0 !important;margin-=
+bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padd=
+ing-top:0 !important;padding-bottom:0 !important;padding-right:0 !important=
+;padding-left:0 !important;"/></body>
+</html>
+--006d9f529cf1072f8b3688f0c374762df269a83261779c3c5df9391745b2--

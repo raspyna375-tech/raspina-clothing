@@ -1,0 +1,316 @@
+Return-Path: <asuslenkov@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id sigQNOmmSmrK/xwAyIPyJQ
+	(envelope-from <asuslenkov@gmail.com>)
+	for <info@raspinaclothing.com>; Sun, 05 Jul 2026 22:18:09 +0330
+Return-path: <asuslenkov@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Sun, 05 Jul 2026 22:18:09 +0330
+Received: from mail-ej1-f54.google.com ([209.85.218.54]:47281)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <asuslenkov@gmail.com>)
+	id 1wgRsq-00000007sw6-0WRT
+	for info@raspinaclothing.com;
+	Sun, 05 Jul 2026 22:18:09 +0330
+Received: by mail-ej1-f54.google.com with SMTP id a640c23a62f3a-c127ec4447cso283674966b.2
+        for <info@raspinaclothing.com>; Sun, 05 Jul 2026 11:47:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1783277240; cv=none;
+        d=google.com; s=arc-20260327;
+        b=NXEZwPgr9PDF6cGT5IJGHLidQAColDM3zbWwGvr+fx/QM8BPS45pv2rPPuKf3nxEs9
+         gPrauFHp7KLnAFO+sXA3DfJ3p60d2+SCJ6I160CHmF7E/Tp4eKyX1iyCR25bIHaJeFis
+         YkIkv9/oMUzHgXBrhY2TltaOldkJ1hvVWDXVYMg36kTcaCLkrkpEhjs1Hdmcftj6gvXp
+         6EqrwgN15PNxhmuAR2n4nPhS+Eixw2lger/xYcQCFQkD1Hi9Ro+gm9Fsry8FjoMI9GK0
+         sSpmh5PAaVxV0wR5f8k8U1VBqXz2nfYcWT2roi3ebXi5qO95dGXghK6U1oBCthtvlgyy
+         BPQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=b401uzNEgRlY/xJm/2iI7JxK58D2VoYJHOwVKbNLGNI=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=VcZvf2PYbTJNLf6hrp/Ezq581wQ7iqN2aub44lhXfXFfgponkqlGEEu73VzAoBTz3m
+         EXSjaCo3vB6E/Kpn4Bcp7JvnUn85DMnmzSb3pc4w/bAqLR2OsWNp6ozEhK5Q+4/mMSxw
+         pLvjKzVCl6wyfPYskWBqO84yP3VfNWvAANfhhYzPIY8Z3wQjHoPiftEuO/5XHnLN9ub2
+         9iJ58kJrHSK8YSXapQgxBfzM7NrCg07i52f3PLos5skOoQlyn3oi5oBNlg1UH9/0jP9x
+         74vNGLZD9nBr72X0O8MZDtHUo+9L9mI3/auSqmZR/YwdhXD2YbCPhtpwSSyT2t1WtQs/
+         tfgQ==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1783277240; x=1783882040; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=b401uzNEgRlY/xJm/2iI7JxK58D2VoYJHOwVKbNLGNI=;
+        b=KM040wEnHWSon5b9zoOouQxNcV3loM1zRBzgzw6JmSd5i4E7rHoWEpWeEkQOaP28Z3
+         UYi3xXWNVsoV3ALtVSakfoqim3TH2vB0/MeJymQ0O+aAWSs71MBdZnrOyI40rft8tNWv
+         nOQt8Zv7t9A0Et9xgUVUnTJ51EgyN3LbZdMolMtUD+OL1i1da810/Af4mZ85+mDxn9gC
+         wNt+b3VyVbAnbLaIxS3XYsQRTwcUcZhXp6wy5MQ8NqR11uR/kHUNZbKUDgfYQmyfzPdf
+         jBfrlwhXu0h+uN+rvA9U5XIlIcJUVWtxxuWmQ5hBUPe7V9r1XoV+SPrzMrKkHu8zJA6E
+         P5ew==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1783277240; x=1783882040;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=b401uzNEgRlY/xJm/2iI7JxK58D2VoYJHOwVKbNLGNI=;
+        b=gp8Nn/QRQHyASA7xzMb+geojIvHbnkdaEkWIALFaMSF73bAFncfz5N6ucTvjRPyGFZ
+         78WcEE51rtzPM+/KawWiz52Xr6/tlpB0/eLElOvyLAkqVZkYZP5srWxgpxCujob41Ul4
+         RmpfyHfUrAXTjr8iIDPVKTXhVXdwVJLMTmEDu3Tn0X4aQhxsNmcl5TlKjEIqcYHoB1pJ
+         +rDjKKbkoQIq/+WNNTycskVwJU7H3CraUAXLqPuCxHZyKME80QrvXgtMUH0u5CBVR0pc
+         j5lb5EXDctNy2/bTA8Y2k1v0groMFMx0YxgwMSZqDPQWYIvZE2XU35xUEQR/qKDPC1I4
+         8D8A==
+X-Gm-Message-State: AOJu0YxP6nQOMNxaAB6vp0PHn/eP+kPevYG7G3b5QfqcN5TbNyY+mp6X
+	SwsYwsbHbidtLIGMrz58msooGPolT5KpoDgfUsnCGKt+w8VthFWdYOqqvnGJyHIRNCENqLRrUQG
+	Lh5rUl6rlyOc8jNrzk8C8Q1DLaC1VGtK1hw==
+X-Gm-Gg: AfdE7cn+6lwnIKDN3SfIVlhREFdRGroxY9pXN8v0rTHwGZT2nYwOfHXbHbCO/90Stmw
+	XQnTQ5/SkoOjRwq4o3dVoJYnlf5gzKEXiTyRUG3qhNnd/H1Xlrrxp34z9C7EEzBkUEsqqwIxAVU
+	TsK+Zp2zq8IGpdeR42VQu3dUtSkw2XwYv62nnnqbqrLwoCkq8UQos969DW3cS2rQs6jauwxjjkM
+	5A6x4xGqBRkNaqFDSVfpWYsBFRDCT44t0fLw6LN9iQtOb54KZIUUPWPhZdq6aa2wYYENxv27AQD
+	P3KhfH2RlG80dvdXuDl3YFaCn3M=
+X-Received: by 2002:a17:907:6d12:b0:c0f:bebb:6d89 with SMTP id
+ a640c23a62f3a-c12e6a75e7emr247976366b.24.1783277240196; Sun, 05 Jul 2026
+ 11:47:20 -0700 (PDT)
+MIME-Version: 1.0
+References: <b75d19791b1b494c397318cbc032862e@raspinaclothing.com>
+ <CAG1OuKFxTa9zePwgc1+sb61FoJBxGNwFZS1LLyOLuQxTtSRQ+A@mail.gmail.com>
+ <429907b47e55da8fe22dd9ee88693ac8@raspinaclothing.com> <CAG1OuKFd6c4vGqpLLvg-ZwP-TM4EiYdxihtJ2AfETzQ_uyN6xw@mail.gmail.com>
+ <e2fda3ccda9c2cb59203b14a59a3bb17@raspinaclothing.com>
+In-Reply-To: <e2fda3ccda9c2cb59203b14a59a3bb17@raspinaclothing.com>
+From: Alexander Suslenkov <asuslenkov@gmail.com>
+Date: Sun, 5 Jul 2026 21:46:41 +0300
+X-Gm-Features: AVVi8Cf-aT1uFTo58El_n9u8yLfRJmFZc93XQMIPAHw4yzHUuAs2QZ2mryg94i0
+Message-ID: <CAG1OuKE7_-Y2XgkpS9kubOj7TpRR5_DVHjjvM0eNe7j26NASAA@mail.gmail.com>
+Subject: Re: Business Collaboration Opportunity
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="0000000000007021f10655e1961c"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Hello Soheil! Thank you for your information. I will think
+    about the opportunities (if any) for your factory. I have one contact who
+    can be interested in low MOQs but they make collections for young girls -
+    11-16 y.o. 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.218.54 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [asuslenkov(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--0000000000007021f10655e1961c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Soheil!
+
+Thank you for your information.
+I will think about the opportunities (if any) for your factory.
+
+I have one contact who can be interested in low MOQs but they make
+collections for young girls - 11-16 y.o.
+
+Rgds,
+
+Alexander
+
+
+
+
+=D0=B2=D1=81, 5 =D0=B8=D1=8E=D0=BB. 2026=E2=80=AF=D0=B3. =D0=B2 00:33, <inf=
+o@raspinaclothing.com>:
+
+> Dear Alexander,
+>
+> First of all, please accept my sincere apologies for my delayed reply.
+> Thank you for your patience.
+>
+> Thank you once again for your interest in our company. Please find my
+> answers to your questions below:
+>
+> 1. Fabrics, yarns and trims
+>
+> All of our garments are manufactured in Iran using our own production
+> facilities. We primarily source fabrics, yarns, and trims from reliable
+> domestic suppliers in Iran. However, depending on the customer's
+> requirements, product specifications, or desired quality standards, we
+> also use carefully selected imported raw materials whenever necessary.
+>
+> 2. Our competitive advantages compared to manufacturers in China and
+> Turkey
+>
+> We believe our main strengths are:
+>
+> Competitive pricing while maintaining consistent product quality.
+> Flexible production with the ability to accommodate customer-specific
+> requirements.
+> Lower minimum order quantities compared to many larger manufacturers.
+> Reliable lead times and on-time delivery.
+> Personalized communication and customer service throughout the entire
+> production process.
+> The ability to develop customized products and collections according to
+> our customers' needs.
+> Strong experience in manufacturing both knitted and woven garments for
+> international markets.
+>
+> Our goal is to provide our partners with the best balance between
+> quality, flexibility, service, and price.
+>
+> 3. Experience with Russian customers
+>
+> One of our customers in Russia is Dyma LLC (=D0=9E=D0=9E=D0=9E "=D0=94=D1=
+=8E=D0=BC=D0=B0"), a Russian
+> company specializing in homewear. We have also established business
+> relationships with other Russian customers following our participation
+> in trade exhibitions in Russia. We highly value our customers' trust and
+> therefore keep the details of some of our business relationships
+> confidential.
+>
+> 4. Market segment
+>
+> Our products are mainly positioned in the mid-range market segment,
+> offering a balance of quality, design, and competitive pricing.
+>
+> 5. Reference prices (MOQ: 100 pcs/style =E2=80=93 FCA Iran)
+>
+> Style   Description     Reference Price
+> 1214    Complete Set    USD 15.00 / set (FCA Iran)
+> 1489    Pants           USD 14.00 / pc (FCA Iran)
+> 1514    Shirt only      USD 9.00 / pc (FCA Iran)
+> 1521    Pants   USD 12.00 / pc (FCA Iran)
+> 1524    Complete Set    USD 22.50 / set (FCA Iran)
+>
+> MOQ: 100 pieces per style.
+>
+> Please note that these are reference prices and may vary depending on
+> fabric selection, order quantity, and any customer-specific
+> requirements.
+>
+> Should you require any additional information, I will be pleased to
+> assist you.
+>
+> Thank you once again for your time and consideration. I look forward to
+> hearing from you and hope this will be the beginning of a successful
+> long-term cooperation.
+>
+> Best regards,
+>
+> Soheil
+>
+
+--0000000000007021f10655e1961c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello Soheil!<div><br></div><div>Thank you for your inform=
+ation.</div><div>I will think about the opportunities (if any) for your fac=
+tory.</div><div><br></div><div>I have one contact who can be interested in =
+low MOQs but they make collections for young girls - 11-16 y.o.</div><div><=
+br></div><div>Rgds,</div><div><br></div><div>Alexander</div><div>=C2=A0</di=
+v><div><br></div><div><br></div></div><br><div class=3D"gmail_quote gmail_q=
+uote_container"><div dir=3D"ltr" class=3D"gmail_attr">=D0=B2=D1=81, 5 =D0=
+=B8=D1=8E=D0=BB. 2026=E2=80=AF=D0=B3. =D0=B2 00:33, &lt;<a href=3D"mailto:i=
+nfo@raspinaclothing.com">info@raspinaclothing.com</a>&gt;:<br></div><blockq=
+uote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1p=
+x solid rgb(204,204,204);padding-left:1ex">Dear Alexander,<br>
+<br>
+First of all, please accept my sincere apologies for my delayed reply. <br>
+Thank you for your patience.<br>
+<br>
+Thank you once again for your interest in our company. Please find my <br>
+answers to your questions below:<br>
+<br>
+1. Fabrics, yarns and trims<br>
+<br>
+All of our garments are manufactured in Iran using our own production <br>
+facilities. We primarily source fabrics, yarns, and trims from reliable <br=
+>
+domestic suppliers in Iran. However, depending on the customer&#39;s <br>
+requirements, product specifications, or desired quality standards, we <br>
+also use carefully selected imported raw materials whenever necessary.<br>
+<br>
+2. Our competitive advantages compared to manufacturers in China and <br>
+Turkey<br>
+<br>
+We believe our main strengths are:<br>
+<br>
+Competitive pricing while maintaining consistent product quality.<br>
+Flexible production with the ability to accommodate customer-specific <br>
+requirements.<br>
+Lower minimum order quantities compared to many larger manufacturers.<br>
+Reliable lead times and on-time delivery.<br>
+Personalized communication and customer service throughout the entire <br>
+production process.<br>
+The ability to develop customized products and collections according to <br=
+>
+our customers&#39; needs.<br>
+Strong experience in manufacturing both knitted and woven garments for <br>
+international markets.<br>
+<br>
+Our goal is to provide our partners with the best balance between <br>
+quality, flexibility, service, and price.<br>
+<br>
+3. Experience with Russian customers<br>
+<br>
+One of our customers in Russia is Dyma LLC (=D0=9E=D0=9E=D0=9E &quot;=D0=94=
+=D1=8E=D0=BC=D0=B0&quot;), a Russian <br>
+company specializing in homewear. We have also established business <br>
+relationships with other Russian customers following our participation <br>
+in trade exhibitions in Russia. We highly value our customers&#39; trust an=
+d <br>
+therefore keep the details of some of our business relationships <br>
+confidential.<br>
+<br>
+4. Market segment<br>
+<br>
+Our products are mainly positioned in the mid-range market segment, <br>
+offering a balance of quality, design, and competitive pricing.<br>
+<br>
+5. Reference prices (MOQ: 100 pcs/style =E2=80=93 FCA Iran)<br>
+<br>
+Style=C2=A0 =C2=A0Description=C2=A0 =C2=A0 =C2=A0Reference Price<br>
+1214=C2=A0 =C2=A0 Complete Set=C2=A0 =C2=A0 USD 15.00 / set (FCA Iran)<br>
+1489=C2=A0 =C2=A0 Pants=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0USD 14.00 /=
+ pc (FCA Iran)<br>
+1514=C2=A0 =C2=A0 Shirt only=C2=A0 =C2=A0 =C2=A0 USD 9.00 / pc (FCA Iran)<b=
+r>
+1521=C2=A0 =C2=A0 Pants=C2=A0 =C2=A0USD 12.00 / pc (FCA Iran)<br>
+1524=C2=A0 =C2=A0 Complete Set=C2=A0 =C2=A0 USD 22.50 / set (FCA Iran)<br>
+<br>
+MOQ: 100 pieces per style.<br>
+<br>
+Please note that these are reference prices and may vary depending on <br>
+fabric selection, order quantity, and any customer-specific <br>
+requirements.<br>
+<br>
+Should you require any additional information, I will be pleased to <br>
+assist you.<br>
+<br>
+Thank you once again for your time and consideration. I look forward to <br=
+>
+hearing from you and hope this will be the beginning of a successful <br>
+long-term cooperation.<br>
+<br>
+Best regards,<br>
+<br>
+Soheil<br>
+</blockquote></div>
+
+--0000000000007021f10655e1961c--

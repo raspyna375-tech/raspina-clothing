@@ -1,0 +1,79 @@
+Return-Path: <>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id q3GOEZowRmos/z8AyIPyJQ
+	(envelope-from <>)
+	for <info@raspinaclothing.com>; Thu, 02 Jul 2026 13:04:18 +0330
+Return-path: <>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Thu, 02 Jul 2026 13:04:18 +0330
+Received: from mailnull by cp80p.mihankhabar.com with local (Exim 4.99.2)
+	id 1wfDoH-0000000Hb42-3r1W
+	for info@raspinaclothing.com;
+	Thu, 02 Jul 2026 13:04:18 +0330
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cp80p.mihankhabar.com>
+To: info@raspinaclothing.com
+References: <f018df66605c6e387e9299b76358d81d@raspinaclothing.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1782984857-eximdsn-1118409685
+MIME-Version: 1.0
+Subject: Warning: message 1weqs1-00000003itl-3oqc delayed 24 hours
+Message-Id: <E1wfDoH-0000000Hb42-3r1W@cp80p.mihankhabar.com>
+Date: Thu, 02 Jul 2026 13:04:17 +0330
+
+--1782984857-eximdsn-1118409685
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+A message that you sent has not yet been delivered to one or more of its
+recipients after more than 24 hours on the queue on cp80p.mihankhabar.com.
+
+The message identifier is:     1weqs1-00000003itl-3oqc
+The date of the message is:    Wed, 01 Jul 2026 12:34:08 +0330
+The subject of the message is: Export Cooperation Opportunity with Raspina Clothing
+
+The address to which the message has not yet been delivered is:
+
+  office@levelpro68.ru
+    host mail.levelpro68.ru [195.161.41.201]
+
+No action is required on your part. Delivery attempts will continue for
+some time, and this warning may be repeated at intervals if the message
+remains undelivered. Eventually the mail delivery software will give up,
+and when that happens, the message will be returned to you.
+
+--1782984857-eximdsn-1118409685
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; cp80p.mihankhabar.com
+
+Action: delayed
+Final-Recipient: rfc822;office@levelpro68.ru
+Status: 4.0.0
+Remote-MTA: dns; mail.levelpro68.ru
+
+--1782984857-eximdsn-1118409685
+Content-type: text/rfc822-headers
+
+Return-path: <info@raspinaclothing.com>
+Received: from [127.0.0.1] (port=54324 helo=cp80p.mihankhabar.com)
+	by cp80p.mihankhabar.com with esmtpa (Exim 4.99.2)
+	(envelope-from <info@raspinaclothing.com>)
+	id 1weqs1-00000003itl-3oqc
+	for office@levelpro68.ru;
+	Wed, 01 Jul 2026 12:34:09 +0330
+MIME-Version: 1.0
+Date: Wed, 01 Jul 2026 12:34:08 +0330
+From: info@raspinaclothing.com
+To: office@levelpro68.ru
+Subject: Export Cooperation Opportunity with Raspina Clothing
+User-Agent: Roundcube Webmail/1.6.15
+Message-ID: <f018df66605c6e387e9299b76358d81d@raspinaclothing.com>
+X-Sender: info@raspinaclothing.com
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+
+
+--1782984857-eximdsn-1118409685--

@@ -1,0 +1,34 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Canonical redirects from the exported Classic ASP paths.
+    RewriteRule ^(?:index\.html?|index\.asp|default\.asp)$ / [R=301,L,NC]
+    RewriteRule ^(shop|catalog|about-us|contact)/default\.asp$ /$1 [R=301,L,NE,NC]
+    RewriteRule ^shop/page/([0-9]+)/default\.asp$ /shop?page=$1 [R=301,L,NE,NC]
+    RewriteRule ^product/([^/]+)/default\.asp$ /product/$1 [R=301,L,NE,NC]
+    RewriteRule ^product-category/([^/]+)/page/([0-9]+)/default\.asp$ /collection/$1?page=$2 [R=301,L,NE,NC]
+    RewriteRule ^product-category/([^/]+)/default\.asp$ /collection/$1 [R=301,L,NE,NC]
+    RewriteRule ^product-category/([^/]+)/?$ /collection/$1 [R=301,L,NE,NC]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+ErrorDocument 404 /404
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+<FilesMatch "(^\.|\.(?:ini|log|sql|json|md)$)">
+    Require all denied
+</FilesMatch>

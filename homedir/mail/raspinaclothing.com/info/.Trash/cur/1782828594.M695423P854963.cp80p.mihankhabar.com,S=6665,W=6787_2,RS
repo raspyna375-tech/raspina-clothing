@@ -1,0 +1,122 @@
+Return-Path: <soheilzali84@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id P6EAKDLOQ2qzCw0AyIPyJQ
+	(envelope-from <soheilzali84@gmail.com>)
+	for <info@raspinaclothing.com>; Tue, 30 Jun 2026 17:39:54 +0330
+Return-path: <soheilzali84@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Tue, 30 Jun 2026 17:39:54 +0330
+Received: from mail-qv1-f44.google.com ([209.85.219.44]:46432)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <soheilzali84@gmail.com>)
+	id 1weZ9p-00000003ZDG-060r
+	for info@raspinaclothing.com;
+	Tue, 30 Jun 2026 17:39:54 +0330
+Received: by mail-qv1-f44.google.com with SMTP id 6a1803df08f44-8ee88fce536so21848086d6.1
+        for <info@raspinaclothing.com>; Tue, 30 Jun 2026 07:09:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1782828547; cv=none;
+        d=google.com; s=arc-20260327;
+        b=VgkBe//ciwNp5vjxakB8HGjNOfoinvzgmihFCwPv5ZE0MmcqpWWxtlnxRLKR/3EADK
+         iADPhnVCOBgUNt1oSLap3WCt/08c8KqGOQRvy3h8NvIOTtDcSLOXToqRmV6gOb1bsDF9
+         xGF3patIBzeCcsCCW/XuI1vh3oE6o/eQpx/3pQa9g9bIm0dXqyfd22UOCgWc83MYm8iS
+         4MTj4jXkY0N7uF1mOyUzh/zHkZ8ws9aJ4NNrmzRoSe+t8CY8aqIA8zNGGfXbkhmMrgvv
+         b/3JueCGiOFRrBI42Za35gu2st7QiTvW9IY0aklekayYH01YuZtKgT4aVEV2+kV32lYi
+         sFOw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=lxDaH5VRKWpXL0WAzfYxzYTbiBX7zzqixZnt2M65JMk=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=DPIof1f+azyUHqsN0jcWVXOkfVbC/Xj5+pXNzrEQuHwml90hTibtYaCnlcZdICHVPR
+         3PxmopblDD/v6LFl3gv7I/hhe74GIgGYoUAF96f2vunfbIJEHoJsJFHf2UJpwa4rnJyN
+         EAXUjkGzDVSp0p6pTT3bLlW/tuTzuGusEG2xITqSo8WgGFLPG+zbWpdRQeirnoIA9+Pq
+         uc4kLmWw3uVf8cDqu0EfE6TW78yibSvFh6rCpWXbuVN4HmM3wLnolAAT+ZZVqOW/tU1n
+         OgHHOqtDXLtoE6g6E7SRlmbrUxFDj7vijA4guY6PEdZ/l9U7+R/pPGQzyMFm2isBKMw+
+         iXYw==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1782828547; x=1783433347; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=lxDaH5VRKWpXL0WAzfYxzYTbiBX7zzqixZnt2M65JMk=;
+        b=gr85u3g349/txe/CaeoE287qh/cb5y4ueUxj3JVnYCaoblJeKcRidIuIKoCd4Ldo4e
+         QtLQBj2FRmycsrZyiUmtmISau4+aH+CU/TrIWlQEXnK8w81/wOWe2qAEN29o97CGQskc
+         L7rq67/xGQoS0gWMuctuIMCVI79ZDBfHeTaalk4mMZYxrVqD+fi0Jdqw9ffyQ6A881pl
+         e4nqlx2NoU81WpftRRISah/0TLtZRrKpbLt8dTv+iVROa1dA1LvjjBIrUUgkRQphdj4F
+         u7Y5H/UkAlTGizVoCj/RkUE04A1QSX422lkr8rsX0TkLTNtWIx3inZl7his5bjLAnIRf
+         Oc0g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1782828547; x=1783433347;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=lxDaH5VRKWpXL0WAzfYxzYTbiBX7zzqixZnt2M65JMk=;
+        b=IZ3g+1t5Cle5zsQKH8ya7DEpxT0Zrjv4BYoEhD0WT+fea+8FvLTnNTl9pek0oS7FRu
+         zzebLoMEA727JT4B7KD1SkbFPXUR+gC2uQnZDC9pv4DYM8LDN03dp/12GnElprBzd2l/
+         lv4M3vNbq711KA8reedvuqgirga5y7tX4cmjo6DEOvOimAQVfwIqrGLbfGy/ZIILNMER
+         5M7eHVVPGiaPuX/tPh2o5szoUa6NvgB9jVqZ5nyiW45HHOl/ajfvGy4AshH72JhKmRnT
+         OcybdysYPdKrIzGSzcZgqziKfYwblRqEYflBX70nGH2va5NvSV+ZShIe1J0JcuyVu8dk
+         4f0w==
+X-Gm-Message-State: AOJu0Yyx9tQAG1E10RPV/gijcmRb7HMbUmmvvqsbYcKunPaYjoF3iB39
+	tiegVrDu5jljqPRk3H8UrPffQA6JGkog3q/pnZ5NqA6D8+GbrwSF7gJX7RzjIJPjRzCzhh4EB4w
+	AiqJ/AzTEtKyc86hEejABPgSmn25e+mw0Jty7HiY=
+X-Gm-Gg: AfdE7ckQmawpQ+YeNZzZZTMWtCxpshv/Gh1/3njo7jaSxAIsN0d0lLpjOQsOZ2Y3j7t
+	l+3sPAQ/PkAOtXVYkqbw2ra6PTpT73I2rGPV8ur4l9MFNcOio8J5VId08OB5bQyGTx4y3J/o8LG
+	LILKCQWCN0L05BJnUkRdp6i3Od0ZhHXZHH+c2doEt4HZ5dAz96Zd/PDTSAFL3s8NkZL/i1aLJav
+	92kazMUo4qdqX5+93TIAXxXzgJT4ZOlJwWpeM4pM+fuCRxe+TtBD7qOkNqKMIoBebM69XdjPg==
+X-Received: by 2002:a05:6214:d41:b0:8f1:8349:59ee with SMTP id
+ 6a1803df08f44-8f1bc67d6e3mr60292116d6.35.1782828546674; Tue, 30 Jun 2026
+ 07:09:06 -0700 (PDT)
+MIME-Version: 1.0
+From: Soheil Zali <soheilzali84@gmail.com>
+Date: Tue, 30 Jun 2026 17:38:55 +0330
+X-Gm-Features: AVVi8CePqNt_KaSKCzDzBqiB3dqZCAICBX_P8PFRxfVHq026FA4aAZP1nNknP8g
+Message-ID: <CADpm5Jf3o-fHJZtm7k7T5-Ytz=-1rj888Ns_pATs1Y-EUR47Tg@mail.gmail.com>
+Subject: =?UTF-8?B?2KrYqw==?=
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="0000000000003854a20655791e52"
+X-Spam-Status: No, score=0.8
+X-Spam-Score: 8
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  ____ ____ 
+ Content analysis details:   (0.8 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.219.44 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.219.44 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  1.0 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends in
+                             digit
+                             [soheilzali84(at)gmail.com]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [soheilzali84(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--0000000000003854a20655791e52
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+2KfbjNmI24wNCg==
+--0000000000003854a20655791e52
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9ImF1dG8iPtin24zZiNuMPC9kaXY+DQo=
+--0000000000003854a20655791e52--

@@ -1,0 +1,1156 @@
+Return-Path: <bounce+d56ed1.938fb-admin=raspinaclothing.com@tidioreply.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id gHDYJ7g83WZcOicAyIPyJQ
+	(envelope-from <bounce+d56ed1.938fb-admin=raspinaclothing.com@tidioreply.com>)
+	for <admin@raspinaclothing.com>; Sun, 08 Sep 2024 09:27:12 +0330
+Return-path: <bounce+d56ed1.938fb-admin=raspinaclothing.com@tidioreply.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Sun, 08 Sep 2024 09:27:12 +0330
+Received: from m195-231.mailgun.net ([161.38.195.231]:60348)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <bounce+d56ed1.938fb-admin=raspinaclothing.com@tidioreply.com>)
+	id 1snAv2-00B7EV-0j
+	for admin@raspinaclothing.com;
+	Sun, 08 Sep 2024 09:27:12 +0330
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=tidioreply.com; q=dns/txt; s=smtp; t=1725774980; x=1725782180;
+ h=Content-Type: Date: MIME-Version: Message-ID: Subject: Subject: To: To: From: From: Sender: Sender;
+ bh=86i2l9j/scswrFYnBzkoQ2O0A7tTfKaR057ZdQgTJI0=;
+ b=EMEw0nEaleqTCqUrDX2kFMBXT1y2ykRZXYrjIr2Lg5uaFIBsUF9ndXCGPZdRZJBMg7NdssJZ6cYeWmKC/nC4pWJY7LlqhLwuXvq8A/2rKwEOrqYFOI2qnUJhb1fi/gVCxeDbAXQiZ8Dyhzrx+rhyh04Ax2nmjPlDOzSew1u08jQ=
+X-Mailgun-Sending-Ip: 161.38.195.231
+X-Mailgun-Sid: WyJkNDYxYyIsImFkbWluQHJhc3BpbmFjbG90aGluZy5jb20iLCI5MzhmYiJd
+Received: by aed4adac105b with HTTP id 66dd3c845424fa623bb12897; Sun, 08 Sep 2024
+ 05:56:20 GMT
+Sender: no-reply@tidioreply.com
+From: Tidio <no-reply@tidioreply.com>
+To: admin@raspinaclothing.com
+Subject: [Tidio] Login attempted from new device
+Message-ID: <a087db9469be4a062b84618befe45246@tidioreply.com>
+MIME-Version: 1.0
+Date: Sun, 08 Sep 2024 05:56:19 +0000
+Content-Type: multipart/related; boundary=FQJrdMmh
+X-Spam-Status: No, score=-3.7
+X-Spam-Score: -36
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  emails/newDeviceDetected.subject Hi there, We noticed your
+    Tidio account admin@raspinaclothing.com was accessed from a new device. 
+ Content analysis details:   (-3.7 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: googleapis.com]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [161.38.195.231 listed in bl.score.senderscore.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 HTTPS_HTTP_MISMATCH    BODY: No description available.
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+X-Spam-Flag: NO
+
+--FQJrdMmh
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+
+<head>
+    <title>    emails/newDeviceDetected.subject
+</title>
+    <!--[if !mso]><!-- -->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <!--<![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <style type=3D"text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        p {
+            display: block;
+            margin: 13px 0;
+        }
+    </style>
+    <!--[if mso]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if lte mso 11]>
+    <style type=3D"text/css">
+        .outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+
+    <!--[if !mso]><!-->
+    <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,500,=
+700" rel=3D"stylesheet" type=3D"text/css">
+    <style type=3D"text/css">
+        @import url(https://fonts.googleapis.com/css?family=3DRoboto:400,50=
+0,700);
+    </style>
+    <!--<![endif]-->
+    <style type=3D"text/css">
+        @media only screen and (min-width:480px) {
+            .mj-column-per-100 {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            .mj-column-per-50 {
+                width: 50% !important;
+                max-width: 50%;
+            }
+        }
+    </style>
+    <style type=3D"text/css">
+        @media only screen and (max-width:480px) {
+            table.full-width-mobile {
+                width: 100% !important;
+            }
+
+            td.full-width-mobile {
+                width: auto !important;
+            }
+        }
+    </style>
+    <style type=3D"text/css">
+        @media screen and (min-width: 599px) {
+            .aligned td {
+                text-align: right !important;
+            }
+        }
+
+        @media screen and (min-width: 599px) {
+            .alignedLeft td {
+                text-align: left !important;
+            }
+        }
+
+        @media screen and (min-width: 599px) {
+            .alignedCenter td {
+                text-align: center !important;
+            }
+        }
+
+        @media screen and (min-width: 595px) {
+            .paddingRight {
+                padding-right: 24px
+            }
+        }
+
+        .IconsPadding {
+            padding-left: 30px;
+        }
+
+
+        @media screen and (max-width: 599px) {
+            .MobileIconsPadding {
+                padding-left: 3px !important;
+                padding-right: 3px !important;
+            }
+        }
+
+        .inactiveLink {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .rendering_center_on_mobile {
+                text-align: center;
+            }
+        }
+
+
+        .mainPadding {
+            padding-left: 43px !important;
+            padding-right: 43px !important;
+        }
+
+
+        @media only screen and (max-width: 587px) {
+            .mainPadding {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+        }
+
+        @media only screen and (max-width: 587px) {
+            .blazingFastIconPadding {
+                padding-left: 0px !important;
+                padding-right: 3px !important;
+            }
+        }
+
+        .AlignTop {
+            vertical-align: top !important;
+            padding-top: 0px;
+
+        }
+
+        .AlignTop td {
+            vertical-align: top !important;
+            padding-top: 0px !important;
+            padding-bottom: 10px;
+
+        }
+
+
+
+        @media only screen and (max-width: 587px) {
+            .MobileLogoPadding {
+                padding-left: 16px !important;
+            }
+
+            .MobilePartnerPadding {
+                padding-right: 18px !important;
+            }
+
+            .MobileTopLinePadding {
+                padding-bottom: 15px !important;
+            }
+
+            .mobileHeyPadding {
+                padding-top: 4px !important;
+            }
+        }
+
+        .MobileTopLinePadding {
+            padding-bottom: 15px;
+        }
+
+        .forPlatform div {
+            padding-bottom: 14px;
+        }
+    </style>
+</head>
+<body style=3D"background-color:#F3F5F8;">
+<div style=3D"background-color:#F3F5F8;">
+    <table align=3D"center" class=3D"border" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"background: #ffffff; back=
+ground-color: #ffffff; width: 100%;" width=3D"100%" bgcolor=3D"#ffffff">
+        <tbody>
+        <tr>
+            <td style=3D"border-bottom: 4px solid #008bff;"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <!--[if mso | IE]>
+    <table
+            align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"MobileTopLinePadding-outlook" style=3D"width:600px;" width=3D"6=
+00"
+    >
+        <tr>
+            <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule=
+:exactly;">
+    <![endif]-->
+
+
+    <div class=3D"MobileTopLinePadding" style=3D"background:#F3F5F8;backgro=
+und-color:#F3F5F8;margin:0px auto;max-width:600px;">
+
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F3F5F8;background-color:#=
+F3F5F8;width:100%;">
+            <tbody>
+            <tr>
+                <td style=3D"direction:ltr;font-size:0px;padding:20px 0;pad=
+ding-bottom:8px;text-align:center;">
+                    <!--[if mso | IE]>
+                    <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0">
+
+                        <tr>
+
+                            <td
+                                    class=3D"" style=3D"width:600px;"
+                            >
+                    <![endif]-->
+
+                    <div class=3D"mj-column-per-100 outlook-group-fix" styl=
+e=3D"font-size:0;line-height:0;text-align:left;display:inline-block;width:1=
+00%;direction:ltr;">
+                        <!--[if mso | IE]>
+                        <table  role=3D"presentation" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0">
+                            <tr>
+
+                                <td
+                                        style=3D"vertical-align:top;width:3=
+00px;"
+                                >
+                        <![endif]-->
+
+                        <div class=3D"mj-column-per-50 outlook-group-fix" s=
+tyle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ve=
+rtical-align:top;width:50%;">
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%"=
+>
+
+                                <tbody>
+                                <tr>
+                                    <td align=3D"left" class=3D"MobileLogoP=
+adding" style=3D"font-size:0px;padding:10px 25px;padding-top:12px;padding-l=
+eft:0px;word-break:break-word;">
+
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:collaps=
+e;border-spacing:0px;">
+                                            <tbody>
+                                            <tr>
+                                                <td style=3D"width:84px;">
+                                                    <a href=3D"https://emai=
+l.tidioreply.com/c/eJwczEFuhSAQANDTwPIHxhGGBYtuvMcMjIXEr8ZPanr7pu5fXs1polWs=
+Zh9hjhETOdtyIQ0COEuaeI3igby6mWISZC0-2p7ZUaySMCRRZBdACIMn0VVxBgwG3ei1H5ee2--=
+rHG-75TbG-THTl4HFwHLf9-shpfH4FwYWe2Wu774bdBd_zr5z2Y7R-v79FD8Z_gIAAP__roQ2ag=
+" target=3D"_blank">
+                                                        <img height=3D"26" =
+src=3D"cid:318f0252a08a684c22d3cc7e810ddb32@symfony" style=3D"border:0;disp=
+lay:block;outline:none;text-decoration:none;height:26px;width:100%;font-siz=
+e:14px;" width=3D"84">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <!--[if mso | IE]>
+                        </td>
+
+                        <td
+                                style=3D"vertical-align:top;width:300px;"
+                        >
+                        <![endif]-->
+
+                        <div class=3D"mj-column-per-50 outlook-group-fix" s=
+tyle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ve=
+rtical-align:top;width:50%;">
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%"=
+>
+
+                            </table>
+
+                        </div>
+
+                        <!--[if mso | IE]>
+                        </td>
+
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </div>
+
+                    <!--[if mso | IE]>
+                    </td>
+
+                    </tr>
+
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+
+    <table
+            align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"" style=3D"width:600px;" width=3D"600"
+    >
+        <tr>
+            <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule=
+:exactly;">
+    <![endif]-->
+
+
+    <div style=3D"background:#ffffff;background-color:#ffffff;margin:0px au=
+to;border-radius:6px;max-width:600px;">
+
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#ffffff;background-color:#=
+ffffff;width:100%;border-radius:6px;">
+            <tbody>
+            <tr>
+                <td style=3D"direction:ltr;font-size:0px;padding:20px 0;pad=
+ding-bottom:0px;text-align:center;">
+                    <!--[if mso | IE]>
+                    <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0">
+
+                        <tr>
+
+                            <td
+                                    class=3D"" style=3D"vertical-align:top;=
+width:600px;"
+                            >
+                    <![endif]-->
+
+                    <div class=3D"mj-column-per-100 outlook-group-fix" styl=
+e=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:100%;">
+
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+
+                            <tbody>
+                            <tr>
+                                <td align=3D"left" class=3D"mainPadding" st=
+yle=3D"font-size:0px;padding:10px 25px;padding-top:5px;word-break:break-wor=
+d;">
+
+                                    <div style=3D"font-family:Roboto,Arial,=
+sans-serif;;font-size:16px;font-weight:normal;line-height:24px;text-align:l=
+eft;color:#080f1a;">
+                                            <p style=3D"margin-bottom: 1em;=
+ ">Hi there,</p>
+    <p style=3D"margin-bottom: 2em; ">We noticed your Tidio account <b>admi=
+n@raspinaclothing.com</b> was accessed from a new device.</p>
+    <p style=3D"margin-bottom: 1em; ">When: 2024-09-08 09:26:19</p>
+    <p style=3D"margin-bottom: 1em; ">Device: Chrome (Windows)</p>
+    <p style=3D"margin-bottom: 1em; ">IP Address: 45.56.100.217</p>
+    <p style=3D"margin-bottom: 1em; ">If you don&#039;t recognize this acti=
+vity, please reset your password and contact customer support.</p>
+
+    <p style=3D"margin-bottom: 1em; ">This message was sent automatically, =
+do not reply to it.</p>
+    <p style=3D"margin-bottom: 1em; ">The Tidio Support Team</p>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!--[if mso | IE]>
+                    </td>
+
+                    </tr>
+
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+
+    <table
+            align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"" style=3D"width:600px;" width=3D"600"
+    >
+        <tr>
+            <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule=
+:exactly;">
+    <![endif]-->
+
+
+    <div style=3D"background:#ffffff;background-color:#ffffff;margin:0px au=
+to;border-radius:6px;max-width:600px;">
+
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#ffffff;background-color:#=
+ffffff;width:100%;border-radius:6px;">
+            <tbody>
+            <tr>
+                <td style=3D"border-top:1px solid #ffffff;direction:ltr;fon=
+t-size:0px;padding:20px 0;padding-bottom:31px;padding-top:0px;text-align:ce=
+nter;">
+                    <!--[if mso | IE]>
+                    <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0">
+
+                        <tr>
+
+                            <td
+                                    class=3D"" style=3D"vertical-align:top;=
+width:600px;"
+                            >
+                    <![endif]-->
+
+                    <div class=3D"mj-column-per-100 outlook-group-fix" styl=
+e=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:100%;">
+
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+
+                            <tbody>
+
+
+                            <tr>
+                                <td align=3D"left" class=3D"mainPadding" st=
+yle=3D"font-size:0px;padding:10px 25px;padding-top:29px;word-break:break-wo=
+rd;">
+
+                                    <div style=3D"font-family:Roboto,Arial,=
+sans-serif;;font-size:16px;font-weight:normal;line-height:24px;text-align:l=
+eft;color:#080f1a;">
+                                        <div class=3D"hs_cos_wrapper hs_cos=
+_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-s=
+ize: inherit; line-height: inherit;"><i>     If you want to learn more abou=
+t Tidio, please visit our knowledge base at: <a href=3D"https://email.tidio=
+reply.com/c/eJwcy0sOgyAQgOHTwNIM48hjwaIb78FjLCSoREmT3r6p6___snez3aJkrwwuxpC=
+zIIuPGgPxgontrIBdUoA2RMzggJNxsvoA1uToSLvIFEBjtKSVjbwxLUhaEIya63lxb98pnbtsvo=
+zRbzG_BK4C18KtT8_zzwJXefmQ93oIgivcvR4htXOUerwf__H4CwAA___0lTT9">https://hel=
+p.tidio.com/</a>.
+ </i></div>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!--[if mso | IE]>
+                    </td>
+
+                    </tr>
+
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+
+    <table
+            align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"" style=3D"width:600px;" width=3D"600"
+    >
+        <tr>
+            <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule=
+:exactly;">
+    <![endif]-->
+
+
+    <div style=3D"margin:0px auto;max-width:600px;">
+
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+            <tbody>
+            <tr>
+                <td style=3D"direction:ltr;font-size:0px;padding:20px 0;pad=
+ding-bottom:10px;padding-top:12px;text-align:center;">
+                    <!--[if mso | IE]>
+                    <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0">
+
+                        <tr>
+
+                            <td
+                                    class=3D"" style=3D"vertical-align:top;=
+width:600px;"
+                            >
+                    <![endif]-->
+
+                    <div class=3D"mj-column-per-100 outlook-group-fix" styl=
+e=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:100%;">
+
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+
+                            <tbody>
+                            <tr>
+                                <td align=3D"center" style=3D"font-size:0px=
+;padding:10px 25px;word-break:break-word;">
+
+
+                                    <!--[if mso | IE]>
+                                    <table
+                                            align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"
+                                    >
+                                        <tr>
+
+                                    <td>
+                                    <![endif]-->
+                                    <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"float:none=
+;display:inline-table;">
+
+                                        <tbody>
+                                        <tr>
+                                            <td style=3D"padding:10px 10px;=
+">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-radius:3=
+px;width:24px;">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style=3D"font-s=
+ize:0;height:24px;vertical-align:middle;width:24px;">
+                                                            <a href=3D"http=
+s://email.tidioreply.com/c/eJwczb1OhTAUAOCnKeNNfw60HTrcaIiLGmOcyWl7kCbQIhSR=
+tzc6f8MXnVVm9A05oWWrNVjDm8lRi4FHjuitIIHBtCK2dkRSGgCDb5JDbnT0FjrrCZB30hvohPE=
+0ErQSOga8ppjKRut83UJZmtlNta47U3cmeyb78zxvVznq4enPmezDhDnTzGT_8XDen17U8LrW6_=
+l9OHZdfkL6emOq3w8_hJLHtC1YU8lMPYpmcxiXlBnwDfc1ZQxzqVPKn__zt5O_AQAA__8ocUrg"=
+ target=3D"_blank">
+                                                                <img height=
+=3D"24" src=3D"cid:565f3f170b049b459966e4752c76deb8@symfony" style=3D"borde=
+r-radius:3px;display:block;" width=3D"24">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+
+                                            <td style=3D"vertical-align:mid=
+dle;">
+                                                <a href=3D"https://email.ti=
+dioreply.com/c/eJwczb1OhTAUAOCnKeNNfw60HTrcaIiLGmOcyWl7kCbQIhSRtzc6f8MXnVVm=
+9A05oWWrNVjDm8lRi4FHjuitIIHBtCK2dkRSGgCDb5JDbnT0FjrrCZB30hvohPE0ErQSOga8ppj=
+KRut83UJZmtlNta47U3cmeyb78zxvVznq4enPmezDhDnTzGT_8XDen17U8LrW6_l9OHZdfkL6em=
+Oq3w8_hJLHtC1YU8lMPYpmcxiXlBnwDfc1ZQxzqVPKn__zt5O_AQAA__8ocUrg" style=3D"co=
+lor:#080f1a;font-size:14px;font-family:Roboto,Arial,sans-serif;;line-height=
+:15px;text-decoration:none;" target=3D"_blank">
+                                                    <span style=3D"font-fam=
+ily:Roboto,Arial,sans-serif;">    Subscribe to our channel
+</span>
+                                                </a>
+                                            </td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <!--[if mso | IE]>
+                                    </td>
+
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+
+
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!--[if mso | IE]>
+                    </td>
+
+                    </tr>
+
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+
+
+    <table align=3D"center" class=3D"borderGrey" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-top: 1px sol=
+id #e6e9f2; background: #F3F5F8; background-color: #F3F5F8; width: 100%;" w=
+idth=3D"100%" bgcolor=3D"#F3F5F8">
+        <tbody>
+        <tr>
+            <td>
+
+
+                <!--[if mso | IE]>
+                <table
+                        align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" class=3D"borderGrey-outlook" style=3D"width:600px;" width=3D=
+"600"
+                >
+                    <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;">
+                <![endif]-->
+
+
+                <div style=3D"margin:0px auto;max-width:600px;">
+
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"width:100%;">
+                        <tbody>
+                        <tr>
+                            <td style=3D"direction:ltr;font-size:0px;paddin=
+g:20px 0;padding-bottom:0px;padding-right:0px;padding-top:0px;text-align:le=
+ft;">
+                                <!--[if mso | IE]>
+                                <table role=3D"presentation" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0">
+
+                                    <tr>
+
+                                        <td
+                                                class=3D"" style=3D"vertica=
+l-align:top;width:600px;"
+                                        >
+                                <![endif]-->
+
+                                <div class=3D"mj-column-per-100 outlook-gro=
+up-fix" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline=
+-block;vertical-align:top;width:100%;">
+
+                                    <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"background-color:#F3F5F8;ve=
+rtical-align:top;" width=3D"100%">
+
+                                        <tbody>
+                                        <tr>
+                                            <td style=3D"font-size:0px;word=
+-break:break-word;">
+
+
+                                                <!--[if mso | IE]>
+
+                                                <table role=3D"presentation=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td height=3D"27" st=
+yle=3D"vertical-align:top;height:27px;">
+
+                                                <![endif]-->
+
+                                                <div style=3D"height:27px;"=
+>
+                                                    &nbsp;
+                                                </div>
+
+                                                <!--[if mso | IE]>
+
+                                                </td></tr></table>
+
+                                                <![endif]-->
+
+
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                                <!--[if mso | IE]>
+                                </td>
+
+                                </tr>
+
+                                </table>
+                                <![endif]-->
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+                <!--[if mso | IE]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <!--[if mso | IE]>
+    <table
+            align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"" style=3D"width:600px;" width=3D"600"
+    >
+        <tr>
+            <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule=
+:exactly;">
+    <![endif]-->
+
+
+    <div style=3D"margin:0px auto;max-width:600px;">
+
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+            <tbody>
+            <tr>
+                <td style=3D"direction:ltr;font-size:0px;padding:20px 0;pad=
+ding-top:10px;text-align:center;">
+                    <!--[if mso | IE]>
+                    <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0">
+
+                        <tr>
+
+                            <td
+                                    class=3D"" style=3D"vertical-align:top;=
+width:600px;"
+                            >
+                    <![endif]-->
+
+                    <div class=3D"mj-column-per-100 outlook-group-fix" styl=
+e=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:100%;">
+
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+
+                            <tbody>
+                            <tr>
+                                <td align=3D"center" style=3D"font-size:0px=
+;padding:10px 25px;word-break:break-word;">
+
+                                    <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;bo=
+rder-spacing:0px;">
+                                        <tbody>
+                                        <tr>
+                                            <td style=3D"width:84px;">
+                                                <a href=3D"https://email.ti=
+dioreply.com/c/eJwczEFuhSAQANDTwPIHxhGGBYtuvMcMjIXEr8ZPanr7pu5fXs1polWsZh9h=
+jhETOdtyIQ0COEuaeI3igby6mWISZC0-2p7ZUaySMCRRZBdACIMn0VVxBgwG3ei1H5ee2--rHG-=
+75TbG-THTl4HFwHLf9-shpfH4FwYWe2Wu774bdBd_zr5z2Y7R-v79FD8Z_gIAAP__roQ2ag" ta=
+rget=3D"_blank"><img height=3D"26" src=3D"cid:cfb04c411af1ab8487f8a79cc2c89=
+f96@symfony" style=3D"border:0;display:block;outline:none;text-decoration:n=
+one;height:26px;width:100%;font-size:14px;" width=3D"84">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align=3D"center" style=3D"font-size:0px=
+;padding:10px 25px;padding-top:6px;word-break:break-word;">
+
+                                    <div style=3D"font-family:Roboto,Arial,=
+sans-serif;;font-size:12px;line-height:16px;text-align:center;color:#939eb4=
+;">
+                                        Copyright &copy; 2024 Tidio,
+                                        <span style=3D"white-space: nowrap;=
+">All rights reserved.</span><br />
+                                        Our mailing address is:<br />
+                                        support@tidio.net <br /><br />
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!--[if mso | IE]>
+                    </td>
+
+                    </tr>
+
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+</div>
+<img width=3D"1px" height=3D"1px" alt=3D"" src=3D"https://email.tidioreply.=
+com/o/eJwcyU2qxCAMAODT1OUjtTGahYdRk7wG-kenDMztB2b9SeWlWA9a5xxTzsgFwlots6AOH=
+vMQywTJjAmYeUmS2Ch4bVCydEbirtiAYi9Ic-lqiikiTQiPi5-3Xtvnb5x7uGuT3Y8J4W6vy482=
+tvNZ_fj_6bvGbwAAAP__6MwqZw"></body>
+</html>
+
+
+--FQJrdMmh
+Content-ID: <318f0252a08a684c22d3cc7e810ddb32@symfony>
+Content-Type: image/png; name="318f0252a08a684c22d3cc7e810ddb32@symfony"
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ name="318f0252a08a684c22d3cc7e810ddb32@symfony"; filename=PN6269LM3T
+
+iVBORw0KGgoAAAANSUhEUgAAAKAAAAA0CAYAAAANODN4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0
+MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
+MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
+b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
+Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MjczMWFiNC1mNTk2LTQ0ZTEtODY5NC1mMTgy
+OTAzYTA1NTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTg3ODA1OTJGM0ZBMTFFOEE5NjE5
+NkNBNDUwRTNDNDUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTg3ODA1OTFGM0ZBMTFFOEE5
+NjE5NkNBNDUwRTNDNDUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkg
+KFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6
+YTIwMjRjNTUtMjRlYi0yNTQwLThiMTctMmI0YzFlOGFlOTRlIiBzdFJlZjpkb2N1bWVudElEPSJh
+ZG9iZTpkb2NpZDpwaG90b3Nob3A6ZmI5NTIyYzMtMzk1ZS1jODRjLTg5MTEtNGY5ZTAxMjkzN2Rh
+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
+--FQJrdMmh
+Content-ID: <565f3f170b049b459966e4752c76deb8@symfony>
+Content-Type: image/png; name="565f3f170b049b459966e4752c76deb8@symfony"
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ name="565f3f170b049b459966e4752c76deb8@symfony"; filename=vqNULkiLPb
+
+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
+--FQJrdMmh
+Content-ID: <cfb04c411af1ab8487f8a79cc2c89f96@symfony>
+Content-Type: image/png; name="cfb04c411af1ab8487f8a79cc2c89f96@symfony"
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ name="cfb04c411af1ab8487f8a79cc2c89f96@symfony"; filename=tehWKHV0KM
+
+iVBORw0KGgoAAAANSUhEUgAAAKAAAAA0CAYAAAANODN4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0
+MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
+MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
+b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
+Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MjczMWFiNC1mNTk2LTQ0ZTEtODY5NC1mMTgy
+OTAzYTA1NTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTg3ODA1OTJGM0ZBMTFFOEE5NjE5
+NkNBNDUwRTNDNDUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTg3ODA1OTFGM0ZBMTFFOEE5
+NjE5NkNBNDUwRTNDNDUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkg
+KFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6
+YTIwMjRjNTUtMjRlYi0yNTQwLThiMTctMmI0YzFlOGFlOTRlIiBzdFJlZjpkb2N1bWVudElEPSJh
+ZG9iZTpkb2NpZDpwaG90b3Nob3A6ZmI5NTIyYzMtMzk1ZS1jODRjLTg5MTEtNGY5ZTAxMjkzN2Rh
+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
+--FQJrdMmh--

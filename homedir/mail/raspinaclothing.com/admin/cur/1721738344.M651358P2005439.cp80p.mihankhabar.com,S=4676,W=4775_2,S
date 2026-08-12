@@ -1,0 +1,99 @@
+Return-Path: <support@setupvpn.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id IIizJmikn2a/mR4AyIPyJQ
+	(envelope-from <support@setupvpn.com>)
+	for <admin@raspinaclothing.com>; Tue, 23 Jul 2024 16:09:04 +0330
+Return-path: <support@setupvpn.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Tue, 23 Jul 2024 16:09:04 +0330
+Received: from mx220.pulsesmtp.com ([91.239.43.176]:41411)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <support@setupvpn.com>)
+	id 1sWEn9-008QA6-0S
+	for admin@raspinaclothing.com;
+	Tue, 23 Jul 2024 16:09:04 +0330
+Content-Type: text/plain
+From: support@setupvpn.com
+To: admin@raspinaclothing.com
+Subject: Registration code for SetupVPN is 30694
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 23 Jul 2024 12:38:09 +0000
+MIME-Version: 1.0
+Precedence: bulk
+Received: from username [18.206.235.232] (Authenticated sender:
+ support@setupvpn.com) by smtp-pulse.com (Exim); Tue,23 Jul 2024 12:38:10
+Errors-To: postmaster@smtp-pulse.com
+X-Complaints-To: abuse@smtp-pulse.com
+Feedback-ID: 573848:smtp:SPulse
+List-Unsubscribe: <mailto:unsubscribe_105ca2b20e55e9ae2e5391179f0b6ece@smtp-pulse.com>,
+ <https://s573848.unsubscribe.smtp-pulse.com/105ca2b20e55e9ae2e5391179f0b6ece>
+Message-Id: <sh2trn-0tuuxd-g7@smtp-pulse.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=smtp-pulse.com; 
+ i=@smtp-pulse.com; q=dns/txt; s=smtpsign; t=1721738290; 
+ x=1721774290; h=subject : from : to : message-id : cc; 
+ bh=RTYLK4G0+FLoZtfRZAWkcV7xmrJ8l4auVDPfajyArns=; 
+ b=HN5D/u/fK0Pt6wIAIGJYMgyOzCbza7f8YtONlQE9kjoPib+P8nSMRsfb
+ sX2zQmFCfpptkPUL81AEpSCR0g+JtsdXw0JN3uRbGU5imHCoAuRsLeOEPY
+ cmUaLDgEsdJciaQbzyxhCPRVlgfGHZtp11vexr6yhq5FBKNJwljCRuDfk=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=setupvpn.com; 
+ i=@setupvpn.com; q=dns/txt; s=smtpsign; t=1721738290; 
+ x=1721774290; h=subject : from : to : message-id : cc; 
+ bh=RTYLK4G0+FLoZtfRZAWkcV7xmrJ8l4auVDPfajyArns=; 
+ b=gmpBORjzV622jb77DRLKdPpecxbTTF5lbstPzm0SNx0tieEdcQGZFsCg
+ uHcXa4a+9gjIpUf3kDGndvgw77RJoKNSv2NMtcD4KFIN0YLsge5Wg8TpRg
+ vH8MrjGnJR2NrgwukIYvhbbV4KsGRp6rIsF98DdHwxnAnaukx+035GRjA=
+X-Spam-Status: No, score=-3.2
+X-Spam-Score: -31
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Dear SetupVPN User, Thank you for registering with SetupVPN!
+    To complete your registration, please enter the following verification code
+    in the registration form: Verification Code: 30694 
+ Content analysis details:   (-3.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: setupvpn.com]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [91.239.43.176 listed in bl.score.senderscore.com]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.5 KAM_NUMSUBJECT         Subject ends in numbers excluding current years
+X-Spam-Flag: NO
+
+Dear SetupVPN User,
+
+Thank you for registering with SetupVPN! To complete =
+your registration, please enter the following verification code in the =
+registration form:
+
+Verification Code: 30694
+
+Please note, this code will =
+expire in a few hours. If you do not confirm your email address within this=
+ time, you will need to start a new registration.
+
+Thank you for choosing =
+SetupVPN.
+
+Best regards,
+The SetupVPN Team

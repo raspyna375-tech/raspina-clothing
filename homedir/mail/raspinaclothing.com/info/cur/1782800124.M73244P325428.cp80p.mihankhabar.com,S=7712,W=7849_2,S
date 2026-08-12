@@ -1,0 +1,137 @@
+Return-Path: <hosseinghorbaniprivate@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id Zp+VAvxeQ2o09wQAyIPyJQ
+	(envelope-from <hosseinghorbaniprivate@gmail.com>)
+	for <info@raspinaclothing.com>; Tue, 30 Jun 2026 09:45:24 +0330
+Return-path: <hosseinghorbaniprivate@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Tue, 30 Jun 2026 09:45:24 +0330
+Received: from mail-ot1-f44.google.com ([209.85.210.44]:44147)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <hosseinghorbaniprivate@gmail.com>)
+	id 1weRka-000000019SS-3jTj
+	for info@raspinaclothing.com;
+	Tue, 30 Jun 2026 09:45:23 +0330
+Received: by mail-ot1-f44.google.com with SMTP id 46e09a7af769-7e9dd333d37so477274a34.0
+        for <info@raspinaclothing.com>; Mon, 29 Jun 2026 23:14:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1782800072; cv=none;
+        d=google.com; s=arc-20260327;
+        b=EQpDnhdlPEyOfoMYzuj71L2K2btW2BDEckAZFCYTpI+xmgKakQbBZw84fAW81aCR5Y
+         zLMqXI2Vvd4oVu/9H9+RvXI9XaKdpYQkmhZIoQFiw/JGSwBdi8khnFyLugzr+5/tcm8J
+         1YK/P3ImyYV2RUPwGDQwLz9kU9bpZull6SeVy1H0duKlQhy+d5RA5vjT3vRskUwkxgQ9
+         OJiv/5Gp8QYHGe0JuK8B5jGH54EzxLpLAvx0FVRKFm1Wr/YPRkDz8QopXKdlBJT2bQzT
+         CTW+iABjJ8CZ1OkPreYpZwzn1rTxjrF+oc8RT3xskUcWocmRSbqeDKi0i4kqGnuKp63O
+         dH9Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=2n6mi9Y12wbBiZ0SGCG8KJn9aZne4Ss+EO6TgPNmu+A=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=pzgFPOGOmrqyiO4oDZVo5O2rUOQN6McVKpWmFkR+7W7OrPM5lwgSvgF4JGNGe+fsI6
+         0P23PXsrtDPf6jwYLB/gr1t8ONxW5B2isszF+aWz5KZhT4QMs0lr+ApOir5PDVPW2rNU
+         Dfrx2KM0/ZJI7nhiWl5JR6vp9dVcm6WVOBVBwp7uBRx5pW2S6vu8WDB2QdWcHajyNnlx
+         3XqvPebGqPNokQ4cUb0kXwZfTKJlQPsqtPQ/v1pGqLBbqk7xHLHFXILPyvh+hSHZJvGc
+         1GMslnYOVNn0TygbCeUEnJZMd8fQRjphDk6ZCDI84RRxT8hlwGAO4c4NaAdFVmEDkNQa
+         7qdw==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1782800072; x=1783404872; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=2n6mi9Y12wbBiZ0SGCG8KJn9aZne4Ss+EO6TgPNmu+A=;
+        b=Owqc1y1hvDJNLZxizTIwGp+jgthO0UAbGYkC1fuK59RypXBDLf6u3p3yAS0RavKwiu
+         plt/d5dNkR7Fg1x5ZpYtcszDaoJmWHUoSA84+8Zr+bfKAR8HvQgh5IS+LH5Dfge0Poei
+         39dSdcwDENhA63mgFh6PN5qn0MQcX+ePKlzp0y/DKgaepUjKihFcilw/UBMP+4eJcBos
+         7UIncQWteFRmBlENKh5c+0O9AFgCR8hdlqbFjed+mEkY40WAk2CSCUaZiUJzpqQFxlWT
+         K1996/AxCSJ3O2GUd+pPFkXfzsBaIx9nQmEiTRcTSKoMpB/nyRCqv1LdIwe6TiNHB+1e
+         eC0A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1782800072; x=1783404872;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=2n6mi9Y12wbBiZ0SGCG8KJn9aZne4Ss+EO6TgPNmu+A=;
+        b=fOXqD4tAGlbrBQfPbpiGfeaxJCKtekRFTY4rJi26ABC9JyekF6sMfUNfYxr731MDae
+         MrWLcceMJBQZ5Gl1ab+PhTNoPyg3qTSpXwtCMcB0fQYbRGKhoWC0m3xsig9eVzL8CWBN
+         8EqXQa6Ko58FvmQOMk5txUXddQYe6/Pr2HMqAwI/xkm8NBSp7fDVYBt89/NVtoazj8LW
+         30wquPtoS6ZMlTVTzP28JatrHvkP8iVMdTSsIUVNl3CmS8IPsYOUtBj8ozN5GWcShWOQ
+         cuuCJlc7ASraonnXMdt30vXnShWSNZ/HW0Fq1BnngcD34+svg5kFXZgDqlWf8WA6XbzD
+         4kMw==
+X-Gm-Message-State: AOJu0Yz7Hd/39NHu4gfIoIqjp9lDCbJ+8ILUFpzaL1PH5qJFqVTkYx03
+	b9SjSzDKcAn/RJK9uE3qUA9RWCeCF4Axlh2C5b+lExZawR13gL4PuuafXCQJtY/B6dHzyzmDPDe
+	dqjYElm4L1Dq2qxi/18V5zFJkA0ml2gakv2sN4iM=
+X-Gm-Gg: AfdE7ckdgJjBHBP1SDQajCZvKT1a7hj5ky7YZFdR4BlTRFJdVRh5rhAj8k4XCHJaMc7
+	YH6ZDu/aMFN5yZArESkfYfcNy3F9cxDpJYHlCvthLrotPBJ2CQFRxQ9C2Z59c9yhGYG0+iWY14S
+	n7P5wJajPyE31L9a56Cs/lyLmhAklQYqv1D7iTIxRu+obtX5EuPYPQUNGUIrmg4v4SuIYUJbdbn
+	bgs8892u12AXyBiFKr5C4SeivlW3I1vUL3UNYzDL1jrhr90f8MAFew8AKZxNIgnA1D9R6I+pd23
+	bvYp+w==
+X-Received: by 2002:a05:6808:14c1:b0:495:e54a:dbcf with SMTP id
+ 5614622812f47-495eafbfdc5mr2630466b6e.31.1782800071965; Mon, 29 Jun 2026
+ 23:14:31 -0700 (PDT)
+MIME-Version: 1.0
+References: <48a2fb3d1802a382b85c1683f81ad962@raspinaclothing.com>
+In-Reply-To: <48a2fb3d1802a382b85c1683f81ad962@raspinaclothing.com>
+From: Hossein Ghorbani <hosseinghorbaniprivate@gmail.com>
+Date: Tue, 30 Jun 2026 09:44:20 +0330
+X-Gm-Features: AVVi8CfKg5tzQYZxNEBX6IZ_Uh5kJC5X-Kj-F-UtCHDDJgXgk79IUCHzyJ3lhQU
+Message-ID: <CAHphQFj3Xoz+ZRvC3FcSVwafTvMs2x9=V7zXowBn3+9QeyKDYg@mail.gmail.com>
+Subject: =?UTF-8?B?UmU6INm+24zYp9mFINiq2LPYqg==?=
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="000000000000febfcf0655727c07"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  ____ ___ _____ __ On Tue, Jun 30, 2026 at 9:42
+    AM wrote: > ___ __ ____ ___ ___ > 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.210.44 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.210.44 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [hosseinghorbaniprivate(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--000000000000febfcf0655727c07
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+2b7bjNin2YUg2KrYs9iqINiv24zYp9mB2Kog2LTYrw0KDQpPbiBUdWUsIEp1biAzMCwgMjAyNiBh
+dCA5OjQy4oCvQU0gPGluZm9AcmFzcGluYWNsb3RoaW5nLmNvbT4gd3JvdGU6DQoNCj4g2KfbjNmG
+INuM2qkg2b7bjNin2YUg2KrYs9iqINin2LPYqg0KPg0K
+--000000000000febfcf0655727c07
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"rtl">=D9=BE=DB=8C=D8=A7=D9=85 =D8=AA=D8=B3=D8=
+=AA =D8=AF=DB=8C=D8=A7=D9=81=D8=AA =D8=B4=D8=AF</div></div><br><div class=
+=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr=
+">On Tue, Jun 30, 2026 at 9:42=E2=80=AFAM &lt;<a href=3D"mailto:info@raspin=
+aclothing.com">info@raspinaclothing.com</a>&gt; wrote:<br></div><blockquote=
+ class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px so=
+lid rgb(204,204,204);padding-left:1ex">=D8=A7=DB=8C=D9=86 =DB=8C=DA=A9 =D9=
+=BE=DB=8C=D8=A7=D9=85 =D8=AA=D8=B3=D8=AA =D8=A7=D8=B3=D8=AA<br>
+</blockquote></div>
+
+--000000000000febfcf0655727c07--

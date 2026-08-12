@@ -1,0 +1,18 @@
+---
+documentroot: /home/hyxfvjbq/public_html
+group: hyxfvjbq
+hascgi: 0
+homedir: /home/hyxfvjbq
+ip: 185.94.99.249
+ipv6: ~
+owner: rescpanel80p
+phpopenbasedirprotect: ~
+port: 443
+secruleengineoff: ~
+serveradmin: webmaster@raspinaclothing.com
+serveralias: mail.raspinaclothing.com www.raspinaclothing.com
+servername: raspinaclothing.com
+ssl: 1
+usecanonicalname: 'Off'
+user: hyxfvjbq
+userdirprotect: ''

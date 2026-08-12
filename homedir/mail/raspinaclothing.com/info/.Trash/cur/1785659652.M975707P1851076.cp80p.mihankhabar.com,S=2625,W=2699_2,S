@@ -1,0 +1,74 @@
+Return-Path: <>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id XFBdOAQBb2rEPhwAyIPyJQ
+	(envelope-from <>)
+	for <info@raspinaclothing.com>; Sun, 02 Aug 2026 12:04:12 +0330
+Return-path: <>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Sun, 02 Aug 2026 12:04:12 +0330
+Received: from mailnull by cp80p.mihankhabar.com with local (Exim 4.99.5)
+	id 1wqRe8-00000007lXY-2BHd
+	for info@raspinaclothing.com;
+	Sun, 02 Aug 2026 12:04:12 +0330
+X-Failed-Recipients: Yushkoff@mail.ru
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cp80p.mihankhabar.com>
+To: info@raspinaclothing.com
+References: <6de186228da9b729a2fbaa6dc8fc0709@raspinaclothing.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1785659652-eximdsn-2005708435
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1wqRe8-00000007lXY-2BHd@cp80p.mihankhabar.com>
+Date: Sun, 02 Aug 2026 12:04:12 +0330
+
+--1785659652-eximdsn-2005708435
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  Yushkoff@mail.ru
+    host mxs.mail.ru [94.100.180.31]
+    SMTP error from remote mail server after end of data:
+    552 Message size exceeds maximum permitted
+
+--1785659652-eximdsn-2005708435
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; cp80p.mihankhabar.com
+
+Action: failed
+Final-Recipient: rfc822;Yushkoff@mail.ru
+Status: 5.0.0
+Remote-MTA: dns; mxs.mail.ru
+Diagnostic-Code: smtp; 552 Message size exceeds maximum permitted
+
+--1785659652-eximdsn-2005708435
+Content-type: text/rfc822-headers
+
+Return-path: <info@raspinaclothing.com>
+Received: from [127.0.0.1] (port=45950 helo=cp80p.mihankhabar.com)
+	by cp80p.mihankhabar.com with esmtpa (Exim 4.99.5)
+	(envelope-from <info@raspinaclothing.com>)
+	id 1wqRdv-00000007jju-3e3C
+	for Yushkoff@mail.ru;
+	Sun, 02 Aug 2026 12:03:42 +0330
+MIME-Version: 1.0
+Date: Sun, 02 Aug 2026 12:03:37 +0330
+From: info@raspinaclothing.com
+To: Yushkoff@mail.ru
+Subject: Potential Partnership with an Experienced Apparel
+ Manufacturer(raspina clothing)
+User-Agent: Roundcube Webmail/1.6.17
+Message-ID: <6de186228da9b729a2fbaa6dc8fc0709@raspinaclothing.com>
+X-Sender: info@raspinaclothing.com
+Content-Type: multipart/mixed;
+ boundary="=_18f1e9b4862d9b78487b57add37d157c"
+X-Exim-DSN-Information: Due to administrative limits only headers are returned
+
+
+--1785659652-eximdsn-2005708435--

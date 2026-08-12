@@ -1,0 +1,157 @@
+Return-Path: <asuslenkov@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id LzvZJXZ/Q2rPSywAyIPyJQ
+	(envelope-from <asuslenkov@gmail.com>)
+	for <info@raspinaclothing.com>; Tue, 30 Jun 2026 12:03:58 +0330
+Return-path: <asuslenkov@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Tue, 30 Jun 2026 12:03:58 +0330
+Received: from mail-ed1-f53.google.com ([209.85.208.53]:44353)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <asuslenkov@gmail.com>)
+	id 1weTue-0000000C9OQ-283Z
+	for info@raspinaclothing.com;
+	Tue, 30 Jun 2026 12:03:56 +0330
+Received: by mail-ed1-f53.google.com with SMTP id 4fb4d7f45d1cf-697ebe536b6so6758079a12.1
+        for <info@raspinaclothing.com>; Tue, 30 Jun 2026 01:33:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1782808387; cv=none;
+        d=google.com; s=arc-20260327;
+        b=ZYJe46+Kq/jIkMzDw7ZVkuVoeo268rq4RrXL5gm5keIbKqDFUpKnBPWhgeqW7zyOS5
+         RlWTD+5Ftdbu2ydOFGmPJ+4IgImclqYP44R/NydGkCfT6WzBE9+meZ9ioT13KbTDq/tQ
+         gkFfI4T+3SasSAizBfshtp3qRVW/Kf2chgc24AqbkxHA+NQMBgLoW5hEOsTBekwjo6Lu
+         YWH6A8FTJxsXUkCfeN2T42ktjTaYMoS3F6/BNp3nnpi4mzSyw4D6c0ejMP1Y+adicJgz
+         giyiiiKBDc7pozI4wzM5pi1zMT7ERmgCW9W+X/WSoKqfsMUC8WG2L97ibymW+l+2B3gj
+         6Kjg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=Ij5DMR4d8Fggr0xu2uKLHzyU1BpAYoYQyn4WHAMGBaM=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=WBbqXO+/JQdew0QM+V0BUw5P3qth9scCX1I0+2UcXULr0etDdCVymsPWyi1gpEoHUY
+         cDWTwqqNe45mjZMZjZcCMu1q/nz/9wle0x65nBACyp9Sr/H/EiUNOnkb0My69FWsETAV
+         Ha2x+HBOa3P0lL1XR7MHulr5pyt18QtA8UqDqXnAjMEMUjgzUQhsfXht/SM6NKsdBegK
+         CmmkrtlyfA4THVwdy+3UCx2wE5+hJwoMkVjuTNw0EWZMYKVJpyp/B8zny6IYjQIpduLY
+         QD8FtDaHO2zTREQRaof/kQYNrbC6pvn1KJabXsCvPN2dqgnaRP7ZfGVcwfVYLECCXTE/
+         WHYQ==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1782808387; x=1783413187; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Ij5DMR4d8Fggr0xu2uKLHzyU1BpAYoYQyn4WHAMGBaM=;
+        b=N2+3ZankrA0GbBDdzerZtgpRpQG8OzPOkHZ1twg6Nqwd3SyTwZa/DHcarqV9/NmnK0
+         3mmoBc+Sot2rDF0XnXKF0bOhyqFhX1vDwktlTgf9tZA+gGsgOs7nFvIj6oWAuRAgeuJa
+         6ErcR+JS7OjbUzyGSFf9F+zFikopwdg6OB93CXdLQU/QPJ/N/svq9fkoWGI0nOU6FFYE
+         xw6CNqC1KxBhvfREvyzlRL8rD3CuiDZO22Nd2AF1xZiiaZausI8GiG7J4WPh+Wf3sIZ+
+         6LEU9pPdIQyuzgXa7KeGa9rI/EUQZbea9tm+rXXRJyCILaoFjc8NbYNYvGd2yz1C4jgN
+         5jow==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1782808387; x=1783413187;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=Ij5DMR4d8Fggr0xu2uKLHzyU1BpAYoYQyn4WHAMGBaM=;
+        b=CNGYPzHkZpow4Y0okuf3piSelPNCkCDmSKcIjVmaCltuK8S6Nt4w8fdEkk91uxKovx
+         wOdjTYEXhlZ9NXKXFbQnHYwHI3DQiRvIaopb6w0uI5xZtN8hcjJzuJkPOzdxxUdgslR+
+         Ij7HHLmeb+md/+gMrJq09yfUVFUk1hzAUAFeKuQUQPANaywzuw/VOeSj7avwIyVuDIKs
+         RON7w8HHxESvjwXwTzltZkP1E98KwXIf0Elwn4pZ6N55vpXEGCL1UJYKRPrU7QGS/DWw
+         6D125KchjnzCqKsgZJ1W6qAKGLmLeGHDrMb7KMwAtAggkPX8pNSN2G7aGUsrYVsQnGE/
+         QBtQ==
+X-Gm-Message-State: AOJu0YynxA20rX0lAyKRzto/Xt6RP05MzIs/0OZE3d3YBKMHRk4NeCoN
+	yxiNAbd3DIFQUtkM38KNu+nE1clr10BxeKb+E9qDpGTWG/AudTKnksG2HfxAbPBNIZ2Dtgi5ya6
+	16ndLd0r/TVP5WXNlfBPP+qrkDtbjOqhXJg==
+X-Gm-Gg: AfdE7ckUuIandTw//m1HgJ0xdZ1FoMv70KFcD5NKasgV3YT2g+ckDxGxNt5oowNLozz
+	h+49YJxs41amHj/q9xMDlPR0KBIMcwfWKmh1feRgLalZbyigRyHjThUU0MMtvzAbj82kriuDKlS
+	xNqjQgvqhDZx+lroTHw+/tvY5o80/wggFHzaCTG8z4RKFOOMyWk4sQaESkke3zb8UXugZfXk1x5
+	lUDWM4Pve/6bvXDiKBHE8Q40uQ5iDlxpeXta4v/r/be7PTqeHU5MN/M2/Q5swYvqm3d0lS2Px7y
+	aoRtV/bZyQfjLdkm1+S45M6Zwy/h
+X-Received: by 2002:a05:6402:5487:b0:698:bbe:9c8 with SMTP id
+ 4fb4d7f45d1cf-69879de69bamr1036754a12.15.1782808387309; Tue, 30 Jun 2026
+ 01:33:07 -0700 (PDT)
+MIME-Version: 1.0
+References: <b75d19791b1b494c397318cbc032862e@raspinaclothing.com>
+In-Reply-To: <b75d19791b1b494c397318cbc032862e@raspinaclothing.com>
+From: Alexander Suslenkov <asuslenkov@gmail.com>
+Date: Tue, 30 Jun 2026 11:32:28 +0300
+X-Gm-Features: AVVi8CdfQ_9RyqkdaVFbF5lleEtub7B3JJN-TbwpC_hngeHMrCKgk5R-IpPEZqs
+Message-ID: <CAG1OuKFxTa9zePwgc1+sb61FoJBxGNwFZS1LLyOLuQxTtSRQ+A@mail.gmail.com>
+Subject: Re: Business Collaboration Opportunity
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="000000000000a0d7fd0655746c28"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Hello Soheli! Thank you for the product catalogue. I also
+   asked about company/factory profile with information about capacity, equipment,
+    MOQs, lead-times. Rgds, 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.208.53 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.208.53 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [asuslenkov(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--000000000000a0d7fd0655746c28
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Soheli!
+
+Thank you for the product catalogue.
+I also asked about company/factory profile with information about capacity,
+equipment, MOQs, lead-times.
+
+Rgds,
+
+Alexander
+
+
+
+=D0=BF=D0=BD, 29 =D0=B8=D1=8E=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 11:03, <in=
+fo@raspinaclothing.com>:
+
+> Hello sir we talked on linkedin. Please check our catalog
+> Best regards
+> Soheil zali
+
+--000000000000a0d7fd0655746c28
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hello Soheli!<div><br></div><div>Thank you for the product=
+=C2=A0catalogue.</div><div>I also asked about company/factory profile with =
+information about=C2=A0capacity, equipment, MOQs, lead-times.</div><div><br=
+></div><div>Rgds,</div><div><br></div><div>Alexander</div><div><br></div><d=
+iv><br></div></div><br><div class=3D"gmail_quote gmail_quote_container"><di=
+v dir=3D"ltr" class=3D"gmail_attr">=D0=BF=D0=BD, 29 =D0=B8=D1=8E=D0=BD. 202=
+6=E2=80=AF=D0=B3. =D0=B2 11:03, &lt;<a href=3D"mailto:info@raspinaclothing.=
+com">info@raspinaclothing.com</a>&gt;:<br></div><blockquote class=3D"gmail_=
+quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,=
+204);padding-left:1ex">Hello sir we talked on linkedin. Please check our ca=
+talog<br>
+Best regards<br>
+Soheil zali</blockquote></div>
+
+--000000000000a0d7fd0655746c28--

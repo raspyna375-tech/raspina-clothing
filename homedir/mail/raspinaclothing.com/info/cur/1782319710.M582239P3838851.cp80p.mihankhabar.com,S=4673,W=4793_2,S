@@ -1,0 +1,120 @@
+Return-Path: <>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id RZxtIl4KPGqDkzoAyIPyJQ
+	(envelope-from <>)
+	for <info@raspinaclothing.com>; Wed, 24 Jun 2026 20:18:30 +0330
+Return-path: <>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Wed, 24 Jun 2026 20:18:30 +0330
+Received: from mailnull by cp80p.mihankhabar.com with local (Exim 4.99.2)
+	id 1wcQm5-0000000G6dE-1Gxg
+	for info@raspinaclothing.com;
+	Wed, 24 Jun 2026 20:18:29 +0330
+X-Failed-Recipients: info@happy-moms.ru
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cp80p.mihankhabar.com>
+To: info@raspinaclothing.com
+References: <05d3664dd511fca1030abf8810db20cb@raspinaclothing.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1782319709-eximdsn-598540503
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1wcQm5-0000000G6dE-1Gxg@cp80p.mihankhabar.com>
+Date: Wed, 24 Jun 2026 20:18:29 +0330
+
+--1782319709-eximdsn-598540503
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  info@happy-moms.ru
+    Domain raspinaclothing.com has exceeded the max defers and failures per hour (5/5 (100%)) allowed. Message discarded.
+
+--1782319709-eximdsn-598540503
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; cp80p.mihankhabar.com
+
+Action: failed
+Final-Recipient: rfc822;info@happy-moms.ru
+Status: 5.0.0
+
+--1782319709-eximdsn-598540503
+Content-type: message/rfc822
+
+Return-path: <info@raspinaclothing.com>
+Received: from localhost ([127.0.0.1]:38354 helo=cp80p.mihankhabar.com)
+	by cp80p.mihankhabar.com with esmtpa (Exim 4.99.2)
+	(envelope-from <info@raspinaclothing.com>)
+	id 1wbziY-0000000A0Jf-18aA
+	for info@happy-moms.ru;
+	Tue, 23 Jun 2026 15:25:02 +0330
+MIME-Version: 1.0
+Date: Tue, 23 Jun 2026 15:25:01 +0330
+From: info@raspinaclothing.com
+To: Info <info@happy-moms.ru>
+Subject: Business Collaboration Opportunity
+User-Agent: Roundcube Webmail/1.6.15
+Message-ID: <05d3664dd511fca1030abf8810db20cb@raspinaclothing.com>
+X-Sender: info@raspinaclothing.com
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+
+Dear [happy moms company],
+
+I hope this email finds you well.
+
+My name is Soheil Zali, Sales Manager of Raspina Clothing, an Iranian 
+manufacturer specializing in women's apparel. We are reaching out to 
+explore potential cooperation opportunities with your company and 
+establish a long-term business relationship.
+
+Raspina Clothing is a producer of a wide range of women's garments, 
+including dresses, blouses, tunics, knitwear, sweaters, cardigans, 
+hoodies, jackets, coats, and other fashion apparel. While our primary 
+expertise is in women's clothing, we also have experience in 
+manufacturing men's and children's garments.
+
+Over the years, we have successfully exported our products to Russia as 
+well as several neighboring countries of Iran. Based on this experience, 
+we are familiar with the preferences, quality expectations, and sizing 
+standards of the Russian market. Our products are manufactured according 
+to the quality standards expected by customers in your beautiful 
+country, and all sizes can be produced in full compliance with Russian 
+sizing requirements.
+
+One of our key advantages is our high production capacity, extensive 
+product variety, and flexibility in manufacturing. In addition to our 
+existing collections, we can also produce customized designs and models 
+according to your specific requirements within a short lead time.
+
+To help you evaluate the quality of our products, we would be pleased to 
+send samples for your review. Furthermore, we can manufacture and supply 
+garments under your own private label and brand name, allowing you to 
+strengthen your brand presence in the market.
+
+Regarding commercial terms, we are open to working under Letter of 
+Credit (L/C) arrangements and, considering current international trade 
+conditions, we do not foresee any issues in establishing a smooth and 
+reliable business partnership.
+
+Should you be interested, I would be delighted to send you our latest 
+product catalog and provide any additional information you may require.
+
+We look forward to hearing from you and hope to have the opportunity to 
+build a successful and mutually beneficial partnership.
+
+Kind regards,
+
+Soheil Zali
+Sales Manager
+Raspina Clothing
+Email: Info@raspinaclothing.com
+WhatsApp: +989197730514
+
+--1782319709-eximdsn-598540503--

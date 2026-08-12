@@ -1,0 +1,337 @@
+Return-Path: <ebrahim.mello@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id XK4XKCfvY2qGDQEAyIPyJQ
+	(envelope-from <ebrahim.mello@gmail.com>)
+	for <info@raspinaclothing.com>; Sat, 25 Jul 2026 02:33:03 +0330
+Return-path: <ebrahim.mello@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Sat, 25 Jul 2026 02:33:03 +0330
+Received: from mail-lf1-f52.google.com ([209.85.167.52]:61598)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <ebrahim.mello@gmail.com>)
+	id 1wnOw5-00000000GTb-3wld
+	for info@raspinaclothing.com;
+	Sat, 25 Jul 2026 02:33:03 +0330
+Received: by mail-lf1-f52.google.com with SMTP id 2adb3069b0e04-5aeb98460c6so976543e87.2
+        for <info@raspinaclothing.com>; Fri, 24 Jul 2026 16:02:37 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1784934136; x=1785538936; darn=raspinaclothing.com;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:content-type:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=AzWpVDMVWK6NidEk8v9foy0x5nyF6U3tdhF3CNSspnQ=;
+        b=DscMx5Pv3+tqE9SRFjGC9tfrp+Oo21WPdVdGsGgMEHnW4QHpNVWisgzkDGQrZge8WP
+         GX4MN/HwcpCjWUi2Ap8xt6Jnt2k/+HyT5AmXjDzM69Wboe4WQMcpeBmFN2LbfheR9Fxr
+         PREJJ5p3ZOcSMIgK8MZ1NkVctOgcfymDzl9gOkxpcZV36wGe333Qa09f+Zv++64FFjHc
+         f+vZhyaoxAayVIqpvVJK609cr2E35AY16+1Sg0SFKx7Gkp6GND2m4ScDt0QcluUx94Zc
+         hhI3AorXGIuV/T27HHq4kAYAlczU6LCnAmy0bXwq8OWMwpNu7uwOfM0xLr5vbIH0YcUZ
+         zyaw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1784934136; x=1785538936;
+        h=to:in-reply-to:references:message-id:date:subject:mime-version:from
+         :content-transfer-encoding:content-type:x-gm-gg:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to:content-type;
+        bh=AzWpVDMVWK6NidEk8v9foy0x5nyF6U3tdhF3CNSspnQ=;
+        b=cDw+CCQELLF1jcKenyK4jPbMraP9nHo+QRZWiuS8weRkIvc41mzrYEnO1eSd4nDdkZ
+         3vpxk0XYFzdCH1fNDft0Coo4cQX3crTA+5i42YxghPQAZtqmIahASSjWcpE3wvF/79d+
+         ZAwdkQyhGU43tcBbKlnqdLbzrQly7lbq29j1q6cJjm/1gf6tPzIVWxC8aM9RWoHBn9+h
+         r24E2N5qROMFl8EYeKZcJmjI+ELUwBIMGwIMvOJZG/HfRICL7pLykfsI7j6YXgW0u9kI
+         1Ef1vNE1beNEiXr/fT9OiPdQ4Z3k1up93Npi6xdYI9m4YbufqEXSHjG3AldCQTxRljoZ
+         e2ww==
+X-Gm-Message-State: AOJu0YxC0oSg2QgW392NHI2xv4c6DamxWF63LfAPbVwlFtRy2zjUVMtn
+	+6jD/ZWvYDzj0cP0b5ou4t7/oPKJp/WF1bdDgHrCxWnVWNbuYbl4MPOPnvD3oZPctRQ=
+X-Gm-Gg: AR+sD1287hfpaaBza8K82O2fgAIhNxtrzZllVV5DML0FH93+Ck0WvLXn6ztJ73EBbQV
+	harsjkYBIO6iD6nKCXc4kz2fJBRZYK01Cp5UXJkP2NSRBFxk79ARv/LafvfJNBTwfblzRe/RRPW
+	DXGEiCW4mQTSo4giM3YN7l0glwbdv0V9lGT9x9f1PHkTIRZHud0rAoDS/qYbm+Y+MwA4AomG4ei
+	w9Nu9T9gz/ooJvSTIlRf08WsU1yu8cOM/2s0Jq2qTPkW65urRNy8YQPxccFx/xGem5KGIH4dPBU
+	9jyztDXZ33DXtgoGs9cW/CrPY8LEg55zD/oLikPC1vhzuw7rx6b120Q7wTfwMPkH6WR5KLZ/K9X
+	OdgY9kgMuPRP3ux9dSNFND3sPebvqdc9SmM7McW5UvUdmCwO9iMoAlQLRkQtDZt5s7TiJLnkR/D
+	Da0JAwnKObmnEAPsJqpMsTwfiVUXuoQXwXxnlohIw=
+X-Received: by 2002:a05:6512:61a2:b0:5ae:ba8f:f9fa with SMTP id 2adb3069b0e04-5b2c1b09de0mr16420e87.18.1784934136143;
+        Fri, 24 Jul 2026 16:02:16 -0700 (PDT)
+Received: from smtpclient.apple ([89.207.221.102])
+        by smtp.gmail.com with ESMTPSA id 2adb3069b0e04-5b2be1d8838sm152745e87.54.2026.07.24.16.02.13
+        for <info@raspinaclothing.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 24 Jul 2026 16:02:14 -0700 (PDT)
+Content-Type: multipart/alternative; boundary=Apple-Mail-E4898460-4E5C-4CDE-B3A1-560AF2C19D4E
+Content-Transfer-Encoding: 7bit
+From: Ebrahim Mellelo <ebrahim.mello@gmail.com>
+Mime-Version: 1.0 (1.0)
+Subject: Re: Introduction and Greetings
+Date: Sat, 25 Jul 2026 02:02:03 +0300
+Message-Id: <4F5EE071-4182-495F-8D73-965AB5ED012B@gmail.com>
+References: <31f42632893af9f38678f660d3023e8e@raspinaclothing.com>
+In-Reply-To: <31f42632893af9f38678f660d3023e8e@raspinaclothing.com>
+To: info@raspinaclothing.com
+X-Mailer: iPhone Mail (23F84)
+X-Spam-Status: No, score=3.4
+X-Spam-Score: 34
+X-Spam-Bar: +++
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  ____ ______ ____ _ ____ ____ ____
+    ____ ____ _____ _______ ___ __ ______ _ __
+    _____ __ ______ ____ _ __ _____ ___[...] 
+ Content analysis details:   (3.4 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.167.52 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.167.52 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [ebrahim.mello(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 MIME_QP_LONG_LINE      RAW: Quoted-printable line longer than 76 chars
+  3.6 RCVD_IN_SBL_CSS        RBL: Received via a relay in Spamhaus SBL-CSS
+                             [89.207.221.102 listed in zen.spamhaus.org]
+X-Spam-Flag: NO
+
+
+--Apple-Mail-E4898460-4E5C-4CDE-B3A1-560AF2C19D4E
+Content-Type: text/plain;
+	charset=utf-8
+Content-Transfer-Encoding: base64
+
+2LPZhNin2YUg2LHZiNiy2KrYp9mGINio2K7bjNixINmIINi02KfYr9uMINis2YbYp9ioINiw2KfZ
+hNuMIA0K2KzZhtin2Kgg2KfZgtin24wg2KfZgdi024zZhiDZvtin2LHYs9in24zbjCDZhdix2Kcg
+2YXbjCDYtNmG2KfYs9mG2K8g2Ygg2KjYpyDYp9uM2LTYp9mGINiv2LEg2KfYsdiq2KjYp9i3INmH
+2LPYqtmFINmIINiv2LEg2KzYsduM2KfZhiDaqdin2LHZh9in24wg2LTYsdqp2Kog2LTZhdinINmI
+INin2KrYrdin2K/bjNmHINmIINqp2YbYs9ix2LPbjNmI2YUg2b7ZiNi02KfaqSDZh9iz2KrZhSDZ
+iNin24wg2K7bjNmE24wg2KrZhdin24zZhNuMINio2Ycg2YfZhdqp2KfYsduMINio2Kcg2KfYqtit
+2KfYr9uM2Ycg2Ygg2qnZhtiz2LHYs9uM2YjZhSDZhtiv2KfYsdmFINio2Ycg2K/ZhNin24zZhCDZ
+hdiu2KrZhNmB24wg2qnZhyDYqNinINiq2KzYsdio2Ycg2KjYr9uMINqp2Ycg2KfYsiDYr9mI2LPY
+qtin2YYg2K/Yp9ix2YUg2KfZhNio2KrZhyDYqNmHINin2YLYp9uMINm+2KfYsdiz2KfbjNuMINin
+2LHYp9iv2Kog2K/Yp9ix2YUg2Ygg2YfZhduM2LTZhyDYr9ixINiu2K/ZhdiqINin24zYtNin2YYg
+2YfYs9iq2YUg2obZiNmGINio2Kcg2KfYqtit2KfYr9uM2Ycg2Ygg2qnZhtiz2LHYs9uM2YjZhSDZ
+h9iz2KrZhtivINiz2LnbjCDZhduMINqp2YbZhSDYr9mI2LHbjCDaqdmG2YUgDQrYqNinINiq2LTa
+qdixINin2LIg2LTZhdinIA0KVGhlIGJlc3QgcmVnYXJkcyANCklicmFoaW0gRC5NZWxsbw0KUnVz
+c2lhICwgU3QuUGV0ZXJzYnVyZyANCis3OTIxNTkxMTgzOQ0KDQo+IE9uIDIyIEp1bCAyMDI2LCBh
+dCAxMTo1NCwgaW5mb0ByYXNwaW5hY2xvdGhpbmcuY29tIHdyb3RlOg0KPiANCj4g77u/2KzZhtin
+2Kgg2KLZgtin24wg2KfYqNix2KfZh9uM2YUg2K/Ysdin2LrbjCDZhdmE2YgNCj4gDQo+INio2Kcg
+2LPZhNin2YUg2Ygg2KfYrdiq2LHYp9mF2IwNCj4gDQo+INin2YXbjNiv2YjYp9ix2YUg2K3Yp9mE
+2KrYp9mGINiu2YjYqCDYqNin2LTYry4NCj4gDQo+INin24zZhtis2KfZhtioINiz2YfbjNmEINiw
+2KfZhNuM2Iwg2YbZhdin24zZhtiv2Ycg2LTYsdqp2KogUmFzcGluYSBDbG90aGluZ9iMINiq2YjZ
+hNuM2K/aqdmG2YbYr9mHINm+2YjYtNin2qkg2KjYp9mB2KrZhtuMINmIINm+2KfYsdqG2YfigIzY
+p9uMINiv2LEg2KfbjNix2KfZhiDZh9iz2KrZhS4NCj4gDQo+INin2K7bjNix2KfZiyDYqNinINii
+2YLYp9uMINin2YTaqdiz2KfZhtiv2LEg2LPZiNiz2YTZhtqp2YjZgSAoQWxleGFuZGVyIFN1c2xl
+bmtvdikg2K/YsSDYp9ix2KrYqNin2Lcg2KjZiNiv2YUg2Ygg2KfbjNi02KfZhiDYqNinINiq2YjY
+rNmHINio2Ycg2KrYrNix2KjZhyDYp9ix2LLYtNmF2YbYryDZiCDZhtmC2LQg2YXYpNir2LEg2KzZ
+htin2KjYudin2YTbjCDYr9ixINiq2YjYs9i52Ycg2LHZiNin2KjYtyDYqtis2KfYsduMINmF24zY
+p9mGINin24zYsdin2YYg2Ygg2LHZiNiz24zZh9iMINm+24zYtNmG2YfYp9ivINqp2LHYr9mG2K8g
+2qnZhyDYqNinINi02YXYpyDYp9ix2KrYqNin2Lcg2KjYsdmC2LHYp9ixINqp2YbZhS4NCj4gDQo+
+INmF2K/YqtuMINin2LPYqiDaqdmHINiv2LEg2K3Yp9mEINiq2YjYs9i52Ycg2YHYudin2YTbjNiq
+4oCM2YfYp9uMINi02LHaqdiqINiv2LEg2KjYp9iy2KfYsSDYsdmI2LPbjNmHINmH2LPYqtuM2YUg
+2Ygg2KfYsiDYqtis2LHYqNmHINmIINi02YbYp9iu2Kog2q/Ys9iq2LHYr9mHINi02YXYpyDYr9ix
+INin24zZhiDYrdmI2LLZhyDYotqv2KfZhyDZh9iz2KrZhS4g2KjYsdin24wg2YXZhiDYqNin2LnY
+qyDYp9mB2KrYrtin2LEg2K7ZiNin2YfYryDYqNmI2K8g2qnZhyDZgdix2LXYqiDYoti02YbYp9uM
+24wg2KjYpyDYrNmG2KfYqNi52KfZhNuMINix2Kcg2K/Yp9i02KrZhyDYqNin2LTZhSDZiCDYp9iy
+INiq2KzYsdio24zYp9iqINmIINiv24zYr9qv2KfZh+KAjNmH2KfbjCDYp9ix2LLYtNmF2YbYr9iq
+2KfZhiDYr9ix2KjYp9ix2Ycg2YHYsdi12KrigIzZh9in24wg2YfZhdqp2KfYsduMINmIINiq2YjY
+s9i52Ycg2LHZiNin2KjYtyDYqtis2KfYsduMINmF24zYp9mGINin24zYsdin2YYg2Ygg2LHZiNiz
+24zZhyDYqNmH2LHZh+KAjNmF2YbYryDYtNmI2YUuDQo+IA0KPiDZhdinINio2Kcg2KjYsdmG2K8g
+UmFzcGluYSDYr9ixINmG2YXYp9uM2LTar9in2YcgQ1BNIE1vc2NvdyAyMDIyINit2LbZiNixINiv
+2KfYtNiq24zZhSDZiCDYqtis2LHYqNmHINmH2YXaqdin2LHbjCDYqNinINmF2LTYqtix24zYp9mG
+INix2YjYs9uMINix2Kcg2YbbjNiyINiv2KfYtNiq2YfigIzYp9uM2YUuINiv2LEg2K3Yp9mEINit
+2KfYttixINmG24zYsiDYqNmHINiv2YbYqNin2YQg2q/Ys9iq2LHYtCDZh9mF2qnYp9ix24zigIzZ
+h9in24wg2KjZhNmG2K/Zhdiv2Kog2Ygg2K3YttmI2LEg2b7Ysdix2Ybar+KAjNiq2LEg2K/YsSDY
+qNin2LLYp9ixINix2YjYs9uM2Ycg2YfYs9iq24zZhS4NCj4gDQo+INiv2LEg2LXZiNix2Kog2KfZ
+hdqp2KfZhtiMINio2LPbjNin2LEg2K7ZiNi02K3Yp9mEINiu2YjYp9mH2YUg2LTYryDYp9qv2LEg
+2LLZhdin2YbbjCDYsdinINio2LHYp9uMINuM2qkg2q/Zgdiq4oCM2Yjar9mI24wg2KLZhtmE2Kfb
+jNmGINqp2YjYqtin2Ycg2K/YsSDYstmF2KfZhtuMINqp2Ycg2KjYsdin24zYqtin2YYg2YXZhtin
+2LPYqCDYqNin2LTYryDYp9iu2KrYtdin2LUg2K/Zh9uM2K8uINmH2YXahtmG24zZhiDYr9ixINi1
+2YjYsdiqINiq2YXYp9uM2YTYjCDYqNinINqp2YXYp9mEINmF24zZhCDZvtix2YjZgdin24zZhCDY
+tNix2qnYqiDZiCDaqdin2KrYp9mE2YjaryDZhdit2LXZiNmE2KfYqtmF2KfZhiDYsdinINmG24zY
+siDYqNix2KfbjNiq2KfZhiDYp9ix2LPYp9mEINiu2YjYp9mH2YUg2qnYsdivLg0KPiANCj4g2KfY
+siDZiNmC2KrbjCDaqdmHINio2LHYp9uMINmF2LfYp9mE2LnZhyDYp9uM2YYg2b7bjNin2YUg2KfY
+rtiq2LXYp9i1INiv2KfYr9uM2K8g2LXZhduM2YXYp9mG2Ycg2LPZvtin2LPar9iy2KfYsdmFINmI
+INin2YXbjNiv2YjYp9ix2YUg2YHYsdi12Kog2KLYtNmG2KfbjNuMINmIINmH2YXaqdin2LHbjCDY
+qNinINis2YbYp9io2LnYp9mE24wg2YHYsdin2YfZhSDYtNmI2K8uDQo+IA0KPiDYqNinINin2K3Y
+qtix2KfZhdiMDQo+IA0KPiDYs9mH24zZhCDYsNin2YTbjA0KPiBSYXNwaW5hIENsb3RoaW5nDQo+
+IERlYXIgTXIuIEVicmFoaW0gRGFyZ2FoaSBNZWxsbywNCj4gDQo+IEkgaG9wZSB0aGlzIGVtYWls
+IGZpbmRzIHlvdSB3ZWxsLg0KPiANCj4gTXkgbmFtZSBpcyBTb2hlaWwgWmFsaSwgYW5kIEkgcmVw
+cmVzZW50IFJhc3BpbmEgQ2xvdGhpbmcsIGFuIElyYW5pYW4gbWFudWZhY3R1cmVyIG9mIGtuaXR0
+ZWQgYW5kIHdvdmVuIGdhcm1lbnRzLg0KPiANCj4gSSB3YXMgcmVjZW50bHkgaW4gY29udGFjdCB3
+aXRoIE1yLiBBbGV4YW5kZXIgU3VzbGVua292LCB3aG8ga2luZGx5IHJlY29tbWVuZGVkIHRoYXQg
+SSBnZXQgaW4gdG91Y2ggd2l0aCB5b3UgYmVjYXVzZSBvZiB5b3VyIGV4dGVuc2l2ZSBleHBlcmll
+bmNlIGFuZCB2YWx1YWJsZSByb2xlIGluIHN0cmVuZ3RoZW5pbmcgYnVzaW5lc3MgcmVsYXRpb25z
+IGJldHdlZW4gSXJhbiBhbmQgUnVzc2lhLg0KPiANCj4gV2UgaGF2ZSBiZWVuIGFjdGl2ZWx5IGRl
+dmVsb3Bpbmcgb3VyIHByZXNlbmNlIGluIHRoZSBSdXNzaWFuIG1hcmtldCBhbmQgcGFydGljaXBh
+dGVkIGFzIGFuIGV4aGliaXRvciBhdCBDUE0gTW9zY293IGZyb20gMjAyMiB0aHJvdWdoIDIwMjUg
+dW5kZXIgb3VyIFJhc3BpbmEgYnJhbmQuIFRoZXNlIGV4aGliaXRpb25zIHByb3ZpZGVkIHVzIHdp
+dGggdmFsdWFibGUgb3Bwb3J0dW5pdGllcyB0byBzaG93Y2FzZSBvdXIgY29sbGVjdGlvbnMsIGJ1
+aWxkIGxvbmctdGVybSByZWxhdGlvbnNoaXBzIHdpdGggUnVzc2lhbiBidXNpbmVzcyBwYXJ0bmVy
+cywgYW5kIGdhaW4gYSBkZWVwZXIgdW5kZXJzdGFuZGluZyBvZiB0aGUgUnVzc2lhbiBhcHBhcmVs
+IG1hcmtldC4NCj4gDQo+IEdpdmVuIHlvdXIgZXhwZXJpZW5jZSBhcyBDaGFpcm1hbiBvZiB0aGUg
+UnVzc2lhLUlyYW4gQnVzaW5lc3MgQ291bmNpbCwgSSB3b3VsZCBiZSBob25vcmVkIHRvIGJlY29t
+ZSBhY3F1YWludGVkIHdpdGggeW91IGFuZCBsZWFybiBmcm9tIHlvdXIgdmFsdWFibGUgaW5zaWdo
+dHMgcmVnYXJkaW5nIGJ1c2luZXNzIG9wcG9ydHVuaXRpZXMgYmV0d2VlbiBvdXIgdHdvIGNvdW50
+cmllcy4NCj4gDQo+IElmIHlvdSBoYXZlIHNvbWUgdGltZSBpbiB0aGUgZnV0dXJlLCBJIHdvdWxk
+IGJlIGRlbGlnaHRlZCB0byBhcnJhbmdlIGEgc2hvcnQgb25saW5lIG1lZXRpbmcgYXQgeW91ciBj
+b252ZW5pZW5jZS4gSSB3b3VsZCBhbHNvIGJlIHBsZWFzZWQgdG8gc2VuZCB5b3Ugb3VyIGNvbXBh
+bnkgcHJvZmlsZSBhbmQgcHJvZHVjdCBjYXRhbG9nIGlmIHlvdSBhcmUgaW50ZXJlc3RlZC4NCj4g
+DQo+IFRoYW5rIHlvdSB2ZXJ5IG11Y2ggZm9yIHlvdXIgdGltZSBhbmQgY29uc2lkZXJhdGlvbi4g
+SSBzaW5jZXJlbHkgbG9vayBmb3J3YXJkIHRvIGhlYXJpbmcgZnJvbSB5b3UuDQo+IA0KPiBLaW5k
+IHJlZ2FyZHMsDQo+IA0KPiBTb2hlaWwgWmFsaQ0KPiBSYXNwaW5hIENsb3RoaW5nDQo=
+
+--Apple-Mail-E4898460-4E5C-4CDE-B3A1-560AF2C19D4E
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html class=3D"apple-mail-supports-explicit-dark-mode"><head><meta http-equi=
+v=3D"content-type" content=3D"text/html; charset=3Dutf-8"></head><body dir=3D=
+"auto"><div style=3D"direction: rtl;">=D8=B3=D9=84=D8=A7=D9=85 =D8=B1=D9=88=D8=
+=B2=D8=AA=D8=A7=D9=86 =D8=A8=D8=AE=DB=8C=D8=B1 =D9=88 =D8=B4=D8=A7=D8=AF=DB=8C=
+ =D8=AC=D9=86=D8=A7=D8=A8 =D8=B0=D8=A7=D9=84=DB=8C&nbsp;</div><div style=3D"=
+direction: rtl;">=D8=AC=D9=86=D8=A7=D8=A8 =D8=A7=D9=82=D8=A7=DB=8C =D8=A7=D9=
+=81=D8=B4=DB=8C=D9=86 =D9=BE=D8=A7=D8=B1=D8=B3=D8=A7=DB=8C=DB=8C =D9=85=D8=B1=
+=D8=A7 =D9=85=DB=8C =D8=B4=D9=86=D8=A7=D8=B3=D9=86=D8=AF =D9=88 =D8=A8=D8=A7=
+ =D8=A7=DB=8C=D8=B4=D8=A7=D9=86 =D8=AF=D8=B1 =D8=A7=D8=B1=D8=AA=D8=A8=D8=A7=D8=
+=B7 =D9=87=D8=B3=D8=AA=D9=85 =D9=88 =D8=AF=D8=B1 =D8=AC=D8=B1=DB=8C=D8=A7=D9=
+=86 =DA=A9=D8=A7=D8=B1=D9=87=D8=A7=DB=8C =D8=B4=D8=B1=DA=A9=D8=AA =D8=B4=D9=85=
+=D8=A7 =D9=88 =D8=A7=D8=AA=D8=AD=D8=A7=D8=AF=DB=8C=D9=87 =D9=88 =DA=A9=D9=86=
+=D8=B3=D8=B1=D8=B3=DB=8C=D9=88=D9=85 =D9=BE=D9=88=D8=B4=D8=A7=DA=A9 =D9=87=D8=
+=B3=D8=AA=D9=85 =D9=88=D8=A7=DB=8C =D8=AE=DB=8C=D9=84=DB=8C =D8=AA=D9=85=D8=A7=
+=DB=8C=D9=84=DB=8C =D8=A8=D9=87 =D9=87=D9=85=DA=A9=D8=A7=D8=B1=DB=8C =D8=A8=D8=
+=A7 =D8=A7=D8=AA=D8=AD=D8=A7=D8=AF=DB=8C=D9=87 =D9=88 =DA=A9=D9=86=D8=B3=D8=B1=
+=D8=B3=DB=8C=D9=88=D9=85 =D9=86=D8=AF=D8=A7=D8=B1=D9=85 =D8=A8=D9=87 =D8=AF=D9=
+=84=D8=A7=DB=8C=D9=84 =D9=85=D8=AE=D8=AA=D9=84=D9=81=DB=8C =DA=A9=D9=87 =D8=A8=
+=D8=A7 =D8=AA=D8=AC=D8=B1=D8=A8=D9=87 =D8=A8=D8=AF=DB=8C =DA=A9=D9=87 =D8=A7=
+=D8=B2 =D8=AF=D9=88=D8=B3=D8=AA=D8=A7=D9=86 =D8=AF=D8=A7=D8=B1=D9=85 =D8=A7=D9=
+=84=D8=A8=D8=AA=D9=87 =D8=A8=D9=87 =D8=A7=D9=82=D8=A7=DB=8C =D9=BE=D8=A7=D8=B1=
+=D8=B3=D8=A7=DB=8C=DB=8C =D8=A7=D8=B1=D8=A7=D8=AF=D8=AA =D8=AF=D8=A7=D8=B1=D9=
+=85 =D9=88 =D9=87=D9=85=DB=8C=D8=B4=D9=87 =D8=AF=D8=B1 =D8=AE=D8=AF=D9=85=D8=
+=AA =D8=A7=DB=8C=D8=B4=D8=A7=D9=86 =D9=87=D8=B3=D8=AA=D9=85 =DA=86=D9=88=D9=86=
+ =D8=A8=D8=A7 =D8=A7=D8=AA=D8=AD=D8=A7=D8=AF=DB=8C=D9=87 =D9=88 =DA=A9=D9=86=
+=D8=B3=D8=B1=D8=B3=DB=8C=D9=88=D9=85 =D9=87=D8=B3=D8=AA=D9=86=D8=AF =D8=B3=D8=
+=B9=DB=8C =D9=85=DB=8C =DA=A9=D9=86=D9=85 =D8=AF=D9=88=D8=B1=DB=8C =DA=A9=D9=
+=86=D9=85&nbsp;</div><div style=3D"direction: rtl;">=D8=A8=D8=A7 =D8=AA=D8=B4=
+=DA=A9=D8=B1 =D8=A7=D8=B2 =D8=B4=D9=85=D8=A7&nbsp;</div><div dir=3D"ltr">The=
+ best regards&nbsp;<div>Ibrahim D.Mello</div><div>Russia , St.Petersburg&nbs=
+p;<br><div>+79215911839</div></div></div><div dir=3D"ltr"><br><blockquote ty=
+pe=3D"cite">On 22 Jul 2026, at 11:54, info@raspinaclothing.com wrote:<br><br=
+></blockquote></div><blockquote type=3D"cite"><div dir=3D"rtl">=EF=BB=BF<spa=
+n>=D8=AC=D9=86=D8=A7=D8=A8 =D8=A2=D9=82=D8=A7=DB=8C =D8=A7=D8=A8=D8=B1=D8=A7=
+=D9=87=DB=8C=D9=85 =D8=AF=D8=B1=D8=A7=D8=BA=DB=8C =D9=85=D9=84=D9=88</span><=
+br><span></span><br><span>=D8=A8=D8=A7 =D8=B3=D9=84=D8=A7=D9=85 =D9=88 =D8=A7=
+=D8=AD=D8=AA=D8=B1=D8=A7=D9=85=D8=8C</span><br><span></span><br><span>=D8=A7=
+=D9=85=DB=8C=D8=AF=D9=88=D8=A7=D8=B1=D9=85 =D8=AD=D8=A7=D9=84=D8=AA=D8=A7=D9=
+=86 =D8=AE=D9=88=D8=A8 =D8=A8=D8=A7=D8=B4=D8=AF.</span><br><span></span><br>=
+<span>=D8=A7=DB=8C=D9=86=D8=AC=D8=A7=D9=86=D8=A8 =D8=B3=D9=87=DB=8C=D9=84 =D8=
+=B0=D8=A7=D9=84=DB=8C=D8=8C =D9=86=D9=85=D8=A7=DB=8C=D9=86=D8=AF=D9=87 =D8=B4=
+=D8=B1=DA=A9=D8=AA Raspina Clothing=D8=8C =D8=AA=D9=88=D9=84=DB=8C=D8=AF=DA=A9=
+=D9=86=D9=86=D8=AF=D9=87 =D9=BE=D9=88=D8=B4=D8=A7=DA=A9 =D8=A8=D8=A7=D9=81=D8=
+=AA=D9=86=DB=8C =D9=88 =D9=BE=D8=A7=D8=B1=DA=86=D9=87=E2=80=8C=D8=A7=DB=8C =D8=
+=AF=D8=B1 =D8=A7=DB=8C=D8=B1=D8=A7=D9=86 =D9=87=D8=B3=D8=AA=D9=85.</span><br=
+><span></span><br><span>=D8=A7=D8=AE=DB=8C=D8=B1=D8=A7=D9=8B =D8=A8=D8=A7 =D8=
+=A2=D9=82=D8=A7=DB=8C =D8=A7=D9=84=DA=A9=D8=B3=D8=A7=D9=86=D8=AF=D8=B1 =D8=B3=
+=D9=88=D8=B3=D9=84=D9=86=DA=A9=D9=88=D9=81 (Alexander Suslenkov) =D8=AF=D8=B1=
+ =D8=A7=D8=B1=D8=AA=D8=A8=D8=A7=D8=B7 =D8=A8=D9=88=D8=AF=D9=85 =D9=88 =D8=A7=
+=DB=8C=D8=B4=D8=A7=D9=86 =D8=A8=D8=A7 =D8=AA=D9=88=D8=AC=D9=87 =D8=A8=D9=87 =D8=
+=AA=D8=AC=D8=B1=D8=A8=D9=87 =D8=A7=D8=B1=D8=B2=D8=B4=D9=85=D9=86=D8=AF =D9=88=
+ =D9=86=D9=82=D8=B4 =D9=85=D8=A4=D8=AB=D8=B1 =D8=AC=D9=86=D8=A7=D8=A8=D8=B9=D8=
+=A7=D9=84=DB=8C =D8=AF=D8=B1 =D8=AA=D9=88=D8=B3=D8=B9=D9=87 =D8=B1=D9=88=D8=A7=
+=D8=A8=D8=B7 =D8=AA=D8=AC=D8=A7=D8=B1=DB=8C =D9=85=DB=8C=D8=A7=D9=86 =D8=A7=DB=
+=8C=D8=B1=D8=A7=D9=86 =D9=88 =D8=B1=D9=88=D8=B3=DB=8C=D9=87=D8=8C =D9=BE=DB=8C=
+=D8=B4=D9=86=D9=87=D8=A7=D8=AF =DA=A9=D8=B1=D8=AF=D9=86=D8=AF =DA=A9=D9=87 =D8=
+=A8=D8=A7 =D8=B4=D9=85=D8=A7 =D8=A7=D8=B1=D8=AA=D8=A8=D8=A7=D8=B7 =D8=A8=D8=B1=
+=D9=82=D8=B1=D8=A7=D8=B1 =DA=A9=D9=86=D9=85.</span><br><span></span><br><spa=
+n>=D9=85=D8=AF=D8=AA=DB=8C =D8=A7=D8=B3=D8=AA =DA=A9=D9=87 =D8=AF=D8=B1 =D8=AD=
+=D8=A7=D9=84 =D8=AA=D9=88=D8=B3=D8=B9=D9=87 =D9=81=D8=B9=D8=A7=D9=84=DB=8C=D8=
+=AA=E2=80=8C=D9=87=D8=A7=DB=8C =D8=B4=D8=B1=DA=A9=D8=AA =D8=AF=D8=B1 =D8=A8=D8=
+=A7=D8=B2=D8=A7=D8=B1 =D8=B1=D9=88=D8=B3=DB=8C=D9=87 =D9=87=D8=B3=D8=AA=DB=8C=
+=D9=85 =D9=88 =D8=A7=D8=B2 =D8=AA=D8=AC=D8=B1=D8=A8=D9=87 =D9=88 =D8=B4=D9=86=
+=D8=A7=D8=AE=D8=AA =DA=AF=D8=B3=D8=AA=D8=B1=D8=AF=D9=87 =D8=B4=D9=85=D8=A7 =D8=
+=AF=D8=B1 =D8=A7=DB=8C=D9=86 =D8=AD=D9=88=D8=B2=D9=87 =D8=A2=DA=AF=D8=A7=D9=87=
+ =D9=87=D8=B3=D8=AA=D9=85. =D8=A8=D8=B1=D8=A7=DB=8C =D9=85=D9=86 =D8=A8=D8=A7=
+=D8=B9=D8=AB =D8=A7=D9=81=D8=AA=D8=AE=D8=A7=D8=B1 =D8=AE=D9=88=D8=A7=D9=87=D8=
+=AF =D8=A8=D9=88=D8=AF =DA=A9=D9=87 =D9=81=D8=B1=D8=B5=D8=AA =D8=A2=D8=B4=D9=
+=86=D8=A7=DB=8C=DB=8C =D8=A8=D8=A7 =D8=AC=D9=86=D8=A7=D8=A8=D8=B9=D8=A7=D9=84=
+=DB=8C =D8=B1=D8=A7 =D8=AF=D8=A7=D8=B4=D8=AA=D9=87 =D8=A8=D8=A7=D8=B4=D9=85 =D9=
+=88 =D8=A7=D8=B2 =D8=AA=D8=AC=D8=B1=D8=A8=DB=8C=D8=A7=D8=AA =D9=88 =D8=AF=DB=
+=8C=D8=AF=DA=AF=D8=A7=D9=87=E2=80=8C=D9=87=D8=A7=DB=8C =D8=A7=D8=B1=D8=B2=D8=
+=B4=D9=85=D9=86=D8=AF=D8=AA=D8=A7=D9=86 =D8=AF=D8=B1=D8=A8=D8=A7=D8=B1=D9=87=
+ =D9=81=D8=B1=D8=B5=D8=AA=E2=80=8C=D9=87=D8=A7=DB=8C =D9=87=D9=85=DA=A9=D8=A7=
+=D8=B1=DB=8C =D9=88 =D8=AA=D9=88=D8=B3=D8=B9=D9=87 =D8=B1=D9=88=D8=A7=D8=A8=D8=
+=B7 =D8=AA=D8=AC=D8=A7=D8=B1=DB=8C =D9=85=DB=8C=D8=A7=D9=86 =D8=A7=DB=8C=D8=B1=
+=D8=A7=D9=86 =D9=88 =D8=B1=D9=88=D8=B3=DB=8C=D9=87 =D8=A8=D9=87=D8=B1=D9=87=E2=
+=80=8C=D9=85=D9=86=D8=AF =D8=B4=D9=88=D9=85.</span><br><span></span><br><spa=
+n>=D9=85=D8=A7 =D8=A8=D8=A7 =D8=A8=D8=B1=D9=86=D8=AF Raspina =D8=AF=D8=B1 =D9=
+=86=D9=85=D8=A7=DB=8C=D8=B4=DA=AF=D8=A7=D9=87 CPM Moscow 2022 =D8=AD=D8=B6=D9=
+=88=D8=B1 =D8=AF=D8=A7=D8=B4=D8=AA=DB=8C=D9=85 =D9=88 =D8=AA=D8=AC=D8=B1=D8=A8=
+=D9=87 =D9=87=D9=85=DA=A9=D8=A7=D8=B1=DB=8C =D8=A8=D8=A7 =D9=85=D8=B4=D8=AA=D8=
+=B1=DB=8C=D8=A7=D9=86 =D8=B1=D9=88=D8=B3=DB=8C =D8=B1=D8=A7 =D9=86=DB=8C=D8=B2=
+ =D8=AF=D8=A7=D8=B4=D8=AA=D9=87=E2=80=8C=D8=A7=DB=8C=D9=85. =D8=AF=D8=B1 =D8=
+=AD=D8=A7=D9=84 =D8=AD=D8=A7=D8=B6=D8=B1 =D9=86=DB=8C=D8=B2 =D8=A8=D9=87 =D8=
+=AF=D9=86=D8=A8=D8=A7=D9=84 =DA=AF=D8=B3=D8=AA=D8=B1=D8=B4 =D9=87=D9=85=DA=A9=
+=D8=A7=D8=B1=DB=8C=E2=80=8C=D9=87=D8=A7=DB=8C =D8=A8=D9=84=D9=86=D8=AF=D9=85=
+=D8=AF=D8=AA =D9=88 =D8=AD=D8=B6=D9=88=D8=B1 =D9=BE=D8=B1=D8=B1=D9=86=DA=AF=E2=
+=80=8C=D8=AA=D8=B1 =D8=AF=D8=B1 =D8=A8=D8=A7=D8=B2=D8=A7=D8=B1 =D8=B1=D9=88=D8=
+=B3=DB=8C=D9=87 =D9=87=D8=B3=D8=AA=DB=8C=D9=85.</span><br><span></span><br><=
+span>=D8=AF=D8=B1 =D8=B5=D9=88=D8=B1=D8=AA =D8=A7=D9=85=DA=A9=D8=A7=D9=86=D8=
+=8C =D8=A8=D8=B3=DB=8C=D8=A7=D8=B1 =D8=AE=D9=88=D8=B4=D8=AD=D8=A7=D9=84 =D8=AE=
+=D9=88=D8=A7=D9=87=D9=85 =D8=B4=D8=AF =D8=A7=DA=AF=D8=B1 =D8=B2=D9=85=D8=A7=D9=
+=86=DB=8C =D8=B1=D8=A7 =D8=A8=D8=B1=D8=A7=DB=8C =DB=8C=DA=A9 =DA=AF=D9=81=D8=
+=AA=E2=80=8C=D9=88=DA=AF=D9=88=DB=8C =D8=A2=D9=86=D9=84=D8=A7=DB=8C=D9=86 =DA=
+=A9=D9=88=D8=AA=D8=A7=D9=87 =D8=AF=D8=B1 =D8=B2=D9=85=D8=A7=D9=86=DB=8C =DA=A9=
+=D9=87 =D8=A8=D8=B1=D8=A7=DB=8C=D8=AA=D8=A7=D9=86 =D9=85=D9=86=D8=A7=D8=B3=D8=
+=A8 =D8=A8=D8=A7=D8=B4=D8=AF =D8=A7=D8=AE=D8=AA=D8=B5=D8=A7=D8=B5 =D8=AF=D9=87=
+=DB=8C=D8=AF. =D9=87=D9=85=DA=86=D9=86=DB=8C=D9=86 =D8=AF=D8=B1 =D8=B5=D9=88=
+=D8=B1=D8=AA =D8=AA=D9=85=D8=A7=DB=8C=D9=84=D8=8C =D8=A8=D8=A7 =DA=A9=D9=85=D8=
+=A7=D9=84 =D9=85=DB=8C=D9=84 =D9=BE=D8=B1=D9=88=D9=81=D8=A7=DB=8C=D9=84 =D8=B4=
+=D8=B1=DA=A9=D8=AA =D9=88 =DA=A9=D8=A7=D8=AA=D8=A7=D9=84=D9=88=DA=AF =D9=85=D8=
+=AD=D8=B5=D9=88=D9=84=D8=A7=D8=AA=D9=85=D8=A7=D9=86 =D8=B1=D8=A7 =D9=86=DB=8C=
+=D8=B2 =D8=A8=D8=B1=D8=A7=DB=8C=D8=AA=D8=A7=D9=86 =D8=A7=D8=B1=D8=B3=D8=A7=D9=
+=84 =D8=AE=D9=88=D8=A7=D9=87=D9=85 =DA=A9=D8=B1=D8=AF.</span><br><span></spa=
+n><br><span>=D8=A7=D8=B2 =D9=88=D9=82=D8=AA=DB=8C =DA=A9=D9=87 =D8=A8=D8=B1=D8=
+=A7=DB=8C =D9=85=D8=B7=D8=A7=D9=84=D8=B9=D9=87 =D8=A7=DB=8C=D9=86 =D9=BE=DB=8C=
+=D8=A7=D9=85 =D8=A7=D8=AE=D8=AA=D8=B5=D8=A7=D8=B5 =D8=AF=D8=A7=D8=AF=DB=8C=D8=
+=AF =D8=B5=D9=85=DB=8C=D9=85=D8=A7=D9=86=D9=87 =D8=B3=D9=BE=D8=A7=D8=B3=DA=AF=
+=D8=B2=D8=A7=D8=B1=D9=85 =D9=88 =D8=A7=D9=85=DB=8C=D8=AF=D9=88=D8=A7=D8=B1=D9=
+=85 =D9=81=D8=B1=D8=B5=D8=AA =D8=A2=D8=B4=D9=86=D8=A7=DB=8C=DB=8C =D9=88 =D9=
+=87=D9=85=DA=A9=D8=A7=D8=B1=DB=8C =D8=A8=D8=A7 =D8=AC=D9=86=D8=A7=D8=A8=D8=B9=
+=D8=A7=D9=84=DB=8C =D9=81=D8=B1=D8=A7=D9=87=D9=85 =D8=B4=D9=88=D8=AF.</span>=
+<br><span></span><br><span>=D8=A8=D8=A7 =D8=A7=D8=AD=D8=AA=D8=B1=D8=A7=D9=85=
+=D8=8C</span><br><span></span><br><span>=D8=B3=D9=87=DB=8C=D9=84 =D8=B0=D8=A7=
+=D9=84=DB=8C</span><br><span>Raspina Clothing</span><br><span>Dear Mr. Ebrah=
+im Dargahi Mello,</span><br><span></span><br><span>I hope this email finds y=
+ou well.</span><br><span></span><br><span>My name is Soheil Zali, and I repr=
+esent Raspina Clothing, an Iranian manufacturer of knitted and woven garment=
+s.</span><br><span></span><br><span>I was recently in contact with Mr. Alexa=
+nder Suslenkov, who kindly recommended that I get in touch with you because o=
+f your extensive experience and valuable role in strengthening business rela=
+tions between Iran and Russia.</span><br><span></span><br><span>We have been=
+ actively developing our presence in the Russian market and participated as a=
+n exhibitor at CPM Moscow from 2022 through 2025 under our Raspina brand. Th=
+ese exhibitions provided us with valuable opportunities to showcase our coll=
+ections, build long-term relationships with Russian business partners, and g=
+ain a deeper understanding of the Russian apparel market.</span><br><span></=
+span><br><span>Given your experience as Chairman of the Russia-Iran Business=
+ Council, I would be honored to become acquainted with you and learn from yo=
+ur valuable insights regarding business opportunities between our two countr=
+ies.</span><br><span></span><br><span>If you have some time in the future, I=
+ would be delighted to arrange a short online meeting at your convenience. I=
+ would also be pleased to send you our company profile and product catalog i=
+f you are interested.</span><br><span></span><br><span>Thank you very much f=
+or your time and consideration. I sincerely look forward to hearing from you=
+.</span><br><span></span><br><span>Kind regards,</span><br><span></span><br>=
+<span>Soheil Zali</span><br><span>Raspina Clothing</span><br></div></blockqu=
+ote></body></html>=
+
+--Apple-Mail-E4898460-4E5C-4CDE-B3A1-560AF2C19D4E--

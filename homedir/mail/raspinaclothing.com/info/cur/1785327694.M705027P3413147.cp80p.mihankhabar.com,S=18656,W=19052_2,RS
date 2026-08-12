@@ -1,0 +1,396 @@
+Return-Path: <ichulpan@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id rydHKE7waWqbFDQAyIPyJQ
+	(envelope-from <ichulpan@gmail.com>)
+	for <info@raspinaclothing.com>; Wed, 29 Jul 2026 15:51:34 +0330
+Return-path: <ichulpan@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Wed, 29 Jul 2026 15:51:34 +0330
+Received: from mail-pf1-f176.google.com ([209.85.210.176]:43468)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <ichulpan@gmail.com>)
+	id 1wp3Hs-0000000EHw2-3DUz
+	for info@raspinaclothing.com;
+	Wed, 29 Jul 2026 15:51:34 +0330
+Received: by mail-pf1-f176.google.com with SMTP id d2e1a72fcca58-8486ac3f347so2007723b3a.1
+        for <info@raspinaclothing.com>; Wed, 29 Jul 2026 05:20:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1785327634; cv=none;
+        d=google.com; s=arc-20260327;
+        b=i3fWVF3RzFYhVhPc0L95fj5B+L8NItoB4tU2sVGHr384zlfJXiHHJvn4IZq5XhT+ZV
+         H2gIuJagjuUhhmI8fPBCBBs4bPdQ2PMbd01HrmJfzh854zbWjaRi0le+DNaFo9/GGoDJ
+         EY3jzFbFd5E4WYjq5Y2UyM8grL/K3rr0rVCpr6/Uq/HVW0kn42YIVJhEahUfamlSXiO8
+         h1U1ir5Mog74JIBn5ECQvSUGSBkOWoBbCdlwZxeuJq6G5KCnQhwWUhHVzHz5CI0aFT3O
+         vpcLa8p87BdYtVIKZk1ZbwYO0eEnutXGNgkfPrmMyHW32JnLjDowMCH8Jqrt1NO1oLpN
+         9p+g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=3Px3+wWhakXALWdS/3Xzw5SdRWAiYUOLkaBr9CFDX2I=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=mMDxHxDhK1mOBjKHl9W/jeOJTwIZicyngRDXfIKrG18FacV151EMvf1lgrpu2f/hm/
+         3bbejNSr6pYFKIAJsKJKAaOttuTKVeH3llykwrQpsjlqAyWwF51xgZFgDvEzfOk/saf2
+         Vl4chNBJu6XzM4Ici1UbaCQQI/gCZe1TzavHlOHuk+4oaW7YzoNbpLAyUlZhJSlSFvzL
+         SmEbRxGr8egQFbpOUpUpg1E4aadLIRf5PCAxE78teaCelKJxYQObE08Y/V6c6g0bTRcD
+         go9VW/ZP2s427Kvb6p1UlwBRHQ+WkD+/jWMSXEo3wwTv5dY84p2vQfHjTcsy7EOMMnJU
+         jV0g==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1785327634; x=1785932434; darn=raspinaclothing.com;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=3Px3+wWhakXALWdS/3Xzw5SdRWAiYUOLkaBr9CFDX2I=;
+        b=AjTchqIL+FvYNm7TdkIQwxoZLwzo+8qzbN7PsxB/5LQbSKe7EraHQmCd9Z2QCKlXbd
+         Lp2pPRYES1d9N4wZvrVTX11pVK6tL4tQ/8r91u9qO5QmCtXvJKguqqjhpCYDIDbsEM5n
+         1ZkSu/4wV81nwYBZUSy9GD+yEp9H9I1mn035SJY/4VIwU30u+5yODmifDGWsYS0vBxef
+         Lr4VGK9HTRb/QY1nDWdLZubSBJPUfEtSc5U477jbyqkKFuwoi6lbnWvfE7VC94uLWvWF
+         hMy+jCYR6C4Why/9UkcL5hVg27a3HnpQv73iW4MMhLEHC846aQlrplPedzh9Z6ZaRq9r
+         HvdQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1785327634; x=1785932434;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=3Px3+wWhakXALWdS/3Xzw5SdRWAiYUOLkaBr9CFDX2I=;
+        b=Jlwmga1m7VzXb08O/lHoAcTyl6C0fh28a7Dmofz97JyicviLpGQeTT9uxfJ8ScQCwU
+         AAs98GzKs4VsIbxZoaMP/7z2lJV0El8doJk1DRgoLOzeSacAJRPzSnMLC2a+GkOHmUaq
+         au6GWF6nGh0L68FI0jEMykY4cfO25mUlC3dGPk8v45t/WniZDCwrkgt0Tl/G4JniG10L
+         kXbCkcUUk/fe1WCp5/0GUtjGTto/a5/6mpgkAOcp5qpQBRDkUW9kEQ7URmzmCXhc4Bs5
+         WT9SnFtXr/D92mej3WOtyGPYkvjA9VFsGzr+L/OHOO/YPvFIMa7gbl8uRHX8NylAcdoS
+         7T1A==
+X-Gm-Message-State: AOJu0YwWp3XtgVkBDx5VkTmDTizwVTKtMDqC5ABT8cd6KOHPqKVIhOcb
+	f3maaUapy0j2uTewNwH8yyo1AV9mfY58Urpt6/L04phx7BspAVoDXYgcrRVvhF6j8jWDzL2+jrT
+	Cww7dOOb0QuYFezFZ7oTET2mDU+cxAH9B1NIzcX+Rog==
+X-Gm-Gg: AR+sD12tkXB2eJOyq55Yvcsgl8XUvNYLiHgfHnEGKx2GoyX5Y79NbbW1gvU6Jxk7SOQ
+	NGntoYA1Utt/32Xz36FufTpf9NuI4EFeXT/mhcaufS7l4CXKoM19VXAD3KgzBLcw8zH8N5TKLIc
+	p8978JoxoBZ1bpTLZcLlFS6KPatKaQZ3uT8TpWaBeip4v2fd0FUDEAY/TRZobyVypre2aJcqTRm
+	M7YtNMg9cWF2YRZqn6JzIHD2MTL4KXUPrr5BKocQkTuNzFjaok+ZVNmJzHqm5G9/nmvRxJT0I0I
+	3L97l3GjxaViQd4e6f2vZJ6hQh20UJ+xpBolwK55xYB+5xUwr5x6N3fBipbjN0dygjdkGx78YQ=
+	=
+X-Received: by 2002:a05:6a20:db90:b0:39b:bc11:9ec5 with SMTP id
+ adf61e73a8af0-3c8e464ea6dmr2314262637.13.1785327634142; Wed, 29 Jul 2026
+ 05:20:34 -0700 (PDT)
+MIME-Version: 1.0
+References: <d08b4eee73a75d3b0718c19b04ec0501@raspinaclothing.com>
+ <CAMe4RvRT20pLXCFwG6E3qhu=qdFDXKOzgpHBn_4pVna9LY5bxQ@mail.gmail.com>
+ <d6a77da06dad57f7b3427daa0f64a759@raspinaclothing.com> <CAMe4RvS3=z4LZpUt-AvZVFuQkEkBQcMgLRnNgMf4r5ny93eAiQ@mail.gmail.com>
+ <CAMe4RvSGWEVCCgPtNz0Fnonm4KeB_b6oNGRdDdiwmWVMofz3TA@mail.gmail.com> <bd89494e31a69ab45b584306eda682c4@raspinaclothing.com>
+In-Reply-To: <bd89494e31a69ab45b584306eda682c4@raspinaclothing.com>
+From: =?UTF-8?B?0KfRg9C70L/QsNC9?= <ichulpan@gmail.com>
+Date: Wed, 29 Jul 2026 15:20:21 +0300
+X-Gm-Features: AUfX_myz9Lf3ZO8f6xuhjl6KwsLv5ZoHMDk_aG_EoeC3N4i-lSUCfIgqKd2LTTI
+Message-ID: <CAMe4RvS8N16oQj-=KhH+k3VZ2j+y+RM4t2r-bxzjQUHpOiiN=g@mail.gmail.com>
+Subject: Re: Fwd: Export Cooperation Opportunity with Raspina Clothing
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="00000000000070d9b60657befb3c"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Dear Soheil, Thank you very much for your detailed reply and
+    for answering all of my questions so openly. I truly appreciate your professionalism
+    and the time you have taken to provide such detailed i [...] 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.210.176 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.210.176 listed in list.dnswl.org]
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [ichulpan(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--00000000000070d9b60657befb3c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Soheil, Thank you very much for your detailed reply and for answering
+all of my questions so openly. I truly appreciate your professionalism and
+the time you have taken to provide such detailed information. It has been a
+pleasure getting to know more about Raspina Clothing and your approach to
+working with international customers. Thank you as well for explaining your
+production process. It is very helpful to understand how you organize
+manufacturing and cooperate with partner factories while maintaining your
+quality standards. As part of my work, I always carry out a due diligence
+review before introducing a manufacturer to potential customers. This helps
+me better understand the company and confidently present it to my business
+partners. I hope you don't mind if I ask a few more questions. Could you
+please share: =E2=80=A2 Your Business Registration Certificate (or Company
+Registration Certificate); =E2=80=A2 Your company registration number; =E2=
+=80=A2 Your
+export license (if applicable); =E2=80=A2 The legal name of the company exa=
+ctly as
+it appears on the registration documents. I would also be grateful if you
+could clarify one more point. In your company presentation, you mention
+woven fabric production, circular knitting production, and warp knitting
+production. Could you please explain whether these facilities belong to
+Raspina or to your manufacturing partners? This information will help me
+better understand your production structure and present your company
+accurately to potential customers. There is absolutely no rush. I
+understand that collecting these documents may take some time. Thank you
+once again for your openness and professional communication. I look forward
+to hearing from you. Best regards, Chulpan
+
+
+=D0=A1 =D1=83=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC, =D0=A7=D1=83=
+=D0=BB=D0=BF=D0=B0=D0=BD =D0=92=D0=BE=D1=80=D0=BE=D0=BD=D1=86=D0=BE=D0=B2=
+=D0=B0
+
+=D0=AD=D0=BB. =D0=BF=D0=BE=D1=87=D1=82=D0=B0 ichulpan@gmail.com
+
+
+
+
+
+
+=D0=B2=D1=82, 28 =D0=B8=D1=8E=D0=BB. 2026=E2=80=AF=D0=B3. =D0=B2 16:17, <in=
+fo@raspinaclothing.com>:
+
+> Dear Chulpan,
+>
+> Thank you very much for your thoughtful email and for taking the time to
+> carefully review our company profile, catalog, and production materials.
+>
+> I truly appreciate the effort you are putting into getting to know our
+> company before introducing us to your business partners. Your
+> professional approach gives me great confidence, and I genuinely have a
+> very positive feeling about the possibility of working together. I
+> sincerely hope that our discussions will lead to a successful long-term
+> cooperation.
+>
+> I also appreciate your interest in arranging a video meeting. Whenever
+> you feel you have completed your review and are ready, I will be happy
+> to schedule a meeting at a time that is convenient for you. I look
+> forward to speaking with you personally.
+>
+> Please find my answers to your additional questions below:
+>
+> =E2=80=A2 Dyma LLC
+>
+> Our cooperation with Dyma LLC was a completed project. After its
+> completion, there was no further follow-up from either side.
+>
+> =E2=80=A2 MOQ
+>
+> Our standard MOQ is 100 pieces per style. The MOQ per colour is flexible
+> and can always be discussed depending on the customer's requirements and
+> the order structure.
+>
+> =E2=80=A2 Custom designs and technical packs
+>
+> Absolutely. We are able to manufacture garments based entirely on our
+> customers' requirements. Whether the customer provides their own
+> designs, technical packs, size specifications, or other production
+> details, our team has the capability to develop samples and manufacture
+> the products accordingly.
+>
+> =E2=80=A2 Fabric sourcing
+>
+> We work with both locally sourced and imported fabrics. We are very
+> flexible in this regard and can source materials according to our
+> customers' preferences, quality requirements, and budget.
+>
+> =E2=80=A2 Quality standards and testing
+>
+> Our company is familiar with the quality standards commonly required in
+> the Russian market. As part of our quality control process, we routinely
+> perform fabric testing, including abrasion resistance, shrinkage, and
+> fabric drape evaluations to ensure that our products meet the expected
+> quality standards.
+>
+> =E2=80=A2 Production facilities
+>
+> Some parts of our production process and certain machinery are operated
+> in cooperation with trusted partner factories. These partners work
+> strictly according to our production standards, quality requirements,
+> and technical specifications, ensuring consistent product quality
+> throughout the manufacturing process.
+>
+> Once again, thank you very much for your continued interest in Raspina
+> Clothing. It is a pleasure communicating with you, and I truly
+> appreciate your professionalism and the time you have invested in
+> learning about our company.
+>
+> I look forward to hearing from you again and to our future video
+> meeting.
+>
+> Kind regards,
+>
+> Soheil Zali
+> Raspina Clothing
+>
+
+--00000000000070d9b60657befb3c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><span style=3D"color:rgb(0,0,0);font-family:Roboto,-a=
+pple-system,&quot;apple color emoji&quot;,BlinkMacSystemFont,&quot;Segoe UI=
+&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-=
+serif;white-space:pre-wrap">Dear Soheil,
+
+Thank you very much for your detailed reply and for answering all of my que=
+stions so openly.
+
+I truly appreciate your professionalism and the time you have taken to prov=
+ide such detailed information. It has been a pleasure getting to know more =
+about Raspina Clothing and your approach to working with international cust=
+omers.
+
+Thank you as well for explaining your production process. It is very helpfu=
+l to understand how you organize manufacturing and cooperate with partner f=
+actories while maintaining your quality standards.
+
+As part of my work, I always carry out a due diligence review before introd=
+ucing a manufacturer to potential customers. This helps me better understan=
+d the company and confidently present it to my business partners.
+
+I hope you don&#39;t mind if I ask a few more questions.
+
+Could you please share:
+
+=E2=80=A2 Your Business Registration Certificate (or Company Registration C=
+ertificate);
+
+=E2=80=A2 Your company registration number;
+
+=E2=80=A2 Your export license (if applicable);
+
+=E2=80=A2 The legal name of the company exactly as it appears on the regist=
+ration documents.
+
+I would also be grateful if you could clarify one more point.
+
+In your company presentation, you mention woven fabric production, circular=
+ knitting production, and warp knitting production. Could you please explai=
+n whether these facilities belong to Raspina or to your manufacturing partn=
+ers?
+
+This information will help me better understand your production structure a=
+nd present your company accurately to potential customers.
+
+There is absolutely no rush. I understand that collecting these documents m=
+ay take some time.
+
+Thank you once again for your openness and professional communication. I lo=
+ok forward to hearing from you.
+
+Best regards,
+
+Chulpan</span></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-sm=
+artmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"l=
+tr"><div dir=3D"ltr"><div>=C2=A0</div><div>=C2=A0</div><div>=D0=A1 =D1=83=
+=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC, =D0=A7=D1=83=D0=BB=D0=BF=
+=D0=B0=D0=BD =D0=92=D0=BE=D1=80=D0=BE=D0=BD=D1=86=D0=BE=D0=B2=D0=B0</div><d=
+iv><br></div><div>=D0=AD=D0=BB. =D0=BF=D0=BE=D1=87=D1=82=D0=B0 <a href=3D"m=
+ailto:ichulpan@gmail.com" target=3D"_blank">ichulpan@gmail.com</a></div><di=
+v><br></div><div><div style=3D"color:rgb(34,34,34)"><br></div></div><div><b=
+r></div><div><br></div></div></div></div></div></div></div><br></div><br><d=
+iv class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gm=
+ail_attr">=D0=B2=D1=82, 28 =D0=B8=D1=8E=D0=BB. 2026=E2=80=AF=D0=B3. =D0=B2 =
+16:17, &lt;<a href=3D"mailto:info@raspinaclothing.com">info@raspinaclothing=
+.com</a>&gt;:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0p=
+x 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">De=
+ar Chulpan,<br>
+<br>
+Thank you very much for your thoughtful email and for taking the time to <b=
+r>
+carefully review our company profile, catalog, and production materials.<br=
+>
+<br>
+I truly appreciate the effort you are putting into getting to know our <br>
+company before introducing us to your business partners. Your <br>
+professional approach gives me great confidence, and I genuinely have a <br=
+>
+very positive feeling about the possibility of working together. I <br>
+sincerely hope that our discussions will lead to a successful long-term <br=
+>
+cooperation.<br>
+<br>
+I also appreciate your interest in arranging a video meeting. Whenever <br>
+you feel you have completed your review and are ready, I will be happy <br>
+to schedule a meeting at a time that is convenient for you. I look <br>
+forward to speaking with you personally.<br>
+<br>
+Please find my answers to your additional questions below:<br>
+<br>
+=E2=80=A2 Dyma LLC<br>
+<br>
+Our cooperation with Dyma LLC was a completed project. After its <br>
+completion, there was no further follow-up from either side.<br>
+<br>
+=E2=80=A2 MOQ<br>
+<br>
+Our standard MOQ is 100 pieces per style. The MOQ per colour is flexible <b=
+r>
+and can always be discussed depending on the customer&#39;s requirements an=
+d <br>
+the order structure.<br>
+<br>
+=E2=80=A2 Custom designs and technical packs<br>
+<br>
+Absolutely. We are able to manufacture garments based entirely on our <br>
+customers&#39; requirements. Whether the customer provides their own <br>
+designs, technical packs, size specifications, or other production <br>
+details, our team has the capability to develop samples and manufacture <br=
+>
+the products accordingly.<br>
+<br>
+=E2=80=A2 Fabric sourcing<br>
+<br>
+We work with both locally sourced and imported fabrics. We are very <br>
+flexible in this regard and can source materials according to our <br>
+customers&#39; preferences, quality requirements, and budget.<br>
+<br>
+=E2=80=A2 Quality standards and testing<br>
+<br>
+Our company is familiar with the quality standards commonly required in <br=
+>
+the Russian market. As part of our quality control process, we routinely <b=
+r>
+perform fabric testing, including abrasion resistance, shrinkage, and <br>
+fabric drape evaluations to ensure that our products meet the expected <br>
+quality standards.<br>
+<br>
+=E2=80=A2 Production facilities<br>
+<br>
+Some parts of our production process and certain machinery are operated <br=
+>
+in cooperation with trusted partner factories. These partners work <br>
+strictly according to our production standards, quality requirements, <br>
+and technical specifications, ensuring consistent product quality <br>
+throughout the manufacturing process.<br>
+<br>
+Once again, thank you very much for your continued interest in Raspina <br>
+Clothing. It is a pleasure communicating with you, and I truly <br>
+appreciate your professionalism and the time you have invested in <br>
+learning about our company.<br>
+<br>
+I look forward to hearing from you again and to our future video <br>
+meeting.<br>
+<br>
+Kind regards,<br>
+<br>
+Soheil Zali<br>
+Raspina Clothing<br>
+</blockquote></div>
+
+--00000000000070d9b60657befb3c--

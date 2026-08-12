@@ -1,0 +1,371 @@
+Return-Path: <noreply+admin=raspinaclothing.com@mega.nz>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id yCJ+IwrhbWeZjwoAyIPyJQ
+	(envelope-from <noreply+admin=raspinaclothing.com@mega.nz>)
+	for <admin@raspinaclothing.com>; Fri, 27 Dec 2024 02:34:42 +0330
+Return-path: <noreply+admin=raspinaclothing.com@mega.nz>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Fri, 27 Dec 2024 02:34:42 +0330
+Received: from relay4.api.mega.co.nz ([66.203.124.43]:40342)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <noreply+admin=raspinaclothing.com@mega.nz>)
+	id 1tQwuA-002teY-1y
+	for admin@raspinaclothing.com;
+	Fri, 27 Dec 2024 02:34:42 +0330
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mega.nz; s=201611;
+	t=1735254229; bh=1LM+RPijgg19Ba7xnvWVD+J9PXDgn4jcXcqICxJ1zsE=;
+	h=Date:To:From:Subject:From;
+	b=ez/tG93sWDRNNLmSrqtrj/A6eN5ir8LlMyRsqH32pMiRPgpfXOTZG0h1ErPtVeEcw
+	 55g5of0g22Cv/hGAJawAQZUCqiYGEU47CJqYQkHRiV1c0FEB5rXvcokbAQbP1LLJtJ
+	 QEwzdmEB4lvRtNQx5NpO/VKB1YHAfF++yHfrzMn4MFLqL7FJfmsM30S8pfoiea1zKz
+	 BkWkk8FoEdAcuTymLknHoH7ZnifnNjxwfwWbgL7VfcGuqqpMGx5dYvsLNG2i700K0P
+	 moZQt0YZRO+MIBw4APHecuHIhDApcONkX6vZROGyVqt2LQg93DlQBtPrsfvKbP0r7Q
+	 DFPfObiX4EFug==
+Received: from mega800 (bt0.api.mega.co.nz [66.203.125.10])
+	by relay4.api.mega.co.nz (Postfix) with ESMTP id 5D07CC21CA7
+	for <admin@raspinaclothing.com>; Fri, 27 Dec 2024 00:03:49 +0100 (CET)
+Date: Thu, 26 Dec 2024 23:03:49 +0000
+To: admin@raspinaclothing.com
+From: MEGA <noreply@mega.nz>
+Subject: MEGA misses you.
+Message-ID: <P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0@mega800>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0"
+Content-Transfer-Encoding: 8bit
+X-Spam-Status: No, score=-3.9
+X-Spam-Score: -38
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  admin@raspinaclothing.com MEGA misses you. We notice that
+   you haven’t used your MEGA account recently. We would love to see you back!
+    
+ Content analysis details:   (-3.9 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: mega.nz]
+  0.0 URIBL_ZEN_BLOCKED      ADMINISTRATOR NOTICE: The query to
+                             zen.spamhaus.org was blocked. See
+                             https://www.spamhaus.org/returnc/vol/
+                             [URIs: mega.nz]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [66.203.124.43 listed in bl.score.senderscore.com]
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.0 KAM_SHORT              Use of a URL Shortener for very short URL
+X-Spam-Flag: NO
+
+This is a multi-part message in MIME format.
+
+--b1_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+admin@raspinaclothing.com
+
+MEGA misses you.
+
+
+
+We notice that you haven’t used your MEGA account recently. We would love to see you back!
+
+
+
+You can use our MEGA Desktop App which is available for Windows, macOS and Linux to automatically keep your computer data in sync with your MEGA account: https://mega.nz/sync 
+
+
+
+You can use our MEGA Mobile Apps (Android and iOS) to automatically back up photos and videos to your MEGA account: https://mega.nz/mobile 
+
+
+
+If you have forgotten your password, you can reset your account here (https://mega.nz/recovery).
+
+
+
+Please note that all your data on MEGA is encrypted with your password, which only you have. If you want to access the data in your MEGA account, you either need your password, an active session in for example a browser tab, or your Recovery Key.
+
+
+
+If you do not have a backup of your Recovery Key and you still have access to your MEGA account, now is a good time to make a secure backup of your Recovery Key (https://mega.nz/backup).
+
+
+
+If you need any assistance or have any suggestions, feel free to contact us at support@mega.nz (mailto:support@mega.nz)
+
+Best regards,
+
+— Team MEGA
+
+---
+
+Don’t want to receive these emails?
+
+ Account notification settings (https://mega.nz/fm/account/notifications)
+
+--b1_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: multipart/related;
+ boundary="b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0";
+ type="text/html"
+
+--b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MEGA misses you.
+
+</title>
+<style>
+
+</style>
+
+
+</head>
+
+<body style="margin:0; padding: 0;">
+<table width="100%"  cellpadding="0" cellspacing="0"  style="padding:0; margin:0; ">
+  <tr>
+    <td style="font-size:0;"><span></span></td>
+    <td valign="top" align="left" style="width:640px; max-width:640px;" >
+        <table width="100%" bgcolor="#FFFFFF"  cellpadding="0" cellspacing="0"  style="padding:0; margin:0; border:0;">
+            <tr>
+              <td align="left" style="padding: 32px 63px 0 63px;" id="main-pad">
+
+                  <a href="https://mega.nz/" target="_blank"> <img alt="" src="cid:megaheadericon.png-z142a9b411f5b063d" width="136" style="max-height:45px; width:136px; *width:136px; *height=45px;" /></a>
+
+                  <!-- Content !-->
+                  <h1 style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; line-height: 31px; color: #777777; padding: 0; margin: 28px 0 32px 0; font-weight: 400; text-align: left;text-decoration: none;"><a href="https://mega.nz/" style="text-decoration:none;color:#777777;"><span style="display:block;"> admin@raspinaclothing.com </span></a></h1>
+                  
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; margin: 0; padding: 0; margin: 0 0 20px 0; text-align: left;">
+                    We notice that you haven’t used your MEGA account recently. We would love to see you back!
+
+
+                  </p>
+
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; margin: 0; padding: 0; margin: 0 0 20px 0; text-align: left;">
+                    You can use our MEGA Desktop App which is available for Windows, macOS and Linux to automatically keep your computer data in sync with your MEGA account: <a href="https://mega.nz/sync" target="_blank" style=" font-size: 16px; line-height: 20px; color:#D90007; text-decoration: none;">https://mega.nz/sync </a>
+
+
+                  </p>
+
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; margin: 0; padding: 0; margin: 0 0 20px 0; text-align: left;">
+                    You can use our MEGA Mobile Apps (Android and iOS) to automatically back up photos and videos to your MEGA account: <a href="https://mega.nz/mobile" target="_blank" style=" font-size: 16px; line-height: 20px; color:#D90007; text-decoration: none;">https://mega.nz/mobile </a>
+
+
+                  </p>
+
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; margin: 0; padding: 0; margin: 0 0 20px 0; text-align: left;">
+                    If you have forgotten your password, you can <a href="https://mega.nz/recovery" target="_blank" style=" font-size: 16px; line-height: 20px; color:#D90007; text-decoration: none;">reset your account here</a>.
+
+
+                  </p>
+
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; margin: 0; padding: 0; margin: 0 0 20px 0; text-align: left;">
+                    Please note that all your data on MEGA is encrypted with your password, which only you have. If you want to access the data in your MEGA account, you either need your password, an active session in for example a browser tab, or your Recovery Key.
+
+
+                  </p>
+
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; margin: 0; padding: 0; margin: 0 0 20px 0; text-align: left;">
+                    If you do not have a backup of your Recovery Key and you still have access to your MEGA account, now is a good time to <a href="https://mega.nz/backup" target="_blank" style=" font-size: 16px; line-height: 20px; color:#D90007; text-decoration: none;">make a secure backup of your Recovery Key</a>.
+
+
+                  </p>                
+
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; padding: 0; margin: 0px 0 20px 0; text-align: left;">
+                    If you need any assistance or have any suggestions, feel free to contact us at <a href="mailto:support@mega.nz" style=" font-size: 16px; line-height: 20px; color:#D90007; text-decoration: none;">support@mega.nz</a>
+                  </p>
+                  <!-- end of Content !-->
+
+                  <!-- Regards !-->
+                  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height:20px; color: #333333; padding: 0; margin: 35px 0 0 0; text-align: left;">
+                    Best regards,<br/><br/>— Team MEGA
+                  </p>
+                  <!-- end of Regards !-->
+
+              </td>
+            </tr>
+        </table>
+    </td>
+    <td style="font-size:0;"><span></span></td>
+  </tr>
+
+ <!-- Copyrights !-->
+  <tr>
+    <td style="font-size:0;"><span></span></td>
+    <td valign="middle" align="center"  style="width:640px; max-width:640px; padding: 25px 0 28px 0;" id="copyrights-block">
+        <p style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:20px; color: #999999; padding: 0; margin: 4px 0 22px 0;">Mega Limited 2024 </p>
+        <table  cellpadding="0" cellspacing="0"  style="padding:0; margin:0; border:0;">
+            <tr>
+                <td style="padding: 0 8px;"><a href="https://www.twitter.com/MEGAprivacy" target="_blank" style="text-decoration: none;"><img alt="" src="cid:footertwitter.png-z142a9b411f5b063d" width="24" style="border-style: none; max-height:24px; width:24px; *width:24px; *height=24px;" /></a></td>
+                <td style="padding: 0 8px;"><a href="https://www.facebook.com/MEGAprivacy" target="_blank" style="text-decoration: none;"><img alt="" src="cid:footerfacebook.png-z142a9b411f5b063d" width="24" style="border-style: none; max-height:24px; width:24px; *width:24px; *height=24px;" /></a></td>
+                <td style="padding: 0 8px;"><a href="https://mega.nz/" target="_blank" style="text-decoration: none;"><img alt="" src="cid:footermega.png-z142a9b411f5b063d" width="24" style="border-style: none; max-height:24px; width:24px; *width:24px; *height=24px;" /></a></td>
+            </tr>
+        </table>
+        <p style="border-bottom:1px solid #DDDDDD; width:600px; margin:0 0 12px 0;">&nbsp;</a>
+        <p style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; line-height:20px; color: #999999; padding: 0; margin: 0 0 22px 0;">Don’t want to receive these emails?
+
+ <a href="https://mega.nz/fm/account/notifications" target="_blank" style="font-weight:bold; font-size: 13px; line-height: 18px; color:#999999; text-decoration: underline; overflow: hidden; text-overflow: ellipsis; word-wrap:break-word; ms-word-break: break-all; word-break: break-all; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;" lang="en">Account notification settings</a></p>
+    </td>
+    <td style="font-size:0;"><span></span></td>
+  </tr>
+  <!-- end of Copyrights !-->
+
+</table>
+
+<style type="text/css">
+#bottom-button-bg {
+    background-color:transparent !important;
+    padding: 0 !important;
+}
+#bottom-button {
+    padding: 12px 20px 12px 20px !important;
+}
+@media only screen and (max-width: 480px) {
+    #main-pad {
+        padding: 32px 16px 0 16px !important;
+    }
+    #copyrights-block {
+        padding: 25px 0 27px 0 !important;
+    }
+}
+</style>
+</body>
+</html>
+
+--b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <megaheadericon.png-z142a9b411f5b063d>
+Content-Disposition: inline
+
+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
+
+--b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <footerfacebook.png-z142a9b411f5b063d>
+Content-Disposition: inline
+
+iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAARVBMVEUAAACgoKCampqbm5uampqZ
+mZmhoaGZmZmZmZmZmZmZmZmZmZmZmZmampqampqhoaGlpaWampqZmZmbm5ubm5ubm5uZmZmSkE+9
+AAAAFnRSTlMABfRd+OYJqDbszLePfE4aENuvhWZsJ0R8fgAAASBJREFUSMeVltuWgyAMRSO3AblU
+1Ob/P3WmtdNlPYjNflS2YhITCHAlxRqMCTWm4uiCSc+Kd6hZT53lLisGVD57zbBabmLXgRrcRj5l
+vBHgLXewng5ow12MPqznSz4Mb64F43ffa/kL7PvLh0Z8kp8edz5j9R/dFZaHx+tB4PWVX9zQnZqC
+3XKesRqGtsD5WW8KE7uFLi/L8UlTOwXxKYSTZMwM/Ly2g8xETkkE5ajAxWXZqmD5A24WSnBtX/KY
+UIo9wTfiUXsC7rdS6Al3LBoyLIkSG7kQZEKgKhMqRZkQKcmEREUmFHHxycubtETQ8IuCgL8o5e+F
+DG2mL1gHjazPCq2yzzhIm7G03UsHinxkyYeifOzKB7v86CA/nIiPP7+miojurnnqOQAAAABJRU5E
+rkJggg==
+
+--b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <footermega.png-z142a9b411f5b063d>
+Content-Disposition: inline
+
+iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAUVBMVEUAAACZmZmZmZmhoaGZmZmv
+r6+ampqZmZmZmZmZmZmampqZmZmampqampqZmZmampqcnJylpaWdnZ2ZmZmbm5uampqampqZmZmZ
+mZmhoaGZmZkf+BAHAAAAGnRSTlMA9Y8J5gXKt697T+zbZV9bNhEamkgvpYduGwjdD+cAAAFaSURB
+VEjHlZbbloMgDEVPAAXxUltt6+T/P3SsqzNUQluznwzLrUQhAQIbje9aorbzJlp84TwE4hcoDGe8
+xzbEAmrevabqHRdxfYUCl5rfUl8gGB1/wI3IOBF/hE7Z/fyVnTHSd4HGl3wdH8D9Z17VfIj67+v2
+fJD++X/dUcHZTWj4MM223ui4QI+VOKR4meeJM6Z5XlI0rEJIIVYW3rFgJYUBsJRCmVKDvUAWkTMB
+9zRwRyZwhBFCGjIQgoGXAqZnvpCCR1cQcHtENxSEDm1JqAJzqEpCC8qE2W6G99v9ds4EEoLx6cmr
+ZzKBxZTMYy5pZkZMqRMC31LuQujgcyF9z4ml4GEKApt0JX5cFMJzTdy5JERYKglc11wSyAKhICSM
+WN4YNMKw36Lxer3WWWlZh+LLFtUWAXWZ0RYydanUFmN9udc3FH3L0jfFxI+i7Soau/rooD+cqI8/
+v1RGl0l+wei1AAAAAElFTkSuQmCC
+
+--b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <footertwitter.png-z142a9b411f5b063d>
+Content-Disposition: inline
+
+iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAaVBMVEUAAACZmZmpqamampq8vLya
+mpqZmZmcnJyenp6ampqampqampqampqampqampqampqgoKCampqampqcnJyampqZmZmdnZ2oqKiZ
+mZmZmZmampqampqdnZ2ampqampqbm5uZmZmampqZmZkZuKmlAAAAInRSTlMA9AhjA/nkOhzvzaV3
+W8CKDtmrKuhKEwveyrWVIW5UQ3NMxoKyJQAAAXFJREFUSMeV1ut6gyAMBuAPxLOCise2a7fc/0Xu
+Wbt1AbWV91/7oBIgCViRgyl1K0SrSzNIvNHUnSBGdHWDfbLKaSWv9j6jooQ2JZHChqygXUWGlbSn
+F/oUniiml+LIG09vOU+kMb0Vpyzeng7on5Grgg4plBvA4TBkQgcljz2v6LDqft5yOixvANQUoAbQ
+8dMs+JGzk/3Iaa7YInaAFHwZ7HMBThN+jKkac/ZGiS9iGlyW3/eP+HNJ2YgBhu++AtQjiQyepoUN
+MSiJsfdl+9AxXXfypIQm5owHacedg6zR8p20CiuGuBaCr6rCWkmcgPD3xTd7D7TOzwG+G3lT0sQt
+8vWMSHt/zH4U1kveEoYcZzjkQi6DgVwny4thSZ4BUnhRff6HMZ7II6RzvKNrmvH5z+Tr3AQq6onV
+nnO8nUBN7vaD9CKn7Fbp7RQNLQLBZSa0kAWXytBiHFruQxtKeMsKb4rhbTe8sYdfHcIvJ8HXn28A
+SMQ0SxcMsgAAAABJRU5ErkJggg==
+
+--b2_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0--
+
+
+--b1_P3czF3zY6GvtGhc2yTg4nCjWXdTE5Kc8eHz4mJujE0--
+

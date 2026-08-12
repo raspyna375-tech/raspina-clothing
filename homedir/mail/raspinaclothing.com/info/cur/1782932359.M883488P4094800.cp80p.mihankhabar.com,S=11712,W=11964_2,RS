@@ -1,0 +1,252 @@
+Return-Path: <asuslenkov@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id GswKM4djRWpQez4AyIPyJQ
+	(envelope-from <asuslenkov@gmail.com>)
+	for <info@raspinaclothing.com>; Wed, 01 Jul 2026 22:29:19 +0330
+Return-path: <asuslenkov@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Wed, 01 Jul 2026 22:29:19 +0330
+Received: from mail-ed1-f41.google.com ([209.85.208.41]:53572)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <asuslenkov@gmail.com>)
+	id 1wf09s-0000000H8Ue-1Y5E
+	for info@raspinaclothing.com;
+	Wed, 01 Jul 2026 22:29:19 +0330
+Received: by mail-ed1-f41.google.com with SMTP id 4fb4d7f45d1cf-691c5776f35so1640755a12.3
+        for <info@raspinaclothing.com>; Wed, 01 Jul 2026 11:58:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1782932308; cv=none;
+        d=google.com; s=arc-20260327;
+        b=j3Q/A9JZKNONIwpJDK2mQrbGVSyBwAnGYAAnMKzq9Zs3MTVsJPfdLE/WEBzTacpmgm
+         TRAT87x38NbLT8pPYnuOhLgWpyG6fY7+rnaA4mNGLYK9cNtXdW0ctlh9+A3X5yj9pBY6
+         zLKN3Tam41qkzFiZ/Mpd9+eKjkhqGvV23ZQ2VkkKfSCZOBPbeBC3BzMxmfMWewAbIvZU
+         Pnrzed9kB65JcxB/jA0PjL/qK1NqOmxty0yumoZ+HkBSRfGsTwy4PuZPz2AjK6IuHsbo
+         bzJFPZ1cPPEHxKA1IiWJiolIYogA7fnnlNMCAy/xHUtjhr+RFiFVNjFt8gBMYNjzJmrk
+         y4VA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=dNQW1/+4NaWMepEoFsJf0h8eBJDQq67qOxOq9Zj4/jE=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=HVEidMfUW8PbeVwdP6gorVtKV6obdp5MGAIIGXEzZxZ/9AqFe8OdC0qGgUdGWYFh1t
+         2VmUyIpkDfxUdfVtGKor+wiCuSk5AEI5YLV05C4pLzacNp1QNr2Vu279s0V4l9/DpN+7
+         F/iu/Ge/KItqmETTLj4w85icA8PkT2W1w52Ke+v4QaZZtzfDcz3FEpZDMnyZDxSrvDLs
+         XyrSv8JFDy6+Io9fOWz4i3N7g/e1XxIAZBcYQ9Jas2mslBbm9kJnzw+SfxXkkctswqIt
+         1SFFd/4v7EY8a/VptVWRy+F5JYg2hk8tp/a+C9HnEYqDNftJrQYR8drAhKm+htnhk3eO
+         C2bg==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1782932308; x=1783537108; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=dNQW1/+4NaWMepEoFsJf0h8eBJDQq67qOxOq9Zj4/jE=;
+        b=etLiUOWUXT4U6aGvHXS7SdReMX75Upoo3bVLBR5TqNK1y6xN4xxByjvSoxMIt5g6zM
+         SVUpZ92buZHeb+JZQTU82xawdpFLk+4QbwtKTTXoEEGYeU5cJqyQCsAz5Q+X+CfhaKlj
+         Sa6n/ZVIBPFucWkHjqwgcdbAjSTokoEvs3MTIajqhtun9aYqosNkOSWFE9LD5y6qokNm
+         M5BUTlejjwlQcaqUqjhj1fW3tYFjflEZxeDeqOlvsB7ZrDk9WSqGT9MgTshX4iMw7S0M
+         sOvWh8uHuTb+E2WQC4ONO4mEN+5Ba96k/f4ONL3tCCi7ynNByGWgfhWwah+pDbb59XD1
+         ia+w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1782932308; x=1783537108;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=dNQW1/+4NaWMepEoFsJf0h8eBJDQq67qOxOq9Zj4/jE=;
+        b=Alq+rBR3SFFoCmK0mEsnLJYOGSQthOQi21skOZAurVvO2cAL22QkT5HoKLbacr7ImX
+         msNMvXJErOXoKtM6c1PjFFrHK5z+a67x6wSEh5Q9yzGHLRsHD/+3//VCR1vi/6CqVviE
+         Bt4BcAIeRArRC9EMUxy7WxmG0KkQyHruzyTewBixnPEiacX14oVluAcCZjatxBlCufvY
+         TzSUvjrL0E4IwX1c6yDpdw4js61tCHBEpE/s0cBmQnuQod7lmYXjN4nETXqmI2nklqqi
+         HBuV9ZY4GLWg6HwfwoAoAUdzluY6CugcCZvXesSlgeujwFt2IZSSYJXBPOXzvJIFzFfg
+         Q/rw==
+X-Gm-Message-State: AOJu0YwCRBW96g5AtpBhU+cSjoq29OWrjVVbiqimfaZCCNyTJ5O8LxaA
+	xjYYCn/wDFOSIdU3qJqVjKSg8nr5YLBvnAKDYt1mlGxwg9ZeONiglOu9+m+Ex2cL+y8VItv1Ezp
+	mCf6DYjmyZPS6Lb3n9SevBnvyZ0IUu5V0ww==
+X-Gm-Gg: AfdE7clDTe8MVXFUmKIz3XSX1YDpf0m8ubm1OJtYyz5o5GAo+iortF7UMEJFvndMi85
+	Gf4hRnowCJpF+tPA1KbRrsM6yN8kE7yf3iolD+Wc8JcVulGKEKsYWQfgdqtbaxACimyL/1SmWJv
+	AATQbszlyE3wPOh3eQ9nrvJEJcaFB1QVhtOrqE096tcne28UiWvR82h5X5niDV3NbOqkRL91QPA
+	YQCZ7PcL85TXx51glBkMEWYmi8bgxQHz17Tl7m9jkg71Mbdxvimb5Rn4pnYQuU1zQheBAusiWDK
+	DaB4c4dMyzCgu12irU6mpywh3WIP
+X-Received: by 2002:a05:6402:4311:b0:697:4fff:b90a with SMTP id
+ 4fb4d7f45d1cf-6989f2fab3amr1468696a12.4.1782932308086; Wed, 01 Jul 2026
+ 11:58:28 -0700 (PDT)
+MIME-Version: 1.0
+References: <b75d19791b1b494c397318cbc032862e@raspinaclothing.com>
+ <CAG1OuKFxTa9zePwgc1+sb61FoJBxGNwFZS1LLyOLuQxTtSRQ+A@mail.gmail.com> <429907b47e55da8fe22dd9ee88693ac8@raspinaclothing.com>
+In-Reply-To: <429907b47e55da8fe22dd9ee88693ac8@raspinaclothing.com>
+From: Alexander Suslenkov <asuslenkov@gmail.com>
+Date: Wed, 1 Jul 2026 21:57:50 +0300
+X-Gm-Features: AVVi8CdXsSTZwRYORMoJ7zXlpD9IH_WmZm01qc5Ad1QL4SlziiGKA5G3HpHNARY
+Message-ID: <CAG1OuKFd6c4vGqpLLvg-ZwP-TM4EiYdxihtJ2AfETzQ_uyN6xw@mail.gmail.com>
+Subject: Re: Business Collaboration Opportunity
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="000000000000e1d44c065591469c"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Good afternoon Soheil! Thank you for providing the company
+    presentation and additional information. Additional questions from my side:
+    - From where do you source fabrics, yarns and trims for your garments? -
+   Could you compare your factory with factories from China and from Turkey and
+    define your com [...] 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.208.41 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [209.85.208.41 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [asuslenkov(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--000000000000e1d44c065591469c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Good afternoon Soheil!
+
+Thank you for providing the company presentation and additional information=
+.
+
+Additional questions from my side:
+- From where do you source fabrics, yarns and trims for your garments?
+- Could you compare your factory with factories from China and from Turkey
+and define your competitive advantages vs them?
+- Could you name 2 - 3 your customers from Russia?
+- Do you work for high, mid or low price segment customers?
+
+- Please give as just reference the prices (MOQ, FCA Iran) for following
+codes: 1214, 1489, 1514, 1521, 1524.
+
+
+Best regards,
+
+Alexander
+
+
+=D0=B2=D1=82, 30 =D0=B8=D1=8E=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 17:03, <in=
+fo@raspinaclothing.com>:
+
+> On 2026-06-30 12:02, Alexander Suslenkov wrote:
+> > Hello Soheli!
+> >
+> > Thank you for the product catalogue.
+> > I also asked about company/factory profile with information about
+> > capacity, equipment, MOQs, lead-times.
+> >
+> > Rgds,
+> >
+> > Alexander
+> >
+> > =D0=BF=D0=BD, 29 =D0=B8=D1=8E=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 11:03,=
+ <info@raspinaclothing.com>:
+> >
+> >> Hello sir we talked on linkedin. Please check our catalog
+> >> Best regards
+> >> Soheil zali
+> Dear Alexander,
+>
+> Thank you very much for your message and for your interest in our
+> company.
+>
+> Please find our Company Profile attached to this email.
+>
+> Regarding your questions:
+>
+> MOQ: Our minimum order quantity is 100 pieces per style.
+> Annual Production Capacity: Approximately 300,000 to 400,000 pieces per
+> year.
+> Lead Time: For shipments by ground transportation, the lead time is
+> usually around 3 to 4 weeks, depending on the order quantity and
+> destination.
+>
+> Thank you once again for your interest. If you have any further
+> questions or need additional information, please feel free to contact
+> me. I look forward to your reply.
+>
+> Best regards,
+> Soheil zali
+
+--000000000000e1d44c065591469c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr">Good afternoon=C2=A0Sohe=
+il!<br><br>Thank you for providing the company presentation=C2=A0and additi=
+onal information.</div><div><br></div><div>Additional questions from my sid=
+e:</div><div>- From where do you source fabrics, yarns and trims for your g=
+arments?<br>- Could you=C2=A0compare your factory=C2=A0with factories from =
+China and from Turkey and=C2=A0define your competitive=C2=A0advantages vs t=
+hem?=C2=A0</div><div>- Could you name 2 -=C2=A03 your customers from Russia=
+?</div><div>- Do you work for high, mid or low price segment customers?</di=
+v><div><br></div><div>- Please give as just reference the prices (MOQ, FCA =
+Iran) for following codes: 1214, 1489, 1514, 1521, 1524.=C2=A0</div><div di=
+r=3D"ltr"><br></div><div dir=3D"ltr"><br>Best regards,<br><br></div><div di=
+r=3D"ltr">Alexander</div><div dir=3D"ltr"><br></div><br><div class=3D"gmail=
+_quote"><div dir=3D"ltr" class=3D"gmail_attr">=D0=B2=D1=82, 30 =D0=B8=D1=8E=
+=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 17:03, &lt;<a href=3D"mailto:info@raspi=
+naclothing.com" target=3D"_blank">info@raspinaclothing.com</a>&gt;:<br></di=
+v><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;borde=
+r-left:1px solid rgb(204,204,204);padding-left:1ex">On 2026-06-30 12:02, Al=
+exander Suslenkov wrote:<br>
+&gt; Hello Soheli!<br>
+&gt; <br>
+&gt; Thank you for the product catalogue.<br>
+&gt; I also asked about company/factory profile with information about<br>
+&gt; capacity, equipment, MOQs, lead-times.<br>
+&gt; <br>
+&gt; Rgds,<br>
+&gt; <br>
+&gt; Alexander<br>
+&gt; <br>
+&gt; =D0=BF=D0=BD, 29 =D0=B8=D1=8E=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 11:03=
+, &lt;<a href=3D"mailto:info@raspinaclothing.com" target=3D"_blank">info@ra=
+spinaclothing.com</a>&gt;:<br>
+&gt; <br>
+&gt;&gt; Hello sir we talked on linkedin. Please check our catalog<br>
+&gt;&gt; Best regards<br>
+&gt;&gt; Soheil zali<br>
+Dear Alexander,<br>
+<br>
+Thank you very much for your message and for your interest in our <br>
+company.<br>
+<br>
+Please find our Company Profile attached to this email.<br>
+<br>
+Regarding your questions:<br>
+<br>
+MOQ: Our minimum order quantity is 100 pieces per style.<br>
+Annual Production Capacity: Approximately 300,000 to 400,000 pieces per <br=
+>
+year.<br>
+Lead Time: For shipments by ground transportation, the lead time is <br>
+usually around 3 to 4 weeks, depending on the order quantity and <br>
+destination.<br>
+<br>
+Thank you once again for your interest. If you have any further <br>
+questions or need additional information, please feel free to contact <br>
+me. I look forward to your reply.<br>
+<br>
+Best regards,<br>
+Soheil zali</blockquote></div>
+</div>
+</div>
+
+--000000000000e1d44c065591469c--

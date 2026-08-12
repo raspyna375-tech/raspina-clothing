@@ -1,0 +1,562 @@
+Return-Path: <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id qC0IDl5AZWfGyT8AyIPyJQ
+	(envelope-from <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>)
+	for <admin@raspinaclothing.com>; Fri, 20 Dec 2024 13:31:02 +0330
+Return-path: <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Fri, 20 Dec 2024 13:31:02 +0330
+Received: from wrqvwvdt.outbound-mail.sendgrid.net ([149.72.152.215]:40682)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>)
+	id 1tOZoX-0001wL-21
+	for admin@raspinaclothing.com;
+	Fri, 20 Dec 2024 13:31:02 +0330
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gtmetrix.com;
+	h=content-type:from:mime-version:subject:reply-to:to:cc:content-type:
+	from:subject:to;
+	s=s1; bh=1QXD3ZCrvCJzYqvIDCB4FsWfMQ4uhfrkT4RqvkHRyvE=;
+	b=1+ZeAqAFdymrmvpJMPoHx/+KoBJQqbHNsBhRY43IsLXno64Q+Lnp1+jnFc2LOtkxq2TF
+	smPU+lnApHxYfoTtk1zbJ586CdrMo/Cco7oKP99j7A3ib3IB2C4ow6P1KqHSbQPbicYTuu
+	KGuP9YQkK74akUsNjcTDXHhqPN/wPz3SslohR3SVckORlwVTRn1aSM6g8SBbugGnQkvP5/
+	bXIm+FtCDzEhycN2Aqj6urTUmu/vP//RYS4OA+OVk4iWvQ9pBh9iYekQph5oZAjkuBt7NR
+	BXuR/ZkZMj5nGKh8qU9gNsoDBC9o6cuAxsICjfxvBFC8TFhcZv4LUAyxxqBWobcA==
+Received: by recvd-5bbc5967db-57m7l with SMTP id recvd-5bbc5967db-57m7l-1-67654029-2D
+	2024-12-20 10:00:09.857146187 +0000 UTC m=+3069451.124181175
+Received: from MzEwODQ0OTY (unknown)
+	by geopod-ismtpd-14 (SG) with HTTP
+	id 9TKpqqxwRnWT6CeFnKLsPA
+	Fri, 20 Dec 2024 10:00:09.750 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=602c75f1cf8a292cf4888be812e061f2e36d7a9693894a184bc081d45b3f
+Date: Fri, 20 Dec 2024 10:00:09 +0000 (UTC)
+From: GTmetrix <feedback@gtmetrix.com>
+Mime-Version: 1.0
+Message-ID: <9TKpqqxwRnWT6CeFnKLsPA@geopod-ismtpd-14>
+Subject: Your GTmetrix testing journey is about to end (Discount offer
+ inside)!
+Reply-To: feedback@gtmetrix.com
+auto-submitted: auto-generated
+x-auto-response-suppress: All
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E931Vi=2Fn2XrHQnuxNMvRqynGQsGSI5olkFC4c4KwRNo5wlg91qoRNYD1tn?=
+ =?us-ascii?Q?pXJL90DKvpKsxKDQX5InRnyToDN6MC+tmVsdqfi?=
+ =?us-ascii?Q?ib72tVc0KieCmsaUG2J52qDvNmWkHGEkqX8wb+r?=
+ =?us-ascii?Q?ohMlOqEWZHjUQa=2FUu+gBE6LohVt72mVhy=2FlezyH?=
+ =?us-ascii?Q?10fnMjiiNg3KH1Kg8NFwDaNKEFdZdftMJcuzzdB?=
+ =?us-ascii?Q?Ipxg8tvG3i+nGwHzqNiYZxRn28hP07njqEUHPLL?= =?us-ascii?Q?1NGc?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDH6A=2FTz6+u9fLwW?=
+ =?us-ascii?Q?7H9YlHVhT3XmxPm6W2hnkIRa6ajKQ=3D=3D?=
+To: Admin Raspina <admin@raspinaclothing.com>
+X-Entity-ID: u001.WvjOUWp/O94XQqn7S70aaA==
+X-Spam-Status: No, score=-2.8
+X-Spam-Score: -27
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  We hope you've been enjoying your testing journey with us
+   over the past 6 months! Ready to keep the testing momentum going? Upgrade
+   to GTmetrix PRO today! We have plans as low as $5/month (with 15% off on yearly
+    terms). 
+ Content analysis details:   (-2.8 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: x.com]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_IMAGE_RATIO_06    BODY: HTML has a low ratio of text to image
+                             area
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  1.1 KAM_REALLYHUGEIMGSRC   RAW: Spam with image tags with ridiculously
+                              huge http urls
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [149.72.152.215 listed in bl.score.senderscore.com]
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.0 KAM_SHORT              Use of a URL Shortener for very short URL
+X-Spam-Flag: NO
+
+--602c75f1cf8a292cf4888be812e061f2e36d7a9693894a184bc081d45b3f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+We hope you've been enjoying your testing journey with us over the past
+6 months!
+
+Ready to keep the testing momentum going? Upgrade to GTmetrix PRO today!
+
+We have plans as low as $5/month (with 15% off on yearly terms).
+
+We also offer Custom plans so you can find a GTmetrix PRO plan that
+suits your needs and budget.
+
+  https://gtmetrix.com/pricing.html
+
+How about a discount?
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+As a thank-you for giving us a shot, we're offering you a discount on a
+yearly GTmetrix PRO subscription.
+
+Get an additional 12% off the first year of a GTmetrix PRO plan* with
+this code:
+
+  LETSGOPRONOW
+
+Don't let your performance optimization journey end here!
+
+Sign up today and unleash the full potential of GTmetrix.
+
+* Custom plans not included.
+
+Need more reasons to go PRO?
+----------------------------
+
+Discover the full potential of GTmetrix and how you can level-up your
+performance optimization and testing capabilities.
+
+  https://gtmetrix.com/why-gtmetrix-pro.html
+
+
+Questions?
+----------
+
+Feel free to reach out to our team for any inquiries. You can also find ans=
+wers to common questions in our FAQ:
+
+    https://gtmetrix.com/faq.html
+
+- The GTmetrix Team
+
+You're receiving this e-mail because admin@raspinaclothing.com is subscribe=
+d to GTmetrix Tips & Tricks e-mails. You can unsubscribe from these e-mails=
+ by visiting this link:
+
+ https://gtmetrix.com/e/tips/4944176/RIYGiW5QK6zYXJ7o
+
+--602c75f1cf8a292cf4888be812e061f2e36d7a9693894a184bc081d45b3f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!doctype html>
+<html>
+<head>
+  <meta charset=3D"utf-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <meta name=3D"x-apple-disable-message-reformatting">
+  <title>You are on your last on-demand test refill!</title>
+  <style>
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+    div[style*=3D"margin: 16px 0"] {
+      margin: 0 !important;
+    }
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+    a {
+      text-decoration: none;
+    }
+    *[x-apple-data-detectors],
+    .unstyle-auto-detected-links *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    .im {
+      color: inherit !important;
+    }
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+    img.g-img + div {
+      display: none !important;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width:=
+ 374px) {
+      u ~ div .email-container {
+        min-width: 320px !important;
+      }
+    }
+    @media only screen and (min-device-width: 375px) and (max-device-width:=
+ 413px) {
+      u ~ div .email-container {
+        min-width: 375px !important;
+      }
+    }
+    @media only screen and (min-device-width: 414px) {
+      u ~ div .email-container {
+        min-width: 414px !important;
+      }
+    }
+  </style>
+  <style>
+    table {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #646464;
+    }
+    .email-content {
+      padding: 30px !important;
+    }
+    @media screen and (max-width: 480px) {
+      .email-hero-title {
+        font-size: 28px !important;
+        line-height: 31px !important;
+      }
+      .email-hero-desc {
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
+      .email-content {
+        padding: 20px 10px !important;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      .stack-column {
+        display: block !important;
+        width: auto !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      .stack-column {
+        margin-bottom: 25px;
+        padding: 0 !important;
+      }
+      .stack-column:last-child {
+        margin-bottom: 0;
+      }
+      .stack-column-center {
+        text-align: center !important;
+      }
+    }
+
+    .recurly-custom-list span {
+      display: block;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body width=3D"100%" style=3D"margin:0; padding:0; mso-line-height-rule:exa=
+ctly; background:#fff">
+  <div style=3D"background:#fff; font-family:Arial, sans-serif; font-size:1=
+4px; line-height:1.6; color:#646464">
+  <!--[if mso | IE]>
+  <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" bgcolor=3D"#fff">
+  <tr>
+  <td>
+  <![endif]-->
+    <div style=3D"display:none; font-size:1px; line-height:1px; max-height:=
+0; max-width:0; opacity:0; overflow:hidden; mso-hide:all">
+      Go PRO to unleash the full potential of GTmetrix - use the coupon ins=
+ide.
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" class=3D"email-container">
+  <tr>
+    <td align=3D"center" style=3D"background:url(https://gtmetrix.com/stati=
+c/email/bg.jpg) #11284a no-repeat top center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px">
+        <tr>
+          <td style=3D"padding:30px; text-align:center">
+            <a href=3D"https://gtmetrix.com"><img src=3D"https://gtmetrix.c=
+om/static/email/gtmetrix.png" border=3D"0" width=3D"225" style=3D"max-width=
+:225px; font-size:40px; font-weight:bold; color:#3e9adc" alt=3D"GTmetrix"><=
+/a><br>
+           =20
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" class=3D"email-container" style=3D"background:#f1f1f1">
+  <tr>
+    <td align=3D"center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px; background:#fff">
+        <tr>
+          <td class=3D"email-content" style=3D"padding:20px 10px;text-align=
+: center;">
+
+  <p style=3D"margin-bottom:30px;">
+    <a href=3D"https://gtmetrix.com"><img src=3D"https://gtmetrix.com/stati=
+c/email/basic_refill_drip/last-refill-splash.png" width=3D"620" height=3D"1=
+48" border=3D"0" style=3D"display:block; width:100%; height:auto; font-size=
+:28px; text-align:center" alt=3D"You've got more tests!"></a>
+  </p>
+  <h2 style=3D"font-size:18px; font-weight:bold; line-height:20px;">We hope=
+ you've been enjoying your testing journey with us over the past 6 months!<=
+/h2>
+
+  <p style=3D"margin:20px 0;">Ready to keep the testing momentum going? <a =
+href=3D"https://gtmetrix.com/pricing.html" style=3D"color: #3c9adc; text-de=
+coration:underline;">Upgrade to GTmetrix PRO today!</a></p>
+  <p style=3D"margin:20px 0;">
+    <strong>We have plans as low as $5/month</strong> (with 15% off on
+    yearly terms).
+  </p>
+  <p style=3D"margin:20px 0;">
+    We also offer <strong>Custom plans</strong> so you can find a
+    GTmetrix PRO plan that suits your needs and budget.
+  </p>
+
+  <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; margin:30p=
+x 10px;">
+
+  <h2 style=3D"font-size:18px; font-weight:bold; line-height:20px;">How abo=
+ut a discount?</h2>
+
+  <p style=3D"margin:20px 0;">
+    As a thank-you for giving us a shot, we're offering you a discount
+    on a yearly GTmetrix PRO subscription.
+  </p>
+  <p style=3D"margin:20px 0;">
+    <strong>Get an additional 12% off the first year</strong> of a
+    GTmetrix PRO plan* with this code:
+  </p>
+
+  <p style=3D"margin:30px 0;color:#ce4e92;font-size:36px;font-weight:bold;"=
+>
+    LETSGOPRONOW
+  </p>
+
+  <p style=3D"margin:20px 0;">
+    Don't let your performance optimization journey end here! Sign up
+    today and unleash the full potential of GTmetrix.
+    <br>
+    <span style=3D"font-size:12px;">* Custom plans not included</span>
+  </p>
+
+  <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; margin:30p=
+x 10px;">
+
+  <p style=3D"margin:20px 0;">
+    <a href=3D"https://gtmetrix.com/pricing.html"><img src=3D"https://gtmet=
+rix.com/static/email/basic_refill_drip/pro-cta.png" width=3D"620" height=3D=
+"109" border=3D"0" style=3D"display:block; width:100%; height:auto; font-si=
+ze:28px; text-align:center" alt=3D"Upgrade to GTmetrix PRO for more capacit=
+y, Monitored Slots, Premium Tests and more!"></a>
+  </p>
+  <p style=3D"margin:20px 0;">
+    <a href=3D"https://gtmetrix.com/why-gtmetrix-pro.html"><img src=3D"http=
+s://gtmetrix.com/static/email/basic_refill_drip/reasons-for-pro.png" width=
+=3D"620" height=3D"109" border=3D"0" style=3D"display:block; width:100%; he=
+ight:auto; font-size:28px; text-align:center" alt=3D"Need more reasons to g=
+o PRO?"></a>
+  </p>
+
+  <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; margin:30p=
+x 10px;">
+
+<h3 style=3D"font-size:18px; font-weight:bold; line-height:20px;">Questions=
+?</h3>
+
+<p>
+  Feel free to <a href=3D"https://gtmetrix.com/contact.html" style=3D"color=
+: #3c9adc; text-decoration:underline;">reach out to our team</a> for any in=
+quiries.
+  You can also find answers to common questions in our
+  <a href=3D"https://gtmetrix.com/faq.html" style=3D"color: #3c9adc; text-d=
+ecoration:underline;">FAQ</a>.
+</p>
+
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+
+  <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" class=3D"email-container">
+  <tr>
+    <td style=3D"text-align:center; background:#123858; padding:25px">
+      <a href=3D"https://gtmetrix.com/contact.html"><img src=3D"https://gtm=
+etrix.com/static/email/contact.png" border=3D"0" width=3D"29" style=3D"max-=
+width:29px" alt=3D"Contact"></a>&nbsp;
+      <a href=3D"https://x.com/gtmetrix/"><img src=3D"https://gtmetrix.com/=
+static/email/x.png" border=3D"0" width=3D"29" style=3D"max-width:29px" alt=
+=3D"X (formerly Twitter)"></a>&nbsp;
+      <a href=3D"https://www.facebook.com/gtmetrix/"><img src=3D"https://gt=
+metrix.com/static/email/facebook.png" border=3D"0" width=3D"29" style=3D"ma=
+x-width:29px" alt=3D"Facebook"></a>&nbsp;
+      <a href=3D"https://www.linkedin.com/company/gtmetrix"><img src=3D"htt=
+ps://gtmetrix.com/static/email/linkedin.png" border=3D"0" width=3D"29" styl=
+e=3D"max-width:29px" alt=3D"Linkedin"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px">
+        <tr>
+          <td style=3D"padding-top:5px; font-size:12px; line-height:18px; t=
+ext-align:center">
+            <p style=3D"margin:15px 20px; font-size:11px; line-height:16px"=
+>
+              You're receiving this e-mail because admin@raspinaclothing.co=
+m is subscribed to GTmetrix Tips & Tricks e-mails. You can unsubscribe from=
+ these e-mails by visiting <a href=3D"https://gtmetrix.com/e/tips/4944176/R=
+IYGiW5QK6zYXJ7o" style=3D"color: #646464; text-decoration:underline;">this =
+link</a>.
+            </p>
+
+            <p style=3D"margin:15px 0">
+              810 - 181 Bay Street, Bay Wellington Tower, Toronto, ON, M5J =
+2T3, Canada<br>
+              <a href=3D"https://gtmetrix.com/contact.html" style=3D"color:=
+ #646464; text-decoration:underline;">Contact Us</a>
+              &nbsp;|&nbsp; <a href=3D"https://gtmetrix.com/terms-of-servic=
+e.html" style=3D"color: #646464; text-decoration:underline;">Terms of Servi=
+ce</a>
+              &nbsp;|&nbsp; <a href=3D"https://gtmetrix.com/privacy-policy.=
+html" style=3D"color: #646464; text-decoration:underline;">Privacy</a>
+            </p>
+
+            <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; =
+margin:15px 10px">
+
+            <p style=3D"margin:15px 0">
+              &copy; 2024 GTmetrix. All Rights Reserved.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+
+  <!--[if mso | IE]>
+  </td>
+  </tr>
+  </table>
+  <![endif]-->
+  </div>
+<img src=3D"https://u31084496.ct.sendgrid.net/wf/open?upn=3Du001.lOrJom8Zyq=
+KWyhVVfwZSivtkwPH5jy-2BbkE9RI7m6oZjQWUGz3o-2F5RjGjAZ0YeTz1p3jwD6T-2Fw6sZ2wa=
+Bw9ttS-2BSnpxPYljhIFxPdYqNIKKEwxk7dzbh5iSFmziD04Gj6da-2BX8ue2juTyai4fKWq1zb=
+XzuIaFKrgap-2Fkqn9L83FGA-2FGHsElACIs8oqSxeWCQ-2B6Y5l1GNUJvyotPTP5Wbfi-2FwpY=
+b2Dzw5EKNgABmTB4k3FkRo1rZP-2F6zMW24kZ-2BArjrYUxvaOMKu-2B1-2ByGj3AihNQ-3D-3D=
+" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !impor=
+tant;width:1px !important;border-width:0 !important;margin-top:0 !important=
+;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !import=
+ant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !i=
+mportant;padding-left:0 !important;"/></body>
+</html>
+
+--602c75f1cf8a292cf4888be812e061f2e36d7a9693894a184bc081d45b3f--

@@ -1,0 +1,276 @@
+Return-Path: <ichulpan@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id TeN1NlabR2pydSYAyIPyJQ
+	(envelope-from <ichulpan@gmail.com>)
+	for <info@raspinaclothing.com>; Fri, 03 Jul 2026 14:51:58 +0330
+Return-path: <ichulpan@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Fri, 03 Jul 2026 14:51:58 +0330
+Received: from mail-pg1-f174.google.com ([209.85.215.174]:59433)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <ichulpan@gmail.com>)
+	id 1wfbyb-0000000AYoA-14JZ
+	for info@raspinaclothing.com;
+	Fri, 03 Jul 2026 14:51:58 +0330
+Received: by mail-pg1-f174.google.com with SMTP id 41be03b00d2f7-c99eaa1f020so478306a12.2
+        for <info@raspinaclothing.com>; Fri, 03 Jul 2026 04:21:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1783077670; cv=none;
+        d=google.com; s=arc-20260327;
+        b=p7QHPz6drzUwYJd/HSBx1ULyS8NpC41JxKQVn6fy4jTe6mvy7SykG7coVcZ+gVmNpW
+         Ix1BoaoHcY6cJQkjG5807IxhFFwPUFwhleavySJY4JpkE7BjuWzipEQPa41NmG4DZcJJ
+         1nC4tyr2WWraFLyWReCoArh8WFKZd51+CR/DoblmOEbvS03Ji03PrkvPZQXWU2TLAO6m
+         RAmq1lBvhWBEl4+aH/W421oUxZHHwbup1WQ65cTz9pcaqik3wezwuFCZWec14oAGSHmr
+         nEggmLSHv/W9ATdduOycr1bzgMOLkpXkCb5m3w0FAQWDth+sBbOX/roZHj49rRhnTVYD
+         3UJQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=yeAjZdGf3uF2bEeZGM7+X/RYmkTHbhjW9SgaZ6HzItA=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=Xbzq1VBtChG10r1C5DHiEfUGFBDwFXhobH39miNSkKBDlnQ9KIgye0zFXzXRP0YzRi
+         EyEfaZ89+DmTkmiX76jgzcFmkHeKdGkuewJkeBXNPM83ncYHH8tnYX8pGwafyxxqsuHR
+         K+dj6DTzHahonuGeZ5bZrmozJmtjGp2coiN6/AxFcaTBBTd7dcwu5TKGyMlJvjvlsdlr
+         5kq2ZFIma+D1CaXz6xQ9+ZzPUXAkPRihQuJ8GFA84LMXUBTca0ve7mdipkTdLFYQmm0h
+         ZF8Z25rL8qHUsOt9N3EVtTQo36ejg+ICfWYDpMiG/JoGUIB31HJpAmrGzctLAfS15ZGi
+         iDXA==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1783077670; x=1783682470; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=yeAjZdGf3uF2bEeZGM7+X/RYmkTHbhjW9SgaZ6HzItA=;
+        b=kou/I5ZdHTifDamHo6pdHNk3lfMHZtYgaDXN1OE5hifUpv2V3Y5kM9XDVQLmUgtNwW
+         BLXkooYMvqAP1PyrxhFax2DSHyZP2kZaLX7NFjbu6PG8s5PTWvABGSeYvayfHidTbPRB
+         L59Z6s203QF7NxpWQN2Vm2K9dJNFldr1PpaERGlE+yv8D4BTea1VmTyZEo0SZATf/f2c
+         TNN9HlYnw0nQsDS+ych5/Y91ciguJl4UtJVNWUYwQVeapX3LHlRkUTgPLhxJOmSO5DC1
+         0Pqiyc42JpZU7yq62mlsBUusmmIA1kg/V7JyWjOm0gT7n5p/ORNlW4BxGdx2yWuG1nVk
+         carw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1783077670; x=1783682470;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=yeAjZdGf3uF2bEeZGM7+X/RYmkTHbhjW9SgaZ6HzItA=;
+        b=at57CCtKLFjPccLBeDGJ0JyNzWjeEDa+Cd9K4N+opqnUEHCwYgOV0qOqmMCUyS3H/+
+         SYv9DY4L89+FiTIPAnPyFXBD/C8oT+R+4P+99rNvO81frAdmhEkjb64iM8DpW/MgvHb7
+         YrnkUatTrYa88yEuAue54itmOwvqjJM4Jh3gfHQdNu++2RMAcOslBmneWI/foL3S/6eu
+         NkPWmnSzRZYSlLtrdBGW5PLdGxQMw2cs6SxOSZlszyg6v32Q1tEA279gLjdTsMCz9AUO
+         LKVRYdnErmLV37+wmE/bAbeb+jliMIqUY1rmP+8KbMqVmeheNwMBHPQaz4b3UfdaUffH
+         h64Q==
+X-Gm-Message-State: AOJu0Yx+jqFNOpzcxf4fFFlZjAWhCcfdaOPDTD3O2/I1ZPgf44f5Iuuf
+	XpPU3LgimuhQu7XywJ3jxVegdZtows9t7ce/1156jCjsNyVofFslk+FZDPuVSTF6FAf5lshE7vW
+	8wvyUPDFosBkzWJynfJ5+FdikaUKrxsVpaH0OcYUZ3A==
+X-Gm-Gg: AfdE7ckAckXCyRIVZvB0YZSofIyajg4J1/GHHtPunlbV/AjZR+BV47P2OxiHulDoTCF
+	poLjX0CtynIqb00Zm/eIb8E59+stvykl1k2Oh1YyxWDDhF5BfyfA06L8M7qzcXTx9AyDL/wsoZ3
+	cPIO0Wdxkflo4kgnGmpVULfViLpmuquSB+ciI8BCxp58DLjcdEL3kaCeM1wJXeiqo7SFarMuV8P
+	l+C9/QmDmI4bFRi7F7V9m/c2INVif0PwHqfDnPrTTXjIIeKiaC6OM0UI/RgPLY5Fw/bSM8V/HDZ
+	jJ0PZ7HSNUnu4NjlnHuRCzlZkKTG
+X-Received: by 2002:a05:6a20:c98b:b0:3b3:223f:d3fc with SMTP id
+ adf61e73a8af0-3bff42909e4mr10213715637.45.1783077669669; Fri, 03 Jul 2026
+ 04:21:09 -0700 (PDT)
+MIME-Version: 1.0
+References: <d08b4eee73a75d3b0718c19b04ec0501@raspinaclothing.com>
+In-Reply-To: <d08b4eee73a75d3b0718c19b04ec0501@raspinaclothing.com>
+From: =?UTF-8?B?0KfRg9C70L/QsNC9?= <ichulpan@gmail.com>
+Date: Fri, 3 Jul 2026 14:20:59 +0300
+X-Gm-Features: AVVi8CcQVm4X4tR5qI7Bjp-mI22ZHnPzUAYz9KsbyUyYKthCoA1TUFzmd2n76EQ
+Message-ID: <CAMe4RvRT20pLXCFwG6E3qhu=qdFDXKOzgpHBn_4pVna9LY5bxQ@mail.gmail.com>
+Subject: Re: Export Cooperation Opportunity with Raspina Clothing
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="0000000000001b8e3f0655b31f88"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Hello Soheil, Thank you once again for sending me your company
+    profile and catalog. I have started reviewing the materials, and I appreciate
+    the time you took to prepare them. I have a few questions that will help
+   [...] 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.215.174 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.215.174 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [ichulpan(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--0000000000001b8e3f0655b31f88
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello Soheil,
+
+Thank you once again for sending me your company profile and catalog. I
+have started reviewing the materials, and I appreciate the time you took to
+prepare them. I have a few questions that will help me better understand
+your company and evaluate potential cooperation. Could you please let me
+know:
+
+=E2=80=A2 What is the full legal registered name of your company?
+
+=E2=80=A2 Under which company name did you participate in the CPM Moscow ex=
+hibition
+in 2022?
+
+=E2=80=A2 You mentioned that you have previously exported to Russia. Could =
+you
+please tell me which Russian company (or companies) you worked with? If the
+information is confidential, I completely understand. In that case, any
+general information about your experience with the Russian market would be
+appreciated.
+
+=E2=80=A2 In addition, if possible, could you please share a few recent pho=
+tos or a
+short video of your woven and knitted fabric production, as well as your
+garment manufacturing facilities? I would be very interested to see your
+production process.
+
+Thank you in advance. I look forward to your reply.
+ Best regards,
+Chulpan
+
+=D0=A1 =D1=83=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC, =D0=A7=D1=83=
+=D0=BB=D0=BF=D0=B0=D0=BD =D0=92=D0=BE=D1=80=D0=BE=D0=BD=D1=86=D0=BE=D0=B2=
+=D0=B0
+=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=
+=D1=80=D0=B3
+=D0=AD=D0=BB. =D0=BF=D0=BE=D1=87=D1=82=D0=B0 ichulpan@gmail.com
+
+
+
+
+
+
+=D0=B2=D1=82, 30 =D0=B8=D1=8E=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 17:12, <in=
+fo@raspinaclothing.com>:
+
+> Dear Chulpan,
+>
+> It was a pleasure connecting with you on LinkedIn.
+>
+> As we discussed, I=E2=80=99m sending you our Company Profile and Product
+> Catalog. I hope they give you a good overview of our company and
+> products.
+>
+> I would be happy to hear your feedback after you have had a chance to
+> review them. Please let me know your thoughts or if you have any
+> questions.
+>
+> I look forward to hearing from you.
+>
+> Best regards,
+> Soheil zali
+
+--0000000000001b8e3f0655b31f88
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div>=C2=A0<span style=3D"=
+font-family:&quot;Times New Roman&quot;,serif;font-size:11pt;background-col=
+or:transparent">=C2=A0</span></div>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">Hello Soheil, </span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">Thank you once again for
+sending me your company profile and catalog. I have started reviewing the
+materials, and I appreciate the time you took to prepare them. I have a few
+questions that will help me better understand your company and evaluate pot=
+ential
+cooperation. Could you please let me know: </span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">=E2=80=A2 What is the full legal
+registered name of your company? </span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">=E2=80=A2 Under which company nam=
+e did
+you participate in the CPM Moscow exhibition in 2022? </span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">=E2=80=A2 You mentioned that you =
+have
+previously exported to Russia. Could you please tell me which Russian compa=
+ny
+(or companies) you worked with? If the information is confidential, I
+completely understand. In that case, any general information about your exp=
+erience
+with the Russian market would be appreciated. </span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">=E2=80=A2 In addition, if possibl=
+e,
+could you please share a few recent photos or a short video of your=C2=A0wo=
+ven
+and knitted fabric production, as well as your garment manufacturing
+facilities? I would be very interested to see your production process. </sp=
+an></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif"><span lang=3D"EN-US" style=3D"font-=
+family:&quot;Times New Roman&quot;,serif">Thank you in advance. I look
+forward to your reply.</span></p><div>=C2=A0Best regards,</div><div>Chulpan=
+=C2=A0</div><div><br></div><div>=D0=A1 =D1=83=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=
+=D0=B8=D0=B5=D0=BC, =D0=A7=D1=83=D0=BB=D0=BF=D0=B0=D0=BD =D0=92=D0=BE=D1=80=
+=D0=BE=D0=BD=D1=86=D0=BE=D0=B2=D0=B0</div><div>=D0=A1=D0=B0=D0=BD=D0=BA=D1=
+=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=D1=80=D0=B3<br></div><div><s=
+pan style=3D"background-color:transparent">=D0=AD=D0=BB. =D0=BF=D0=BE=D1=87=
+=D1=82=D0=B0 </span><a href=3D"mailto:ichulpan@gmail.com" target=3D"_blank"=
+ style=3D"background-color:transparent">ichulpan@gmail.com</a></div><div><b=
+r></div><div><div style=3D"color:rgb(34,34,34)"><br></div></div><div><br></=
+div><div><br></div></div></div></div></div></div></div><br></div><br><div c=
+lass=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_=
+attr">=D0=B2=D1=82, 30 =D0=B8=D1=8E=D0=BD. 2026=E2=80=AF=D0=B3. =D0=B2 17:1=
+2, &lt;<a href=3D"mailto:info@raspinaclothing.com">info@raspinaclothing.com=
+</a>&gt;:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0p=
+x 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Dear C=
+hulpan,<br>
+<br>
+It was a pleasure connecting with you on LinkedIn.<br>
+<br>
+As we discussed, I=E2=80=99m sending you our Company Profile and Product <b=
+r>
+Catalog. I hope they give you a good overview of our company and <br>
+products.<br>
+<br>
+I would be happy to hear your feedback after you have had a chance to <br>
+review them. Please let me know your thoughts or if you have any <br>
+questions.<br>
+<br>
+I look forward to hearing from you.<br>
+<br>
+Best regards,<br>
+Soheil zali</blockquote></div>
+
+--0000000000001b8e3f0655b31f88--

@@ -1,0 +1,590 @@
+Return-Path: <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id mANkHu3UFGdw9QoAyIPyJQ
+	(envelope-from <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>)
+	for <admin@raspinaclothing.com>; Sun, 20 Oct 2024 13:31:17 +0330
+Return-path: <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Sun, 20 Oct 2024 13:31:17 +0330
+Received: from wrqvwvdt.outbound-mail.sendgrid.net ([149.72.152.215]:47656)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <bounces+31084496-b66d-admin=raspinaclothing.com@em4394.gtmetrix.com>)
+	id 1t2SkG-003Y8u-36
+	for admin@raspinaclothing.com;
+	Sun, 20 Oct 2024 13:31:17 +0330
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gtmetrix.com;
+	h=content-type:from:mime-version:subject:reply-to:to:cc:content-type:
+	from:subject:to;
+	s=s1; bh=vcZ/0rapYSaSnANH+GnElFozjKaIUYBk6IJTDSD8yY4=;
+	b=GYo3AuiYuM0nN20HnfUMAERiNi/sFBcTOaNF7HeG8kyimMEnZkS7D9/Hun+6MLAdUITP
+	9uMhE7sK84nt+csSOhBZMxep/o50PmA8ECdJSryVC1idkhybw/slIBtIE+0ZEsrD9D399T
+	Vk5hJO+JYipoNAdKcKOP19pGGIYSs8lhYKHhSm6qBPqsCOX9CjXiMjXcSj/MDwXru7gRnk
+	YZdV+05Uw1A83N7vFGamBVhnKoApKRx3TIl43JyC1/BAXHNzBOWOLvY4U4gOlsimooZ/uO
+	YohkCjsy8yXED/6liQNtZfwS6lmLUHJVh7LVWFHgi1XuNo1joql2TKakqoyj5JUA==
+Received: by recvd-6986f65d8d-dnbq5 with SMTP id recvd-6986f65d8d-dnbq5-1-6714D4B7-70
+	2024-10-20 10:00:23.788595405 +0000 UTC m=+3254631.178374107
+Received: from MzEwODQ0OTY (unknown)
+	by geopod-ismtpd-5 (SG) with HTTP
+	id jWeGxsCcRSKLitk2ylDBnA
+	Sun, 20 Oct 2024 10:00:23.725 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=5460f76fb10b5b0aa491fa5f6099d602208f3f50041f4342246ca29ecd6f
+Date: Sun, 20 Oct 2024 10:00:23 +0000 (UTC)
+From: GTmetrix <feedback@gtmetrix.com>
+Mime-Version: 1.0
+Message-ID: <jWeGxsCcRSKLitk2ylDBnA@geopod-ismtpd-5>
+Subject: Get more from GTmetrix!
+Reply-To: feedback@gtmetrix.com
+x-auto-response-suppress: All
+auto-submitted: auto-generated
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E931Vi=2Fn2XrHQnuxNMvRqynGQsGSI5olkFC4c4KwRNo5wlg91qoRNYD1tn?=
+ =?us-ascii?Q?pXJL90DKvpKsxKDQX5InRnyToDN6L1SCHG5Dd9X?=
+ =?us-ascii?Q?oLXBObP0RRme5xtuIw9mg9PiJQJoErw9S4C8Vlr?=
+ =?us-ascii?Q?d0f2Ttp4=2FnU3ZYeFLS5wLz9qy=2FLgscJ18TlV1te?=
+ =?us-ascii?Q?zhrSG=2FC1G6OOtfF98YAEs0H9967QVJyF1tyn2b0?=
+ =?us-ascii?Q?Jdr=2FLWOzWQ5=2FyjXir7vYqjvnPM8SvdH77qeHqNn?=
+ =?us-ascii?Q?jabV?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDH6A=2FTz6+u9fLwW?=
+ =?us-ascii?Q?7H9YlHVPm+cmjOqLwjhW06nC7=2FkDA=3D=3D?=
+To: Admin Raspina <admin@raspinaclothing.com>
+X-Entity-ID: u001.WvjOUWp/O94XQqn7S70aaA==
+X-Spam-Status: No, score=-2.8
+X-Spam-Score: -27
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Get the most out of GTmetrix with different test locations,
+    report history, alerts, and more! Continue testing your pages in different
+    scenarios and configurations. Which location should I test from? 
+ Content analysis details:   (-2.8 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: x.com]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_IMAGE_RATIO_08    BODY: HTML has a low ratio of text to image
+                             area
+  1.1 KAM_REALLYHUGEIMGSRC   RAW: Spam with image tags with ridiculously
+                              huge http urls
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                            [149.72.152.215 listed in bl.score.senderscore.com]
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.0 KAM_SHORT              Use of a URL Shortener for very short URL
+X-Spam-Flag: NO
+
+--5460f76fb10b5b0aa491fa5f6099d602208f3f50041f4342246ca29ecd6f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+Get the most out of GTmetrix with different test locations, report
+history, alerts, and more! Continue testing your pages in different
+scenarios and configurations.
+
+Which location should I test from?
+----------------------------------
+
+We explain why location matters when testing your page:
+
+  https://gtmetrix.com/blog/which-location-should-i-test-from/
+
+How to use History graphs
+-------------------------
+
+We'll tell you all about GTmetrix History Graphs and how to use them.
+
+  https://gtmetrix.com/blog/how-to-use-history-graphs/
+
+How to determine Alert conditions
+---------------------------------
+
+We show you how to make the best use of GTmetrix Alerts.
+
+  https://gtmetrix.com/blog/how-to-determine-alert-conditions/
+
+How to export Report History
+----------------------------
+
+Do you need to export report history into a spreadsheet? We'll show you
+how.
+
+  https://gtmetrix.com/blog/how-to-export-report-history/
+
+Upgrade to GTmetrix PRO
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Get more testing capacity, Monitored Slots, Premium Test Locations and
+more with GTmetrix PRO!
+
+  https://gtmetrix.com/pricing.html
+
+Questions?
+----------
+
+Feel free to reach out to our team for any inquiries. You can also find ans=
+wers to common questions in our FAQ:
+
+    https://gtmetrix.com/faq.html
+
+- The GTmetrix Team
+
+You're receiving this e-mail because admin@raspinaclothing.com is subscribe=
+d to GTmetrix Tips & Tricks e-mails. You can unsubscribe from these e-mails=
+ by visiting this link:
+
+ https://gtmetrix.com/e/tips/4944176/RIYGiW5QK6zYXJ7o
+
+--5460f76fb10b5b0aa491fa5f6099d602208f3f50041f4342246ca29ecd6f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!doctype html>
+<html>
+<head>
+  <meta charset=3D"utf-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <meta name=3D"x-apple-disable-message-reformatting">
+  <title>Explore more GTmetrix features!</title>
+  <style>
+    html,
+    body {
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+    div[style*=3D"margin: 16px 0"] {
+      margin: 0 !important;
+    }
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+    a {
+      text-decoration: none;
+    }
+    *[x-apple-data-detectors],
+    .unstyle-auto-detected-links *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    .im {
+      color: inherit !important;
+    }
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+    img.g-img + div {
+      display: none !important;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width:=
+ 374px) {
+      u ~ div .email-container {
+        min-width: 320px !important;
+      }
+    }
+    @media only screen and (min-device-width: 375px) and (max-device-width:=
+ 413px) {
+      u ~ div .email-container {
+        min-width: 375px !important;
+      }
+    }
+    @media only screen and (min-device-width: 414px) {
+      u ~ div .email-container {
+        min-width: 414px !important;
+      }
+    }
+  </style>
+  <style>
+    table {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #646464;
+    }
+    .email-content {
+      padding: 30px !important;
+    }
+    @media screen and (max-width: 480px) {
+      .email-hero-title {
+        font-size: 28px !important;
+        line-height: 31px !important;
+      }
+      .email-hero-desc {
+        font-size: 16px !important;
+        line-height: 20px !important;
+      }
+      .email-content {
+        padding: 20px 10px !important;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      .stack-column {
+        display: block !important;
+        width: auto !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      .stack-column {
+        margin-bottom: 25px;
+        padding: 0 !important;
+      }
+      .stack-column:last-child {
+        margin-bottom: 0;
+      }
+      .stack-column-center {
+        text-align: center !important;
+      }
+    }
+
+    .recurly-custom-list span {
+      display: block;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body width=3D"100%" style=3D"margin:0; padding:0; mso-line-height-rule:exa=
+ctly; background:#fff">
+  <div style=3D"background:#fff; font-family:Arial, sans-serif; font-size:1=
+4px; line-height:1.6; color:#646464">
+  <!--[if mso | IE]>
+  <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" bgcolor=3D"#fff">
+  <tr>
+  <td>
+  <![endif]-->
+    <div style=3D"display:none; font-size:1px; line-height:1px; max-height:=
+0; max-width:0; opacity:0; overflow:hidden; mso-hide:all">
+      Get most out of GTmetrix with different test locations, report histor=
+y, alerts and more.
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" class=3D"email-container">
+  <tr>
+    <td align=3D"center" style=3D"background:url(https://gtmetrix.com/stati=
+c/email/bg.jpg) #11284a no-repeat top center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px">
+        <tr>
+          <td style=3D"padding:30px; text-align:center">
+            <a href=3D"https://gtmetrix.com"><img src=3D"https://gtmetrix.c=
+om/static/email/gtmetrix.png" border=3D"0" width=3D"225" style=3D"max-width=
+:225px; font-size:40px; font-weight:bold; color:#3e9adc" alt=3D"GTmetrix"><=
+/a><br>
+           =20
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"100%" class=3D"email-container" style=3D"background:#f1f1f1">
+  <tr>
+    <td align=3D"center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px; background:#fff">
+        <tr>
+          <td class=3D"email-content" style=3D"padding:20px 10px;text-align=
+: center;">
+
+  <p style=3D"margin-bottom:30px;">
+    <a href=3D"https://gtmetrix.com"><img src=3D"https://gtmetrix.com/stati=
+c/email/basic_refill_drip/explore-gtmetrix-splash.png" width=3D"620" height=
+=3D"148" border=3D"0" style=3D"display:block; width:100%; height:auto; font=
+-size:28px; text-align:center" alt=3D"You've got more tests!"></a>
+  </p>
+  <h2 style=3D"font-size:18px; font-weight:bold; line-height:20px;">Get the=
+ most out of GTmetrix with different test locations, report history, alerts=
+ and more!</h2>
+
+  <p>Continue testing your pages in different scenarios and configurations.=
+</p>
+
+  <div style=3D"margin:30px 0">
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" bgcolor=3D"#ffffff">
+      <tr>
+        <td style=3D"padding-right:5px; text-align:center; vertical-align:t=
+op">
+          <a href=3D"https://gtmetrix.com/blog/which-location-should-i-test=
+-from/"><img src=3D"https://gtmetrix.com/static/email/basic_refill_drip/whi=
+ch-location.png" border=3D"0" style=3D"display:block; width:100%; height:au=
+to; font-size:28px; text-align:center" alt=3D"Which location should I test =
+from?"></a>
+          <p>We explain <a href=3D"https://gtmetrix.com/blog/which-location=
+-should-i-test-from/" style=3D"color: #3c9adc; text-decoration:underline;">=
+why location matters</a> when testing your page.</p>
+        </td>
+        <td style=3D"padding-left:5px; text-align:center; vertical-align:to=
+p">
+          <a href=3D"https://gtmetrix.com/blog/how-to-use-history-graphs/">=
+<img src=3D"https://gtmetrix.com/static/email/basic_refill_drip/how-to-hist=
+ory.png" border=3D"0" style=3D"display:block; width:100%; height:auto; font=
+-size:28px; text-align:center" alt=3D"How to use History graphs"></a>
+          <p>We'll tell you <a href=3D"https://gtmetrix.com/blog/how-to-use=
+-history-graphs/" style=3D"color: #3c9adc; text-decoration:underline;">all =
+about GTmetrix History Graphs</a> and how to use them.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div style=3D"margin:30px 0">
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" bgcolor=3D"#ffffff" style=3D"margin:30px 0;">
+      <tr>
+        <td style=3D"padding-right:5px; text-align:center; vertical-align:t=
+op">
+          <a href=3D"https://gtmetrix.com/blog/how-to-determine-alert-condi=
+tions/"><img src=3D"https://gtmetrix.com/static/email/basic_refill_drip/how=
+-to-setup-alerts.png" border=3D"0" style=3D"display:block; width:100%; heig=
+ht:auto; font-size:28px; text-align:center" alt=3D"How to determine Alert c=
+onditions"></a>
+          <p>We show you how to make <a href=3D"https://gtmetrix.com/blog/h=
+ow-to-determine-alert-conditions/" style=3D"color: #3c9adc; text-decoration=
+:underline;">the best use of GTmetrix Alerts</a>.</p>
+        </td>
+        <td style=3D"padding-left:5px; text-align:center; vertical-align:to=
+p">
+          <a href=3D"https://gtmetrix.com/blog/how-to-export-report-history=
+/"><img src=3D"https://gtmetrix.com/static/email/basic_refill_drip/how-to-e=
+xport-history.png" border=3D"0" style=3D"display:block; width:100%; height:=
+auto; font-size:28px; text-align:center" alt=3D"How to export Report Histor=
+y"></a>
+          <p>Do you need to export report history into a spreadsheet? <a hr=
+ef=3D"https://gtmetrix.com/blog/how-to-export-report-history/" style=3D"col=
+or: #3c9adc; text-decoration:underline;">We'll show you how</a>.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <p style=3D"text-align:center; ">
+  <a href=3D"https://gtmetrix.com/blog/" style=3D"display:inline-block; tex=
+t-align:center; text-decoration:none !important; font-size:18px; background=
+:#1b6d8b; color:#fff; padding: 12px 28px; line-height: 18px; font-weight: b=
+old; border-radius: 5px;">
+    <!--[if mso]>&nbsp;&nbsp;<![endif]-->Explore more ways to use GTmetrix<=
+!--[if mso]>&nbsp;&nbsp;<![endif]-->
+  </a>
+</p>
+
+
+  <p style=3D"margin:20px 0;">
+    <a href=3D"https://gtmetrix.com/pricing.html"><img src=3D"https://gtmet=
+rix.com/static/email/basic_refill_drip/pro-cta.png" width=3D"620" height=3D=
+"109" border=3D"0" style=3D"display:block; width:100%; height:auto; font-si=
+ze:28px; text-align:center" alt=3D"Upgrade to GTmetrix PRO for more capacit=
+y, Monitored Slots, Premium Tests and more!"></a>
+  </p>
+
+  <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; margin:30p=
+x 10px;">
+
+<h3 style=3D"font-size:18px; font-weight:bold; line-height:20px;">Questions=
+?</h3>
+
+<p>
+  Feel free to <a href=3D"https://gtmetrix.com/contact.html" style=3D"color=
+: #3c9adc; text-decoration:underline;">reach out to our team</a> for any in=
+quiries.
+  You can also find answers to common questions in our
+  <a href=3D"https://gtmetrix.com/faq.html" style=3D"color: #3c9adc; text-d=
+ecoration:underline;">FAQ</a>.
+</p>
+
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+
+  <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" class=3D"email-container">
+  <tr>
+    <td style=3D"text-align:center; background:#123858; padding:25px">
+      <a href=3D"https://gtmetrix.com/contact.html"><img src=3D"https://gtm=
+etrix.com/static/email/contact.png" border=3D"0" width=3D"29" style=3D"max-=
+width:29px" alt=3D"Contact"></a>&nbsp;
+      <a href=3D"https://x.com/gtmetrix/"><img src=3D"https://gtmetrix.com/=
+static/email/x.png" border=3D"0" width=3D"29" style=3D"max-width:29px" alt=
+=3D"X (formerly Twitter)"></a>&nbsp;
+      <a href=3D"https://www.facebook.com/gtmetrix/"><img src=3D"https://gt=
+metrix.com/static/email/facebook.png" border=3D"0" width=3D"29" style=3D"ma=
+x-width:29px" alt=3D"Facebook"></a>&nbsp;
+      <a href=3D"https://www.linkedin.com/company/gtmetrix"><img src=3D"htt=
+ps://gtmetrix.com/static/email/linkedin.png" border=3D"0" width=3D"29" styl=
+e=3D"max-width:29px" alt=3D"Linkedin"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center">
+      <!--[if mso | IE]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"680">
+      <tr>
+      <td>
+      <![endif]-->
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"max-width:680px">
+        <tr>
+          <td style=3D"padding-top:5px; font-size:12px; line-height:18px; t=
+ext-align:center">
+            <p style=3D"margin:15px 20px; font-size:11px; line-height:16px"=
+>
+              You're receiving this e-mail because admin@raspinaclothing.co=
+m is subscribed to GTmetrix Tips & Tricks e-mails. You can unsubscribe from=
+ these e-mails by visiting <a href=3D"https://gtmetrix.com/e/tips/4944176/R=
+IYGiW5QK6zYXJ7o" style=3D"color: #646464; text-decoration:underline;">this =
+link</a>.
+            </p>
+
+            <p style=3D"margin:15px 0">
+              810 - 181 Bay Street, Bay Wellington Tower, Toronto, ON, M5J =
+2T3, Canada<br>
+              <a href=3D"https://gtmetrix.com/contact.html" style=3D"color:=
+ #646464; text-decoration:underline;">Contact Us</a>
+              &nbsp;|&nbsp; <a href=3D"https://gtmetrix.com/terms-of-servic=
+e.html" style=3D"color: #646464; text-decoration:underline;">Terms of Servi=
+ce</a>
+              &nbsp;|&nbsp; <a href=3D"https://gtmetrix.com/privacy-policy.=
+html" style=3D"color: #646464; text-decoration:underline;">Privacy</a>
+            </p>
+
+            <hr style=3D"border:0; border-top:1px solid #d7d7d7; height:0; =
+margin:15px 10px">
+
+            <p style=3D"margin:15px 0">
+              &copy; 2024 GTmetrix. All Rights Reserved.
+            </p>
+          </td>
+        </tr>
+      </table>
+      <!--[if mso | IE]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+
+
+  <!--[if mso | IE]>
+  </td>
+  </tr>
+  </table>
+  <![endif]-->
+  </div>
+<img src=3D"https://u31084496.ct.sendgrid.net/wf/open?upn=3Du001.lOrJom8Zyq=
+KWyhVVfwZSivtkwPH5jy-2BbkE9RI7m6oZjQWUGz3o-2F5RjGjAZ0YeTz1PTmcQsm3JrYE0bdHa=
+a8zBkJkO6Pld26jYbw9DiSGETyFF7p520doq41dkIZHwIm3R1tUG2RMMTaELGoRDjPGO-2F-2BO=
+Td2jM2y0Bu65NMA1qyge8K-2F3WiWejOyf4KTO-2F00Yc9adtDoGcB4x8vJxIhEipwfC-2FZNoq=
+LNLTUGEpmRSdNbbzeuplzKhl-2F8kfSmZPJ5BitEOr2UZ1Y-2B-2F9Tiuj-2BLGDg-3D-3D" al=
+t=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important=
+;width:1px !important;border-width:0 !important;margin-top:0 !important;mar=
+gin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;=
+padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !impor=
+tant;padding-left:0 !important;"/></body>
+</html>
+
+--5460f76fb10b5b0aa491fa5f6099d602208f3f50041f4342246ca29ecd6f--

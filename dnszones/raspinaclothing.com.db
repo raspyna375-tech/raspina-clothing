@@ -1,0 +1,33 @@
+; cPanel first:116.0.7 (update_time):1781551405 Cpanel::ZoneFile::VERSION:1.3 hostname:cp80p.mihankhabar.com latest:134.0.29
+; Zone file for raspinaclothing.com
+$TTL 14400
+raspinaclothing.com.	14400	IN	SOA	ns559.mihanwebhost.com.	mihanspa.gmail.com.	(
+						2026061501 ;Serial Number
+						14400 ;refresh
+						130 ;retry
+						1209600 ;expire
+						14400	)
+raspinaclothing.com.	14400	IN	NS	ns559.mihanwebhost.com.
+raspinaclothing.com.	14400	IN	NS	ns560.mihanwebhost.com.
+raspinaclothing.com.	14400	IN	A	185.94.99.249
+raspinaclothing.com.	14400	IN	MX	0	mail.raspinaclothing.com.
+mail	14400	IN	A	185.94.99.249
+www	14400	IN	CNAME	raspinaclothing.com.
+ftp	14400	IN	A	185.94.99.249
+cpanel	14400	IN	A	185.94.99.249
+webdisk	14400	IN	A	185.94.99.249
+whm	14400	IN	A	185.94.99.249
+webmail	14400	IN	A	185.94.99.249
+raspinaclothing.com.	14400	IN	TXT	"v=spf1 ip4:185.94.99.249 +a +mx ~all"
+cpcontacts	14400	IN	A	185.94.99.249
+cpcalendars	14400	IN	A	185.94.99.249
+default._domainkey	14400	IN	TXT	"v=DKIM1\; k=rsa\; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0U0iPZTDdBeQOQAjp5dFQ16yXo1/8KeZiddZy/N8TRP5dI1GkDMLP6GG0rTJqr25S8fRPFUrfwofVUPT3YOWEKpEOBd6Q1C695FoYqpHx4h36iIkZcRpcQTBGoGpgIfdhKBjSqGEsX1swmEQ1TiyF0DIwL2aKvUpf0zgmqA1WQ8oTs8ANLa8si3HbuqAEzluf" "pcnoXDAzEF/xMVB4UZo1vuoJk3aqgxIG8UFW6za3YWN5pgLji/6rehOBJj83iPKwcohjFf2qbZBLpGHcuq+ol8Wb9eAq2+MdDKdM3gEIBzmCxShIVIEMW5biGrmNQplIAvJrwE8hZPKRPdm4z1YswIDAQAB\;"
+_cpanel-dcv-test-record	14400	IN	TXT	"_cpanel-dcv-test-record=M2UNncrcdIy2mkMqqe0KWT9xaxiKh1PoGH34zNqYl7coJNrWQq_yUDHLUI6Jb18j"
+_acme-challenge	14400	IN	TXT	"SvTzNUzsWku14MMVQpnM2BRzCZJmAf3htq_fTEN10io"
+_acme-challenge.www	14400	IN	TXT	"k8aI7HZT9nQF8QbuzbLDrwXS4g1mSBbCIw9C2JiPOow"
+_acme-challenge.mail	14400	IN	TXT	"Ccx3uPQL8XayyxF6nr7WA0crb16zkpStDON7O8qvBGo"
+_acme-challenge.webmail	14400	IN	TXT	"iPhxi1rpbOa765vZtNoxgzB34vve0ljh_TezrBAzX_w"
+_acme-challenge.cpanel	14400	IN	TXT	"0mjDwoIrR1JQhKW5U-Jm3t1bDGgWAHN5Lc6fFrgaPSw"
+_acme-challenge.webdisk	14400	IN	TXT	"yLsRC39wygT-SClGuE0nYP8mYafqtc44fOghu83lKis"
+_acme-challenge.cpcontacts	14400	IN	TXT	"1Il9qdo8lMqFLv9ySJgXc_R9uKFzl6f8PvqEX8xJcoc"
+_acme-challenge.cpcalendars	14400	IN	TXT	"ATIclwQMDcXVuwWdKFa5m4SEMapfj_7MCQyCYR_1KA0"

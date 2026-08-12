@@ -1,0 +1,38 @@
+Return-Path: <hyxfvjbq@raspinaclothing.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id 4zeNLBp6W2oT5xAAyIPyJQ
+	(envelope-from <hyxfvjbq@raspinaclothing.com>)
+	for <info@raspinaclothing.com>; Sat, 18 Jul 2026 16:35:30 +0330
+Return-path: <hyxfvjbq@raspinaclothing.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Sat, 18 Jul 2026 16:35:30 +0330
+Received: from hyxfvjbq by cp80p.mihankhabar.com with local (Exim 4.99.2)
+	(envelope-from <hyxfvjbq@raspinaclothing.com>)
+	id 1wl4jS-00000004eAJ-1mPZ
+	for info@raspinaclothing.com;
+	Sat, 18 Jul 2026 16:35:30 +0330
+To: info@raspinaclothing.com
+Subject: =?us-ascii?Q?[RASPINA]_Your_site_has_updated_to_WordPress_7.?=  =?us-ascii?Q?0.2?=
+X-PHP-Script: raspinaclothing.com/2/wp-cron.php for 185.94.99.249
+Date: Sat, 18 Jul 2026 13:05:30 +0000
+From: WordPress <wordpress@raspinaclothing.com>
+Message-ID: <M3Srd77o30gim9UXXQ6aV150itrHEENciexuyj2Fog@raspinaclothing.com>
+X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Howdy! Your site at https://raspinaclothing.com/2 has been updated automatically to WordPress 7.0.2.
+
+No further action is needed on your part. For more on version 7.0.2, see the About WordPress screen:
+https://raspinaclothing.com/2/wp-admin/about.php
+
+If you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help.
+https://wordpress.org/support/forums/
+
+You also have some plugins or themes with updates available. Update them now:
+https://raspinaclothing.com/2/wp-admin/
+
+The WordPress Team
+

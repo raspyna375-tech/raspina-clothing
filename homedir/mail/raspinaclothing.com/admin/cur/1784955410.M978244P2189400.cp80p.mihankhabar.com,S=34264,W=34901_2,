@@ -1,0 +1,637 @@
+Return-Path: <design@bertimail.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id plhyOBJCZGpYaCEAyIPyJQ
+	(envelope-from <design@bertimail.com>)
+	for <admin@raspinaclothing.com>; Sat, 25 Jul 2026 08:26:50 +0330
+Return-path: <design@bertimail.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Sat, 25 Jul 2026 08:26:50 +0330
+Received: from mailing.bertina.ir ([185.88.155.131]:55934)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.99.2)
+	(envelope-from <design@bertimail.com>)
+	id 1wnUSU-00000009AUu-49nt
+	for admin@raspinaclothing.com;
+	Sat, 25 Jul 2026 08:26:50 +0330
+X-KumoRef: eyJfQF8iOiJcXF8vIiwicmVjaXBpZW50IjoiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSJ9
+DKIM-Signature: v=1; a=rsa-sha256; d=bertimail.com; s=bertina; c=relaxed/relaxed;
+	bh=4+4JabZfzdLHtIVMNgCDiq0UVuz2SbkQse0q2yu8Yu4=;
+	h=from:to:subject:date:mime-version; t=1784955366;
+	b=GW9xudpstiahw0xaImd5QTf+m05chrT3+xAkRyVQ6uGpeqlmfCcjJjvTpGe3IXytnWEq6Ag+0
+	F47DXgM1RfIA2VWrwguKoxrskTcPbzf3qhOxdYmnROISXajbE9mBbvPtfJfyFwN3SpSZabVxhfR
+	QjZX0jm2kAY7+0IaUaFkZTSJl5cnIN5i89CuiHwpw7D4od/vkmfXF3eRmLlXatMBknS8IezMBYl
+	sQ/wRd+aBGvD7RTAWvX09T1sSDr4pMFZCfZCoZb27pi5YFSIFUECuXSCnLSiBBJsiOFMdTj9Oos
+	kL1M1B14y6KZt4yMlBM0247O9BJcUuW/b3APru6Lykbw==;
+Received: from mailing.bertina.ir (172.18.0.12)
+  by mailing.bertina.ir (KumoMTA 172.18.0.5) 
+  with ESMTP id 250dc13587e511f1bd9c9228dc0608e8 for <admin@raspinaclothing.com>;
+  Sat, 25 Jul 2026 04:56:06 +0000
+X-Bertina-Correlation-ID: 241d74db-0d82-48b4-9944-9c4feaf51778
+X-Bertina-Customer: 555d4011-5f93-4fec-acd0-84f99d2cb896
+X-Bertina-Type: campaign
+List-Unsubscribe:
+ <https://mailing.bertina.ir/u/eyJlIjoiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSIsImMiOiI1NTVkNDAxMS01ZjkzLTRmZWMtYWNkMC04NGY5OWQyY2I4OTYiLCJrIjoiNjk4YzkzNzAtZTM0NS00YzIwLTliODItNjkwOWM0OTZhYmFmIn0.-ZupAX35pdZTQk69r-XW-ydlC4LNIdiYdDW6GdD0LkM/one-click>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+From: =?UTF-8?B?2KjYsdiq24zZhtin?= <design@bertimail.com>
+To: admin@raspinaclothing.com
+Subject: =?UTF-8?B?2KjYsdiq24zZhtinIHwg2obaqdin2b4g2KrYrti1?=
+ =?UTF-8?B?2LXbjCDYsdin24zar9in2YYg2LPYp9uM2Ko=?=
+Message-ID: <1d6a1587-c1e9-4abe-b810-5a301b8b7c00@bertimail.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Sat, 25 Jul 2026 04:56:06 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+X-Spam-Status: No, score=0.9
+X-Spam-Score: 9
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  ______ _ ____ ______ ____ | ______
+    B ____ ____ ___ __ ________ __ _____ ______
+    ____ ____ _____ _____ ______ ______. bertina.ir
+    
+ Content analysis details:   (0.9 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.0 HTML_IMAGE_RATIO_02    BODY: HTML has a low ratio of text to image area
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or identical to
+                             background
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.5 KAM_REALLYHUGEIMGSRC   RAW: Spam with image tags with ridiculously huge
+                              http urls
+  0.5 GB_GEN_REDIR_URL       Redirector found in href link
+  0.0 T_REMOTE_IMAGE         Message contains an external image
+X-Spam-Flag: NO
+
+<html lang=3D"fa" dir=3D"rtl"><head>
+<meta>
+<meta name=3D"viewport">
+<meta>
+<meta name=3D"color-scheme">
+<meta name=3D"supported-color-schemes">
+<title>=D8=A8=D8=B1=D8=AA=DB=8C=D9=86=D8=A7 =E2=80=94 =
+=DA=86=DA=A9=D8=A7=D9=BE =D8=B1=D8=A7=DB=8C=DA=AF=D8=A7=D9=86 =
+=D8=B3=D8=A7=DB=8C=D8=AA | =DA=A9=D8=A7=D9=86=D8=B3=D9=BE=D8=AA B</title>
+<style>
+  body,table,td,a{ -webkit-text-size-adjust:100%; =
+-ms-text-size-adjust:100%; }
+  table,td{ mso-table-lspace:0pt; =
+mso-table-rspace:0pt; }
+  img{ -ms-interpolation-mode:bicubic; border:0; =
+height:auto; line-height:100%; outline:none; text-decoration:none; }
+  body{ margin:0; padding:0; width:100%!important; }
+  a{ color:#2f43d6; }
+  @media only screen and (max-width:640px){
+    .container{ width:100%!=
+important; }
+    .col{ display:block!important; width:100%!important; }
+    .px{ padding-left:22px!important; padding-right:22px!important; }
+    .h1{ font-size:26px!important; line-height:1.55!important; }
+    .h2{ font-size:20px!important; }
+    .btn-full a{ display:block!=
+important; width:auto!important; }
+  }
+  @media (prefers-color-scheme: =
+dark){
+    .dm-page{ background:#0e1330!important; }
+    .dm-card{ background:#161f44!important; }
+    .dm-ink{ color:#f2f5ff!=
+important; }
+    .dm-text{ color:#c7cee2!important; }
+    .dm-muted{ color:#9aa4c0!important; }
+    .dm-border{ =
+border-color:#2c3766!important; }
+    .dm-soft{ background:#1b2551!=
+important; }
+  }
+@font-face{font-family:'Vazirmatn';src:url('https://mailin=
+g.bertina.ir/assets/fonts/Vazirmatn-400.woff2') format('woff2');font-weight=
+:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Vazirmat=
+n';src:url('https://mailing.bertina.ir/assets/fonts/Vazirmatn-500.woff2') =
+format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Vazirmatn';src:url('https://mailing.bertina.=
+ir/assets/fonts/Vazirmatn-600.woff2') format('woff2');font-weight:600;font-=
+style:normal;font-display:swap;}
+@font-face{font-family:'Vazirmatn';src:url=
+('https://mailing.bertina.ir/assets/fonts/Vazirmatn-700.woff2') =
+format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Vazirmatn';src:url('https://mailing.bertina.=
+ir/assets/fonts/Vazirmatn-800.woff2') format('woff2');font-weight:800;font-=
+style:normal;font-display:swap;}
+</style>
+
+
+</head>
+<body dir=3D"rtl" style=3D"margin:0;padding:0;background:#e9edf7;">
+<div class=3D"dm-page" style=3D"background:#e9edf7;">
+
+
+<div style=3D"display:none;max-height:0;overflow:hidden;mso-hide:all;font-s=
+ize:1px;line-height:1px;color:#e9edf7;opacity:0;">
+=D8=B3=D8=A7=DB=8C=D8=AA=
+ =D9=81=D8=B9=D9=84=DB=8C =D8=B4=D9=85=D8=A7 =D8=AA=D8=A7 =
+=D8=AA=D8=AC=D8=B1=D8=A8=D9=87=E2=80=8C=D8=A7=DB=8C =DA=A9=D9=87 =
+=D9=85=D8=B4=D8=AA=D8=B1=DB=8C =D8=A7=D9=86=D8=AA=D8=B8=D8=A7=D8=B1 =
+=D8=AF=D8=A7=D8=B1=D8=AF =DA=86=D9=82=D8=AF=D8=B1 =D9=81=D8=A7=D8=B5=
+=D9=84=D9=87 =D8=AF=D8=A7=D8=B1=D8=AF=D8=9F =D8=B1=D8=A7=DB=8C=DA=AF=
+=D8=A7=D9=86 =D8=A8=D8=B3=D9=86=D8=AC=DB=8C=D8=AF.
+=E2=80=87=E2=80=87=
+=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=
+=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=E2=80=87=
+=E2=80=87=E2=80=87=E2=80=87
+</div>
+
+<table role=3D"presentation" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"background:#e9edf7;" class=3D"dm-page">
+<tbody><tr><td =
+align=3D"center" style=3D"padding:24px 12px;">
+<table role=3D"presentation"=
+ width=3D"640" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+class=3D"container" style=3D"width:640px;max-width:640px;">
+
+ =20
+  <tbody><tr><td style=3D"padding:4px 8px 14px;">
+    <table =
+role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tbody><tr>
+      <td align=3D"right" width=3D"180"><table =
+role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tbody><tr>
+        <td style=3D"background:#ffffff;border-rad=
+ius:12px;padding:9px 13px;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/d9f25d92-56c1-4892-9e30-e70b=
+aa5d429c.png" width=3D"120" height=3D"120" alt=3D"=D8=A8=D8=B1=D8=AA=
+=DB=8C=D9=86=D8=A7" style=3D"display:block;width:120px;height:120px;"></td>
+      </tr></tbody></table></td>
+      <td align=3D"left" valign=3D"middle"=
+ style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:14px;"><a href=3D"https://mailing.bertina.=
+ir/t/c/eyJtZXNzYWdlSWQiOiJhZThlYjM1NS0wMWJhLTQ5M2EtODY0NS1kOWJjMWQwMDlkYWIi=
+LCJjdXN0b21lcklkIjoiNTU1ZDQwMTEtNWY5My00ZmVjLWFjZDAtODRmOTlkMmNiODk2IiwiY2F=
+tcGFpZ25JZCI6IjY5OGM5MzcwLWUzNDUtNGMyMC05YjgyLTY5MDljNDk2YWJhZiIsImVtYWlsIj=
+oiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSJ9.BoCUG9wNvD7PobbQvN54PI_VIO6K_iaXMzst=
+arDRn1s?u=3Dhttps%3A%2F%2Fwww.bertina.ir%2Fwebsite-app-development" =
+style=3D"color:#5b6a86;text-decoration:none;" class=3D"dm-muted">bertina.=
+ir</a></td>
+    </tr></tbody></table>
+  </td></tr>
+
+ =20
+  <tr><td>
+  <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" class=3D"dm-card" style=3D"background:#fffff=
+f;border-radius:16px;overflow:hidden;border:1px solid #e3e8f2;">
+
+   =20
+    <tbody><tr><td style=3D"padding:0;">
+      <a href=3D"https://mailing.=
+bertina.ir/t/c/eyJtZXNzYWdlSWQiOiJhZThlYjM1NS0wMWJhLTQ5M2EtODY0NS1kOWJjMWQw=
+MDlkYWIiLCJjdXN0b21lcklkIjoiNTU1ZDQwMTEtNWY5My00ZmVjLWFjZDAtODRmOTlkMmNiODk=
+2IiwiY2FtcGFpZ25JZCI6IjY5OGM5MzcwLWUzNDUtNGMyMC05YjgyLTY5MDljNDk2YWJhZiIsIm=
+VtYWlsIjoiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSJ9.BoCUG9wNvD7PobbQvN54PI_VIO6K=
+_iaXMzstarDRn1s?u=3Dhttps%3A%2F%2Fwww.bertina.ir%2Fwebsite-app-development"=
+ style=3D"text-decoration:none;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/8f5af244-6d9f-455e-a08a-0b6e=
+bb59e03d.png" width=3D"640" height=3D"300" alt=3D"=D9=85=D9=82=D8=A7=
+=DB=8C=D8=B3=D9=87=D9=94 =D8=AA=D8=AC=D8=B1=D8=A8=D9=87=D9=94 =
+=D8=B3=D8=A7=DB=8C=D8=AA =D9=82=D8=AF=DB=8C=D9=85=DB=8C =D9=88 =
+=D9=85=D8=AF=D8=B1=D9=86 =D8=B1=D9=88=DB=8C =D9=85=D9=88=D8=A8=D8=A7=
+=DB=8C=D9=84 =D9=88 =D9=84=D9=BE=E2=80=8C=D8=AA=D8=A7=D9=BE" =
+style=3D"display:block;width:100%;max-width:640px;height:auto;background:#d=
+fe4f2;"></a>
+    </td></tr>
+    <tr><td class=3D"px" style=3D"padding:32px =
+46px 8px;">
+      <p style=3D"font-size:0;line-height:0;margin:0 0 =
+12px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:13px;font-weight:700;letter-spacing:.=
+4px;color:#ee7412;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/e84170fd-cb22-4f1c-be98-c5e7=
+ab338762.png" width=3D"173" height=3D"15" alt=3D"=D9=81=D8=A7=D8=B5=D9=84=
+=D9=87=D9=94 =D8=B3=D8=A7=DB=8C=D8=AA =D8=B4=D9=85=D8=A7 =D8=AA=D8=A7 =
+=D8=A7=D9=86=D8=AA=D8=B8=D8=A7=D8=B1 =D9=85=D8=B4=D8=AA=D8=B1=DB=8C" =
+style=3D"border:0;vertical-align:middle;max-width:100%;height:auto;"></p>
+      <h1 class=3D"h1 dm-ink" style=3D"font-size:0;line-height:0;margin:0 0=
+ 14px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:29px;line-height:1.5;font-weight:800;color:#14224f;"><=
+img src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d=
+2cb896/dcdda365-d900-43a6-a474-c5ce6e57d602.png" width=3D"514" =
+height=3D"75" alt=3D"=D8=B3=D8=A7=DB=8C=D8=AA =D9=81=D8=B9=D9=84=DB=8C =
+=D8=B4=D9=85=D8=A7=D8=8C =D8=A8=D8=A7 =D8=AA=D8=AC=D8=B1=D8=A8=D9=87=
+=E2=80=8C=D8=A7=DB=8C =DA=A9=D9=87 =D9=85=D8=B4=D8=AA=D8=B1=DB=8C =
+=D8=A7=D9=85=D8=B1=D9=88=D8=B2 =D8=A7=D9=86=D8=AA=D8=B8=D8=A7=D8=B1 =
+=D8=AF=D8=A7=D8=B1=D8=AF" style=3D"border:0;vertical-align:middle;max-width=
+:100%;height:auto;"></h1>
+      <p class=3D"dm-text" =
+style=3D"font-size:0;line-height:0;margin:0;font-family:'Vazirmatn',Tahoma,=
+'Segoe UI',Roboto,Arial,sans-serif;font-size:16px;line-height:2;color:#414b=
+5e;"><img src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-=
+84f99d2cb896/2adcc1f0-4494-4434-bbdc-1d455ed341a7.png" width=3D"501" =
+height=3D"48" alt=3D"=D9=81=D8=A7=D8=B5=D9=84=D9=87=D9=94 =
+=D9=85=DB=8C=D8=A7=D9=86 =D8=A7=DB=8C=D9=86 =D8=AF=D9=88=D8=8C =
+=D9=87=D9=85=D8=A7=D9=86=E2=80=8C=D8=AC=D8=A7=DB=8C=DB=8C =
+=D8=A7=D8=B3=D8=AA =DA=A9=D9=87 =D9=85=D8=B4=D8=AA=D8=B1=DB=8C =D8=B1=D8=A7=
+ =D8=A7=D8=B2 =D8=AF=D8=B3=D8=AA =D9=85=DB=8C=E2=80=8C=D8=AF=D9=87=DB=8C=
+=D8=AF. =D8=A8=D8=A7 =DB=8C=DA=A9 =DA=86=DA=A9=D8=A7=D9=BE =
+=D8=B1=D8=A7=DB=8C=DA=AF=D8=A7=D9=86=D8=8C =D8=A7=DB=8C=D9=86 =
+=D9=81=D8=A7=D8=B5=D9=84=D9=87 =D8=B1=D8=A7 =D8=AF=D9=82=DB=8C=D9=82 =D9=88=
+ =D9=82=D8=A7=D8=A8=D9=84=E2=80=8C=D8=A7=D9=86=D8=AF=D8=A7=D8=B2=D9=87=
+=E2=80=8C=DA=AF=DB=8C=D8=B1=DB=8C =D8=A8=D8=A8=DB=8C=D9=86=DB=8C=D8=AF." =
+style=3D"border:0;vertical-align:middle;max-width:100%;height:auto;"></p>
+    </td></tr>
+    <tr><td class=3D"px" style=3D"padding:24px 46px 34px;">
+     =20
+     =20
+      <table role=3D"presentation" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" class=3D"btn-full"><tbody><tr><td =
+style=3D"border-radius:8px;background:#2f43d6;" bgcolor=3D"#2f43d6">
+        <a href=3D"https://mailing.bertina.ir/t/c/eyJtZXNzYWdlSWQiOiJhZThlY=
+jM1NS0wMWJhLTQ5M2EtODY0NS1kOWJjMWQwMDlkYWIiLCJjdXN0b21lcklkIjoiNTU1ZDQwMTEt=
+NWY5My00ZmVjLWFjZDAtODRmOTlkMmNiODk2IiwiY2FtcGFpZ25JZCI6IjY5OGM5MzcwLWUzNDU=
+tNGMyMC05YjgyLTY5MDljNDk2YWJhZiIsImVtYWlsIjoiYWRtaW5AcmFzcGluYWNsb3RoaW5nLm=
+NvbSJ9.BoCUG9wNvD7PobbQvN54PI_VIO6K_iaXMzstarDRn1s?u=3Dhttps%3A%2F%2Fwww.=
+bertina.ir%2Fwebsite-app-development" style=3D"text-decoration:none;display=
+:inline-block;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/dae18af3-0ed2-447b-8ce8-c2dd=
+2bb0bb1b.png" width=3D"252" height=3D"54" alt=3D"=D8=AF=D8=B1=D8=AE=D9=88=
+=D8=A7=D8=B3=D8=AA =DA=86=DA=A9=D8=A7=D9=BE =D8=B1=D8=A7=DB=8C=DA=AF=
+=D8=A7=D9=86 =D8=B3=D8=A7=DB=8C=D8=AA" style=3D"border:0;display:block;max-=
+width:100%;height:auto;"></a>
+      </td></tr></tbody></table>
+     =20
+    </td></tr>
+
+   =20
+    <tr><td class=3D"px" style=3D"padding:0 46px =
+30px;">
+      <table role=3D"presentation" width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D""><tbody><tr><td =
+style=3D"padding:0;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/5de2d03c-6a15-40b9-bf92-61f9=
+0c39278d.png" width=3D"548" height=3D"133" alt=3D"=D8=B8=D8=B1=D9=81=
+=DB=8C=D8=AA =D9=85=D8=AD=D8=AF=D9=88=D8=AF =E2=80=94 =DB=B2=DB=B0=D9=AA =
+=D8=AA=D8=AE=D9=81=DB=8C=D9=81 =D8=AA=D8=A7 =DB=B1=DB=B0 =
+=D9=85=D8=B1=D8=AF=D8=A7=D8=AF =DB=B1=DB=B4=DB=B0=DB=B5 =
+=D8=A8=D8=B1=D8=A7=DB=8C =D8=B4=D8=B1=D9=88=D8=B9 =D9=BE=D8=B1=D9=88=
+=DA=98=D9=87=D9=94 =D8=B7=D8=B1=D8=A7=D8=AD=DB=8C =D8=B3=D8=A7=DB=8C=D8=AA =
+=DB=8C=D8=A7 =D8=A7=D9=BE=D9=84=DB=8C=DA=A9=DB=8C=D8=B4=D9=86" =
+style=3D"border:0;display:block;max-width:100%;height:auto;"></td></tr></tb=
+ody></table>
+    </td></tr>
+
+   =20
+    <tr><td class=3D"px dm-soft" =
+style=3D"padding:32px 46px 20px;background:#f4f6fc;border-top:1px solid =
+#e3e8f2;">
+      <h2 class=3D"h2 dm-ink" style=3D"font-size:0;line-height:0=
+;margin:0 0 4px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:22px;font-weight:800;color:#14224f;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/32a0852c-9702-4512-a0f8-61f59d4e8954.png" width=3D"126" height=3D"22" =
+alt=3D"=D8=AA=D9=81=D8=A7=D9=88=D8=AA =D8=B1=D8=A7 =D8=A8=D8=A8=DB=8C=
+=D9=86=DB=8C=D8=AF" style=3D"border:0;vertical-align:middle;max-width:100%;=
+height:auto;"></h2>
+      <p class=3D"dm-muted" style=3D"font-size:0;line-h=
+eight:0;margin:0 0 18px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,=
+Arial,sans-serif;font-size:14px;line-height:1.9;color:#7b8598;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/f6f6b509-706c-4bb4-b3d6-d32e4fd8da89.png" width=3D"258" height=3D"16" =
+alt=3D"=D9=87=D9=85=D8=A7=D9=86 =DA=A9=D8=B3=D8=A8=E2=80=8C=D9=88=DA=A9=
+=D8=A7=D8=B1=D8=8C =D8=AF=D9=88 =D8=AA=D8=AC=D8=B1=D8=A8=D9=87=D9=94 =
+=D9=85=D8=AA=D9=81=D8=A7=D9=88=D8=AA =D8=A8=D8=B1=D8=A7=DB=8C =
+=D9=85=D8=B4=D8=AA=D8=B1=DB=8C." style=3D"border:0;vertical-align:middle;ma=
+x-width:100%;height:auto;"></p>
+      <table role=3D"presentation" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tbody><tr>
+        <td class=3D"col" width=3D"50%" valign=3D"top" =
+style=3D"padding:8px;">
+          <table role=3D"presentation" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"border:1px solid #e0e4ee;border-radius:10px;overflow:hidden;backgr=
+ound:#ffffff;" class=3D"dm-border dm-card"><tbody><tr><td>
+            <img src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fe=
+c-acd0-84f99d2cb896/be9d705b-ec96-45b4-9289-2600e173bdc0.png" width=3D"255"=
+ height=3D"170" alt=3D"=D9=86=D9=85=D9=88=D9=86=D9=87=D9=94 =
+=D8=B3=D8=A7=DB=8C=D8=AA =D9=82=D8=AF=DB=8C=D9=85=DB=8C =E2=80=94 =
+=D9=82=D8=A8=D9=84" style=3D"display:block;width:100%;height:auto;backgroun=
+d:#e2e6f0;">
+            <div style=3D"padding:12px =
+14px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;"><span style=3D"font-size:0;line-height:0;font-size:12px;font-w=
+eight:700;color:#98a1b4;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/cf7a06d7-3da6-4935-a587-5104=
+c55c87b0.png" width=3D"17" height=3D"12" alt=3D"=D9=82=D8=A8=D9=84" =
+style=3D"border:0;vertical-align:middle;max-width:100%;height:auto;"></span=
+><div class=3D"dm-muted" style=3D"font-size:13px;line-height:1.=
+8;color:#7b8598;padding-top:3px;">=DA=A9=D9=86=D8=AF=D8=8C =
+=D8=B4=D9=84=D9=88=D8=BA =D9=88 =D9=86=D8=A7=D9=85=D9=86=D8=A7=D8=B3=D8=A8 =
+=D9=85=D9=88=D8=A8=D8=A7=DB=8C=D9=84=D8=9B =D9=85=D8=B4=D8=AA=D8=B1=DB=8C =
+=D9=82=D8=A8=D9=84 =D8=A7=D8=B2 =D8=A7=D9=82=D8=AF=D8=A7=D9=85 =
+=D8=AE=D8=A7=D8=B1=D8=AC =D9=85=DB=8C=E2=80=8C=D8=B4=D9=88=D8=AF.=
+</div></div>
+          </td></tr></tbody></table>
+        </td>
+        <td class=3D"col" width=3D"50%" valign=3D"top" =
+style=3D"padding:8px;">
+          <table role=3D"presentation" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"border:2px solid #2f43d6;border-radius:10px;overflow:hidden;backgr=
+ound:#ffffff;" class=3D"dm-card"><tbody><tr><td>
+            <img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/608da404-4398-405f-8b94-3cff6ac54b9c.png" width=3D"255" height=3D"170" =
+alt=3D"=D8=AA=D8=AC=D8=B1=D8=A8=D9=87=D9=94 =D9=85=D8=AF=D8=B1=D9=86 =
+=E2=80=94 =D8=A8=D8=B9=D8=AF" style=3D"display:block;width:100%;height:auto=
+;background:#dfe4f2;">
+            <div style=3D"padding:12px =
+14px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;"><span style=3D"font-size:0;line-height:0;font-size:12px;font-w=
+eight:700;color:#2f43d6;"><img src=3D"https://mailing.bertina.=
+ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb896/84d24477-2162-4990-9f2b-af2d=
+599cad52.png" width=3D"16" height=3D"10" alt=3D"=D8=A8=D8=B9=D8=AF" =
+style=3D"border:0;vertical-align:middle;max-width:100%;height:auto;"></span=
+><div class=3D"dm-text" style=3D"font-size:13px;line-height:1.=
+8;color:#414b5e;padding-top:3px;">=D8=B3=D8=B1=DB=8C=D8=B9=D8=8C =
+=D8=AE=D9=88=D8=A7=D9=86=D8=A7 =D9=88 =D9=85=D9=88=D8=A8=D8=A7=DB=8C=
+=D9=84=E2=80=8C=D9=85=D8=AD=D9=88=D8=B1=D8=9B =D9=85=D8=B3=DB=8C=D8=B1 =
+=D8=A7=D9=82=D8=AF=D8=A7=D9=85 =D8=B1=D9=88=D8=B4=D9=86 =D9=88 =
+=D8=A8=DB=8C=E2=80=8C=D8=A7=D8=B5=D8=B7=DA=A9=D8=A7=DA=A9.</div></div>
+          </td></tr></tbody></table>
+        </td>
+      =
+</tr></tbody></table>
+    </td></tr>
+
+   =20
+    <tr><td class=3D"px" =
+style=3D"padding:34px 46px 6px;">
+      <h2 class=3D"h2 dm-ink" =
+style=3D"font-size:0;line-height:0;margin:0 0 14px;font-family:'Vazirmatn',=
+Tahoma,'Segoe UI',Roboto,Arial,sans-serif;font-size:20px;font-weight:800;co=
+lor:#14224f;"><img src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4=
+fec-acd0-84f99d2cb896/fca4969b-9163-4322-91b8-c9a36bad5058.png" =
+width=3D"325" height=3D"25" alt=3D"=DA=86=DA=A9=D8=A7=D9=BE =
+=D8=B1=D9=88=DB=8C =DA=86=D9=87=D8=A7=D8=B1 =D9=86=D9=82=D8=B7=D9=87=D9=94 =
+=D9=81=D8=A7=D8=B5=D9=84=D9=87 =D8=AA=D9=85=D8=B1=DA=A9=D8=B2 =
+=D9=85=DB=8C=E2=80=8C=DA=A9=D9=86=D8=AF" style=3D"border:0;vertical-align:m=
+iddle;max-width:100%;height:auto;"></h2>
+      <table role=3D"presentation"=
+ width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tbody><tr>
+        <td class=3D"col" width=3D"50%" =
+valign=3D"top" style=3D"padding:8px;"><table role=3D"presentation" =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+class=3D"dm-soft" style=3D"background:#f4f6fc;border-radius:10px;"><tbody><=
+tr><td style=3D"padding:16px 18px;"><div class=3D"dm-ink" =
+style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:15px;font-weight:700;color:#14224f;">=D8=AA=D8=AC=
+=D8=B1=D8=A8=D9=87=D9=94 =D9=85=D9=88=D8=A8=D8=A7=DB=8C=D9=84</div><div =
+class=3D"dm-muted" style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',=
+Roboto,Arial,sans-serif;font-size:13px;line-height:1.=
+8;color:#7b8598;padding-top:4px;">=D9=86=D9=85=D8=A7=DB=8C=D8=B4 =D9=88 =
+=DA=A9=D8=A7=D8=B1=DA=A9=D8=B1=D8=AF =D8=B1=D9=88=DB=8C =
+=DA=AF=D9=88=D8=B4=DB=8C=D8=8C =D8=AC=D8=A7=DB=8C=DB=8C =DA=A9=D9=87 =
+=D8=A8=DB=8C=D8=B4=D8=AA=D8=B1 =D8=A8=D8=A7=D8=B2=D8=AF=DB=8C=D8=AF =
+=D8=B1=D8=AE =D9=85=DB=8C=E2=80=8C=D8=AF=D9=87=D8=AF.=
+</div></td></tr></tbody></table></td>
+        <td class=3D"col" =
+width=3D"50%" valign=3D"top" style=3D"padding:8px;"><table =
+role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" class=3D"dm-soft" style=3D"background:#f4f6fc;border-radius:10=
+px;"><tbody><tr><td style=3D"padding:16px 18px;"><div class=3D"dm-ink" =
+style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:15px;font-weight:700;color:#14224f;">=D8=B3=D8=B1=
+=D8=B9=D8=AA =D8=A8=D8=A7=D8=B1=DA=AF=D8=B0=D8=A7=D8=B1=DB=8C</div><div =
+class=3D"dm-muted" style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',=
+Roboto,Arial,sans-serif;font-size:13px;line-height:1.=
+8;color:#7b8598;padding-top:4px;">=D8=AB=D8=A7=D9=86=DB=8C=D9=87=E2=80=8C=
+=D9=87=D8=A7=DB=8C=DB=8C =DA=A9=D9=87 =D9=85=DB=8C=D8=A7=D9=86 =
+=D9=85=D8=A7=D9=86=D8=AF=D9=86 =D9=88 =D8=B1=D9=81=D8=AA=D9=86 =
+=DA=A9=D8=A7=D8=B1=D8=A8=D8=B1 =D9=81=D8=B1=D9=82 =D9=85=DB=8C=E2=80=8C=
+=DA=AF=D8=B0=D8=A7=D8=B1=D9=86=D8=AF.</div></td></tr></tbody></table></td>
+      </tr><tr>
+        <td class=3D"col" width=3D"50%" valign=3D"top" =
+style=3D"padding:8px;"><table role=3D"presentation" width=3D"100%" =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"dm-soft" =
+style=3D"background:#f4f6fc;border-radius:10px;"><tbody><tr><td =
+style=3D"padding:16px 18px;"><div class=3D"dm-ink" style=3D"font-family:'Va=
+zirmatn',Tahoma,'Segoe UI',Roboto,Arial,sans-serif;font-size:15px;font-weig=
+ht:700;color:#14224f;">=D8=AE=D9=88=D8=A7=D9=86=D8=A7=DB=8C=DB=8C =D9=88 =
+=DA=86=DB=8C=D8=AF=D9=85=D8=A7=D9=86</div><div class=3D"dm-muted" =
+style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:13px;line-height:1.8;color:#7b8598;padding-top:4px;">=
+=D9=88=D8=B6=D9=88=D8=AD =D9=85=D8=AA=D9=86 =D9=88 =D8=B3=D8=A7=D8=AE=
+=D8=AA=D8=A7=D8=B1 =D8=B5=D9=81=D8=AD=D9=87 =D8=A8=D8=B1=D8=A7=DB=8C =
+=D8=AF=D8=B1=DA=A9 =D8=B3=D8=B1=DB=8C=D8=B9 =D9=BE=DB=8C=D8=A7=D9=85.=
+</div></td></tr></tbody></table></td>
+        <td class=3D"col" =
+width=3D"50%" valign=3D"top" style=3D"padding:8px;"><table =
+role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" class=3D"dm-soft" style=3D"background:#f4f6fc;border-radius:10=
+px;"><tbody><tr><td style=3D"padding:16px 18px;"><div class=3D"dm-ink" =
+style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:15px;font-weight:700;color:#14224f;">=D9=85=D8=B3=
+=DB=8C=D8=B1 =D8=A7=D9=82=D8=AF=D8=A7=D9=85</div><div class=3D"dm-muted" =
+style=3D"font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:13px;line-height:1.8;color:#7b8598;padding-top:4px;">=
+=D9=85=D8=B3=DB=8C=D8=B1 =DA=A9=D8=A7=D8=B1=D8=A8=D8=B1 =D8=AA=D8=A7 =
+=D8=AA=D9=85=D8=A7=D8=B3=D8=8C =D9=81=D8=B1=D9=85 =D9=88 =
+=D8=AE=D8=B1=DB=8C=D8=AF =D8=A8=D8=AF=D9=88=D9=86 =D8=B3=D8=B1=D8=AF=
+=D8=B1=DA=AF=D9=85=DB=8C.</div></td></tr></tbody></table></td>
+      </tr></tbody></table>
+    </td></tr>
+
+   =20
+    <tr><td class=3D"px"=
+ style=3D"padding:26px 46px 6px;">
+      <h2 class=3D"h2 dm-ink" =
+style=3D"font-size:0;line-height:0;margin:0 0 4px;font-family:'Vazirmatn',=
+Tahoma,'Segoe UI',Roboto,Arial,sans-serif;font-size:20px;font-weight:800;co=
+lor:#14224f;"><img src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4=
+fec-acd0-84f99d2cb896/10a1d70e-fea6-4646-a466-a38021966b57.png" =
+width=3D"184" height=3D"24" alt=3D"=D9=86=D9=85=D9=88=D9=86=D9=87=
+=E2=80=8C=D9=87=D8=A7=DB=8C=DB=8C =D8=A7=D8=B2 =D8=AA=D8=AC=D8=B1=D8=A8=
+=D9=87=D9=94 =D8=AA=D8=A7=D8=B2=D9=87" style=3D"border:0;vertical-align:mid=
+dle;max-width:100%;height:auto;"></h2>
+      <p class=3D"dm-muted" =
+style=3D"font-size:0;line-height:0;margin:0 0 12px;font-family:'Vazirmatn',=
+Tahoma,'Segoe UI',Roboto,Arial,sans-serif;font-size:13px;color:#7b8598;"><i=
+mg src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2=
+cb896/bd8a9565-7d44-4bd0-b188-379d3effe996.png" width=3D"118" height=3D"12"=
+ alt=3D"=D9=86=D9=85=D9=88=D9=86=D9=87=E2=80=8C=DA=A9=D8=A7=D8=B1=D9=87=
+=D8=A7=DB=8C =D9=85=D8=AC=D8=A7=D8=B2 =D8=A8=D8=B1=D8=AA=DB=8C=D9=86=D8=A7.=
+" style=3D"border:0;vertical-align:middle;max-width:100%;height:auto;"></p>
+      <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tbody><tr>
+        <td class=3D"col" =
+width=3D"50%" valign=3D"top" style=3D"padding:8px;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/6dcf237f-756a-4220-a983-23a59b7a4265.png" width=3D"255" height=3D"190" =
+alt=3D"=D9=86=D9=85=D9=88=D9=86=D9=87=E2=80=8C=DA=A9=D8=A7=D8=B1 =
+=D9=85=D8=AC=D8=A7=D8=B2 =D8=A8=D8=B1=D8=AA=DB=8C=D9=86=D8=A7 =DB=B1" =
+style=3D"display:block;width:100%;height:auto;border-radius:10px;background=
+:#e2e6f0;"><div class=3D"dm-muted" style=3D"font-family:'Vazirmatn',Tahoma,=
+'Segoe UI',Roboto,Arial,sans-serif;font-size:13px;color:#7b8598;padding-top=
+:8px;">=D8=B7=D8=B1=D8=A7=D8=AD=DB=8C =D8=B3=D8=A7=DB=8C=D8=AA =
+=D8=A2=D8=B1=D8=B3=D8=A7=D9=84</div></td>
+        <td class=3D"col" =
+width=3D"50%" valign=3D"top" style=3D"padding:8px;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/e659dcdd-d84c-4bd1-8bef-f40bde881318.png" width=3D"255" height=3D"190" =
+alt=3D"=D9=86=D9=85=D9=88=D9=86=D9=87=E2=80=8C=DA=A9=D8=A7=D8=B1 =
+=D9=85=D8=AC=D8=A7=D8=B2 =D8=A8=D8=B1=D8=AA=DB=8C=D9=86=D8=A7 =DB=B2" =
+style=3D"display:block;width:100%;height:auto;border-radius:10px;background=
+:#e2e6f0;"><div class=3D"dm-muted" style=3D"font-family:'Vazirmatn',Tahoma,=
+'Segoe UI',Roboto,Arial,sans-serif;font-size:13px;color:#7b8598;padding-top=
+:8px;">=D8=B7=D8=B1=D8=A7=D8=AD=DB=8C =D8=B3=D8=A7=DB=8C=D8=AA =
+=D8=A2=D9=85=D8=A8=D9=88=D9=84=D8=A7=D9=86=D8=B3 =D8=A2=D8=B0=D8=B1=D9=86=
+=D8=AC=D8=A7=D8=AA</div></td>
+      </tr></tbody></table>
+    </td></tr>
+
+   =20
+    <tr><td class=3D"px" style=3D"padding:26px 46px 6px;">
+      <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" class=3D"dm-soft" style=3D"background:#f4f6f=
+c;border-radius:12px;"><tbody><tr><td style=3D"padding:22px 24px;">
+        <h2 class=3D"dm-ink" style=3D"font-size:0;line-height:0;margin:0 0 =
+8px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:18px;font-weight:800;color:#14224f;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/2cb2773d-cb40-4041-a00f-e0ec08fca080.png" width=3D"206" height=3D"22" =
+alt=3D"=D8=AF=D8=B1 =D8=B3=D9=87 =DA=AF=D8=A7=D9=85=D8=8C =
+=D9=81=D8=A7=D8=B5=D9=84=D9=87 =D8=B1=D8=A7 =D8=A8=D8=A8=DB=8C=D9=86=
+=DB=8C=D8=AF" style=3D"border:0;vertical-align:middle;max-width:100%;height=
+:auto;"></h2>
+        <p class=3D"dm-text" style=3D"margin:0;font-family:'V=
+azirmatn',Tahoma,'Segoe UI',Roboto,Arial,sans-serif;font-size:14px;line-hei=
+ght:2;color:#414b5e;">=DB=B1) =D8=AB=D8=A8=D8=AA =D8=A2=D8=AF=D8=B1=D8=B3 =
+=D8=B3=D8=A7=DB=8C=D8=AA &nbsp;=E2=86=90&nbsp; =DB=B2) =
+=D8=A8=D8=B1=D8=B1=D8=B3=DB=8C =D8=AA=D8=AE=D8=B5=D8=B5=DB=8C =
+=D8=AA=D9=88=D8=B3=D8=B7 =D8=A8=D8=B1=D8=AA=DB=8C=D9=86=D8=A7 =
+&nbsp;=E2=86=90&nbsp; =DB=B3) =D8=AF=D8=B1=DB=8C=D8=A7=D9=81=D8=AA =
+=DA=AF=D8=B2=D8=A7=D8=B1=D8=B4 PDF =D8=A8=D8=A7 =D8=A7=D9=88=D9=84=D9=88=
+=DB=8C=D8=AA=E2=80=8C=D9=87=D8=A7=DB=8C =D9=BE=DB=8C=D8=B4=D9=86=D9=87=
+=D8=A7=D8=AF=DB=8C.</p>
+      </td></tr></tbody></table>
+    </td></tr>
+
+   =20
+    <tr><td style=3D"padding:20px 0 0;">
+      <table =
+role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"background:#16205a;" bgcolor=3D"#16205a"><tbody><tr><=
+td align=3D"center" class=3D"px" style=3D"padding:40px 46px;">
+        <h2 style=3D"font-size:0;line-height:0;margin:0 0 =
+10px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:22px;font-weight:800;color:#ffffff;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/1c2cf0a1-0044-49f9-8bc3-073dd62b26d8.png" width=3D"254" height=3D"24" =
+alt=3D"=D9=81=D8=A7=D8=B5=D9=84=D9=87 =D8=B1=D8=A7 =D8=A8=D9=87 =
+=D9=81=D8=B1=D8=B5=D8=AA =D8=AA=D8=A8=D8=AF=DB=8C=D9=84 =
+=DA=A9=D9=86=DB=8C=D8=AF" style=3D"border:0;vertical-align:middle;max-width=
+:100%;height:auto;"></h2>
+        <p style=3D"font-size:0;line-height:0;mar=
+gin:0 0 22px;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,Arial,=
+sans-serif;font-size:15px;line-height:1.9;color:#c3cae6;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/48169cff-d37b-4c71-a37b-54849828999f.png" width=3D"290" height=3D"17" =
+alt=3D"=DA=AF=D8=B2=D8=A7=D8=B1=D8=B4 =DA=86=DA=A9=D8=A7=D9=BE =
+=D9=86=D8=B4=D8=A7=D9=86 =D9=85=DB=8C=E2=80=8C=D8=AF=D9=87=D8=AF =
+=D8=A7=D8=B2 =DA=A9=D8=AC=D8=A7 =D8=A8=D8=A7=DB=8C=D8=AF =
+=D8=B4=D8=B1=D9=88=D8=B9 =DA=A9=D9=86=DB=8C=D8=AF." =
+style=3D"border:0;vertical-align:middle;max-width:100%;height:auto;"></p>
+       =20
+       =20
+        <table role=3D"presentation" =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" =
+class=3D"btn-full"><tbody><tr><td style=3D"border-radius:8px;background:#2f=
+43d6;" bgcolor=3D"#2f43d6">
+          <a href=3D"https://mailing.bertina.=
+ir/t/c/eyJtZXNzYWdlSWQiOiJhZThlYjM1NS0wMWJhLTQ5M2EtODY0NS1kOWJjMWQwMDlkYWIi=
+LCJjdXN0b21lcklkIjoiNTU1ZDQwMTEtNWY5My00ZmVjLWFjZDAtODRmOTlkMmNiODk2IiwiY2F=
+tcGFpZ25JZCI6IjY5OGM5MzcwLWUzNDUtNGMyMC05YjgyLTY5MDljNDk2YWJhZiIsImVtYWlsIj=
+oiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSJ9.BoCUG9wNvD7PobbQvN54PI_VIO6K_iaXMzst=
+arDRn1s?u=3Dhttps%3A%2F%2Fwww.bertina.ir%2Fwebsite-app-development" =
+style=3D"text-decoration:none;display:inline-block;"><img =
+src=3D"https://mailing.bertina.ir/assets/555d4011-5f93-4fec-acd0-84f99d2cb8=
+96/dae18af3-0ed2-447b-8ce8-c2dd2bb0bb1b.png" width=3D"252" height=3D"54" =
+alt=3D"=D8=AF=D8=B1=D8=AE=D9=88=D8=A7=D8=B3=D8=AA =DA=86=DA=A9=D8=A7=D9=BE =
+=D8=B1=D8=A7=DB=8C=DA=AF=D8=A7=D9=86 =D8=B3=D8=A7=DB=8C=D8=AA" =
+style=3D"border:0;display:block;max-width:100%;height:auto;"></a>
+        </td></tr></tbody></table>
+       =20
+        <p =
+style=3D"margin:22px 0 0;font-family:'Vazirmatn',Tahoma,'Segoe UI',Roboto,=
+Arial,sans-serif;font-size:14px;color:#aab3d6;">=D9=87=D9=86=D9=88=D8=B2 =
+=D8=B3=D8=A7=DB=8C=D8=AA =D9=86=D8=AF=D8=A7=D8=B1=DB=8C=D8=AF=D8=9F <a =
+href=3D"https://mailing.bertina.ir/t/c/eyJtZXNzYWdlSWQiOiJhZThlYjM1NS0wMWJh=
+LTQ5M2EtODY0NS1kOWJjMWQwMDlkYWIiLCJjdXN0b21lcklkIjoiNTU1ZDQwMTEtNWY5My00ZmV=
+jLWFjZDAtODRmOTlkMmNiODk2IiwiY2FtcGFpZ25JZCI6IjY5OGM5MzcwLWUzNDUtNGMyMC05Yj=
+gyLTY5MDljNDk2YWJhZiIsImVtYWlsIjoiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSJ9.=
+BoCUG9wNvD7PobbQvN54PI_VIO6K_iaXMzstarDRn1s?u=3Dhttps%3A%2F%2Fwww.bertina.=
+ir%2Fwebsite-app-development" style=3D"color:#ffffff;text-decoration:underl=
+ine;">=D8=AF=D8=B1=D8=AE=D9=88=D8=A7=D8=B3=D8=AA =D9=85=D8=B4=D8=A7=D9=88=
+=D8=B1=D9=87 =D8=A7=D9=88=D9=84=DB=8C=D9=87</a></p>
+      </td></tr></tbody></table>
+    </td></tr>
+
+   =20
+    <tr><td class=3D"px" style=3D"padding:24px 46px;">
+      <div class=3D"dm-text" style=3D"font-family:'Vazirmatn',Tahoma,'Segoe=
+ UI',Roboto,Arial,sans-serif;font-size:14px;line-height:2;color:#414b5e;">=
+=D8=AA=D9=84=D9=81=D9=86: <span dir=3D"ltr">=DB=B0=DB=B2=DB=B1-=DB=B4=
+=DB=B9=DB=B1=DB=B3=DB=B5</span><br>=D8=AA=D9=87=D8=B1=D8=A7=D9=86=D8=8C =
+=D8=AE=DB=8C=D8=A7=D8=A8=D8=A7=D9=86 =D8=B3=D8=AA=D8=A7=D8=B1=D8=AE=D8=A7=
+=D9=86=D8=8C =DA=A9=D9=88=DA=86=D9=87 =D8=AD=D8=AC=D8=AA=D8=8C =
+=D9=BE=D9=84=D8=A7=DA=A9 =DB=B8=D8=8C =D8=B3=D8=A7=D8=AE=D8=AA=D9=85=
+=D8=A7=D9=86 =D8=A8=D8=B1=D8=AA=DB=8C=D9=86=D8=A7</div>
+    </td></tr>
+
+  </tbody></table>
+  </td></tr>
+
+ =20
+  <tr><td align=3D"center" =
+style=3D"padding:12px 24px 30px;">
+    <div style=3D"height:1px;background:=
+#d6dcea;line-height:1px;font-size:0;margin-bottom:14px;" =
+class=3D"dm-border">&nbsp;</div>
+   =20
+  </td></tr>
+
+</tbody></table>
+</td></tr>
+</tbody></table>
+</div>
+
+
+<div style=3D"text-align:center;font-s=
+ize:12px;color:#94a3b8;padding:16px">=D8=A8=D8=B1=D8=A7=DB=8C =
+=D9=84=D8=BA=D9=88 =D8=A7=D8=B4=D8=AA=D8=B1=D8=A7=DA=A9 <a =
+href=3D"https://mailing.bertina.ir/u/eyJlIjoiYWRtaW5AcmFzcGluYWNsb3RoaW5nLm=
+NvbSIsImMiOiI1NTVkNDAxMS01ZjkzLTRmZWMtYWNkMC04NGY5OWQyY2I4OTYiLCJrIjoiNjk4Y=
+zkzNzAtZTM0NS00YzIwLTliODItNjkwOWM0OTZhYmFmIn0.-ZupAX35pdZTQk69r-XW-ydlC4LN=
+IdiYdDW6GdD0LkM">=D8=A7=DB=8C=D9=86=D8=AC=D8=A7 =DA=A9=D9=84=DB=8C=DA=A9 =
+=DA=A9=D9=86=DB=8C=D8=AF</a></div><img src=3D"https://mailing.bertina.=
+ir/t/o/eyJtZXNzYWdlSWQiOiJhZThlYjM1NS0wMWJhLTQ5M2EtODY0NS1kOWJjMWQwMDlkYWIi=
+LCJjdXN0b21lcklkIjoiNTU1ZDQwMTEtNWY5My00ZmVjLWFjZDAtODRmOTlkMmNiODk2IiwiY2F=
+tcGFpZ25JZCI6IjY5OGM5MzcwLWUzNDUtNGMyMC05YjgyLTY5MDljNDk2YWJhZiIsImVtYWlsIj=
+oiYWRtaW5AcmFzcGluYWNsb3RoaW5nLmNvbSJ9.BoCUG9wNvD7PobbQvN54PI_VIO6K_iaXMzst=
+arDRn1s" width=3D"1" height=3D"1" alt=3D"" style=3D"display:none"/></body><=
+/html>

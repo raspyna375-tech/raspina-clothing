@@ -1,0 +1,413 @@
+{
+  "brand": "Raspina Clothing",
+  "source": "sanitized WordPress/WooCommerce backup",
+  "product_count": 306,
+  "category_count": 32,
+  "image_count": 306,
+  "missing_image_count": 588,
+  "currency": "USD",
+  "price_policy": "Legacy prices are reference values; wholesale quotations confirm current pricing.",
+  "privacy": "Only public catalog records were extracted; users, orders, comments and credentials were ignored.",
+  "missing_images": [
+    {
+      "attachment_id": 3291,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/LKL.jpg"
+    },
+    {
+      "attachment_id": 3292,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/NGGGF.jpg"
+    },
+    {
+      "attachment_id": 3293,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/PLP.jpg"
+    },
+    {
+      "attachment_id": 3308,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/FGHJKLDFGHJK-1.jpg"
+    },
+    {
+      "attachment_id": 3309,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/SDFGHJIKOLPLKJHGFC.jpg"
+    },
+    {
+      "attachment_id": 3316,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/9عفل.jpg"
+    },
+    {
+      "attachment_id": 3317,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/97ف.jpg"
+    },
+    {
+      "attachment_id": 3318,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/98عفلل.jpg"
+    },
+    {
+      "attachment_id": 3319,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/خالغل.jpg"
+    },
+    {
+      "attachment_id": 3320,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/خههعل.jpg"
+    },
+    {
+      "attachment_id": 3325,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/9عفل-1.jpg"
+    },
+    {
+      "attachment_id": 3326,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/98عفلل-1.jpg"
+    },
+    {
+      "attachment_id": 3330,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/مهالبزربلغعه.jpg"
+    },
+    {
+      "attachment_id": 3334,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/نظن.jpg"
+    },
+    {
+      "attachment_id": 3384,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/POIHGFGHJKLLKJHG.jpg"
+    },
+    {
+      "attachment_id": 3331,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/خسخ.jpg"
+    },
+    {
+      "attachment_id": 3393,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/تلا.jpg"
+    },
+    {
+      "attachment_id": 3408,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/BGCFDGF.jpg"
+    },
+    {
+      "attachment_id": 3409,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/GHJ.jpg"
+    },
+    {
+      "attachment_id": 3410,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/JBHYF.jpg"
+    },
+    {
+      "attachment_id": 3411,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/JNHJHFY.jpg"
+    },
+    {
+      "attachment_id": 3420,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/OIU8Y.jpg"
+    },
+    {
+      "attachment_id": 3426,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/UJNYHHNNV.jpg"
+    },
+    {
+      "attachment_id": 3424,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/SDFGH.jpg"
+    },
+    {
+      "attachment_id": 3431,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/غغ8.jpg"
+    },
+    {
+      "attachment_id": 3447,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/unnamed-file-2.jpg"
+    },
+    {
+      "attachment_id": 3445,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/M-BJKL.jpg"
+    },
+    {
+      "attachment_id": 3451,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/هعلا.jpg"
+    },
+    {
+      "attachment_id": 3465,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/JZUGYU.jpg"
+    },
+    {
+      "attachment_id": 3464,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/DVS.jpg"
+    },
+    {
+      "attachment_id": 3466,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/FD.jpg"
+    },
+    {
+      "attachment_id": 3482,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/TFTRD.jpg"
+    },
+    {
+      "attachment_id": 3483,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/YR.jpg"
+    },
+    {
+      "attachment_id": 3495,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/متهنت.jpg"
+    },
+    {
+      "attachment_id": 3497,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/عغعفف.jpg"
+    },
+    {
+      "attachment_id": 3507,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/سصیص.jpg"
+    },
+    {
+      "attachment_id": 3514,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/XLKJHGVF.jpg"
+    },
+    {
+      "attachment_id": 3512,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/FDGF-Copy.jpg"
+    },
+    {
+      "attachment_id": 4262,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/1786.webp"
+    },
+    {
+      "attachment_id": 3519,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/POLP.jpg"
+    },
+    {
+      "attachment_id": 3518,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/SERTYUIOPOIUHGFD.jpg"
+    },
+    {
+      "attachment_id": 3525,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/TRDESDHYHUJ.jpg"
+    },
+    {
+      "attachment_id": 3523,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/GHUIOPKJHGV.jpg"
+    },
+    {
+      "attachment_id": 3529,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/علععغل.jpg"
+    },
+    {
+      "attachment_id": 3541,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/IKLMJG.jpg"
+    },
+    {
+      "attachment_id": 3545,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/DFGHJK.jpg"
+    },
+    {
+      "attachment_id": 3549,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/MNBVCFGHJL-Copy.jpg"
+    },
+    {
+      "attachment_id": 3556,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/GFHFGHF.jpg"
+    },
+    {
+      "attachment_id": 3557,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/HFSSESWAWA.jpg"
+    },
+    {
+      "attachment_id": 3558,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/OLOHJG.jpg"
+    },
+    {
+      "attachment_id": 3270,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/jbjhg.jpg"
+    },
+    {
+      "attachment_id": 3554,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/OLKJK.jpg"
+    },
+    {
+      "attachment_id": 3607,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/PPP.jpg"
+    },
+    {
+      "attachment_id": 3471,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/HZHG-1.jpg"
+    },
+    {
+      "attachment_id": 4248,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/1126.jpg"
+    },
+    {
+      "attachment_id": 3619,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00046.jpg"
+    },
+    {
+      "attachment_id": 3620,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00045.jpg"
+    },
+    {
+      "attachment_id": 4247,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/1183.webp"
+    },
+    {
+      "attachment_id": 3624,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00092.jpg"
+    },
+    {
+      "attachment_id": 3623,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00093.jpg"
+    },
+    {
+      "attachment_id": 4246,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/1375.webp"
+    },
+    {
+      "attachment_id": 3627,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00025.jpg"
+    },
+    {
+      "attachment_id": 3628,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00026.jpg"
+    },
+    {
+      "attachment_id": 3629,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00024.jpg"
+    },
+    {
+      "attachment_id": 4245,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/1189.webp"
+    },
+    {
+      "attachment_id": 3632,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00090.jpg"
+    },
+    {
+      "attachment_id": 3633,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00089.jpg"
+    },
+    {
+      "attachment_id": 4244,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/1274.webp"
+    },
+    {
+      "attachment_id": 3641,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00091.jpg"
+    },
+    {
+      "attachment_id": 3645,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/05/henry-arat-00087.jpg"
+    },
+    {
+      "attachment_id": 4242,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/1394.webp"
+    },
+    {
+      "attachment_id": 4241,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/1763.webp"
+    },
+    {
+      "attachment_id": 3467,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/02/HZHG.jpg"
+    },
+    {
+      "attachment_id": 5119,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-flora-Croatian-collar-top-dress-1251-2.webp"
+    },
+    {
+      "attachment_id": 5118,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-flora-Croatian-collar-top-dress-1251-1.webp"
+    },
+    {
+      "attachment_id": 5112,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Sleeveless-Chiffon-Tunic-1148-5.webp"
+    },
+    {
+      "attachment_id": 5111,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Sleeveless-Chiffon-Tunic-1148-4.webp"
+    },
+    {
+      "attachment_id": 5110,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Sleeveless-Chiffon-Tunic-1148-3.webp"
+    },
+    {
+      "attachment_id": 5109,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Sleeveless-Chiffon-Tunic-1148-1.webp"
+    },
+    {
+      "attachment_id": 5106,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-linen-Wide-leg-pants-1443-3.webp"
+    },
+    {
+      "attachment_id": 5105,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-linen-Wide-leg-pants-1443-2.webp"
+    },
+    {
+      "attachment_id": 5104,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-linen-Wide-leg-pants-1443-1.webp"
+    },
+    {
+      "attachment_id": 5113,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Sleeveless-Chiffon-Tunic-1148-65.webp"
+    },
+    {
+      "attachment_id": 5101,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-slotted-Chiffon-silk-Chemise-1188-1.webp"
+    },
+    {
+      "attachment_id": 5102,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-slotted-Chiffon-silk-Chemise-1188-3.webp"
+    },
+    {
+      "attachment_id": 5097,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Shuttle-Blouse-1224-1.webp"
+    },
+    {
+      "attachment_id": 5098,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Shuttle-Blouse-1224-2.webp"
+    },
+    {
+      "attachment_id": 5099,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Shuttle-Blouse-1224-3.webp"
+    },
+    {
+      "attachment_id": 5094,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Chiffon-Silk-Chemise-1360-1.webp"
+    },
+    {
+      "attachment_id": 5095,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Chiffon-Silk-Chemise-1360-2.webp"
+    },
+    {
+      "attachment_id": 5090,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Flax-Tunic-1433-1.webp"
+    },
+    {
+      "attachment_id": 5091,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Flax-Tunic-1433-2.webp"
+    },
+    {
+      "attachment_id": 5092,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Flax-Tunic-1433-3.webp"
+    },
+    {
+      "attachment_id": 5086,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Yakhma-Bustier-Blouse-1436-2.webp"
+    },
+    {
+      "attachment_id": 5088,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Yakhma-Bustier-Blouse-1436-3.webp"
+    },
+    {
+      "attachment_id": 5087,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Yakhma-Bustier-Blouse-1436-1.webp"
+    },
+    {
+      "attachment_id": 5082,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Jean-Dress-1448-2.webp"
+    },
+    {
+      "attachment_id": 5083,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Jean-Dress-1448-3.webp"
+    },
+    {
+      "attachment_id": 5084,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Womens-Jean-Dress-1448-4.webp"
+    },
+    {
+      "attachment_id": 5079,
+      "guid": "https://raspinaclothing.com/wp-content/uploads/2024/06/Women-Flax-Tunic-1449-2.webp"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+Return-Path: <armen.antonyan@norkgroup.am>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id O61TJwiUaGq54xcAyIPyJQ
+	(envelope-from <armen.antonyan@norkgroup.am>)
+	for <info@raspinaclothing.com>; Tue, 28 Jul 2026 15:05:36 +0330
+Return-path: <armen.antonyan@norkgroup.am>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Tue, 28 Jul 2026 15:05:36 +0330
+Received: from mail-northeuropeazon11021089.outbound.protection.outlook.com ([52.101.65.89]:58073 helo=DU2PR03CU002.outbound.protection.outlook.com)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.99.2)
+	(envelope-from <armen.antonyan@norkgroup.am>)
+	id 1wog5k-00000006MQl-3ZaC
+	for info@raspinaclothing.com;
+	Tue, 28 Jul 2026 15:05:35 +0330
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=BBzzDUj8UIEzJ7puuu/mpZoHjSvu3jUZ08CK6cyU7It1RMaJyVpqA6+ma/MpAGsqwFJKzEjjl7fdzwGnORTSd7WLV2M+F5gxJsIQGgpMkNqNShBsYbGxJn9kGAcwczcSMHiy/GoS0ubkyXjcQ5vMrD1ONLgYAldQOzAWDucPpPtvLcBuLrgJFNPZIaulK10tWkPJkrs6p7cnV7lyhEoXy1nlTrfO2D92b3l4iZn9i4jz+FEzbscCSVJvqUQqBOZc9/hYdNDaD/qV5dUbNNvKhN1U1mDCERy3F+tA4FqbX3wkRqH6lhXluJLVqul27bl2sj5qUgsP7NHmMNBH37iE2w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=kpEiTJZSG+mVUfYspbF+T8nrUObLGJfxvIC3HH4RDpw=;
+ b=M3RL6PB7mVgCU3h/jOMKRRbaOpBSr7+abM+ZLoQ+TunBEXQpksMbHarsgvNmhFYdZ/P4gzm4CJNs3iM2cXoxC9a9NIdzx6s36g1qGo8oWd/76YXWQ4R1e9yyfw4WZSykQUSrKPlVXmqaPM11ESnAy77a8Pg/ZZKkpmPxLGM7237Obto6Drw88jU2viQa8SLPKJ/wo4Ui0FGET54dgW0cKE3+JHF2j/2wDE5gH71SsnFFVBpuCcmvMzOGUm/KtFJJaHzdUcqL2Qb1e/Jj7hYbwHy2/OqlnQJ3UWSvXFMZ0cRy0hf9YkEFg40e1U7buF/xTyiA9/A/A4veyeOhQR1WbQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=norkgroup.am; dmarc=pass action=none header.from=norkgroup.am;
+ dkim=pass header.d=norkgroup.am; arc=none
+Received: from AS4P251MB0733.EURP251.PROD.OUTLOOK.COM (2603:10a6:20b:4bd::16)
+ by DB9P251MB0154.EURP251.PROD.OUTLOOK.COM (2603:10a6:10:2c8::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.245.10; Tue, 28 Jul
+ 2026 11:34:40 +0000
+Received: from AS4P251MB0733.EURP251.PROD.OUTLOOK.COM
+ ([fe80::e83a:dc18:70eb:7204]) by AS4P251MB0733.EURP251.PROD.OUTLOOK.COM
+ ([fe80::e83a:dc18:70eb:7204%4]) with mapi id 15.21.0270.009; Tue, 28 Jul 2026
+ 11:34:40 +0000
+From: Armen Antonyan <armen.antonyan@norkgroup.am>
+To: "info@raspinaclothing.com" <info@raspinaclothing.com>
+Subject: RE: Product Presentation
+Thread-Topic: Product Presentation
+Thread-Index: AQHdHoKY81eBSEh3s0K1wUGVPZraZ7aCzSJM
+Date: Tue, 28 Jul 2026 11:34:40 +0000
+Message-ID:
+ <AS4P251MB0733141B6B8F9332A70D36D8E8CB2@AS4P251MB0733.EURP251.PROD.OUTLOOK.COM>
+References: <fa695a6afa9c46195521c121d7effccf@raspinaclothing.com>
+In-Reply-To: <fa695a6afa9c46195521c121d7effccf@raspinaclothing.com>
+Accept-Language: en-US, ru-RU
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=norkgroup.am;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: AS4P251MB0733:EE_|DB9P251MB0154:EE_
+x-ms-office365-filtering-correlation-id: f0b98438-94ec-4354-24a0-08deec9c364e
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|69100299015|366016|1800799024|23010399003|34096008|10070799003|376014|3109299003|22082099003|5023799004|18002099003|8096899003|38070700021|10067099003|56012099006;
+x-microsoft-antispam-message-info:
+ UH4x41LLHT59hP2caqL5/h3Jj34BEXvS8pQl4i+980uahBTFpDETv+p7y0wmOjHcsrtQxR/27QEQ2jXpojnicnDDnN77Z8rm0qP09SQBuNkA+TowUFsPNVFuLekF3uF1mEA60qILHjM2ByOMjgjzzLCcvr4ITPFvHmJcTkO8EV6VrN8w+UvIy9EXeKxuG7wulH2T9TxmjYv3W8C/f4C0us3gaVjl9XFcM1V/Ilo4+UJwLOT+ouVszPKKoGeza1OBU+hoAYuyOygRLyhJesliz5WTHZ6fvBzIwnT5xZ8Wh8kQ3tHMupjxkQ+X09gq3SPT/rCW9MazDXJeqkH8z3Qlupjv/h6bLpEuA26j+8S+8NAQVl5YFnbgI47BX7Xi46lO1yZTgENQ4gvZsI2CIUVh37NR4IAV317hMQPdgAVfWufFGGEEd/pFpuoW79ctFznsjlDR95Pa7FVfGgzu4al4C9+CCv9wkotZ2aKnMCu7S4bkxH9d73A9dZvKTN2lkvP4RPCfMhEyUHFeolj8rKXJOUfgpd/sWIsMaJJA2psSSuYIZjWYRSe++0Nv4M/zIjDz+kygepyfV/olD0NEOEg7Jddnc45Jrenm091x4lKQLYUi28iYgIxf9EJbjwJEqcHphh6PbohAeiLXAVk77fvjJBk+MnR4AxQ36oO79O9VBNwvKbe/Ep1y39ghlyhQ/DcJGNnMS0Zufu+mOsdyzTqUgCF1u2hi+2PeWcgAE53ib/o=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:AS4P251MB0733.EURP251.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(69100299015)(366016)(1800799024)(23010399003)(34096008)(10070799003)(376014)(3109299003)(22082099003)(5023799004)(18002099003)(8096899003)(38070700021)(10067099003)(56012099006);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?C/qnL1CAuxyafuOp/LMlE3WRgERdG0KulFszNxFCyupG0se3ouIgjqMPbGSU?=
+ =?us-ascii?Q?iZJ2tRkhDMvbhP5jF65eRQ0O5DAHqxoyxTQ3P5+YzAYOLWVM/s9oxG0+OcQk?=
+ =?us-ascii?Q?CR4UE66h8MtWuqgZc1PYKKyALpXaWFvB+J/yPIkjNyJXn1VTq343qgEn+L9x?=
+ =?us-ascii?Q?aRIKE5vHmx2GjAoW2crWIf5BIayHk5FBCLvikpkO2fJwenz5oiJPNLtetGD9?=
+ =?us-ascii?Q?WpikHOfkco9Vtfo4rbBfOjRUSnAr3CtwpX2m63I+CPMTuUGpWW4xMWfDi0DR?=
+ =?us-ascii?Q?ufsPHpPLM6H9drQHryVtui3Ccy0VANR4dAGTDnWEKIykKx/aI2YdVmQsQPqq?=
+ =?us-ascii?Q?VU0bi8UDHW2u0bUpjbXgRavK49U9LLJXBg+FV8YpQRlyl/VipfEAWIbcq+by?=
+ =?us-ascii?Q?rCeS8oQ4FYLxAOm9tWa/LXlBn7wwoD4pq4rPqA4oHEzWzqDZvNA3ks/c2E5X?=
+ =?us-ascii?Q?Pxd5uSffLhkZbI9BuUIfnNPNYBli8YE/pJHVBGdumF0XDWhxdUOH22fjUN+f?=
+ =?us-ascii?Q?70Fg76jVXa8QJO9Ne2CGDR6ASuTRUGWOIESH2QSUG2uxcFqzdj8qDVvzdFlC?=
+ =?us-ascii?Q?HyA1W56UBLRJJB9tFZ+GvgleYhc/5cR70ahy7f+38Y2YqqC+qXTJJJusBOJ6?=
+ =?us-ascii?Q?GkImi/wy7s/ciygX31nnEEV63Wi+wc3xLtMU8yp8ACWUx6eKY7yd4n0tTkZ9?=
+ =?us-ascii?Q?81v4WXL5joXJOKnTOZ2GaebQfSmcpHvtk8ShI6Vqjo/mYF+rUj77mr5s3TPy?=
+ =?us-ascii?Q?cgTSjOEjNL0rkrB6/OsRMjlqdWaNWbV3fPBPibUjzzxnSf9W29ee4kAUATig?=
+ =?us-ascii?Q?HS9z9mofEZUUbsRyCzOaIe9dscUFPEJqqkd+BKjyAh7IebRtelYP8uIaVUAk?=
+ =?us-ascii?Q?DYjkjcD6HKiWb0YZuMlPOu3aPnJNHeRdHliKEZhrcQEd5/YhLXnR6ZZuXAGf?=
+ =?us-ascii?Q?Y/czBjbPPAD6CQO6BU1XSi8I3S3kW4+5eeftMXX1gA+OT80sgyiTUTA06knN?=
+ =?us-ascii?Q?05uand4xcHDS7SZ83YE88DuMHBnWf3g+iwHeCMseFGoa+Wzu2dusH0OwosDC?=
+ =?us-ascii?Q?BbkxU7a7wrIjksdO9gnfvtG1gxvuxTOGE4mrRymRnvXSOoxNrX7iEev9KZ+I?=
+ =?us-ascii?Q?3pL1YAkMwNoI06Q9kGBHhnCnidWIyaiWgEjGqh0gfs30m7dPSU6cqMMvcjiI?=
+ =?us-ascii?Q?Qk6Cb3pGwWnY+DWFUbfxv6RmRLXJ+etJe/V1Fz9UWW+biNHdtDv7EoayMHQn?=
+ =?us-ascii?Q?aAMFVocEX2hSRp1gR9nNGilNYi19WM48oLexJR3d8hFGi6RImUJHuvRkCvg7?=
+ =?us-ascii?Q?8WjTRREKMU/ulp//8ZYw/dNKtcizoAEoXHxxYAuo6OoP27Pm2hs2fI96wS6D?=
+ =?us-ascii?Q?6+0F5m+ZTgTwR9iOdN2P4r4LkRf71f9qeKOBRL+Ufgi+c2RJiOt5YyFk3Zq7?=
+ =?us-ascii?Q?qwSURgaRMLNBDQ7Xh06nsPBGQLBQZ/jyu/3j3vSDDB1lHhlj6R81Hg6k/PO2?=
+ =?us-ascii?Q?39dDo4lq5U9GVfF0n3Gzpi2Yo766/RPNXiaTm3MXk+ivnHod0z/QViY3qGhs?=
+ =?us-ascii?Q?hgUNjCVG2exMpXpEdvLw7pEHrk7Jtpb6+NE2xMb9JcVR2bqC+ofTQHJQedPc?=
+ =?us-ascii?Q?Z9X02GT40kTCZ/3vB1e5GseSBqjIIKXL4vdfmK/rf1SWqgGPNH7OWLzO7CGr?=
+ =?us-ascii?Q?t2+tFDQusoMMy9g86e2NbYPSzIzn8ozKwSXv+6WmV0rAZyfmzJs7E47B3Eqg?=
+ =?us-ascii?Q?yRvj1sUVsDoEJ2aE1KEYLBiHRcXckCiXGCpRuk4LN6vBgQ85jDKE?=
+Content-Type: multipart/alternative;
+	boundary="_000_AS4P251MB0733141B6B8F9332A70D36D8E8CB2AS4P251MB0733EURP_"
+MIME-Version: 1.0
+X-OriginatorOrg: norkgroup.am
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: AS4P251MB0733.EURP251.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: f0b98438-94ec-4354-24a0-08deec9c364e
+X-MS-Exchange-CrossTenant-originalarrivaltime: 28 Jul 2026 11:34:40.2420
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 472dd667-2189-4216-a4bc-95644893b57f
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: tgD9MeCcuz1u+C7yUENwuOAIsuRKsIFJ1PuHo0A8Te4ydoopF9TahaQd1IwSrXSNEvpO2vUnsz1vH60cxKWpEeE3ASlnRQ82lddYE0gBZGY=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DB9P251MB0154
+X-Spam-Status: No, score=0.7
+X-Spam-Score: 7
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  [heart] Armen Antonyan reacted to your message: From: info@raspinaclothing.com
+    <info@raspinaclothing.com> Sent: Tuesday, 28 July 2026 11:16:46 To: Armen
+    Antonyan <arme [...] 
+ Content analysis details:   (0.7 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URI: office.net]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [52.101.65.89 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+                             [52.101.65.89 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+  0.0 KAM_DMARC_STATUS       Test Rule for DKIM or SPF Failure with Strict
+                             Alignment
+  0.7 HTML_IMAGE_ONLY_28     BODY: HTML: images with 2400-2800 bytes of words
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 T_REMOTE_IMAGE         Message contains an external image
+X-Spam-Flag: NO
+
+--_000_AS4P251MB0733141B6B8F9332A70D36D8E8CB2AS4P251MB0733EURP_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+[heart]         Armen Antonyan reacted to your message:
+________________________________
+From: info@raspinaclothing.com <info@raspinaclothing.com>
+Sent: Tuesday, 28 July 2026 11:16:46
+To: Armen Antonyan <armen.antonyan@norkgroup.am>
+Subject: Product Presentation
+
+Dear Mr. Antonyan,
+
+I hope you are doing well.
+
+My name is Soheil Zali. We recently connected on LinkedIn, and you
+kindly asked me to send you a presentation of our products.
+
+Please find attached our company presentation and product catalogue. I
+would greatly appreciate it if you could review these two files and
+share your feedback with me.
+
+I hope this will be the beginning of a successful and long-term business
+relationship between our companies. I look forward to hearing your
+thoughts.
+
+Best regards,
+
+Soheil Zali
+International Sales Manager
+Raspina Clothing
++989197730514
+
+--_000_AS4P251MB0733141B6B8F9332A70D36D8E8CB2AS4P251MB0733EURP_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Exchange Server">
+<!-- converted from text --><style><!-- .EmailQuote { margin-left: 1pt; pad=
+ding-left: 4pt; border-left: #800000 2px solid; } --></style>
+</head>
+<body>
+<div>
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"background=
+:#EFF6FC; width:100%; border-radius:10px; border-collapse:separate; border:=
+1px; border-radius:6px; margin-bottom:12px">
+<tbody style=3D"font-family:-apple-system,Segoe UI,HelveticaNeue-Bold,Helve=
+tica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif; font-size:20px">
+<tr>
+<td style=3D"padding:5px 15px">
+<table style=3D"width:100%">
+<tbody style=3D"font-family:-apple-system,Segoe UI,HelveticaNeue-Bold,Helve=
+tica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif">
+<tr>
+<td>
+<table style=3D"border-spacing:0">
+<tbody style=3D"font-family:-apple-system,Segoe UI,HelveticaNeue-Bold,Helve=
+tica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif">
+<tr>
+<td><img alt=3D"heart" src=3D"https://outlook-1.cdn.office.net/assets/react=
+ion/heart.png" style=3D"height:25px; width:25px">
+</td>
+<td><span style=3D"font-weight:bold; padding-left:3px">Armen Antonyan</span=
+> <span>
+reacted to your message:</span> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<div id=3D"x_divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" =
+color=3D"#000000" style=3D"font-size:11pt"><b>From:</b> info@raspinaclothin=
+g.com &lt;info@raspinaclothing.com&gt;<br>
+<b>Sent:</b> Tuesday, 28 July 2026 11:16:46<br>
+<b>To:</b> Armen Antonyan &lt;armen.antonyan@norkgroup.am&gt;<br>
+<b>Subject:</b> Product Presentation</font>
+<div>&nbsp;</div>
+</div>
+</div>
+<font size=3D"2"><span style=3D"font-size:11pt;">
+<div class=3D"PlainText">Dear Mr. Antonyan,<br>
+<br>
+I hope you are doing well.<br>
+<br>
+My name is Soheil Zali. We recently connected on LinkedIn, and you <br>
+kindly asked me to send you a presentation of our products.<br>
+<br>
+Please find attached our company presentation and product catalogue. I <br>
+would greatly appreciate it if you could review these two files and <br>
+share your feedback with me.<br>
+<br>
+I hope this will be the beginning of a successful and long-term business <b=
+r>
+relationship between our companies. I look forward to hearing your <br>
+thoughts.<br>
+<br>
+Best regards,<br>
+<br>
+Soheil Zali<br>
+International Sales Manager<br>
+Raspina Clothing<br>
++989197730514</div>
+</span></font>
+</body>
+</html>
+
+--_000_AS4P251MB0733141B6B8F9332A70D36D8E8CB2AS4P251MB0733EURP_--

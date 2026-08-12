@@ -1,0 +1,101 @@
+Return-Path: <msprvs1=19934VGBnL_8H=bounces-14305@sparkpostmail2.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id sNtoM2Wkn2a/mR4AyIPyJQ
+	(envelope-from <msprvs1=19934VGBnL_8H=bounces-14305@sparkpostmail2.com>)
+	for <admin@raspinaclothing.com>; Tue, 23 Jul 2024 16:09:01 +0330
+Return-path: <msprvs1=19934VGBnL_8H=bounces-14305@sparkpostmail2.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Tue, 23 Jul 2024 16:09:01 +0330
+Received: from mta-174-87-75.smtp-out.sparkpostmail.com ([192.174.87.75]:31785)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <msprvs1=19934VGBnL_8H=bounces-14305@sparkpostmail2.com>)
+	id 1sWEnB-008QAr-12
+	for admin@raspinaclothing.com;
+	Tue, 23 Jul 2024 16:09:01 +0330
+X-MSFBL: 7oi2Vn35zNFE/pkBdUroqSENg99cAXaDfuJQby8K9jY=|eyJtZXNzYWdlX2lkIjo
+	iNjY5ZTMzYTQ5ZjY2YTE5YTM2ZGQiLCJzdWJhY2NvdW50X2lkIjoiMCIsInRlbmF
+	udF9pZCI6InNwYyIsInIiOiJhZG1pbkByYXNwaW5hY2xvdGhpbmcuY29tIiwiY3V
+	zdG9tZXJfaWQiOiIxNDMwNSJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=setupvpn.com;
+	s=scph0417; t=1721738291; i=@setupvpn.com;
+	bh=RTYLK4G0+FLoZtfRZAWkcV7xmrJ8l4auVDPfajyArns=;
+	h=Content-Type:From:To:Subject:Message-ID:Date:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject;
+	b=Xl4YWGxM+G4G2+9dw3al6TlWrfMa4F4M+fen/fYJErotPFK+j7+jrubc9Un+2Clil
+	 fFF9vC2I4AE+jiv1HDp6CQZzB0xN2WCoCM2V8diHtQIhxlK/BAsHLJx/HJBTeJ7Rly
+	 l0IS2qpy+CnDfFEVmTC7Q6+/Jksuyw8KpjEuJElM=
+Authentication-Results:  gc.mta1vsmtp.cc.prd.sparkpost smtp.user=<hidden>; auth=pass (PLAIN)
+Received: from [18.206.235.232] ([18.206.235.232:41278] helo=sparkpost)
+	by gc.mta1vsmtp.cc.prd.sparkpost (envelope-from <support@setupvpn.com>)
+	(ecelerity 4.7.0.74060 r(msys-ecelerity:tags/4.7.0.37)) with ESMTPSA (cipher=AES-128-GCM) 
+	id DD/63-30053-334AF966; Tue, 23 Jul 2024 12:38:11 +0000
+Content-Type: text/plain
+From: support@setupvpn.com
+To: admin@raspinaclothing.com
+Subject: Registration code for SetupVPN is 30694
+Message-ID: <30112b6b-10d8-5fb9-bbb4-bb5d3282af65@setupvpn.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 23 Jul 2024 12:38:10 +0000
+MIME-Version: 1.0
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:hEn05xd2eNECiwNFDWvniMMiHTTd29BVBy1VDU75KsY~|eyAicmNwdF90byI6ICJhZG1pbkByYXNwaW5hY2xvdGhpbmcuY29tIiwgInRlbmFudF9pZCI6ICJzcGMiLCAiY3VzdG9tZXJfaWQiOiAiMTQzMDUiLCAic3ViYWNjb3VudF9pZCI6ICIwIiwgIm1lc3NhZ2VfaWQiOiAiNjY5ZTMzYTQ5ZjY2YTE5YTM2ZGQiIH0~>,<https://unsubscribe.spmta.com/u/TF8LYx-CSx9VTCfeqvPD3A~~/AAA34QA~/RgRogikzPFcDc3BjQgpmnjOkn2ahmjbdUhlhZG1pbkByYXNwaW5hY2xvdGhpbmcuY29tWAQAAAAA>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.14305.0.sparkpostmail.com>
+X-Spam-Status: No, score=-3.1
+X-Spam-Score: -30
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Dear SetupVPN User, Thank you for registering with SetupVPN!
+    To complete your registration, please enter the following verification code
+    in the registration form: Verification Code: 30694 
+ Content analysis details:   (-3.1 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: setupvpn.com]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [192.174.87.75 listed in bl.score.senderscore.com]
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.5 KAM_NUMSUBJECT         Subject ends in numbers excluding current years
+X-Spam-Flag: NO
+
+Dear SetupVPN User,
+
+Thank you for registering with SetupVPN! To complete =
+your registration, please enter the following verification code in the =
+registration form:
+
+Verification Code: 30694
+
+Please note, this code will =
+expire in a few hours. If you do not confirm your email address within this=
+ time, you will need to start a new registration.
+
+Thank you for choosing =
+SetupVPN.
+
+Best regards,
+The SetupVPN Team

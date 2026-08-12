@@ -1,0 +1,214 @@
+Return-Path: <asuslenkov@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id mSDsCaPyTGrs0w0AyIPyJQ
+	(envelope-from <asuslenkov@gmail.com>)
+	for <info@raspinaclothing.com>; Tue, 07 Jul 2026 16:05:47 +0330
+Return-path: <asuslenkov@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Tue, 07 Jul 2026 16:05:47 +0330
+Received: from mail-ej1-f49.google.com ([209.85.218.49]:53719)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.2)
+	(envelope-from <asuslenkov@gmail.com>)
+	id 1wh51U-00000003Zn2-0t0O
+	for info@raspinaclothing.com;
+	Tue, 07 Jul 2026 16:05:46 +0330
+Received: by mail-ej1-f49.google.com with SMTP id a640c23a62f3a-c15b33f7b23so71864366b.3
+        for <info@raspinaclothing.com>; Tue, 07 Jul 2026 05:35:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1783427689; cv=none;
+        d=google.com; s=arc-20260327;
+        b=B491gICa5PR7aolfu3asEOb2sn3kNrt4Qf6GmNURBW1u9fxGuXtz5zW6hioo88ckYg
+         AA4t4Jw6Y3a8YceSSncNZ0Z5VBMUGO0fbn/0XA1of3BrGFq/MoYSFbCanIQ2h3OmfsMn
+         F7gfXShB/Tss7R7pbr/nphLMMVA/eYHuHKSOGCFmYjj1MhzsXgGAnv7H8mGwjh4jg+w0
+         zYwdWnd53TIQJHbGDhVfyc5MAPtkFbQ06XNatwfqqmi0DflGamUrMJy8xAubwvqAQ+KH
+         Ui2DtquVKYV1UMxzsO1/WBf2PeswBML/N4KqHOmTPYa2WHdxYTETDFlbuZQaRO38AzRZ
+         a3Ag==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=uQpdN4l1L8QlKnXC+IUSpdUZQoaYtP6A71CQjt5sSDw=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=c/9oUhCDPZWgrARg8MnMb16qPhLAGUBXXbNtyxUvoLcAU47uwsRNp33xn7asSjriSn
+         M3MNNWPZvoyqseFrEhthns+8tg1RFeIpe34myTsd6Is+AQ6hwNQfLmpFFEKulmX8MKYa
+         Yt5T5EDwTcRUxJbRciGcQWMER2GpnJAR7UgJMPe0hr9eAgCAInH+oJFCda/h4wCpvFRq
+         hcwkXrPj3Y4CrCog4A4OJ2t0SIn6yJMou47TrXIT61jEo3VQcAIrLfk6FkF2JDZtJynM
+         dz7+6H8jPy/I8N4XWhDnjXmB6Xct+8xUpQWVhqGzsVETGg3d6DJ0ufIyGPKyzfUB4KQQ
+         Wd2Q==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1783427689; x=1784032489; darn=raspinaclothing.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=uQpdN4l1L8QlKnXC+IUSpdUZQoaYtP6A71CQjt5sSDw=;
+        b=TXu+i4vugLj2vqThv4F38j/PTDQda5vQ0+OsYHBd9bQtjs51h5YjD9evqbv3nDezQO
+         rK7/pbkWdbvF/Jhwouuf4oJnak1CgSAli5eQLirA2IaUNeTNPyiRwTeucZBufBEdQ2Gx
+         o+LTEWXKlN7UXypwcGifrXg2fm/MEINdrYOdwVHWrNDitFnqXGWPWC9W3hD0UDoNhBkV
+         +6YfAepsRO64vGJnGtAFgcGyXaMTu1ZYMxdf5Lsuyopzo2aHE3cClcjaewvuanK0Urlq
+         69HniobqEnD+EYO1E/Hxlj79X/VX7VS6F67UCLCPTijJ6NqLAjwYccWli8wowDhOsUAh
+         nTAQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1783427689; x=1784032489;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-gg:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=uQpdN4l1L8QlKnXC+IUSpdUZQoaYtP6A71CQjt5sSDw=;
+        b=dXFFdiT4nkOPFWAh2/JXFTInQN3KFLCrr/J5zEvXwoHWFbdEMbLto0HY2Fo8/8oPai
+         gLi5nJVpdOVyQc5jmSavHsCScEUPYBoz8N16KW7cS6+CNhOtymyJoapZro817+5x+SeT
+         pwbb2mjsFo88uPfFJQS+AyVeS/syG40B0NE5FBwRSOgFoiByLBVXsNVr58rX2/zYfLJa
+         x35arrxQBdCMJqd92LqgiUvvsnE3cTy273Y2AfHxYsh7BuMcLObugjn5r8+bUsrFkD7c
+         WvZQnq3Xd5PQt5SfkxbPSgEToJFr962f6hdCRPiaL4H6t46ewl55JmT61AJ3j+4sAPoy
+         k8zw==
+X-Gm-Message-State: AOJu0YxfAC1iMUzFgkYXC0eB8tO35Y8A03qCDq8ieR6wUXloifDg5AaU
+	45oCfXqnUC4lgxAGvbhFPtUn33h8kLYXumkBr2IwIzkLX1DxFhebLXcn2MQMk2dPN9yvk2PXGAJ
+	KYraiLv66HVVA91PSBFDC1l3yEfdAus7Peiwc7CyOQQ==
+X-Gm-Gg: AfdE7cmGDkURU3JMWBYzLpbATU/dinV94LzAE7umFQrAkwAeFJ7dAeR33gtOujho2R9
+	B+ufVS1WWdfEtFRFwxmMkSJjns/dPblNsiSMy33w1Elf3iT+DrDrRCvOTNEOVyJVa0R8CcDjm3i
+	ieX8JTZAPMbvnRsIPQs3DFSMi38gKuJMxzF5gS42XIvnG6GYepBSJ6MoiIZZ/9husdO5j3yYC1N
+	COEyNUEBAGnazT+NIACa/7dP+bpF56h2ve/QComJTAoiOYGXgrjz08RZImtQ/KwoIObhFomfo5N
+	VvMLkjUc2/HdiWY6fofhe43MjWhv7w==
+X-Received: by 2002:a17:907:6d23:b0:c12:528a:94f4 with SMTP id
+ a640c23a62f3a-c15a69c3c4cmr262826766b.60.1783427689290; Tue, 07 Jul 2026
+ 05:34:49 -0700 (PDT)
+MIME-Version: 1.0
+References: <b75d19791b1b494c397318cbc032862e@raspinaclothing.com>
+ <CAG1OuKFxTa9zePwgc1+sb61FoJBxGNwFZS1LLyOLuQxTtSRQ+A@mail.gmail.com>
+ <429907b47e55da8fe22dd9ee88693ac8@raspinaclothing.com> <CAG1OuKFd6c4vGqpLLvg-ZwP-TM4EiYdxihtJ2AfETzQ_uyN6xw@mail.gmail.com>
+ <e2fda3ccda9c2cb59203b14a59a3bb17@raspinaclothing.com> <CAG1OuKE7_-Y2XgkpS9kubOj7TpRR5_DVHjjvM0eNe7j26NASAA@mail.gmail.com>
+ <7bec9665c4be3b445263ffe852a1bba3@raspinaclothing.com>
+In-Reply-To: <7bec9665c4be3b445263ffe852a1bba3@raspinaclothing.com>
+From: Alexander Suslenkov <asuslenkov@gmail.com>
+Date: Tue, 7 Jul 2026 15:34:12 +0300
+X-Gm-Features: AVVi8CcqDXUwNbjoCS2mSQWRRa5dlKKDEikPeKmbZAb220UJhgEyiIBlRN6wBKk
+Message-ID: <CAG1OuKFjf=Y9he9o2KdoVHgNkam81PGSLtXv0JkdaXM0WQ84Jg@mail.gmail.com>
+Subject: Re: Business Collaboration Opportunity
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="000000000000e751280656049d9b"
+X-Spam-Status: No, score=0.8
+X-Spam-Score: 8
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Good afternoon Soheil! I asked the company. They cooperate
+    now mainly with China. I will think about other contacts and let you when
+    see the opportunities By the way, do you know Mello Ebrahim (Ebrahim.Mello@gmail.com)
+    ? 
+ Content analysis details:   (0.8 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.218.49 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.218.49 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [asuslenkov(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  1.0 FREEMAIL_REPLY         From and body contain different freemails
+X-Spam-Flag: NO
+
+--000000000000e751280656049d9b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Good afternoon Soheil!
+
+I asked the company. They cooperate now mainly with China.
+I will think about other contacts and let you when see the opportunities
+
+By the way, do you know  Mello Ebrahim (Ebrahim.Mello@gmail.com) ?
+
+Ebrahim Dargahi Mello, Chairman of the Russia-Iran Business Council.
+
+Rgds
+
+Alexander
+
+
+
+
+
+
+Rgds,
+
+
+=D0=BF=D0=BD, 6 =D0=B8=D1=8E=D0=BB. 2026=E2=80=AF=D0=B3. =D0=B2 13:01, <inf=
+o@raspinaclothing.com>:
+
+> Dear Alexander,
+>
+> Thank you very much for your message and for considering our factory.
+>
+> That sounds very interesting. We would be pleased to explore this
+> opportunity.
+>
+> We have flexible manufacturing capabilities and can produce garments
+> according to our customers' designs, specifications, and requirements.
+> If your contact is looking for a reliable manufacturing partner with low
+> MOQs, we would be happy to discuss their needs and see how we can
+> support them.
+>
+> Please feel free to introduce us if you believe there is a good
+> opportunity for cooperation.
+>
+> Thank you once again, and I look forward to hearing from you.
+>
+> Best regards,
+> Soheil
+>
+
+--000000000000e751280656049d9b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Good afternoon Soheil!<br><br><div>I asked the company. Th=
+ey cooperate now mainly with China.<br>I will think about other contacts an=
+d let you when see the opportunities<br><br>By the way, do you know =C2=A0M=
+ello Ebrahim (<a href=3D"mailto:Ebrahim.Mello@gmail.com">Ebrahim.Mello@gmai=
+l.com</a>) ?</div><div><br></div><div>Ebrahim Dargahi Mello, Chairman of th=
+e Russia-Iran Business Council.</div><div><br></div><div>Rgds</div><div><br=
+></div><div>Alexander</div><div><br><div><br></div><div><br></div><div><br>=
+</div><div><br></div><div><br></div><div>Rgds,</div><div><br></div></div></=
+div><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" c=
+lass=3D"gmail_attr">=D0=BF=D0=BD, 6 =D0=B8=D1=8E=D0=BB. 2026=E2=80=AF=D0=B3=
+. =D0=B2 13:01, &lt;<a href=3D"mailto:info@raspinaclothing.com">info@raspin=
+aclothing.com</a>&gt;:<br></div><blockquote class=3D"gmail_quote" style=3D"=
+margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-lef=
+t:1ex">Dear Alexander,<br>
+<br>
+Thank you very much for your message and for considering our factory.<br>
+<br>
+That sounds very interesting. We would be pleased to explore this <br>
+opportunity.<br>
+<br>
+We have flexible manufacturing capabilities and can produce garments <br>
+according to our customers&#39; designs, specifications, and requirements. =
+<br>
+If your contact is looking for a reliable manufacturing partner with low <b=
+r>
+MOQs, we would be happy to discuss their needs and see how we can <br>
+support them.<br>
+<br>
+Please feel free to introduce us if you believe there is a good <br>
+opportunity for cooperation.<br>
+<br>
+Thank you once again, and I look forward to hearing from you.<br>
+<br>
+Best regards,<br>
+Soheil<br>
+</blockquote></div>
+
+--000000000000e751280656049d9b--

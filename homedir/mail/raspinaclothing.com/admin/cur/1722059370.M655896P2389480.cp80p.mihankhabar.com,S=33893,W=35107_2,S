@@ -1,0 +1,1214 @@
+Return-Path: <01000190f2bbf593-2ee373c9-1cec-48ea-8d5e-6158bf3374dc-000000@amazonses.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id yHtyJmqKpGbodSQAyIPyJQ
+	(envelope-from <01000190f2bbf593-2ee373c9-1cec-48ea-8d5e-6158bf3374dc-000000@amazonses.com>)
+	for <admin@raspinaclothing.com>; Sat, 27 Jul 2024 09:19:30 +0330
+Return-path: <01000190f2bbf593-2ee373c9-1cec-48ea-8d5e-6158bf3374dc-000000@amazonses.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Sat, 27 Jul 2024 09:19:30 +0330
+Received: from a9-63.smtp-out.amazonses.com ([54.240.9.63]:42041)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <01000190f2bbf593-2ee373c9-1cec-48ea-8d5e-6158bf3374dc-000000@amazonses.com>)
+	id 1sXaJ8-00A1sX-0K
+	for admin@raspinaclothing.com;
+	Sat, 27 Jul 2024 09:19:30 +0330
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=67w4dtavfawru4mujyvtas3tk2ujw5or; d=email.pngtree.com;
+	t=1722059322;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type;
+	bh=G2xkx3qAyVxO711Wm3dhdhkQXpDZBFsL/QquWGYlmWI=;
+	b=hfqZmsRl2V1MJSBClCH0iE/YAYtAwvylZ9aOPr02RewD4PUKasr9RdhLgxsx0k45
+	nokyO4M8WGXHrjE2eMZsAXjzXQnS5br4cq+re7znElWpH/G7vr6mHlfJ7gWQvlvpzYk
+	Py3jltWyplcOC0M8fz3nGv73Jl0iPG9faYZfQ3Vzmn6z8efirjtU7iM/Dd62LxxJuBj
+	45K+3UWb5Ay0VlXD9/Ow4NrN4ueB4nhJCt/aFgIJ2g0MHjiotMIk1b4ovOlxfZqftwo
+	6zToBFpGD2CDm4KXlb9S1NhH/f9Yyrr2VbsOulqF1fKGUJRPpmcB68DONhxmpTDiqhw
+	vsfKaplYVg==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1722059322;
+	h=Message-ID:Date:Subject:From:To:MIME-Version:Content-Type:Feedback-ID;
+	bh=G2xkx3qAyVxO711Wm3dhdhkQXpDZBFsL/QquWGYlmWI=;
+	b=M8nOErDaK8PRY4FMj+Utv7xJEE1r5cfHRTHzruZTJt72kKgPKnUlqzBrCdhDZauG
+	BkjEbpkieqCeoFPbDRdt6ipnDYAbVNE9fPf4bp8e9LRsL+a/LU9LaEWqNfrgofmCZBP
+	x7YLTsuHf39EMdqWs7SzElvv3Tg5KzearYOy9jW8=
+Message-ID: <01000190f2bbf593-2ee373c9-1cec-48ea-8d5e-6158bf3374dc-000000@email.amazonses.com>
+Date: Sat, 27 Jul 2024 05:48:42 +0000
+Subject: E-mail verification
+From: pngtree <pngtree@email.pngtree.com>
+To: admin@raspinaclothing.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1722059320_be821ac8107547c51dbed27fed74f5c8_=_"
+Feedback-ID: ::1.us-east-1.wuZugHOOK8021vBq8rAk+NrC/uiPyCKzeP42mtY988I=:AmazonSES
+X-SES-Outgoing: 2024.07.27-54.240.9.63
+X-Spam-Status: No, score=-2.7
+X-Spam-Score: -26
+X-Spam-Bar: --
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  *|MC:SUBJECT|* *|MC_PREVIEW_TEXT|* Thank you for choosing
+   pngtree, please click on the link below to complete the verification:https://pngtree.com/call-back/reg-complete?token=924689c003cc304add305bc1dd1fa734
+    
+ Content analysis details:   (-2.7 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  1.0 HK_RANDOM_FROM         From username looks random
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: pngtree.com]
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [54.240.9.63 listed in bl.score.senderscore.com]
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+X-Spam-Flag: NO
+
+
+--_=_swift_v4_1722059320_be821ac8107547c51dbed27fed74f5c8_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+*|MC:SUBJECT|*
+
+*|MC_PREVIEW_TEXT|*
+
+Thank you for choosing pngtree=
+, please click on the link below to complete the verification:https://pngtr=
+ee.com/call-back/reg-complete?token=3D924689c003cc304add305bc1dd1fa734=20
+=
+
+Copyright =C2=A9 *|2024|* *|pngtree|*, All rights reserved.
+
+Our mai=
+ling address is:
+*info@pngtree.com*=C2=A0
+
+--_=_swift_v4_1722059320_be821ac8107547c51dbed27fed74f5c8_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:off=
+ice:office">
+    <head>
+        <!-- NAME: SELL PRODUCTS -->
+        =
+<!--[if gte mso 15]>
+        <xml>
+            <o:OfficeDocumentSetting=
+s>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsP=
+erInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+      =
+  <![endif]-->
+        <meta charset=3D"UTF-8">
+        <meta http-equi=
+v=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+        <meta name=3D"viewpo=
+rt" content=3D"width=3Ddevice-width, initial-scale=3D1">
+        <title>*=
+|MC:SUBJECT|*</title>
+       =20
+    <style type=3D"text/css">
+=09=09p{=
+
+=09=09=09margin:10px 0;
+=09=09=09padding:0;
+=09=09}
+=09=09table{=
+
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09h1,h2,h3,h4,h5,h6{=
+
+=09=09=09display:block;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=
+=09}
+=09=09img,a img{
+=09=09=09border:0;
+=09=09=09height:auto;
+=09=
+=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09body=
+,#bodyTable,#bodyCell{
+=09=09=09height:100%;
+=09=09=09margin:0;
+=09=
+=09=09padding:0;
+=09=09=09width:100%;
+=09=09}
+=09=09.mcnPreviewText{=
+
+=09=09=09display:none !important;
+=09=09}
+=09=09#outlook a{
+=09=09=
+=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicu=
+bic;
+=09=09}
+=09=09table{
+=09=09=09mso-table-lspace:0pt;
+=09=09=09m=
+so-table-rspace:0pt;
+=09=09}
+=09=09.ReadMsgBody{
+=09=09=09width:100%;=
+
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=
+=09p,a,li,td,blockquote{
+=09=09=09mso-line-height-rule:exactly;
+=09=09}=
+
+=09=09a[href^=3Dtel],a[href^=3Dsms]{
+=09=09=09color:inherit;
+=09=09=
+=09cursor:default;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09p,a,l=
+i,td,body,table,blockquote{
+=09=09=09-ms-text-size-adjust:100%;
+=09=09=
+=09-webkit-text-size-adjust:100%;
+=09=09}
+=09=09.ExternalClass,.Externa=
+lClass p,.ExternalClass td,.ExternalClass div,.ExternalClass span,.External=
+Class font{
+=09=09=09line-height:100%;
+=09=09}
+=09=09a[x-apple-data-d=
+etectors]{
+=09=09=09color:inherit !important;
+=09=09=09text-decoration:=
+none !important;
+=09=09=09font-size:inherit !important;
+=09=09=09font-f=
+amily:inherit !important;
+=09=09=09font-weight:inherit !important;
+=09=
+=09=09line-height:inherit !important;
+=09=09}
+=09=09.templateContainer{=
+
+=09=09=09max-width:600px !important;
+=09=09}
+=09=09a.mcnButton{
+=
+=09=09=09display:block;
+=09=09}
+=09=09.mcnImage,.mcnRetinaImage{
+=09=
+=09=09vertical-align:bottom;
+=09=09}
+=09=09.mcnTextContent{
+=09=09=09=
+word-break:break-word;
+=09=09}
+=09=09.mcnTextContent img{
+=09=09=09he=
+ight:auto !important;
+=09=09}
+=09=09.mcnDividerBlock{
+=09=09=09table-=
+layout:fixed !important;
+=09=09}
+=09/*
+=09@tab Page
+=09@section Hea=
+ding 1
+=09@style heading 1
+=09*/
+=09=09h1{
+=09=09=09/*@editable*/co=
+lor:#222222;
+=09=09=09/*@editable*/font-family:Helvetica;
+=09=09=09/*@e=
+ditable*/font-size:40px;
+=09=09=09/*@editable*/font-style:normal;
+=09=
+=09=09/*@editable*/font-weight:bold;
+=09=09=09/*@editable*/line-height:15=
+0%;
+=09=09=09/*@editable*/letter-spacing:normal;
+=09=09=09/*@editable*/=
+text-align:center;
+=09=09}
+=09/*
+=09@tab Page
+=09@section Heading 2=
+
+=09@style heading 2
+=09*/
+=09=09h2{
+=09=09=09/*@editable*/color:#2=
+22222;
+=09=09=09/*@editable*/font-family:Helvetica;
+=09=09=09/*@editabl=
+e*/font-size:34px;
+=09=09=09/*@editable*/font-style:normal;
+=09=09=09/*=
+@editable*/font-weight:bold;
+=09=09=09/*@editable*/line-height:150%;
+=
+=09=09=09/*@editable*/letter-spacing:normal;
+=09=09=09/*@editable*/text-a=
+lign:left;
+=09=09}
+=09/*
+=09@tab Page
+=09@section Heading 3
+=09@s=
+tyle heading 3
+=09*/
+=09=09h3{
+=09=09=09/*@editable*/color:#444444;=
+
+=09=09=09/*@editable*/font-family:Helvetica;
+=09=09=09/*@editable*/fon=
+t-size:22px;
+=09=09=09/*@editable*/font-style:normal;
+=09=09=09/*@edita=
+ble*/font-weight:bold;
+=09=09=09/*@editable*/line-height:150%;
+=09=09=
+=09/*@editable*/letter-spacing:normal;
+=09=09=09/*@editable*/text-align:l=
+eft;
+=09=09}
+=09/*
+=09@tab Page
+=09@section Heading 4
+=09@style h=
+eading 4
+=09*/
+=09=09h4{
+=09=09=09/*@editable*/color:#949494;
+=09=
+=09=09/*@editable*/font-family:Georgia;
+=09=09=09/*@editable*/font-size:2=
+0px;
+=09=09=09/*@editable*/font-style:italic;
+=09=09=09/*@editable*/fon=
+t-weight:normal;
+=09=09=09/*@editable*/line-height:125%;
+=09=09=09/*@ed=
+itable*/letter-spacing:normal;
+=09=09=09/*@editable*/text-align:left;
+=
+=09=09}
+=09/*
+=09@tab Header
+=09@section Header Container Style
+=09=
+*/
+=09=09#templateHeader{
+=09=09=09/*@editable*/background-color:#F7F7F=
+7;
+=09=09=09/*@editable*/background-image:none;
+=09=09=09/*@editable*/b=
+ackground-repeat:no-repeat;
+=09=09=09/*@editable*/background-position:cen=
+ter;
+=09=09=09/*@editable*/background-size:cover;
+=09=09=09/*@editable*=
+/border-top:0;
+=09=09=09/*@editable*/border-bottom:0;
+=09=09=09/*@edita=
+ble*/padding-top:0px;
+=09=09=09/*@editable*/padding-bottom:0px;
+=09=09}=
+
+=09/*
+=09@tab Header
+=09@section Header Interior Style
+=09*/
+=09=
+=09.headerContainer{
+=09=09=09/*@editable*/background-color:transparent;=
+
+=09=09=09/*@editable*/background-image:none;
+=09=09=09/*@editable*/bac=
+kground-repeat:no-repeat;
+=09=09=09/*@editable*/background-position:cente=
+r;
+=09=09=09/*@editable*/background-size:cover;
+=09=09=09/*@editable*/b=
+order-top:0;
+=09=09=09/*@editable*/border-bottom:0;
+=09=09=09/*@editabl=
+e*/padding-top:0;
+=09=09=09/*@editable*/padding-bottom:0;
+=09=09}
+=09=
+/*
+=09@tab Header
+=09@section Header Text
+=09*/
+=09=09.headerContai=
+ner .mcnTextContent,.headerContainer .mcnTextContent p{
+=09=09=09/*@edita=
+ble*/color:#757575;
+=09=09=09/*@editable*/font-family:Helvetica;
+=09=09=
+=09/*@editable*/font-size:16px;
+=09=09=09/*@editable*/line-height:150%;=
+
+=09=09=09/*@editable*/text-align:left;
+=09=09}
+=09/*
+=09@tab Heade=
+r
+=09@section Header Link
+=09*/
+=09=09.headerContainer .mcnTextConten=
+t a,.headerContainer .mcnTextContent p a{
+=09=09=09/*@editable*/color:#00=
+7C89;
+=09=09=09/*@editable*/font-weight:normal;
+=09=09=09/*@editable*/t=
+ext-decoration:underline;
+=09=09}
+=09/*
+=09@tab Body
+=09@section Bo=
+dy Container Style
+=09*/
+=09=09#templateBody{
+=09=09=09/*@editable*/b=
+ackground-color:#FFFFFF;
+=09=09=09/*@editable*/background-image:none;
+=
+=09=09=09/*@editable*/background-repeat:no-repeat;
+=09=09=09/*@editable*/=
+background-position:center;
+=09=09=09/*@editable*/background-size:cover;=
+
+=09=09=09/*@editable*/border-top:0;
+=09=09=09/*@editable*/border-botto=
+m:0;
+=09=09=09/*@editable*/padding-top:36px;
+=09=09=09/*@editable*/padd=
+ing-bottom:45px;
+=09=09}
+=09/*
+=09@tab Body
+=09@section Body Interi=
+or Style
+=09*/
+=09=09.bodyContainer{
+=09=09=09/*@editable*/background=
+-color:transparent;
+=09=09=09/*@editable*/background-image:none;
+=09=09=
+=09/*@editable*/background-repeat:no-repeat;
+=09=09=09/*@editable*/backgr=
+ound-position:center;
+=09=09=09/*@editable*/background-size:cover;
+=09=
+=09=09/*@editable*/border-top:0;
+=09=09=09/*@editable*/border-bottom:0;=
+
+=09=09=09/*@editable*/padding-top:0;
+=09=09=09/*@editable*/padding-bot=
+tom:0;
+=09=09}
+=09/*
+=09@tab Body
+=09@section Body Text
+=09*/
+=
+=09=09.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+=
+=09=09=09/*@editable*/color:#757575;
+=09=09=09/*@editable*/font-family:He=
+lvetica;
+=09=09=09/*@editable*/font-size:16px;
+=09=09=09/*@editable*/li=
+ne-height:150%;
+=09=09=09/*@editable*/text-align:left;
+=09=09}
+=09/*=
+
+=09@tab Body
+=09@section Body Link
+=09*/
+=09=09.bodyContainer .mcn=
+TextContent a,.bodyContainer .mcnTextContent p a{
+=09=09=09/*@editable*/c=
+olor:#007C89;
+=09=09=09/*@editable*/font-weight:normal;
+=09=09=09/*@edi=
+table*/text-decoration:underline;
+=09=09}
+=09/*
+=09@tab Footer
+=09@=
+section Footer Style
+=09*/
+=09=09#templateFooter{
+=09=09=09/*@editabl=
+e*/background-color:#473fa0;
+=09=09=09/*@editable*/background-image:none;=
+
+=09=09=09/*@editable*/background-repeat:no-repeat;
+=09=09=09/*@editabl=
+e*/background-position:center;
+=09=09=09/*@editable*/background-size:cove=
+r;
+=09=09=09/*@editable*/border-top:0;
+=09=09=09/*@editable*/border-bot=
+tom:0;
+=09=09=09/*@editable*/padding-top:45px;
+=09=09=09/*@editable*/pa=
+dding-bottom:63px;
+=09=09}
+=09/*
+=09@tab Footer
+=09@section Footer =
+Interior Style
+=09*/
+=09=09.footerContainer{
+=09=09=09/*@editable*/ba=
+ckground-color:transparent;
+=09=09=09/*@editable*/background-image:none;=
+
+=09=09=09/*@editable*/background-repeat:no-repeat;
+=09=09=09/*@editabl=
+e*/background-position:center;
+=09=09=09/*@editable*/background-size:cove=
+r;
+=09=09=09/*@editable*/border-top:0;
+=09=09=09/*@editable*/border-bot=
+tom:0;
+=09=09=09/*@editable*/padding-top:0;
+=09=09=09/*@editable*/paddi=
+ng-bottom:0;
+=09=09}
+=09/*
+=09@tab Footer
+=09@section Footer Text=
+
+=09*/
+=09=09.footerContainer .mcnTextContent,.footerContainer .mcnText=
+Content p{
+=09=09=09/*@editable*/color:#FFFFFF;
+=09=09=09/*@editable*/f=
+ont-family:Helvetica;
+=09=09=09/*@editable*/font-size:12px;
+=09=09=09/*=
+@editable*/line-height:150%;
+=09=09=09/*@editable*/text-align:center;
+=
+=09=09}
+=09/*
+=09@tab Footer
+=09@section Footer Link
+=09*/
+=09=09=
+.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a{
+=
+=09=09=09/*@editable*/color:#FFFFFF;
+=09=09=09/*@editable*/font-weight:no=
+rmal;
+=09=09=09/*@editable*/text-decoration:underline;
+=09=09}
+=09@me=
+dia only screen and (min-width:768px){
+=09=09.templateContainer{
+=09=09=
+=09width:600px !important;
+=09=09}
+
+}=09@media only screen and (max-w=
+idth: 480px){
+=09=09body,table,td,p,a,li,blockquote{
+=09=09=09-webkit-t=
+ext-size-adjust:none !important;
+=09=09}
+
+}=09@media only screen and =
+(max-width: 480px){
+=09=09body{
+=09=09=09width:100% !important;
+=09=
+=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and =
+(max-width: 480px){
+=09=09.mcnRetinaImage{
+=09=09=09max-width:100% !imp=
+ortant;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=
+=09.mcnImage{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media o=
+nly screen and (max-width: 480px){
+=09=09.mcnCartContainer,.mcnCaptionTop=
+Content,.mcnRecContentContainer,.mcnCaptionBottomContent,.mcnTextContentCon=
+tainer,.mcnBoxedTextContentContainer,.mcnImageGroupContentContainer,.mcnCap=
+tionLeftTextContentContainer,.mcnCaptionRightTextContentContainer,.mcnCapti=
+onLeftImageContentContainer,.mcnCaptionRightImageContentContainer,.mcnImage=
+CardLeftTextContentContainer,.mcnImageCardRightTextContentContainer,.mcnIma=
+geCardLeftImageContentContainer,.mcnImageCardRightImageContentContainer{
+=
+=09=09=09max-width:100% !important;
+=09=09=09width:100% !important;
+=09=
+=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnBoxedT=
+extContentContainer{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=
+=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupContent=
+{
+=09=09=09padding:9px !important;
+=09=09}
+
+}=09@media only screen =
+and (max-width: 480px){
+=09=09.mcnCaptionLeftContentOuter .mcnTextContent=
+,.mcnCaptionRightContentOuter .mcnTextContent{
+=09=09=09padding-top:9px !=
+important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=
+=09=09.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcn=
+CaptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-=
+child .mcnTextContent{
+=09=09=09padding-top:18px !important;
+=09=09}
+=
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardBott=
+omImageContent{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=
+=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupBlockIn=
+ner{
+=09=09=09padding-top:0 !important;
+=09=09=09padding-bottom:0 !impo=
+rtant;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=
+=09.mcnImageGroupBlockOuter{
+=09=09=09padding-top:9px !important;
+=09=
+=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen =
+and (max-width: 480px){
+=09=09.mcnTextContent,.mcnBoxedTextContentColumn{=
+
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !im=
+portant;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=
+=09=09.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{
+=09=
+=09=09padding-right:18px !important;
+=09=09=09padding-bottom:0 !important=
+;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only s=
+creen and (max-width: 480px){
+=09=09.mcpreview-image-uploader{
+=09=09=
+=09display:none !important;
+=09=09=09width:100% !important;
+=09=09}
+=
+
+}=09@media only screen and (max-width: 480px){
+=09/*
+=09@tab Mobile =
+Styles
+=09@section Heading 1
+=09@tip Make the first-level headings larg=
+er in size for better readability on small screens.
+=09*/
+=09=09h1{
+=
+=09=09=09/*@editable*/font-size:30px !important;
+=09=09=09/*@editable*/li=
+ne-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-w=
+idth: 480px){
+=09/*
+=09@tab Mobile Styles
+=09@section Heading 2
+=09=
+@tip Make the second-level headings larger in size for better readability o=
+n small screens.
+=09*/
+=09=09h2{
+=09=09=09/*@editable*/font-size:26px=
+ !important;
+=09=09=09/*@editable*/line-height:125% !important;
+=09=09}=
+
+
+}=09@media only screen and (max-width: 480px){
+=09/*
+=09@tab Mobi=
+le Styles
+=09@section Heading 3
+=09@tip Make the third-level headings l=
+arger in size for better readability on small screens.
+=09*/
+=09=09h3{=
+
+=09=09=09/*@editable*/font-size:20px !important;
+=09=09=09/*@editable*=
+/line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (ma=
+x-width: 480px){
+=09/*
+=09@tab Mobile Styles
+=09@section Heading 4
+=
+=09@tip Make the fourth-level headings larger in size for better readabilit=
+y on small screens.
+=09*/
+=09=09h4{
+=09=09=09/*@editable*/font-size:1=
+8px !important;
+=09=09=09/*@editable*/line-height:150% !important;
+=09=
+=09}
+
+}=09@media only screen and (max-width: 480px){
+=09/*
+=09@tab =
+Mobile Styles
+=09@section Boxed Text
+=09@tip Make the boxed text larger=
+ in size for better readability on small screens. We recommend a font size =
+of at least 16px.
+=09*/
+=09=09.mcnBoxedTextContentContainer .mcnTextCon=
+tent,.mcnBoxedTextContentContainer .mcnTextContent p{
+=09=09=09/*@editabl=
+e*/font-size:14px !important;
+=09=09=09/*@editable*/line-height:150% !imp=
+ortant;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=
+/*
+=09@tab Mobile Styles
+=09@section Header Text
+=09@tip Make the hea=
+der text larger in size for better readability on small screens.
+=09*/
+=
+=09=09.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{=
+
+=09=09=09/*@editable*/font-size:16px !important;
+=09=09=09/*@editable*=
+/line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (ma=
+x-width: 480px){
+=09/*
+=09@tab Mobile Styles
+=09@section Body Text
+=
+=09@tip Make the body text larger in size for better readability on small s=
+creens. We recommend a font size of at least 16px.
+=09*/
+=09=09.bodyCon=
+tainer .mcnTextContent,.bodyContainer .mcnTextContent p{
+=09=09=09/*@edit=
+able*/font-size:16px !important;
+=09=09=09/*@editable*/line-height:150% !=
+important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=
+=09/*
+=09@tab Mobile Styles
+=09@section Footer Text
+=09@tip Make the =
+footer content text larger in size for better readability on small screens.=
+
+=09*/
+=09=09.footerContainer .mcnTextContent,.footerContainer .mcnText=
+Content p{
+=09=09=09/*@editable*/font-size:14px !important;
+=09=09=09/*=
+@editable*/line-height:150% !important;
+=09=09}
+
+}</style></head>
+ =
+   <body>
+        <!--*|IF:MC_PREVIEW_TEXT|*-->
+        <!--[if !gte ms=
+o 9]><!----><span class=3D"mcnPreviewText" style=3D"display:none; font-size=
+:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:h=
+idden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![e=
+ndif]-->
+        <!--*|END:IF|*-->
+        <center>
+            <tabl=
+e align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=
+=3D"100%" width=3D"100%" id=3D"bodyTable">
+                <tr>
+       =
+             <td align=3D"center" valign=3D"top" id=3D"bodyCell">
+       =
+                 <!-- BEGIN TEMPLATE // -->
+                        <tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+      =
+                      <tr>
+                                <td align=3D"c=
+enter" valign=3D"top" id=3D"templateHeader" data-template-container>
+    =
+                                <!--[if (gte mso 9)|(IE)]>
+              =
+                      <table align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+               =
+                     <tr>
+                                    <td align=
+=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;">
+        =
+                            <![endif]-->
+                                =
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" class=3D"templateContainer">
+                           =
+             <tr>
+                                            <td valign=
+=3D"top" class=3D"headerContainer"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%" class=3D"mcnImageBlock" style=3D"min-width:1=
+00%;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+    =
+            <td valign=3D"top" style=3D"padding:9px" class=3D"mcnImageBlock=
+Inner">
+                    <table align=3D"left" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContaine=
+r" style=3D"min-width:100%;">
+                        <tbody><tr>
+     =
+                       <td class=3D"mcnImageContent" valign=3D"top" style=
+=3D"padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: =
+0; text-align:center;">
+                               =20
+              =
+                     =20
+                                        <img align=
+=3D"center" alt=3D"" src=3D"https://js.pngtree.com/web3/images/email/email_=
+log.png" width=3D"324" style=3D"max-width:324px; padding-bottom: 0; display=
+: inline !important; vertical-align: bottom;" class=3D"mcnImage">
+       =
+                            =20
+                               =20
+        =
+                    </td>
+                        </tr>
+               =
+     </tbody></table>
+                </td>
+            </tr>
+    </t=
+body>
+</table></td>
+                                        </tr>
+   =
+                                 </table>
+                               =
+     <!--[if (gte mso 9)|(IE)]>
+                                    </td>=
+
+                                    </tr>
+                            =
+        </table>
+                                    <![endif]-->
+     =
+                           </td>
+                            </tr>
+    =
+                        <tr>
+                                <td align=3D=
+"center" valign=3D"top" id=3D"templateBody" data-template-container>
+    =
+                                <!--[if (gte mso 9)|(IE)]>
+              =
+                      <table align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+               =
+                     <tr>
+                                    <td align=
+=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;">
+        =
+                            <![endif]-->
+                                =
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" class=3D"templateContainer">
+                           =
+             <tr>
+                                            <td valign=
+=3D"top" class=3D"bodyContainer"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" class=3D"mcnImageBlock" style=3D"min-width:100=
+%;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+      =
+          <td valign=3D"top" style=3D"padding:9px" class=3D"mcnImageBlockIn=
+ner">
+                    <table align=3D"left" width=3D"100%" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" s=
+tyle=3D"min-width:100%;">
+                        <tbody><tr>
+         =
+                   <td class=3D"mcnImageContent" valign=3D"top" style=3D"pa=
+dding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; tex=
+t-align:center;">
+                               =20
+                    =
+               =20
+                                        <img align=3D"ce=
+nter" alt=3D"" src=3D"https://js.pngtree.com/web3/images/email/register_ves=
+tre.jpg" width=3D"564" style=3D"max-width:2500px; padding-bottom: 0; displa=
+y: inline !important; vertical-align: bottom;" class=3D"mcnImage">
+      =
+                             =20
+                               =20
+       =
+                     </td>
+                        </tr>
+              =
+      </tbody></table>
+                </td>
+            </tr>
+    </=
+tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">
+    <tbody=
+ class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"to=
+p" class=3D"mcnTextBlockInner" style=3D"padding-top:9px;">
+              =
+=09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=
+=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09   =20
+=09=09=09=09<!--[if=
+ mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;=
+">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width:100%; min-wi=
+dth:100%;" width=3D"100%" class=3D"mcnTextContentContainer">
+            =
+        <tbody><tr>
+                       =20
+                        <t=
+d valign=3D"top" class=3D"mcnTextContent" style=3D"padding-top:0; padding-r=
+ight:18px; padding-bottom:9px; padding-left:18px;">
+                     =
+  =20
+                            <h3>Thank you for choosing pngtree, pleas=
+e click on the link below to complete the verification:<p><a target=3D"_bla=
+nk" href=3D"https://pngtree.com/call-back/reg-complete?token=3D924689c003cc=
+304add305bc1dd1fa734">https://pngtree.com/call-back/reg-complete?token=3D92=
+4689c003cc304add305bc1dd1fa734</a> </p></h3>
+
+                        <=
+/td>
+                    </tr>
+                </tbody></table>
+=09=
+=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+   =
+            =20
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=
+=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>=
+
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" class=3D"mcnDividerBlock" style=3D"min-width:100%;">=
+
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            =
+<td class=3D"mcnDividerBlockInner" style=3D"min-width:100%; padding:18px;">=
+
+                <table class=3D"mcnDividerContent" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100%;">
+   =
+                 <tbody><tr>
+                        <td>
+             =
+               <span></span>
+                        </td>
+            =
+        </tr>
+                </tbody></table>
+<!--           =20
+     =
+           <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;">
+ =
+               <hr class=3D"mcnDividerContent" style=3D"border-bottom-color=
+:none; border-left-color:none; border-right-color:none; border-bottom-width=
+:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0=
+; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        <=
+/tr>
+    </tbody>
+</table></td>
+                                     =
+   </tr>
+                                    </table>
+                 =
+                   <!--[if (gte mso 9)|(IE)]>
+                           =
+         </td>
+                                    </tr>
+              =
+                      </table>
+                                    <![end=
+if]-->
+                                </td>
+                          =
+  </tr>
+                            <tr>
+                              =
+  <td align=3D"center" valign=3D"top" id=3D"templateFooter" data-template-c=
+ontainer>
+                                    <!--[if (gte mso 9)|(IE)]>=
+
+                                    <table align=3D"center" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+
+                                    <tr>
+                             =
+       <td align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600=
+px;">
+                                    <![endif]-->
+                =
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"100%" class=3D"templateContainer">
+           =
+                             <tr>
+                                       =
+     <td valign=3D"top" class=3D"footerContainer"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnDividerBlock" sty=
+le=3D"min-width:100%;">
+    <tbody class=3D"mcnDividerBlockOuter">
+    =
+    <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-widt=
+h:100%; padding:18px;">
+                <table class=3D"mcnDividerContent=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"=
+min-width: 100%;border-top: 2px solid #FFFFFF;">
+                    <tbo=
+dy><tr>
+                        <td>
+                            <span>=
+</span>
+                        </td>
+                    </tr>
+     =
+           </tbody></table>
+<!--           =20
+                <td class=
+=3D"mcnDividerBlockInner" style=3D"padding: 18px;">
+                <hr c=
+lass=3D"mcnDividerContent" style=3D"border-bottom-color:none; border-left-c=
+olor:none; border-right-color:none; border-bottom-width:0; border-left-widt=
+h:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; m=
+argin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>=
+
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">
+    <tbody class=
+=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" cla=
+ss=3D"mcnTextBlockInner" style=3D"padding-top:9px;">
+              =09<!-=
+-[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<t=
+r>
+=09=09=09=09<![endif]-->
+=09=09=09   =20
+=09=09=09=09<!--[if mso]>=
+
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width:100%; min-width:1=
+00%;" width=3D"100%" class=3D"mcnTextContentContainer">
+                 =
+   <tbody><tr>
+                       =20
+                        <td val=
+ign=3D"top" class=3D"mcnTextContent" style=3D"padding-top:0; padding-right:=
+18px; padding-bottom:9px; padding-left:18px;">
+                        =
+
+                            <em>Copyright =C2=A9 *|2024|* *|pngtree|*, A=
+ll rights reserved.</em><br>
+<br>
+<strong>Our mailing address is:</stro=
+ng><br>
+*info@pngtree.com*&nbsp;
+                        </td>
+      =
+              </tr>
+                </tbody></table>
+=09=09=09=09<!--[i=
+f mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+                =
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>=
+
+</table></td>
+                                        </tr>
+        =
+                            </table>
+                                    =
+<!--[if (gte mso 9)|(IE)]>
+                                    </td>
+  =
+                                  </tr>
+                                 =
+   </table>
+                                    <![endif]-->
+          =
+                      </td>
+                            </tr>
+         =
+               </table>
+                        <!-- // END TEMPLATE -->=
+
+                    </td>
+                </tr>
+            </table>=
+
+        </center>
+    </body>
+</html>
+    </body>
+</html>
+
+
+--_=_swift_v4_1722059320_be821ac8107547c51dbed27fed74f5c8_=_--
+

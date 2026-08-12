@@ -1,0 +1,44 @@
+Return-Path: <hyxfvjbq@raspinaclothing.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id zo5tDfCiTWp2LTEAyIPyJQ
+	(envelope-from <hyxfvjbq@raspinaclothing.com>)
+	for <info@raspinaclothing.com>; Wed, 08 Jul 2026 04:38:00 +0330
+Return-path: <hyxfvjbq@raspinaclothing.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Wed, 08 Jul 2026 04:38:00 +0330
+Received: from hyxfvjbq by cp80p.mihankhabar.com with local (Exim 4.99.2)
+	(envelope-from <hyxfvjbq@raspinaclothing.com>)
+	id 1whGlb-0000000DWPn-3iOS
+	for info@raspinaclothing.com;
+	Wed, 08 Jul 2026 04:38:00 +0330
+To: info@raspinaclothing.com
+Subject: [RASPINA] Some themes have failed to update
+X-PHP-Script: raspinaclothing.com/2/wp-cron.php for 185.94.99.249
+Date: Wed, 8 Jul 2026 01:07:59 +0000
+From: WordPress <wordpress@raspinaclothing.com>
+Message-ID: <U2CK6bt2GKlKONnt2std3AkGkPs6EqvkueLPp82G04@raspinaclothing.com>
+X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Howdy! Themes failed to update on your site at https://raspinaclothing.com/2.
+
+
+Please check your site now. It’s possible that everything is working. If there are updates available, you should update.
+
+
+These themes failed to update:
+- Woodmart (from version 6.2.4.2 to 8.5.5)
+
+
+To manage themes on your site, visit the Themes page: https://raspinaclothing.com/2/wp-admin/themes.php
+
+
+If you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help.
+https://wordpress.org/support/forums/
+
+The WordPress Team
+

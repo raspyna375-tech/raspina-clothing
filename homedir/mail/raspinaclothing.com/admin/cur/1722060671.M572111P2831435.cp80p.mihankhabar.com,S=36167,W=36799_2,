@@ -1,0 +1,632 @@
+Return-Path: <01000190f2cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-000000@amazonses.com>
+Delivered-To: admin@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id YKX7IX+PpGZLNCsAyIPyJQ
+	(envelope-from <01000190f2cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-000000@amazonses.com>)
+	for <admin@raspinaclothing.com>; Sat, 27 Jul 2024 09:41:11 +0330
+Return-path: <01000190f2cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-000000@amazonses.com>
+Envelope-to: admin@raspinaclothing.com
+Delivery-date: Sat, 27 Jul 2024 09:41:11 +0330
+Received: from a14-41.smtp-out.amazonses.com ([54.240.14.41]:47121)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <01000190f2cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-000000@amazonses.com>)
+	id 1sXae9-00BlS5-2g
+	for admin@raspinaclothing.com;
+	Sat, 27 Jul 2024 09:41:11 +0330
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=67w4dtavfawru4mujyvtas3tk2ujw5or; d=email.pngtree.com;
+	t=1722060626;
+	h=From:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=FdF3hV2cohFmPr7gaHM+LnFjOIql/eMjN4dY0VomKNQ=;
+	b=R7TzEtPKui0JgetHvLe8j540mApzf1mEbffa0R2MA8x87LpaxRL5La1B2L6nrA7C
+	5N4EkOyi50K6VlhqUciKjUaqb23gcQt2TZ1YytEg+FNHM1AiGzGIu/PbUmGE+8WhKik
+	Mm7oDLGoZFVd3wsOqd+7+8EvD/oPOhUroszfjvQx3+jbRwhlQt5LX7Y+dl1oyWDJJd3
+	xrTTHhlW6jj3Ef0ELRh1xxSJcrokcXhLxhJ0BjWi8ixSyYnMEY7DVFN1In/2u2xTNsZ
+	pOHafmVwPEPHdZBlpAo6Rylrp/fKPDIx8vAoUI2nlZKCCxTHcNs7IcYMWKK0Kg8HpGk
+	oAFarzUjKQ==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1722060626;
+	h=From:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=FdF3hV2cohFmPr7gaHM+LnFjOIql/eMjN4dY0VomKNQ=;
+	b=MXkhLDMyMXWWNWCOYXvKjkySaW9BJW7LWPG1S8XFUK+cYFlMu0YNi7fjIEKeZpON
+	3PgEGLZzPq44jT9mOcFkMikxvf+804KweR9YC8zs+h3k7xGRPCbJGvIZ1deLCEB6cz8
+	6ZfnyU5Hb+nCtiN5DBR85jCBFm11N4YfO0eIhGIQ=
+From: pngtree-pngpromotion@email.pngtree.com
+To: admin@raspinaclothing.com
+Subject: =?UTF-8?Q?WAIT!_Don't_forget_your_free_download_chance!=F0=9F=94=A5?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2608440_1516154244.1722060626471"
+Message-ID: <01000190f2cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-000000@email.amazonses.com>
+Date: Sat, 27 Jul 2024 06:10:26 +0000
+Feedback-ID: ::1.us-east-1.wuZugHOOK8021vBq8rAk+NrC/uiPyCKzeP42mtY988I=:AmazonSES
+X-SES-Outgoing: 2024.07.27-54.240.14.41
+X-Spam-Status: No, score=-3.6
+X-Spam-Score: -35
+X-Spam-Bar: ---
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Pngtree *|MC:SUBJECT|* *|MC_PREVIEW_TEXT|* 
+ Content analysis details:   (-3.6 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: pngtree.com]
+ -2.0 RCVD_IN_VALIDITY_SAFE  RBL: Sender in Validity Safe - Contact
+                             certification@validity.com
+ [Excessive Number of Queries | <https://knowledge.validity.com/hc/en-us/articles/20961730681243>]
+ -3.0 RCVD_IN_VALIDITY_CERTIFIED RBL: Sender in Validity Certification
+                              - Contact certification@validity.com
+  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+                             mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 MIME_HTML_MOSTLY       BODY: Multipart message mostly text/html MIME
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  1.3 RCVD_IN_VALIDITY_RPBL  RBL: Relay in Validity RPBL,
+                             https://senderscore.org/blocklistlookup/
+                             [54.240.14.41 listed in bl.score.senderscore.com]
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+                             Colors in HTML
+X-Spam-Flag: NO
+
+------=_Part_2608440_1516154244.1722060626471
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Pngtree
+------=_Part_2608440_1516154244.1722060626471
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+    <!-- NAME: ANNOUNCE -->
+    <!--[if gte mso 15]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta charset=3D"UTF-8">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <title>*|MC:SUBJECT|*</title>
+
+</head>
+<body style=3D"height: 100%;margin: 0;padding: 0;width: 100%;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;">
+<!--*|IF:MC_PREVIEW_TEXT|*-->
+<!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" style=3D"display:=
+none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacit=
+y:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*=
+</span><!--<![endif]-->
+<!--*|END:IF|*-->
+<center>
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" height=3D"100%" width=3D"100%" id=3D"bodyTable" style=3D"border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;widt=
+h: 100%;">
+        <tr>
+            <td align=3D"center" valign=3D"top" id=3D"bodyCell" style=3D"ms=
+o-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;height: 100%;margin: 0;padding: 0;width: 100%;">
+                <!-- BEGIN TEMPLATE // -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"=
+>
+                    <tr>
+                        <td align=3D"center" valign=3D"top" id=3D"templateH=
+eader" data-template-container style=3D"mso-line-height-rule: exactly;-ms-t=
+ext-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #fff=
+fff;background-image: none;background-repeat: no-repeat;background-position=
+: 50% 50%;background-size: contain;border-top: 0;border-bottom: 0;padding-t=
+op: 0px;padding-bottom: 0px;">
+                            <!--[if (gte mso 9)|(IE)]>
+                            <table align=3D"center" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" wid=
+th=3D"600" style=3D"width:600px;">
+                            <![endif]-->
+                            <table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContainer" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-=
+ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !=
+important;">
+                                <tr>
+                                    <td valign=3D"top" class=3D"headerConta=
+iner" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;background-color: #transparent;background-image=
+: none;background-repeat: no-repeat;background-position: center;background-=
+size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0=
+;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" c=
+lass=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;">
+                                            <tbody class=3D"mcnImageBlockOu=
+ter">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;" class=3D"mcnImageBlockInner">
+                                                    <table align=3D"left" w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mcn=
+ImageContentContainer" style=3D"min-width: 100%;border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;">
+                                                        <tbody><tr>
+                                                            <td class=3D"mc=
+nImageContent" valign=3D"top" style=3D"padding-right: 9px;padding-left: 9px=
+;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: =
+exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+
+                                                                <img align=
+=3D"center" alt=3D"" src=3D"https://js.pngtree.com/images/email/pngtree-log=
+o-305.png" width=3D"56.400000000000006" style=3D"max-width: 1200px;padding-=
+bottom: 0;display: inline !important;vertical-align: bottom;border: 0;heigh=
+t: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic=
+;" class=3D"mcnImage">
+
+
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table></td>
+                                </tr>
+                            </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align=3D"center" valign=3D"top" id=3D"templateB=
+ody" data-template-container style=3D"mso-line-height-rule: exactly;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #e4f5e=
+7;background-image: none;background-repeat: no-repeat;background-position: =
+center;background-size: contain;border-top: 0;border-bottom: 0;padding-top:=
+ 0px;padding-bottom: 0px;">
+                            <!--[if (gte mso 9)|(IE)]>
+                            <table align=3D"center" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" wid=
+th=3D"600" style=3D"width:600px;">
+                            <![endif]-->
+                            <table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContainer" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-=
+ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !=
+important;">
+                                <tr>
+                                    <td valign=3D"top" class=3D"bodyContain=
+er" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;background-color: #transparent;background-image: =
+none;background-repeat: no-repeat;background-position: center;background-si=
+ze: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0;"=
+><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" cla=
+ss=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: collapse;mso-=
+table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;">
+                                            <tbody class=3D"mcnTextBlockOut=
+er">
+                                            <tr>
+                                                <td valign=3D"top" class=3D=
+"mcnTextBlockInner" style=3D"padding-top: 9px;mso-line-height-rule: exactly=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <!--[if mso]>
+                                                    <table align=3D"left" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"wid=
+th:100%;">
+                                                        <tr>
+                                                    <![endif]-->
+
+                                                    <!--[if mso]>
+                                                    <td valign=3D"top" widt=
+h=3D"600" style=3D"width:600px;">
+                                                    <![endif]-->
+                                                    <table align=3D"left" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 100%;mi=
+n-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rsp=
+ace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=
+=3D"100%" class=3D"mcnTextContentContainer">
+                                                        <tbody><tr>
+
+                                                            <td valign=3D"t=
+op" class=3D"mcnTextContent" style=3D"padding-top: 0;padding-right: 18px;pa=
+dding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text=
+-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;co=
+lor: #757575;font-family: Helvetica;font-size: 16px;line-height: 150%;text-=
+align: left;">
+
+                                                                <h1 class=
+=3D"null" style=3D"display: block;margin: 0;padding: 0;color: #222222;font-=
+family: Helvetica;font-size: 40px;font-style: normal;font-weight: bold;line=
+-height: 150%;letter-spacing: normal;text-align: center;"><br>
+                                                                    <br>
+                                                                    <span s=
+tyle=3D"color:#008000">Wait! You still have<br>
+&nbsp;<span style=3D"background-color:#FFD700">1 free downloads</span> left=
+ today!&nbsp;</span></h1>
+
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                    <!--[if mso]>
+                                                    </td>
+                                                    <![endif]-->
+
+                                                    <!--[if mso]>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnImageBlock" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody class=3D"mcnImageBlockOu=
+ter">
+                                            <tr>
+                                                <td valign=3D"top" style=3D=
+"padding: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;" class=3D"mcnImageBlockInner">
+                                                    <table align=3D"left" w=
+idth=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mcn=
+ImageContentContainer" style=3D"min-width: 100%;border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;">
+                                                        <tbody><tr>
+                                                            <td class=3D"mc=
+nImageContent" valign=3D"top" style=3D"padding-right: 9px;padding-left: 9px=
+;padding-top: 0;padding-bottom: 0;text-align: center;mso-line-height-rule: =
+exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                                                                <a href=3D"=
+https://dcd7nrbm.r.us-east-1.awstrack.me/L0/https:%2F%2Fpngtree.com%2Ffreep=
+ng%2FRecently-Download%3Fsce=3Dma%26id=3D2fd/1/01000190f2cfda27-fa97b818-4f=
+11-4815-89bb-3fc7ff343f75-000000/ZZ26R7Yam9E5V_UxqAm8Oz_LCtM=3D384" title=
+=3D"" class=3D"" target=3D"_blank" style=3D"mso-line-height-rule: exactly;-=
+ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                    <img al=
+ign=3D"center" alt=3D"" src=3D"https://js.pngtree.com/images/email/new-user=
+-one-hour-1.png" width=3D"564" style=3D"max-width: 1200px;padding-bottom: 0=
+;display: inline !important;vertical-align: bottom;border: 0;height: auto;o=
+utline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" class=
+=3D"mcnImage">
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D=
+"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-=
+rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody class=3D"mcnTextBlockOut=
+er">
+                                            <tr>
+                                                <td valign=3D"top" class=3D=
+"mcnTextBlockInner" style=3D"padding-top: 9px;mso-line-height-rule: exactly=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <!--[if mso]>
+                                                    <table align=3D"left" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"wid=
+th:100%;">
+                                                        <tr>
+                                                    <![endif]-->
+
+                                                    <!--[if mso]>
+                                                    <td valign=3D"top" widt=
+h=3D"600" style=3D"width:600px;">
+                                                    <![endif]-->
+                                                    <table align=3D"left" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 100%;mi=
+n-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rsp=
+ace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=
+=3D"100%" class=3D"mcnTextContentContainer">
+                                                        <tbody><tr>
+
+                                                            <td valign=3D"t=
+op" class=3D"mcnTextContent" style=3D"padding-top: 0;padding-right: 18px;pa=
+dding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text=
+-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;co=
+lor: #757575;font-family: Helvetica;font-size: 16px;line-height: 150%;text-=
+align: left;">
+
+                                                                <span style=
+=3D"color:#008000"><strong><span style=3D"font-size:20px">Millions of free =
+png resources &amp; Different types of content</span><span style=3D"font-si=
+ze:18px"> are ready for you, enjoy your free download on Pngtree now!</span=
+></strong></span><br>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                    <!--[if mso]>
+                                                    </td>
+                                                    <![endif]-->
+
+                                                    <!--[if mso]>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnButtonBlock" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody class=3D"mcnButtonBlockO=
+uter">
+                                            <tr>
+                                                <td style=3D"padding-top: 0=
+;padding-right: 18px;padding-bottom: 18px;padding-left: 18px;mso-line-heigh=
+t-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"=
+ valign=3D"top" align=3D"center" class=3D"mcnButtonBlockInner">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"mcnButtonContentContainer" style=
+=3D"border-collapse: separate !important;border-radius: 50px;background-col=
+or: #548E4C;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjus=
+t: 100%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"middle" class=3D"mcnButtonContent" style=3D"font-family: Ar=
+ial;font-size: 16px;padding: 18px;mso-line-height-rule: exactly;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                <a class=3D=
+"mcnButton " title=3D"Get Free Download" href=3D"https://dcd7nrbm.r.us-east=
+-1.awstrack.me/L0/https:%2F%2Fpngtree.com%2Ffreepng%2FRecently-Download%3Fs=
+ce=3Dma%26id=3D2fd/2/01000190f2cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-=
+000000/0PzlSvxhDHMChExNZOtVJp4nvkY=3D384" target=3D"_blank" style=3D"font-w=
+eight: bold;letter-spacing: normal;line-height: 100%;text-align: center;tex=
+t-decoration: none;color: #FFFFFF;mso-line-height-rule: exactly;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;display: block;">Get Free Do=
+wnload</a>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnDividerBlock" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;ta=
+ble-layout: fixed !important;">
+                                            <tbody class=3D"mcnDividerBlock=
+Outer">
+                                            <tr>
+                                                <td class=3D"mcnDividerBloc=
+kInner" style=3D"min-width: 100%;padding: 18px;mso-line-height-rule: exactl=
+y;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <table class=3D"mcnDivi=
+derContent" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"min-width: 100%;border-top: 2px dashed #FFFFFF;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody><tr>
+                                                            <td style=3D"ms=
+o-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;">
+                                                                <span></spa=
+n>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                    <!--
+                                                                    <td cla=
+ss=3D"mcnDividerBlockInner" style=3D"padding: 18px;">
+                                                                    <hr cla=
+ss=3D"mcnDividerContent" style=3D"border-bottom-color:none; border-left-col=
+or:none; border-right-color:none; border-bottom-width:0; border-left-width:=
+0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; mar=
+gin-left:0;" />
+                                                    -->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table></td>
+                                </tr>
+                            </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align=3D"center" valign=3D"top" id=3D"templateF=
+ooter" data-template-container style=3D"mso-line-height-rule: exactly;-ms-t=
+ext-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #8f8=
+f8f;background-image: none;background-repeat: no-repeat;background-position=
+: 50% 50%;background-size: cover;border-top: 0;border-bottom: 0;padding-top=
+: 0px;padding-bottom: 0px;">
+                            <!--[if (gte mso 9)|(IE)]>
+                            <table align=3D"center" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" wid=
+th=3D"600" style=3D"width:600px;">
+                            <![endif]-->
+                            <table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContainer" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-=
+ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;max-width: 600px !=
+important;">
+                                <tr>
+                                    <td valign=3D"top" class=3D"footerConta=
+iner" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;background-color: #transparent;background-image=
+: none;background-repeat: no-repeat;background-position: center;background-=
+size: cover;border-top: 0;border-bottom: 0;padding-top: 0;padding-bottom: 0=
+;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" c=
+lass=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: collapse=
+;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;table-layout: fixed !important;">
+                                            <tbody class=3D"mcnDividerBlock=
+Outer">
+                                            <tr>
+                                                <td class=3D"mcnDividerBloc=
+kInner" style=3D"min-width: 100%;padding: 18px;mso-line-height-rule: exactl=
+y;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <table class=3D"mcnDivi=
+derContent" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"min-width: 100%;border-top: 2px solid #FFFFFF;border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody><tr>
+                                                            <td style=3D"ms=
+o-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;">
+                                                                <span></spa=
+n>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                    <!--
+                                                                    <td cla=
+ss=3D"mcnDividerBlockInner" style=3D"padding: 18px;">
+                                                                    <hr cla=
+ss=3D"mcnDividerContent" style=3D"border-bottom-color:none; border-left-col=
+or:none; border-right-color:none; border-bottom-width:0; border-left-width:=
+0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; mar=
+gin-left:0;" />
+                                                    -->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D=
+"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-=
+rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                            <tbody class=3D"mcnTextBlockOut=
+er">
+                                            <tr>
+                                                <td valign=3D"top" class=3D=
+"mcnTextBlockInner" style=3D"padding-top: 9px;mso-line-height-rule: exactly=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                    <!--[if mso]>
+                                                    <table align=3D"left" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"wid=
+th:100%;">
+                                                        <tr>
+                                                    <![endif]-->
+
+                                                    <!--[if mso]>
+                                                    <td valign=3D"top" widt=
+h=3D"600" style=3D"width:600px;">
+                                                    <![endif]-->
+                                                    <table align=3D"left" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 100%;mi=
+n-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rsp=
+ace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=
+=3D"100%" class=3D"mcnTextContentContainer">
+                                                        <tbody><tr>
+
+                                                            <td valign=3D"t=
+op" class=3D"mcnTextContent" style=3D"padding-top: 0;padding-right: 18px;pa=
+dding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text=
+-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;co=
+lor: #FFFFFF;font-family: Helvetica;font-size: 12px;line-height: 150%;text-=
+align: center;">
+
+                                                                <table alig=
+n=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" =
+style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: =
+0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td=
+ valign=3D"top" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjust=
+: 100%;-webkit-text-size-adjust: 100%;"><em>Copyright =C2=A9* | 2023 | * * =
+| pngtree | *, all rights reserved.<br>
+                                                                           =
+     <br>
+                                                                           =
+     <a href=3D"https://dcd7nrbm.r.us-east-1.awstrack.me/L0/https:%2F%2Fpng=
+tree.com%2Femail-unsubscribe%3Fsce=3Dma%26id=3D2fd/1/01000190f2cfda27-fa97b=
+818-4f11-4815-89bb-3fc7ff343f75-000000/iVCdHX1ss5QY7Dw_cmr9Q_6VYw8=3D384" t=
+arget=3D"_blank" style=3D"mso-line-height-rule: exactly;-ms-text-size-adjus=
+t: 100%;-webkit-text-size-adjust: 100%;color: #FFFFFF;font-weight: normal;t=
+ext-decoration: underline;">You can unsubscribe from this list.</a></em></t=
+d>
+                                                                    </tr>
+                                                                    </tbody=
+>
+                                                                </table>
+
+                                                            </td>
+                                                        </tr>
+                                                        </tbody></table>
+                                                    <!--[if mso]>
+                                                    </td>
+                                                    <![endif]-->
+
+                                                    <!--[if mso]>
+                                                    </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table></td>
+                                </tr>
+                            </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        </td>
+                    </tr>
+                </table>
+                <!-- // END TEMPLATE -->
+            </td>
+        </tr>
+    </table>
+</center>
+<img alt=3D"" src=3D"https://dcd7nrbm.r.us-east-1.awstrack.me/I0/01000190f2=
+cfda27-fa97b818-4f11-4815-89bb-3fc7ff343f75-000000/Oo4lccHNhAKzJm2f11YAnWfc=
+kUk=3D384" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+</html>
+------=_Part_2608440_1516154244.1722060626471--

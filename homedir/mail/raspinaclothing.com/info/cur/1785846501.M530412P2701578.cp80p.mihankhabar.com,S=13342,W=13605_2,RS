@@ -1,0 +1,263 @@
+Return-Path: <ichulpan@gmail.com>
+Delivered-To: info@raspinaclothing.com
+Received: from cp80p.mihankhabar.com
+	by cp80p.mihankhabar.com with LMTP
+	id JQSrHeXacWoKOSkAyIPyJQ
+	(envelope-from <ichulpan@gmail.com>)
+	for <info@raspinaclothing.com>; Tue, 04 Aug 2026 15:58:21 +0330
+Return-path: <ichulpan@gmail.com>
+Envelope-to: info@raspinaclothing.com
+Delivery-date: Tue, 04 Aug 2026 15:58:21 +0330
+Received: from mail-pg1-f174.google.com ([209.85.215.174]:52318)
+	by cp80p.mihankhabar.com with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.99.5)
+	(envelope-from <ichulpan@gmail.com>)
+	id 1wrEG5-0000000BIFJ-0IIG
+	for info@raspinaclothing.com;
+	Tue, 04 Aug 2026 15:58:20 +0330
+Received: by mail-pg1-f174.google.com with SMTP id 41be03b00d2f7-c96b08cdd1cso3184057a12.0
+        for <info@raspinaclothing.com>; Tue, 04 Aug 2026 05:27:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1785846452; cv=none;
+        d=google.com; s=arc-20260327;
+        b=iYn6Cp+o3iGBaTDUhhK/E3oBipBh1b9DJd1V4mjJiQRUv2hQe48evLOAhTKCZiNYy8
+         duR8Cfp1S08bqiiKot/4fHl0j+3MTq+sy/vZp0vJsDzGbS7Dy62NqHfMJchD6vHqDcc+
+         d2qc+jdD/rRn3iChvKboVkqBsNAbQ6gzkLz7NPpSHX8jtIzTOVpgBCWenNegV6t/z+QL
+         ztd9PXn8ZYp7dycm+HF7SgZni1Y8tmX4OWlvYDhkteupthhwZ2ywa9ocCLp+PLI1JqI1
+         4SaFl5t1RtMPwdahUKqIXLx3cipLIogZGvnhbjfbUkSJAjw7XaztFLLrOzv5KZDFy6O5
+         Xr0g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=6i2piod7lmpPl4CMaSCzWWIWmunSzYo+dBt0qvJ6Eyo=;
+        fh=OxLTX4m76ChPMf4GP7je2uvJ6CTF6ow93nWwGnMh5p8=;
+        b=hovp1Bjjy4nNnYsJi9Fwqhtzli4ofSNj6cqNk+VKqsEIVVcJoSqswv5PoQO4S59Dtn
+         IWGYi7uxi7lUPblJnKGshpJf3xxjbzyVjhOl+2jnbG1Mjj/d8/KRUMpc6KJNw3KJe8Yt
+         0ZyCYIxfL0pGZrU1PxUJTbVqHANqBSysq4cjMooc+f8tsb1AAs3E6EMM5ErYXXZFyC7x
+         KzOhTaSwW0KOb5Mcv2IUZOkjfDVRuXEGNfTqbcsW7GDzEPkGQZG33bffbz5MH12U7mxf
+         kLieQHSJgOZOGSQhNplOcmf3o4yB2rxZ0Ngv4DYIaqYRBVy7tp689UKvTpUvzfs8Cnod
+         0gJg==;
+        darn=raspinaclothing.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1785846452; x=1786451252; darn=raspinaclothing.com;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=6i2piod7lmpPl4CMaSCzWWIWmunSzYo+dBt0qvJ6Eyo=;
+        b=Kr2RsCl3k98UzAhKKehLgOyPzFEe5XWL1EVBpyCFO+jbbntvLEbsL/lWLyzlRIySLo
+         OxfIkpgpKsgMgT9cLCnd/uw7MwymXx8xzQsMVw9fIDE/tK6H3QpiAl3sfX17hQSKw1ke
+         +0JN3OoOp9r9kS2sXbKc1u3gBCaSY2/ubrktGzrBPh9ezP3btl5PPp9Z0xS5d78vB79S
+         QUGwN5RqXdDpkHaxhJt77eVkosFb/GHYzC/0Wc/3KVdpmSXtQ9spUu0Gc7cE4Tkdrf18
+         TcEkm404Wug1VteiLxCnE40azvZ2szj/ZPD/3wGfn93VApMenAglHkyhe6Q6LOwlfYMw
+         MeOQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1785846452; x=1786451252;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=6i2piod7lmpPl4CMaSCzWWIWmunSzYo+dBt0qvJ6Eyo=;
+        b=Ip6ipiCUgqrmK6IP9um7GJ+wTV5ajeC+Bf4/HbwCPpd6hQgDdjNlJeHhMzfz2VtqMg
+         ks2zvUMmee65Py0zigu0woVaL11Z6tai+8bR22Q7T91lr+6dSQlMcJkvoh+4W9CIDKOO
+         Ga38Fy/wQwjTRZE2nWwqx55KdeP1RZ2f9gzEttKt85CR8WEWDug+pYItfgtGUARJBIhC
+         LHAAKlSCFDRz9NKDPca+8ibmKL9o0o/x4iYBwZYqQuB27JtI4d+bjPdci3LwyiWJUaXT
+         Rf3xk3GhxM74aY8jp96M+eFcr474Et0nt30be6o+MyZPFEMZChKkvL3wdUFdYGvZGnEh
+         PUDw==
+X-Gm-Message-State: AOJu0YxIwshaM7EH0VqUNwaRRqPwmIlEBHURfHTjF/AuocS6cPGVV/pw
+	8TSSuJMBmWERpF0lWzpZ5SMrW10fHOVtKDyvfJl7RCo9CpzjoYLtOVstM9dN/RqfXk233R8viOa
+	0qkkckxnkgmQW/hGJk4OhRkkEwnobaG2I/A==
+X-Gm-Gg: AR+sD13xN1Q8cohmenZBSlBoJRMhmI84ZN9bFOj6proBnj1pnXZzk5yb+8VEltQCjcf
+	YuykyS74Vzfe+I0FGSlyltvOYxtRA+PlXKn8O28zkR78NdMNR/yr5qiZLKCNCdstr+bBBNkfkKJ
+	dImo6tb7Jr4NJ78BoWIv5oJUcqlLShAV/yDZmcBVVrBVMeVJafXcfoTGvT2ZRR8DGsxs/so0MhH
+	poyVfZtdnC84c1KaoTPlzDcfVffSHyevEfH0RpumyAlHCWL41c4ntfWgX+5dcRQ+8v6ycixthYj
+	dSazaJGWSrPjybkAM8vHfQgqEmyXzLFLDYckhQBImlLauFTlJxmohRdmsGU546hgOT8TpqhcmQ=
+	=
+X-Received: by 2002:a05:6a20:c891:b0:3bf:6c08:fb85 with SMTP id
+ adf61e73a8af0-3c92a8897d6mr14652606637.53.1785846451713; Tue, 04 Aug 2026
+ 05:27:31 -0700 (PDT)
+MIME-Version: 1.0
+References: <d08b4eee73a75d3b0718c19b04ec0501@raspinaclothing.com>
+ <CAMe4RvRT20pLXCFwG6E3qhu=qdFDXKOzgpHBn_4pVna9LY5bxQ@mail.gmail.com>
+ <d6a77da06dad57f7b3427daa0f64a759@raspinaclothing.com> <CAMe4RvS3=z4LZpUt-AvZVFuQkEkBQcMgLRnNgMf4r5ny93eAiQ@mail.gmail.com>
+ <CAMe4RvSGWEVCCgPtNz0Fnonm4KeB_b6oNGRdDdiwmWVMofz3TA@mail.gmail.com>
+ <bd89494e31a69ab45b584306eda682c4@raspinaclothing.com> <CAMe4RvS8N16oQj-=KhH+k3VZ2j+y+RM4t2r-bxzjQUHpOiiN=g@mail.gmail.com>
+ <5246ee355e62289fb51436073cef02a1@raspinaclothing.com> <CAMe4RvQLVjJgjq8Am8k2uW-j9y4PtL=TxvivhKD0XSOU+oAESw@mail.gmail.com>
+ <af2133f1ad7a49e3287ed5c63845a8e8@raspinaclothing.com>
+In-Reply-To: <af2133f1ad7a49e3287ed5c63845a8e8@raspinaclothing.com>
+From: =?UTF-8?B?0KfRg9C70L/QsNC9?= <ichulpan@gmail.com>
+Date: Tue, 4 Aug 2026 15:27:19 +0300
+X-Gm-Features: AUfX_mwVhiY3j6f7MTp59D6NpnUTswddgAlfgxYLtuKgLNUZGyZ5BtixmuulAkw
+Message-ID: <CAMe4RvT1wpCUtF8rZ_ZXu18RabO=H5SJTUNnYvbdbxr8BHYN+Q@mail.gmail.com>
+Subject: Re: Additional Information
+To: info@raspinaclothing.com
+Content-Type: multipart/alternative; boundary="00000000000060c720065837c7b0"
+X-Spam-Status: No, score=-0.2
+X-Spam-Score: -1
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cp80p.mihankhabar.com",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Dear Soheil, Thank you very much for your reply and for your
+    explanation. I understand that the document you sent contains both your company
+    registration information and your trademark registration information. 
+ Content analysis details:   (-0.2 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [209.85.215.174 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+                             [209.85.215.174 listed in wl.mailspike.net]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail provider
+                             [ichulpan(at)gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+
+--00000000000060c720065837c7b0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Soheil,
+
+Thank you very much for your reply and for your explanation.
+
+I understand that the document you sent contains both your company
+registration information and your trademark registration information.
+
+Unfortunately, the PDF file I received is of quite low resolution, so some
+parts of the document are difficult to read clearly, including the details
+of the issuing authority and some of the registration information.
+
+Would it be possible for you to send me the same document in a higher
+resolution or as a scanned copy?
+
+This is a standard verification process that I carry out with all
+manufacturers before introducing them to potential customers and business
+partners. I simply like to review the official documents carefully so that
+I have a clear understanding of the company's legal information and
+registration details.
+
+Thank you very much for your understanding and support.
+
+I look forward to receiving the document and continuing our communication.
+
+
+Best regards,
+
+Chulpan
+
+
+=D0=A1 =D1=83=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC, =D0=A7=D1=83=
+=D0=BB=D0=BF=D0=B0=D0=BD =D0=92=D0=BE=D1=80=D0=BE=D0=BD=D1=86=D0=BE=D0=B2=
+=D0=B0
+=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=80=D0=B1=D1=83=
+=D1=80=D0=B3
+=D0=9C=D0=BE=D0=B1. 8-909-582-08-84
+=D0=AD=D0=BB. =D0=BF=D0=BE=D1=87=D1=82=D0=B0 ichulpan@gmail.com
+
+
+
+
+
+=D1=81=D0=B1, 1 =D0=B0=D0=B2=D0=B3. 2026=E2=80=AF=D0=B3., 11:52 <info@raspi=
+naclothing.com>:
+
+> Dear Chulpan,
+>
+> Thank you very much for your email.
+>
+> I believe there may have been a small misunderstanding. Both the Company
+> Registration information and the Trademark Registration information are
+> included in the same document that I sent previously.
+>
+> The document contains our legal company details, company registration
+> number, as well as the trademark registration information, so there is
+> no separate Company Registration Certificate attached.
+>
+> If there is any specific information or document you are looking for
+> that is not included in the file, please let me know. I will be more
+> than happy to provide any additional details or documentation you may
+> need.
+>
+> Thank you once again for your careful review of our documents and for
+> your professional communication. I truly appreciate your attention to
+> detail and look forward to hearing from you.
+>
+> Kind regards,
+>
+> Soheil Zali
+> Raspina Clothing
+>
+
+--00000000000060c720065837c7b0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div><div><br></div><div>Dear Soheil,<br><br>Thank you ve=
+ry much for your reply and for your explanation.<br><br>I understand that t=
+he document you sent contains both your company registration information an=
+d your trademark registration information.<br><br>Unfortunately, the PDF fi=
+le I received is of quite low resolution, so some parts of the document are=
+ difficult to read clearly, including the details of the issuing authority =
+and some of the registration information.<br><br>Would it be possible for y=
+ou to send me the same document in a higher resolution or as a scanned copy=
+?<br><br>This is a standard verification process that I carry out with all =
+manufacturers before introducing them to potential customers and business p=
+artners. I simply like to review the official documents carefully so that I=
+ have a clear understanding of the company&#39;s legal information and regi=
+stration details.<br><br>Thank you very much for your understanding and sup=
+port.<br><br>I look forward to receiving the document and continuing our co=
+mmunication.<br><br><br>Best regards,</div><div dir=3D"auto"><br>Chulpan</d=
+iv><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div>=C2=A0</div><div>=C2=A0</div><div>=
+=D0=A1 =D1=83=D0=B2=D0=B0=D0=B6=D0=B5=D0=BD=D0=B8=D0=B5=D0=BC, =D0=A7=D1=83=
+=D0=BB=D0=BF=D0=B0=D0=BD =D0=92=D0=BE=D1=80=D0=BE=D0=BD=D1=86=D0=BE=D0=B2=
+=D0=B0</div><div>=D0=A1=D0=B0=D0=BD=D0=BA=D1=82-=D0=9F=D0=B5=D1=82=D0=B5=D1=
+=80=D0=B1=D1=83=D1=80=D0=B3<br></div><div>=D0=9C=D0=BE=D0=B1. 8-909-582-08-=
+84</div><div>=D0=AD=D0=BB. =D0=BF=D0=BE=D1=87=D1=82=D0=B0 <a href=3D"mailto=
+:ichulpan@gmail.com" target=3D"_blank">ichulpan@gmail.com</a></div><div><br=
+></div><div><div style=3D"color:rgb(34,34,34)"><br></div></div><div><br></d=
+iv><div><br></div></div></div></div></div></div><br><div class=3D"gmail_quo=
+te gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">=D1=81=D0=
+=B1, 1 =D0=B0=D0=B2=D0=B3. 2026=E2=80=AF=D0=B3., 11:52  &lt;<a href=3D"mail=
+to:info@raspinaclothing.com">info@raspinaclothing.com</a>&gt;:<br></div><bl=
+ockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #=
+ccc solid;padding-left:1ex">Dear Chulpan,<br>
+<br>
+Thank you very much for your email.<br>
+<br>
+I believe there may have been a small misunderstanding. Both the Company <b=
+r>
+Registration information and the Trademark Registration information are <br=
+>
+included in the same document that I sent previously.<br>
+<br>
+The document contains our legal company details, company registration <br>
+number, as well as the trademark registration information, so there is <br>
+no separate Company Registration Certificate attached.<br>
+<br>
+If there is any specific information or document you are looking for <br>
+that is not included in the file, please let me know. I will be more <br>
+than happy to provide any additional details or documentation you may <br>
+need.<br>
+<br>
+Thank you once again for your careful review of our documents and for <br>
+your professional communication. I truly appreciate your attention to <br>
+detail and look forward to hearing from you.<br>
+<br>
+Kind regards,<br>
+<br>
+Soheil Zali<br>
+Raspina Clothing<br>
+</blockquote></div></div></div>
+
+--00000000000060c720065837c7b0--
