@@ -259,6 +259,19 @@ final class AdminRepository
         return $statement->fetchAll();
     }
 
+    public function listAuditLogs(int $page, int $perPage = 25): array
+    {
+        $this->requireReady();
+        $countStatement = $this->pdo->query('SELECT COUNT(*) FROM ' . $this->table('admin_audit'));
+        $total = (int) $countStatement->fetchColumn();
+        $pages = max(1, (int) ceil($total / $perPage));
+        $page = min(max(1, $page), $pages);
+        $offset = ($page - 1) * $perPage;
+        $sql = 'SELECT a.id, a.admin_user_id, a.action, a.entity_type, a.entity_id, a.ip_hash, a.metadata_json, a.created_at, u.name AS user_name, u.email AS user_email FROM ' . $this->table('admin_audit') . ' a LEFT JOIN ' . $this->table('admin_users') . ' u ON u.id = a.admin_user_id ORDER BY a.created_at DESC, a.id DESC LIMIT ' . (int) $perPage . ' OFFSET ' . (int) $offset;
+        $statement = $this->pdo->query($sql);
+        return array('items' => $statement->fetchAll(), 'total' => $total, 'page' => $page, 'pages' => $pages, 'per_page' => $perPage);
+    }
+
     public function getCategory(int $id): ?array
     {
         $this->requireReady();

@@ -260,3 +260,49 @@ function render_sitemap(CatalogRepository $catalog, array $config): void
     }
     echo '</urlset>';
 }
+
+function get_current_lang(): string
+{
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        @session_start();
+    }
+    if (isset($_GET['lang'])) {
+        $lang = strtolower((string) $_GET['lang']);
+        if (in_array($lang, array('en', 'ru', 'ar'), true)) {
+            $_SESSION['lang'] = $lang;
+            return $lang;
+        }
+    }
+    if (isset($_SESSION['lang'])) {
+        return (string) $_SESSION['lang'];
+    }
+    return 'en';
+}
+
+function lang_url(string $lang): string
+{
+    $query = $_GET;
+    $query['lang'] = $lang;
+    return '?' . http_build_query($query);
+}
+
+function t(string $key, string $default = ''): string
+{
+    static $translations = null;
+    if ($translations === null) {
+        $file = __DIR__ . '/translations.php';
+        if (is_file($file)) {
+            $translations = require $file;
+        } else {
+            $translations = array();
+        }
+    }
+    $lang = get_current_lang();
+    if ($lang === 'en') {
+        return $default !== '' ? $default : $key;
+    }
+    if (isset($translations[$lang][$key])) {
+        return $translations[$lang][$key];
+    }
+    return $default !== '' ? $default : $key;
+}
