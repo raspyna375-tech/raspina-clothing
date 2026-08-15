@@ -3,6 +3,7 @@ $disabled = !empty($read_only) ? 'disabled' : '';
 $value = static function (string $key, $fallback = '') use ($form) { return $form[$key] ?? $fallback; };
 $selectedCategories = array_map('intval', (array) ($form['category_ids'] ?? array()));
 $productAction = !empty($form['id']) ? admin_url('/products/edit/' . (int) $form['id']) : admin_url('/products/new');
+
 $apparelFields = array(
     'brand' => 'برند',
     'garment_type' => 'نوع لباس',
@@ -10,32 +11,537 @@ $apparelFields = array(
     'season' => 'فصل / سال تولید',
     'fabric_composition' => 'جنس و ترکیب پارچه',
     'fabric_weight' => 'وزن پارچه',
-    'color' => 'رنگ',
+    'color' => 'رنگ اصلی',
     'color_family' => 'طیف رنگی',
     'pattern' => 'طرح پارچه',
     'fit' => 'نوع تن‌خور (Fit)',
-    'silhouette' => 'سیلوئت (فرم کلی لباس)',
+    'silhouette' => 'سیلوئت (فرم کلی)',
     'neckline' => 'مدل یقه',
     'sleeve_length' => 'قد آستین',
     'garment_length' => 'قد لباس',
-    'closure' => 'نحوه بسته‌شدن (دکمه/زیپ...)',
+    'closure' => 'نحوه بسته‌شدن',
     'lining' => 'وضعیت آستر',
-    'stretch' => 'میزان کشسانی پارچه',
+    'stretch' => 'میزان کشسانی',
     'origin_country' => 'کشور سازنده',
-    'size_range' => 'محدوده سایزهای تولیدی'
+    'size_range' => 'محدوده سایزها'
 );
+
+// Determine primary image
+$imagesList = (array) ($form['images'] ?? array());
+$imageRecords = (array) ($form['image_records'] ?? array());
+$primaryImg = $form['primary_image_path'] ?? ($imagesList[0] ?? '');
 ?>
-<header class="admin-page-head compact-head"><div><a class="admin-back-link" href="<?= e(admin_url('/products')) ?>">← بازگشت به محصولات</a><p class="admin-eyebrow">کاتالوگ / <?= !empty($form['id']) ? 'ویرایش رکورد محصول' : 'ثبت محصول جدید' ?></p><h1><?= !empty($form['id']) ? 'ویرایش محصول' : 'افزودن محصول جدید' ?></h1><p class="admin-lede">مشخصات ظاهری و جزئیات کاربردی لازم برای استعلام و سفارش خریداران عمده را در این بخش تکمیل کنید.</p></div></header>
-<?php if (!empty($errors)): ?><div class="admin-alert error" role="alert"><ul><?php foreach ($errors as $error): ?><li><?= e($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
-<?php if (!empty($read_only)): ?><div class="admin-state-card <?= e($admin_repository->status()) ?>" role="status"><span class="state-dot"></span><div><strong>وضعیت فقط خواندنی (بدون دیتابیس فعال)</strong><p><?= e($admin_repository->statusMessage()) ?></p></div></div><?php endif; ?>
-<span id="product-form-errors" class="sr-only">لطفاً پیش از ذخیره‌سازی، هشدارهای اعتبارسنجی بالا را بررسی فرمایید.</span><form class="admin-editor-form" method="post" action="<?= e($productAction) ?>" aria-describedby="product-form-errors" enctype="multipart/form-data">
-<input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>"><input type="hidden" name="id" value="<?= e($form['id'] ?? 0) ?>">
-<div class="editor-layout"><div class="editor-main">
-<section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">۰۱ / هویت و داستان محصول</p><h2>مشخصات پایه</h2></div></div><div class="form-grid">
-<label class="span-2"><span>نام محصول <b>*</b></span><input type="text" name="name" value="<?= e($value('name')) ?>" maxlength="255" required <?= $disabled ?>></label><label><span>اسلاگ در آدرس اینترنتی (فقط انگلیسی) <b>*</b></span><input type="text" name="slug" value="<?= e($value('slug')) ?>" maxlength="120" pattern="[a-z0-9-]+" required aria-describedby="product-slug-help" <?= $disabled ?>><small id="product-slug-help">حروف کوچک انگلیسی، اعداد و خط تیره.</small></label><label><span>کد محصول (SKU) / شناسه مرجع</span><input type="text" name="sku" value="<?= e($value('sku')) ?>" maxlength="96" <?= $disabled ?>></label><label><span>نوع محصول</span><input type="text" name="product_type" value="<?= e($value('product_type', 'simple')) ?>" maxlength="50" <?= $disabled ?>></label><label><span>برند</span><input type="text" name="brand" value="<?= e($value('brand', 'Raspina')) ?>" maxlength="120" <?= $disabled ?>></label><label class="span-2"><span>خلاصه معرفی محصول</span><textarea name="summary" rows="3" maxlength="5000" <?= $disabled ?>><?= e($value('summary')) ?></textarea></label><label class="span-2"><span>توضیحات تکمیلی و کامل</span><textarea name="description" rows="8" maxlength="50000" <?= $disabled ?>><?= e($value('description')) ?></textarea></label></div></section>
-<section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">۰۲ / مشخصات پوشاک</p><h2>نحوه تولید و دوخت</h2></div></div><div class="form-grid"><?php foreach ($apparelFields as $field => $label): ?><label><span><?= e($label) ?></span><input type="text" name="<?= e($field) ?>" value="<?= e($value($field)) ?>" maxlength="255" <?= $disabled ?>></label><?php endforeach; ?><label class="span-2"><span>دستورالعمل مراقبت و شستشو</span><textarea name="care_instructions" rows="3" maxlength="2000" <?= $disabled ?>><?= e($value('care_instructions')) ?></textarea></label><label class="toggle-field"><span>سایز سفارشی</span><input type="checkbox" name="customizable_size" value="1" <?= !empty($form['customizable_size']) ? 'checked' : '' ?> <?= $disabled ?>><strong>امکان دوخت با اندازه اختصاصی خریدار</strong></label><label class="toggle-field"><span>پارچه سفارشی</span><input type="checkbox" name="customizable_fabric" value="1" <?= !empty($form['customizable_fabric']) ? 'checked' : '' ?> <?= $disabled ?>><strong>امکان دوخت با پارچه انتخابی خریدار</strong></label></div></section>
-<section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">۰۳ / اطلاعات عمده‌فروشی و موجودی</p><h2>بستر استعلام قیمت</h2></div></div><div class="form-grid"><label><span>واحد پولی</span><input type="text" name="currency" value="<?= e($value('currency', 'USD')) ?>" maxlength="3" pattern="[A-Za-z]{3}" <?= $disabled ?>></label><label><span>وضعیت انتشار</span><select name="publish_status" <?= $disabled ?>><option value="draft" <?= $value('publish_status') === 'draft' ? 'selected' : '' ?>>پیش‌نویس</option><option value="published" <?= $value('publish_status') === 'published' ? 'selected' : '' ?>>منتشر شده</option><option value="archived" <?= $value('publish_status') === 'archived' ? 'selected' : '' ?>>بایگانی شده</option></select></label><label><span>قیمت مرجع استعلام</span><input name="reference_price" inputmode="decimal" value="<?= e($value('reference_price')) ?>" <?= $disabled ?>></label><label><span>قیمت پایه (عادی)</span><input name="regular_price" inputmode="decimal" value="<?= e($value('regular_price')) ?>" <?= $disabled ?>></label><label><span>قیمت ویژه (تخفیف)</span><input name="sale_price" inputmode="decimal" value="<?= e($value('sale_price')) ?>" <?= $disabled ?>></label><label><span>وضعیت موجودی</span><select name="stock_status" <?= $disabled ?>><option value="instock" <?= $value('stock_status') === 'instock' ? 'selected' : '' ?>>موجود در انبار</option><option value="onbackorder" <?= $value('stock_status') === 'onbackorder' ? 'selected' : '' ?>>قابل پیش‌خرید</option><option value="outofstock" <?= $value('stock_status') === 'outofstock' ? 'selected' : '' ?>>ناموجود</option></select></label><label><span>تعداد موجودی انبار</span><input type="number" min="0" name="stock_quantity" value="<?= e($value('stock_quantity')) ?>" <?= $disabled ?>></label><label><span>حداقل تعداد سفارش عمده</span><input type="number" min="0" name="minimum_order_quantity" value="<?= e($value('minimum_order_quantity')) ?>" <?= $disabled ?>></label><label><span>زمان تحویل سفارش</span><input name="lead_time" value="<?= e($value('lead_time')) ?>" maxlength="120" placeholder="مثال: ۴ الی ۶ هفته" <?= $disabled ?>></label><label><span>تاریخ آماده عرضه</span><input type="date" name="available_from" value="<?= e($value('available_from')) ?>" <?= $disabled ?>></label><label class="toggle-field"><span>نمایش در صفحه اصلی</span><input type="checkbox" name="featured" value="1" <?= !empty($form['featured']) ? 'checked' : '' ?> <?= $disabled ?>><strong>در ردیف کارهای منتخب نمایش داده شود</strong></label><label class="span-2"><span>توضیح موجودی / عرضه</span><input name="availability_note" value="<?= e($value('availability_note')) ?>" maxlength="255" <?= $disabled ?>></label><label class="span-2"><span>یادداشت‌های عمده‌فروشی</span><textarea name="wholesale_notes" rows="4" maxlength="3000" <?= $disabled ?>><?= e($value('wholesale_notes')) ?></textarea></label></div></section>
-<section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">۰۴ / سئو و جستجو</p><h2>دسترسی و یافت‌پذیری</h2></div></div><div class="form-grid"><label class="span-2"><span>دسته‌بندی‌ها</span><select name="categories[]" multiple size="7" aria-describedby="product-categories-help" <?= $disabled ?>><?php foreach ($categories as $category): ?><option value="<?= e($category['id']) ?>" <?= in_array((int) $category['id'], $selectedCategories, true) ? 'selected' : '' ?>><?= e($category['name']) ?> (<?= e($category['product_count']) ?>)</option><?php endforeach; ?></select><small id="product-categories-help">کلید Ctrl (یا Cmd در مک) را برای انتخاب همزمان چند مورد نگه دارید.</small></label><label class="span-2"><span>ویژگی‌های فرعی / هر ویژگی در یک سطر به فرمت «نام ویژگی: مقدار»</span><textarea name="attributes" rows="5" placeholder="مثال: آستر داخلی: دارد" <?= $disabled ?>><?= e(implode("\n", (array) ($form['attributes'] ?? array()))) ?></textarea></label><label><span>برچسب‌ها (با کاما تفکیک کنید)</span><textarea name="tags" rows="4" placeholder="مثال: جدید، بافت، سورمه‌ای" <?= $disabled ?>><?= e(implode(', ', (array) ($form['tags'] ?? array()))) ?></textarea></label><label><span>عنوان سئو (SEO Title)</span><input name="seo_title" value="<?= e($value('seo_title')) ?>" maxlength="255" <?= $disabled ?>></label><label class="span-2"><span>توضیحات سئو (SEO Description)</span><textarea name="seo_description" rows="3" maxlength="500" <?= $disabled ?>><?= e($value('seo_description')) ?></textarea></label></div></section>
-<section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">۰۵ / متغیرها (Variants)</p><h2>ابعاد یا رنگ‌های متفاوت محصول</h2></div><button class="admin-light-button" type="button" data-add-variant <?= $disabled ?>>افزودن متغیر جدید</button></div><div class="variant-list" data-variant-list role="group" aria-describedby="product-variants-help"><?php foreach ((array) ($form['variants'] ?? array()) as $index => $variant): ?><div class="variant-row" data-variant-row><label><span>SKU</span><input name="variants[<?= (int) $index ?>][variant_sku]" value="<?= e($variant['variant_sku'] ?? '') ?>" <?= $disabled ?>></label><label><span>سایز</span><input name="variants[<?= (int) $index ?>][size]" value="<?= e($variant['size'] ?? '') ?>" <?= $disabled ?>></label><label><span>رنگ</span><input name="variants[<?= (int) $index ?>][color]" value="<?= e($variant['color'] ?? '') ?>" <?= $disabled ?>></label><label><span>تعداد</span><input type="number" min="0" name="variants[<?= (int) $index ?>][stock_quantity]" value="<?= e($variant['stock_quantity'] ?? '') ?>" <?= $disabled ?>></label><label><span>قیمت اختصاصی</span><input name="variants[<?= (int) $index ?>][price_override]" value="<?= e($variant['price_override'] ?? '') ?>" <?= $disabled ?>></label><label><span>وضعیت</span><select name="variants[<?= (int) $index ?>][stock_status]" <?= $disabled ?>><option value="instock" <?= ($variant['stock_status'] ?? '') === 'instock' ? 'selected' : '' ?>>موجود</option><option value="onbackorder" <?= ($variant['stock_status'] ?? '') === 'onbackorder' ? 'selected' : '' ?>>پیش‌خرید</option><option value="outofstock" <?= ($variant['stock_status'] ?? '') === 'outofstock' ? 'selected' : '' ?>>ناموجود</option></select></label><label class="toggle-field"><span>فعال</span><input type="checkbox" name="variants[<?= (int) $index ?>][is_active]" value="1" <?= !isset($variant['is_active']) || !empty($variant['is_active']) ? 'checked' : '' ?> <?= $disabled ?>></label><button type="button" class="icon-action danger" data-remove-variant>حذف</button></div><?php endforeach; ?></div><p id="product-variants-help" class="form-note">در صورتی که محصول سایز بندی و متغیر ندارد، این بخش را خالی بگذارید.</p></section>
-</div><aside class="editor-aside"><section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">۰۶ / رسانه</p><h2>آرشیو تصاویر محصول</h2></div></div><?php if (!empty($can_upload)): ?><label><span>بارگذاری تصاویر محصول</span><input id="product-images-input" type="file" name="product_images[]" accept="image/jpeg,image/png,image/webp" multiple aria-describedby="product-images-help" <?= $disabled ?>><small id="product-images-help">فرمت‌های مجاز: JPEG, PNG یا WebP، حداکثر حجم مجاز ۸ مگابایت برای هر تصویر. حداکثر ۱۲ فایل.</small></label><label><span>متن جایگزین (Alt) برای تصاویر جدید</span><input id="product-upload-alt" type="text" name="upload_alt" maxlength="255" <?= $disabled ?>></label><?php endif; ?><label><span>مسیرهای محلی تصاویر</span><textarea name="images" rows="4" placeholder="/assets/images/catalog/..." aria-describedby="product-local-images-help" <?= $disabled ?>><?= e(implode("\n", (array) ($form['images'] ?? array()))) ?></textarea><small id="product-local-images-help">مسیرهای محلی وارد شده به صورت دستی پشتیبانی می‌شوند.</small></label><?php foreach ((array) ($form['image_records'] ?? array()) as $image): $path = (string) ($image['path'] ?? ''); if ($path === '') continue; $encoded = rawurlencode($path); ?><div class="existing-image"><input type="hidden" name="keep_images[]" value="<?= e($path) ?>"><strong><?= e(basename($path)) ?></strong><input type="text" name="image_alt[<?= e($encoded) ?>]" value="<?= e($image['alt_text'] ?? '') ?>" placeholder="متن جایگزین (Alt)" <?= $disabled ?>><label class="inline-check"><input type="radio" name="primary_image_path" value="<?= e($path) ?>" <?= ($form['primary_image_path'] ?? '') === $path ? 'checked' : '' ?> <?= $disabled ?>> تصویر اصلی</label><label class="inline-check"><input type="checkbox" name="remove_images[]" value="<?= e($path) ?>" <?= $disabled ?>> حذف</label></div><?php endforeach; ?></section><section class="admin-panel editor-panel"><div class="panel-heading"><div><p class="admin-eyebrow">نکات ویژه</p><h2>توجه خریدار</h2></div></div><p class="form-note">مشخصات را خلاصه، دقیق و واقعی بنویسید. این اطلاعات در صفحه محصول به خریداران عمده‌فروشی نمایش داده می‌شوند.</p></section></aside></div>
-<?php if (empty($read_only)): ?><div class="editor-submit"><a class="admin-cancel-link" href="<?= e(admin_url('/products')) ?>">انصراف</a><button class="admin-primary-button" type="submit"><?= !empty($form['id']) ? 'ذخیره محصول' : 'ثبت محصول' ?> <span aria-hidden="true">→</span></button></div><?php endif; ?></form>
+
+<style>
+/* WordPress / WooCommerce Admin Form Styling */
+.wp-editor-wrap {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    margin-top: 15px;
+}
+@media (max-width: 992px) {
+    .wp-editor-wrap {
+        grid-template-columns: 1fr;
+    }
+}
+.wp-box {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.wp-box-header {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ccd0d4;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wp-box-header h2, .wp-box-header h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1d2327;
+}
+.wp-box-body {
+    padding: 15px;
+}
+.wp-title-input {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 10px 14px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+.wp-slug-wrap {
+    font-size: 0.85rem;
+    color: #646970;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.wp-slug-wrap input {
+    font-size: 0.85rem;
+    padding: 3px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+}
+.wp-tabs {
+    display: flex;
+    border-bottom: 1px solid #ccd0d4;
+    background: #f6f7f7;
+    overflow-x: auto;
+}
+.wp-tab-btn {
+    padding: 10px 16px;
+    border: none;
+    background: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #2c3338;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+.wp-tab-btn.active {
+    background: #ffffff;
+    border-bottom-color: #2271b1;
+    color: #2271b1;
+}
+.wp-tab-content {
+    display: none;
+    padding: 15px;
+}
+.wp-tab-content.active {
+    display: block;
+}
+.wp-field-group {
+    margin-bottom: 14px;
+}
+.wp-field-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1d2327;
+}
+.wp-field-group input[type="text"],
+.wp-field-group input[type="number"],
+.wp-field-group input[type="date"],
+.wp-field-group select,
+.wp-field-group textarea {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+.wp-field-group .help-text {
+    font-size: 0.78rem;
+    color: #646970;
+    margin-top: 4px;
+}
+.wp-category-checklist {
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #8c8f94;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #fafafa;
+}
+.wp-category-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.88rem;
+}
+.wp-image-preview-box {
+    text-align: center;
+    background: #f0f0f1;
+    border: 2px dashed #c3c4c7;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.wp-image-preview-box img {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+</style>
+
+<header class="admin-page-head compact-head">
+    <div>
+        <a class="admin-back-link" href="<?= e(admin_url('/products')) ?>">← بازگشت به فهرست محصولات</a>
+        <p class="admin-eyebrow">مدیریت محصولات وردپرس / WooCommerce</p>
+        <h1><?= !empty($form['id']) ? 'ویرایش محصول: ' . e($value('name')) : 'افزودن محصول جدید' ?></h1>
+    </div>
+</header>
+
+<?php if (!empty($errors)): ?>
+    <div class="admin-alert error" role="alert">
+        <ul><?php foreach ($errors as $error): ?><li><?= e($error) ?></li><?php endforeach; ?></ul>
+    </div>
+<?php endif; ?>
+
+<form method="post" action="<?= e($productAction) ?>" enctype="multipart/form-data">
+    <input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>">
+    <input type="hidden" name="id" value="<?= e($form['id'] ?? 0) ?>">
+
+    <div class="wp-editor-wrap">
+        <!-- MAIN CONTENT AREA (Left Side in RTL) -->
+        <div class="wp-editor-main">
+            <!-- Product Title Box -->
+            <div class="wp-box">
+                <div class="wp-box-body">
+                    <input type="text" name="name" class="wp-title-input" value="<?= e($value('name')) ?>" placeholder="نام محصول را اینجا وارد کنید..." required <?= $disabled ?>>
+
+                    <div class="wp-slug-wrap">
+                        <strong>پیوند یکتا (اسلاگ):</strong>
+                        <input type="text" name="slug" value="<?= e($value('slug')) ?>" pattern="[a-z0-9-]+" placeholder="product-slug" required <?= $disabled ?>>
+                        <small>(فقط حروف کوچک انگلیسی، اعداد و خط تیره)</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Full Description -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h2>توضیحات کامل محصول</h2>
+                </div>
+                <div class="wp-box-body">
+                    <textarea name="description" rows="12" placeholder="توضیحات جامع و کامل محصول..." <?= $disabled ?>><?= e($value('description')) ?></textarea>
+                </div>
+            </div>
+
+            <!-- WooCommerce Product Data Tabs -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h2>اطلاعات محصول (WooCommerce Product Data)</h2>
+                    <span style="font-size:0.8rem; color:#666;">نوع محصول:
+                        <select name="product_type" style="padding:2px 6px; font-size:0.82rem;" <?= $disabled ?>>
+                            <option value="simple" <?= $value('product_type', 'simple') === 'simple' ? 'selected' : '' ?>>محصول ساده (Simple)</option>
+                            <option value="variable" <?= $value('product_type') === 'variable' ? 'selected' : '' ?>>محصول متغیر (Variable)</option>
+                        </select>
+                    </span>
+                </div>
+
+                <!-- Tabs header -->
+                <div class="wp-tabs" id="product-tabs-header">
+                    <button type="button" class="wp-tab-btn active" onclick="openWpTab(event, 'tab-pricing')">قیمت‌گذاری</button>
+                    <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-inventory')">موجودی و انبار</button>
+                    <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-apparel')">مشخصات پوشاک</button>
+                    <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-wholesale')">عمده‌فروشی & تحویل</button>
+                    <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-variants')">متغیرها (Variants)</button>
+                </div>
+
+                <!-- Tab 1: Pricing -->
+                <div id="tab-pricing" class="wp-tab-content active">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px;">
+                        <div class="wp-field-group">
+                            <label>قیمت عادی (Regular Price)</label>
+                            <input name="regular_price" inputmode="decimal" value="<?= e($value('regular_price')) ?>" placeholder="مثال: 1500000" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>قیمت فروش ویژه (Sale Price)</label>
+                            <input name="sale_price" inputmode="decimal" value="<?= e($value('sale_price')) ?>" placeholder="مثال: 1200000" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>قیمت مرجع استعلام</label>
+                            <input name="reference_price" inputmode="decimal" value="<?= e($value('reference_price')) ?>" placeholder="مثال: 1350000" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>واحد ارز</label>
+                            <input type="text" name="currency" value="<?= e($value('currency', 'IRR')) ?>" maxlength="10" <?= $disabled ?>>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Inventory -->
+                <div id="tab-inventory" class="wp-tab-content">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px;">
+                        <div class="wp-field-group">
+                            <label>شناسه محصول (SKU)</label>
+                            <input type="text" name="sku" value="<?= e($value('sku')) ?>" maxlength="96" placeholder="مثال: RAS-102" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>وضعیت موجودی</label>
+                            <select name="stock_status" <?= $disabled ?>>
+                                <option value="instock" <?= $value('stock_status') === 'instock' ? 'selected' : '' ?>>موجود در انبار</option>
+                                <option value="onbackorder" <?= $value('stock_status') === 'onbackorder' ? 'selected' : '' ?>>قابل پیش‌خرید</option>
+                                <option value="outofstock" <?= $value('stock_status') === 'outofstock' ? 'selected' : '' ?>>ناموجود</option>
+                            </select>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>تعداد موجودی انبار</label>
+                            <input type="number" min="0" name="stock_quantity" value="<?= e($value('stock_quantity')) ?>" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>حداقل تعداد سفارش عمده</label>
+                            <input type="number" min="0" name="minimum_order_quantity" value="<?= e($value('minimum_order_quantity')) ?>" <?= $disabled ?>>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Apparel Details -->
+                <div id="tab-apparel" class="wp-tab-content">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+                        <?php foreach ($apparelFields as $field => $label): ?>
+                        <div class="wp-field-group">
+                            <label><?= e($label) ?></label>
+                            <input type="text" name="<?= e($field) ?>" value="<?= e($value($field)) ?>" maxlength="255" <?= $disabled ?>>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="wp-field-group" style="margin-top:10px;">
+                        <label>دستورالعمل مراقبت و شستشو</label>
+                        <textarea name="care_instructions" rows="2" <?= $disabled ?>><?= e($value('care_instructions')) ?></textarea>
+                    </div>
+                    <div style="display:flex; gap:20px; margin-top:10px;">
+                        <label style="display:flex; align-items:center; gap:6px; font-size:0.88rem;">
+                            <input type="checkbox" name="customizable_size" value="1" <?= !empty($form['customizable_size']) ? 'checked' : '' ?> <?= $disabled ?>>
+                            امکان دوخت سفارشی سایز
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px; font-size:0.88rem;">
+                            <input type="checkbox" name="customizable_fabric" value="1" <?= !empty($form['customizable_fabric']) ? 'checked' : '' ?> <?= $disabled ?>>
+                            امکان سفارش پارچه دلخواه
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Wholesale & Delivery -->
+                <div id="tab-wholesale" class="wp-tab-content">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px;">
+                        <div class="wp-field-group">
+                            <label>زمان تحویل سفارش</label>
+                            <input name="lead_time" value="<?= e($value('lead_time')) ?>" placeholder="مثال: ۲ الی ۳ هفته" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label>تاریخ آماده عرضه</label>
+                            <input type="date" name="available_from" value="<?= e($value('available_from')) ?>" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group" style="grid-column: 1 / -1;">
+                            <label>توضیح موجودی / عرضه</label>
+                            <input name="availability_note" value="<?= e($value('availability_note')) ?>" <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group" style="grid-column: 1 / -1;">
+                            <label>یادداشت‌های ویژه عمده‌فروشی</label>
+                            <textarea name="wholesale_notes" rows="3" <?= $disabled ?>><?= e($value('wholesale_notes')) ?></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Variants -->
+                <div id="tab-variants" class="wp-tab-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <p style="margin:0; font-size:0.85rem; color:#666;">متغیرها برای مدیریت سایزها و رنگ‌های مختلف محصول استفاده می‌شوند.</p>
+                        <button type="button" class="admin-light-button" data-add-variant <?= $disabled ?>>+ افزودن متغیر جدید</button>
+                    </div>
+                    <div class="variant-list" data-variant-list>
+                        <?php foreach ((array) ($form['variants'] ?? array()) as $index => $variant): ?>
+                        <div class="variant-row" data-variant-row style="display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) 40px; gap:8px; background:#f9f9f9; padding:10px; border:1px solid #e0e0e0; border-radius:4px; margin-bottom:8px;">
+                            <label><span style="font-size:0.75rem;">SKU</span><input name="variants[<?= (int) $index ?>][variant_sku]" value="<?= e($variant['variant_sku'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">سایز</span><input name="variants[<?= (int) $index ?>][size]" value="<?= e($variant['size'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">رنگ</span><input name="variants[<?= (int) $index ?>][color]" value="<?= e($variant['color'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">تعداد</span><input type="number" min="0" name="variants[<?= (int) $index ?>][stock_quantity]" value="<?= e($variant['stock_quantity'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">قیمت</span><input name="variants[<?= (int) $index ?>][price_override]" value="<?= e($variant['price_override'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">وضعیت</span>
+                                <select name="variants[<?= (int) $index ?>][stock_status]" <?= $disabled ?>>
+                                    <option value="instock" <?= ($variant['stock_status'] ?? '') === 'instock' ? 'selected' : '' ?>>موجود</option>
+                                    <option value="outofstock" <?= ($variant['stock_status'] ?? '') === 'outofstock' ? 'selected' : '' ?>>ناموجود</option>
+                                </select>
+                            </label>
+                            <button type="button" class="icon-action danger" data-remove-variant style="align-self:end; margin-bottom:4px;">✕</button>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Short Summary / Description -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h2>توضیحات کوتاه محصول (Product Short Description)</h2>
+                </div>
+                <div class="wp-box-body">
+                    <textarea name="summary" rows="4" placeholder="خلاصه کوتاه برای نمایش در بالا یا کارت محصول..." <?= $disabled ?>><?= e($value('summary')) ?></textarea>
+                </div>
+            </div>
+
+            <!-- SEO Meta Box -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h2>تنظیمات سئو (Yoast / SEO Settings)</h2>
+                </div>
+                <div class="wp-box-body">
+                    <div class="wp-field-group">
+                        <label>عنوان سئو (SEO Title)</label>
+                        <input type="text" name="seo_title" value="<?= e($value('seo_title')) ?>" placeholder="عنوان برای گوگل..." <?= $disabled ?>>
+                    </div>
+                    <div class="wp-field-group">
+                        <label>توضیحات سئو (SEO Meta Description)</label>
+                        <textarea name="seo_description" rows="3" placeholder="توضیحات مختصر جهت نمایش در نتایج جستجو..." <?= $disabled ?>><?= e($value('seo_description')) ?></textarea>
+                    </div>
+                    <div class="wp-field-group">
+                        <label>ویژگی‌های فرعی (Attributes)</label>
+                        <textarea name="attributes" rows="3" placeholder="مثال: جنس آستر: حریر&#10;شستشو: خشک‌شویی" <?= $disabled ?>><?= e(implode("\n", (array) ($form['attributes'] ?? array()))) ?></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDEBAR AREA (Right Side in RTL) -->
+        <div class="wp-editor-sidebar">
+            <!-- Publish Box -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h3>انتشار (Publish)</h3>
+                </div>
+                <div class="wp-box-body">
+                    <div class="wp-field-group">
+                        <label>وضعیت انتشار:</label>
+                        <select name="publish_status" <?= $disabled ?>>
+                            <option value="published" <?= $value('publish_status', 'published') === 'published' ? 'selected' : '' ?>>منتشر شده (Published)</option>
+                            <option value="draft" <?= $value('publish_status') === 'draft' ? 'selected' : '' ?>>پیش‌نویس (Draft)</option>
+                            <option value="archived" <?= $value('publish_status') === 'archived' ? 'selected' : '' ?>>بایگانی شده (Archived)</option>
+                        </select>
+                    </div>
+
+                    <div class="wp-field-group" style="margin-top: 10px;">
+                        <label style="display:flex; align-items:center; gap:6px; font-weight:normal;">
+                            <input type="checkbox" name="featured" value="1" <?= !empty($form['featured']) ? 'checked' : '' ?> <?= $disabled ?>>
+                            <strong>محصول ویژه / منتخب</strong>
+                        </label>
+                    </div>
+
+                    <hr style="border:none; border-top:1px solid #eee; margin:15px 0;">
+
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <a href="<?= e(admin_url('/products')) ?>" style="color:#d63638; text-decoration:none; font-size:0.85rem;">انصراف</a>
+                        <button type="submit" class="admin-primary-button" style="padding: 8px 18px; font-weight: bold;" <?= $disabled ?>>
+                            <?= !empty($form['id']) ? 'به‌روزرسانی محصول' : 'انتشار محصول' ?>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Categories Box -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h3>دسته‌بندی‌های محصول</h3>
+                </div>
+                <div class="wp-box-body">
+                    <div class="wp-category-checklist">
+                        <?php if (empty($categories)): ?>
+                            <p style="font-size:0.8rem; color:#888; margin:0;">هیچ دسته‌بندی تعریف نشده است.</p>
+                        <?php else: ?>
+                            <?php foreach ($categories as $category): ?>
+                                <label class="wp-category-item">
+                                    <input type="checkbox" name="categories[]" value="<?= e($category['id']) ?>" <?= in_array((int) $category['id'], $selectedCategories, true) ? 'checked' : '' ?> <?= $disabled ?>>
+                                    <span><?= e($category['name']) ?></span>
+                                </label>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tags / Hashtags Box -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h3>برچسب‌ها و هشتگ‌ها</h3>
+                </div>
+                <div class="wp-box-body">
+                    <div class="wp-field-group">
+                        <textarea name="tags" rows="3" placeholder="برچسب‌ها را با کاما جدا کنید (مثال: #زنانه, پالتو, پاییزه)" <?= $disabled ?>><?= e(implode(', ', (array) ($form['tags'] ?? array()))) ?></textarea>
+                        <p class="help-text">برچسب‌ها و هشتگ‌ها را با کاما (،) از یکدیگر جدا کنید.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Image (Featured Image) Box -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h3>تصویر شاخص محصول</h3>
+                </div>
+                <div class="wp-box-body">
+                    <?php if (!empty($primaryImg)): ?>
+                        <div class="wp-image-preview-box">
+                            <img src="<?= e($primaryImg) ?>" alt="تصویر شاخص" onerror="this.style.display='none';">
+                        </div>
+                    <?php else: ?>
+                        <div class="wp-image-preview-box" style="color:#888; font-size:0.85rem;">
+                            تصویر شاخص انتخاب نشده است
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($can_upload)): ?>
+                        <div class="wp-field-group">
+                            <label style="font-size:0.8rem;">بارگذاری تصویر شاخص / جدید:</label>
+                            <input type="file" name="product_images[]" accept="image/jpeg,image/png,image/webp" multiple <?= $disabled ?>>
+                        </div>
+                        <div class="wp-field-group">
+                            <label style="font-size:0.8rem;">متن جایگزین (Alt):</label>
+                            <input type="text" name="upload_alt" maxlength="255" placeholder="توضیح تصویر..." <?= $disabled ?>>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <!-- Gallery & Existing Images Box -->
+            <div class="wp-box">
+                <div class="wp-box-header">
+                    <h3>گالری تصاویر & مدیریت رسانه</h3>
+                </div>
+                <div class="wp-box-body">
+                    <div class="wp-field-group">
+                        <label style="font-size:0.8rem;">آدرس محلی تصاویر (هر خط یک آدرس):</label>
+                        <textarea name="images" rows="3" placeholder="/assets/images/..." <?= $disabled ?>><?= e(implode("\n", $imagesList)) ?></textarea>
+                    </div>
+
+                    <?php foreach ($imageRecords as $image):
+                        $path = (string) ($image['path'] ?? '');
+                        if ($path === '') continue;
+                        $encoded = rawurlencode($path);
+                    ?>
+                        <div style="background:#f8f9fa; border:1px solid #e2e4e7; border-radius:4px; padding:8px; margin-bottom:8px; font-size:0.8rem;">
+                            <input type="hidden" name="keep_images[]" value="<?= e($path) ?>">
+                            <div style="display:flex; gap:8px; align-items:center; margin-bottom:4px;">
+                                <img src="<?= e($path) ?>" style="width:36px; height:36px; object-fit:cover; border-radius:3px;" onerror="this.style.display='none';">
+                                <strong style="word-break:break-all; flex:1;"><?= e(basename($path)) ?></strong>
+                            </div>
+                            <input type="text" name="image_alt[<?= e($encoded) ?>]" value="<?= e($image['alt_text'] ?? '') ?>" placeholder="متن Alt" style="width:100%; font-size:0.75rem; padding:3px; margin-bottom:4px;" <?= $disabled ?>>
+                            <div style="display:flex; justify-content:space-between; font-size:0.78rem;">
+                                <label><input type="radio" name="primary_image_path" value="<?= e($path) ?>" <?= $primaryImg === $path ? 'checked' : '' ?> <?= $disabled ?>> اصلی</label>
+                                <label style="color:#c00;"><input type="checkbox" name="remove_images[]" value="<?= e($path) ?>" <?= $disabled ?>> حذف</label>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+function openWpTab(evt, tabId) {
+    var tabs = document.getElementsByClassName("wp-tab-content");
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+    }
+    var buttons = document.querySelectorAll("#product-tabs-header .wp-tab-btn");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
