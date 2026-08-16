@@ -8,6 +8,10 @@ $cssVersion = (string) (@filemtime(dirname(__DIR__, 2) . '/assets/css/site.css')
 $jsVersion = (string) (@filemtime(dirname(__DIR__, 2) . '/assets/js/site.js') ?: '20260723');
 $siteStylesheet = asset('css/site.css') . '?v=' . rawurlencode($cssVersion);
 $siteScript = asset('js/site.js') . '?v=' . rawurlencode($jsVersion);
+$rtlStylesheet = asset('css/rtl-fix.css') . '?v=' . rawurlencode($cssVersion);
+$catalogFeatureStylesheet = asset('css/catalog-feature.css') . '?v=' . rawurlencode($cssVersion);
+$langDropdownStylesheet = asset('css/lang-dropdown.css') . '?v=' . rawurlencode($cssVersion);
+
 $organizationSchema = array(
     '@context' => 'https://schema.org',
     '@type' => 'Organization',
@@ -19,9 +23,13 @@ $organizationSchema = array(
     'address' => array('@type' => 'PostalAddress', 'addressLocality' => 'Tehran', 'addressCountry' => 'IR'),
     'sameAs' => array($config['site']['instagram']),
 );
+
+$current_lang = get_current_lang();
+$langLabels = array('en' => 'English (EN)', 'ru' => 'Русский (RU)', 'ar' => 'العربية (AR)');
+$currentLangLabel = $langLabels[$current_lang] ?? 'Language';
 ?>
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="<?= e($current_lang) ?>" dir="<?= $current_lang === 'ar' ? 'rtl' : 'ltr' ?>">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +47,11 @@ $organizationSchema = array(
     <link rel="icon" href="<?= e(asset('images/brand/raspina-logo.png')) ?>">
     <link rel="preload" href="<?= e($siteStylesheet) ?>" as="style">
     <link rel="stylesheet" href="<?= e($siteStylesheet) ?>">
+    <link rel="stylesheet" href="<?= e($catalogFeatureStylesheet) ?>">
+    <link rel="stylesheet" href="<?= e($langDropdownStylesheet) ?>">
+    <?php if ($current_lang === 'ar'): ?>
+    <link rel="stylesheet" href="<?= e($rtlStylesheet) ?>">
+    <?php endif; ?>
     <script type="application/ld+json"><?= json_for_html($organizationSchema) ?></script>
     <?php if (isset($product)): ?>
         <?php
@@ -56,8 +69,8 @@ $organizationSchema = array(
 <a class="skip-link" href="#main-content">Skip to content</a>
 <div class="sr-only" aria-live="polite" aria-atomic="true" data-site-announcer></div>
 <div class="announcement">
-    <span>International women’s clothing wholesale</span>
-    <a href="<?= e(url('/wholesale')) ?>">Start an enquiry <span aria-hidden="true">↗</span></a>
+    <span><?= e(t('International women’s clothing wholesale')) ?></span>
+    <a href="<?= e(url('/wholesale')) ?>"><?= e(t('Start an enquiry')) ?> <span aria-hidden="true">↗</span></a>
 </div>
 <header class="site-header" data-site-header>
     <div class="header-container">
@@ -72,17 +85,30 @@ $organizationSchema = array(
             <img src="<?= e(asset('images/brand/raspina-logo.png')) ?>" width="140" height="52" alt="Raspina Clothing">
         </a>
 
-        <!-- Desktop Navigation (Right) -->
+        <!-- Desktop Navigation (Center-Right) -->
         <nav class="header-nav desktop-nav" aria-label="Primary navigation">
-            <a href="<?= e(url('/')) ?>"<?= active_nav('/') ?>>Home</a>
-            <a href="<?= e(url('/shop')) ?>"<?= active_nav('/shop') ?>>Shop</a>
-            <a href="<?= e(url('/about-us')) ?>"<?= active_nav('/about-us') ?>>About us</a>
-            <a href="<?= e(url('/contact')) ?>"<?= active_nav('/contact') ?>>Contact us</a>
-            <a href="<?= e(url('/catalog')) ?>"<?= active_nav('/catalog') ?>>Catalog</a>
+            <a href="<?= e(url('/')) ?>"<?= active_nav('/') ?>><?= e(t('Home')) ?></a>
+            <a href="<?= e(url('/shop')) ?>"<?= active_nav('/shop') ?>><?= e(t('Shop')) ?></a>
+            <a href="<?= e(url('/about-us')) ?>"<?= active_nav('/about-us') ?>><?= e(t('About us')) ?></a>
+            <a href="<?= e(url('/contact')) ?>"<?= active_nav('/contact') ?>><?= e(t('Contact us')) ?></a>
+            <a href="<?= e(url('/catalog')) ?>"<?= active_nav('/catalog') ?>><?= e(t('Catalog')) ?></a>
         </nav>
 
         <!-- Header Actions (Right) -->
         <div class="header-actions">
+            <!-- Language Dropdown Button -->
+            <div class="lang-dropdown" data-lang-dropdown aria-expanded="false">
+                <button type="button" class="lang-dropdown-btn" data-lang-toggle aria-label="Select website language">
+                    <span><?= e(strtoupper($current_lang)) ?></span>
+                    <span class="lang-arrow" aria-hidden="true">▼</span>
+                </button>
+                <div class="lang-dropdown-menu" role="menu">
+                    <a href="<?= e(lang_url('en')) ?>" class="<?= $current_lang === 'en' ? 'is-active' : '' ?>"><span>English</span> <b>EN</b></a>
+                    <a href="<?= e(lang_url('ru')) ?>" class="<?= $current_lang === 'ru' ? 'is-active' : '' ?>"><span>Русский</span> <b>RU</b></a>
+                    <a href="<?= e(lang_url('ar')) ?>" class="<?= $current_lang === 'ar' ? 'is-active' : '' ?>"><span>العربية</span> <b>AR</b></a>
+                </div>
+            </div>
+
             <button class="header-action search-toggle" type="button" aria-label="Open product search" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-controls="site-search-dialog">
                 <span class="action-icon" aria-hidden="true">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -90,11 +116,11 @@ $organizationSchema = array(
                         <path d="M12 12L16.5 16.5"/>
                     </svg>
                 </span>
-                <span class="sr-only">Search</span>
+                <span class="sr-only"><?= e(t('Search')) ?></span>
             </button>
             <a class="header-action shortlist-link" href="<?= e(url('/wishlist')) ?>" aria-label="Open inquiry shortlist, 0 saved items" data-shortlist-link>
                 <span class="action-icon" aria-hidden="true">♡</span>
-                <span class="shortlist-label">Shortlist</span>
+                <span class="shortlist-label"><?= e(t('Shortlist')) ?></span>
                 <span class="shortlist-count" data-shortlist-count aria-hidden="true">0</span>
             </a>
         </div>
@@ -104,25 +130,25 @@ $organizationSchema = array(
 <div class="nav-drawer" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Site navigation" aria-hidden="true" hidden data-menu-drawer>
     <button class="drawer-backdrop" type="button" aria-label="Close menu" data-menu-close></button>
     <nav class="drawer-panel" aria-label="Mobile navigation">
-        <div class="drawer-top"><span>Raspina / Menu</span><button type="button" class="icon-button" aria-label="Close site menu" data-menu-close><span aria-hidden="true">×</span></button></div>
-        <a href="<?= e(url('/shop')) ?>">Shop all <span>01</span></a>
-        <a href="<?= e(url('/collection/collection-2026')) ?>">Collections <span>02</span></a>
-        <a href="<?= e(url('/catalog')) ?>">Catalog <span>03</span></a>
-        <a href="<?= e(url('/about-us')) ?>">About <span>04</span></a>
-        <a href="<?= e(url('/contact')) ?>">Contact <span>05</span></a>
-        <a href="<?= e(url('/wholesale')) ?>">Wholesale enquiry <span>06</span></a>
+        <div class="drawer-top"><span><?= e(t('Raspina / Menu')) ?></span><button type="button" class="icon-button" aria-label="Close site menu" data-menu-close><span aria-hidden="true">×</span></button></div>
+        <a href="<?= e(url('/shop')) ?>"><?= e(t('Shop all')) ?> <span>01</span></a>
+        <a href="<?= e(url('/collection/collection-2026')) ?>"><?= e(t('Collection 2026')) ?> <span>02</span></a>
+        <a href="<?= e(url('/catalog')) ?>"><?= e(t('Catalog')) ?> <span>03</span></a>
+        <a href="<?= e(url('/about-us')) ?>"><?= e(t('About')) ?> <span>04</span></a>
+        <a href="<?= e(url('/contact')) ?>"><?= e(t('Contact')) ?> <span>05</span></a>
+        <a href="<?= e(url('/wholesale')) ?>"><?= e(t('Wholesale enquiry')) ?> <span>06</span></a>
     </nav>
 </div>
 
 <div class="search-dialog" id="site-search-dialog" role="dialog" aria-modal="true" aria-label="Search the collection" aria-hidden="true" hidden data-search-dialog>
     <button class="search-backdrop" type="button" aria-label="Close search" data-search-close></button>
     <div class="search-panel">
-        <div class="search-label"><span>Search the archive</span><button type="button" aria-label="Close site search" data-search-close>Close <span aria-hidden="true">×</span></button></div>
+        <div class="search-label"><span><?= e(t('Search the archive')) ?></span><button type="button" aria-label="Close site search" data-search-close><?= e(t('Close')) ?> <span aria-hidden="true">×</span></button></div>
         <form action="<?= e(url('/search')) ?>" method="get" role="search">
-            <label for="global-search">What are you looking for?</label>
-            <div class="search-line"><input id="global-search" name="q" type="search" maxlength="80" autocomplete="off" placeholder="Dress, blouse, SKU…"><button type="submit">Search ↗</button></div>
+            <label for="global-search"><?= e(t('What are you looking for?')) ?></label>
+            <div class="search-line"><input id="global-search" name="q" type="search" maxlength="80" autocomplete="off" placeholder="<?= e(t('Dress, blouse, SKU…')) ?>"><button type="submit"><?= e(t('Search')) ?> ↗</button></div>
         </form>
-        <div class="search-suggestions"><span>Explore</span><a href="<?= e(url('/collection/dress')) ?>">Dresses</a><a href="<?= e(url('/collection/blouse')) ?>">Blouses</a><a href="<?= e(url('/collection/collection-2026')) ?>">2026 collection</a></div>
+        <div class="search-suggestions"><span><?= e(t('Explore')) ?></span><a href="<?= e(url('/collection/dress')) ?>"><?= e(t('Dresses')) ?></a><a href="<?= e(url('/collection/blouse')) ?>"><?= e(t('Blouses')) ?></a><a href="<?= e(url('/collection/collection-2026')) ?>"><?= e(t('2026 collection')) ?></a></div>
     </div>
 </div>
 
@@ -134,19 +160,19 @@ $organizationSchema = array(
     <div class="footer-ambient" aria-hidden="true"></div>
     <div class="footer-shell">
         <div class="footer-intro footer-reveal">
-            <p class="footer-index">Raspina / International wholesale</p>
-            <p class="footer-status"><span aria-hidden="true"></span>Wholesale enquiries open</p>
+            <p class="footer-index"><?= e(t('Raspina / International wholesale')) ?></p>
+            <p class="footer-status"><span aria-hidden="true"></span><?= e(t('Wholesale enquiries open')) ?></p>
         </div>
 
         <section class="footer-cta footer-reveal">
             <div class="footer-cta-copy">
-                <p class="footer-kicker">Your next edit starts here</p>
-                <h2 id="footer-heading">Let’s shape <em>your next</em> collection.</h2>
+                <p class="footer-kicker"><?= e(t('Your next edit starts here')) ?></p>
+                <h2 id="footer-heading"><?= t('Let’s shape <em>your next</em> collection.') ?></h2>
             </div>
             <div class="footer-cta-action">
-                <p>Tell us what your market needs. We’ll help you build a focused Raspina selection for your boutique, distribution network or retail concept.</p>
+                <p><?= e(t('Tell us what your market needs. We’ll help you build a focused Raspina selection for your boutique, distribution network or retail concept.')) ?></p>
                 <a class="footer-enquiry-button" href="<?= e(url('/wholesale')) ?>">
-                    <span>Start wholesale enquiry</span>
+                    <span><?= e(t('Start wholesale enquiry')) ?></span>
                     <span class="footer-button-arrow" aria-hidden="true">↗</span>
                 </a>
             </div>
@@ -154,29 +180,29 @@ $organizationSchema = array(
 
         <div class="footer-directory footer-reveal">
             <div class="footer-provenance">
-                <p class="footer-kicker">Raspina Clothing</p>
-                <p>Women’s fashion shaped in Tehran and prepared for independent boutiques and international wholesale partners.</p>
+                <p class="footer-kicker"><?= e(t('Raspina Clothing')) ?></p>
+                <p><?= e(t('Women’s fashion shaped in Tehran and prepared for independent boutiques and international wholesale partners.')) ?></p>
             </div>
 
             <div class="footer-links">
                 <nav aria-label="Footer collection navigation">
-                    <p class="footer-label">Collection</p>
-                    <a href="<?= e(url('/shop')) ?>">Shop all <span aria-hidden="true">↗</span></a>
-                    <a href="<?= e(url('/collection/collection-2026')) ?>">Collection 2026 <span aria-hidden="true">↗</span></a>
-                    <a href="<?= e(url('/catalog')) ?>">Catalog archive <span aria-hidden="true">↗</span></a>
-                    <a href="<?= e(url('/wishlist')) ?>">Inquiry shortlist <span aria-hidden="true">↗</span></a>
+                    <p class="footer-label"><?= e(t('Collection')) ?></p>
+                    <a href="<?= e(url('/shop')) ?>"><?= e(t('Shop all')) ?> <span aria-hidden="true">↗</span></a>
+                    <a href="<?= e(url('/collection/collection-2026')) ?>"><?= e(t('Collection 2026')) ?> <span aria-hidden="true">↗</span></a>
+                    <a href="<?= e(url('/catalog')) ?>"><?= e(t('Catalog archive')) ?> <span aria-hidden="true">↗</span></a>
+                    <a href="<?= e(url('/wishlist')) ?>"><?= e(t('Inquiry shortlist')) ?> <span aria-hidden="true">↗</span></a>
                 </nav>
 
                 <nav aria-label="Footer company navigation">
-                    <p class="footer-label">Company</p>
-                    <a href="<?= e(url('/about-us')) ?>">About <span aria-hidden="true">↗</span></a>
-                    <a href="<?= e(url('/wholesale')) ?>">Wholesale process <span aria-hidden="true">↗</span></a>
-                    <a href="<?= e(url('/contact')) ?>">Contact <span aria-hidden="true">↗</span></a>
+                    <p class="footer-label"><?= e(t('Company')) ?></p>
+                    <a href="<?= e(url('/about-us')) ?>"><?= e(t('About')) ?> <span aria-hidden="true">↗</span></a>
+                    <a href="<?= e(url('/wholesale')) ?>"><?= e(t('Wholesale process')) ?> <span aria-hidden="true">↗</span></a>
+                    <a href="<?= e(url('/contact')) ?>"><?= e(t('Contact')) ?> <span aria-hidden="true">↗</span></a>
                 </nav>
 
                 <address>
-                    <p class="footer-label">Direct contact</p>
-                    <span><?= e($config['site']['address']) ?></span>
+                    <p class="footer-label"><?= e(t('Direct contact')) ?></p>
+                    <span><?= e(t($config['site']['address'])) ?></span>
                     <a href="tel:<?= e($config['site']['phone_link']) ?>"><?= e($config['site']['phone_display']) ?> <span aria-hidden="true">↗</span></a>
                     <a href="mailto:<?= e($config['site']['email']) ?>"><?= e($config['site']['email']) ?> <span aria-hidden="true">↗</span></a>
                     <a href="<?= e($config['site']['instagram']) ?>" rel="noopener noreferrer" target="_blank">Instagram <span aria-hidden="true">↗</span></a>
@@ -190,13 +216,13 @@ $organizationSchema = array(
 
         <div class="footer-base footer-reveal">
             <span>© <?= date('Y') ?> Raspina Clothing</span>
-            <span>Designed in Tehran / Prepared for the world</span>
+            <span><?= e(t('Designed in Tehran / Prepared for the world')) ?></span>
             <nav class="footer-legal" aria-label="Legal navigation">
-                <a href="<?= e(url('/privacy')) ?>">Privacy</a>
-                <a href="<?= e(url('/terms')) ?>">Terms</a>
+                <a href="<?= e(url('/privacy')) ?>"><?= e(t('Privacy')) ?></a>
+                <a href="<?= e(url('/terms')) ?>"><?= e(t('Terms')) ?></a>
             </nav>
             <button class="footer-back-top" type="button" data-back-to-top aria-label="Back to the top of this page">
-                <span>Back to top</span><span aria-hidden="true">↑</span>
+                <span><?= e(t('Back to top')) ?></span><span aria-hidden="true">↑</span>
             </button>
         </div>
     </div>

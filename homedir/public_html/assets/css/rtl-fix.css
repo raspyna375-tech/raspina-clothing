@@ -1,0 +1,120 @@
+/* RTL / Arabic Responsive Layout Improvements */
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] body {
+    font-family: Arial, "Helvetica Neue", "Segoe UI", sans-serif;
+}
+
+html[dir="rtl"] .header-actions {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+html[dir="rtl"] .header-brand {
+    justify-self: center;
+}
+
+html[dir="rtl"] .menu-toggle {
+    justify-self: start;
+}
+
+html[dir="rtl"] .header-search {
+    justify-self: end;
+}
+
+html[dir="rtl"] .shortlist-link {
+    padding-left: 0;
+    padding-right: 1rem;
+    border-left: 0;
+    border-right: 1px solid var(--rule);
+}
+
+html[dir="rtl"] .section-heading > :last-child {
+    justify-self: start;
+}
+
+html[dir="rtl"] .collection-row {
+    grid-template-columns: 2rem 1fr auto;
+}
+
+html[dir="rtl"] .collection-arrow {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .card-enquire span[aria-hidden="true"] {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+html[dir="rtl"] .raspina-hero-copy {
+    text-align: right;
+}
+
+html[dir="rtl"] .hero-actions,
+html[dir="rtl"] .raspina-hero-actions {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    html[dir="rtl"] .site-header {
+        width: calc(100% - 1rem);
+        margin-inline: auto;
+    }
+
+    html[dir="rtl"] .header-primary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: .75rem;
+    }
+
+    html[dir="rtl"] .header-actions {
+        margin-left: 0;
+        margin-right: 0;
+        gap: .5rem;
+    }
+
+    html[dir="rtl"] .raspina-hero-copy {
+        right: .75rem;
+        left: .75rem;
+        width: auto;
+        text-align: right;
+    }
+
+    html[dir="rtl"] .raspina-hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    html[dir="rtl"] .shop-showcase-copy {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .shop-showcase-actions {
+        flex-direction: column;
+    }
+
+    html[dir="rtl"] .catalog-feature {
+        text-align: right;
+    }
+
+    html[dir="rtl"] .catalog-copy {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    html[dir="rtl"] .catalog-copy > div {
+        flex-direction: column;
+        align-items: stretch;
+        gap: .75rem;
+    }
+
+    html[dir="rtl"] .catalog-image span {
+        left: 0;
+        right: auto;
+    }
+}

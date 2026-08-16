@@ -1,0 +1,89 @@
+
+/* Modern Header Language Selector Dropdown */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .4rem .75rem;
+    border: 1px solid rgba(217, 185, 81, .45);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .65);
+    color: var(--ink);
+    font-size: .78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s var(--ease);
+}
+
+.lang-dropdown-btn:hover {
+    border-color: var(--gold);
+    background: var(--ivory);
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.lang-dropdown-btn .lang-arrow {
+    font-size: .65rem;
+    transition: transform .25s var(--ease);
+}
+
+.lang-dropdown[aria-expanded="true"] .lang-arrow {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown-menu {
+    position: absolute;
+    top: calc(100% + .5rem);
+    right: 0;
+    z-index: 150;
+    min-width: 7.5rem;
+    padding: .4rem;
+    border: 1px solid rgba(217, 185, 81, .5);
+    border-radius: .85rem;
+    background: rgba(255, 250, 240, .96);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 32px rgba(21, 18, 13, .16);
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: all .25s var(--ease);
+}
+
+.lang-dropdown[aria-expanded="true"] .lang-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .45rem .65rem;
+    border-radius: .5rem;
+    color: var(--ink);
+    font-size: .78rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease;
+}
+
+.lang-dropdown-menu a:hover,
+.lang-dropdown-menu a.is-active {
+    background: rgba(217, 185, 81, .2);
+    color: var(--oxblood);
+}
+
+@media (max-width: 768px) {
+    .lang-dropdown-menu {
+        right: auto;
+        left: 0;
+    }
+}

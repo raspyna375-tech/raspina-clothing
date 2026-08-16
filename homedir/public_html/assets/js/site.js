@@ -246,6 +246,26 @@
             });
         }
 
+        var langDropdown = one('[data-lang-dropdown]');
+        var langToggle = one('[data-lang-toggle]', langDropdown || document);
+        if (langDropdown && langToggle) {
+            langToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var isExpanded = langDropdown.getAttribute('aria-expanded') === 'true';
+                langDropdown.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+            });
+            document.addEventListener('click', function (e) {
+                if (!langDropdown.contains(e.target)) {
+                    langDropdown.setAttribute('aria-expanded', 'false');
+                }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    langDropdown.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
         if (searchButton && searchDialog) {
             searchButton.setAttribute('aria-expanded', 'false');
             searchButton.addEventListener('click', function () {
@@ -1099,7 +1119,7 @@
                 width: cardWidth,
                 height: cardHeight,
                 depth: depth,
-                alpha: .38 + depth * .62
+                alpha: .85 + depth * .15
             });
         });
 
@@ -1235,60 +1255,11 @@
         }
     }
 
-    hero.addEventListener('pointermove', function (event) {
-        if (reducedMotion || event.pointerType === 'touch') {
-            return;
-        }
-        var bounds = hero.getBoundingClientRect();
-        pointerX = (event.clientX - bounds.left) / bounds.width - .5;
-        pointerY = (event.clientY - bounds.top) / bounds.height - .5;
-    }, {passive: true});
-
-    hero.addEventListener('pointerleave', function () {
-        pointerX = 0;
-        pointerY = 0;
-    }, {passive: true});
-
     hero.addEventListener('wheel', function (event) {
         if (!reducedMotion) {
             targetAngle += event.deltaY * .0022;
         }
     }, {passive: true});
-
-    canvas.addEventListener('click', function (event) {
-        var card = cardAt(event.clientX, event.clientY);
-        if (card) {
-            openModal(card.index);
-        }
-    });
-
-    canvas.addEventListener('keydown', function (event) {
-        if ((event.key === 'Enter' || event.key === ' ') && cards.length) {
-            event.preventDefault();
-            openModal(cards[cards.length - 1].index);
-        }
-    });
-
-    if (closeButton) {
-        closeButton.addEventListener('click', closeModal);
-    }
-
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-            closeModal();
-        }
-    });
-
-    document.addEventListener('pointerdown', function (event) {
-        if (
-            modal &&
-            modal.classList.contains('active') &&
-            !modal.contains(event.target) &&
-            event.target !== canvas
-        ) {
-            closeModal();
-        }
-    });
 
     document.addEventListener('visibilitychange', function () {
         pageVisible = !document.hidden;

@@ -260,3 +260,79 @@ function render_sitemap(CatalogRepository $catalog, array $config): void
     }
     echo '</urlset>';
 }
+
+function get_current_lang(): string
+{
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        @session_start();
+    }
+    if (isset($_GET['lang'])) {
+        $lang = strtolower((string) $_GET['lang']);
+        if (in_array($lang, array('en', 'ru', 'ar'), true)) {
+            $_SESSION['lang'] = $lang;
+            return $lang;
+        }
+    }
+    if (isset($_SESSION['lang'])) {
+        return (string) $_SESSION['lang'];
+    }
+    return 'en';
+}
+
+function lang_url(string $lang): string
+{
+    $query = $_GET;
+    $query['lang'] = $lang;
+    return '?' . http_build_query($query);
+}
+
+function translate_product_title(string $key, string $lang): string
+{
+    if ($lang === 'ru') {
+        $clean = preg_replace("/^(Women|Womwn|woman|women)['\x{2019}]?s?\s*/ui", "Женская ", $key);
+        $replacements = array(
+            'blouse' => 'блузка', 'dress' => 'платье', 'pants' => 'брюки', 'pant' => 'брюки',
+            'chemise' => 'рубашка', 'coat' => 'пальто', 'skirt' => 'юбка', 'top' => 'топ',
+            'tunic' => 'туника', 'sundress' => 'сарафан', 'sweater' => 'свитер', 'shorts' => 'шорты',
+            'set' => 'комплект', 'pleated' => 'плиссированная', 'plaited' => 'плиссированная',
+            'silk' => 'шелковая', 'cotton' => 'хлопковая', 'chiffon' => 'шифоновая', 'linen' => 'льняная', 'satin' => 'атласная'
+        );
+        return str_ireplace(array_keys($replacements), array_values($replacements), (string) $clean);
+    }
+    if ($lang === 'ar') {
+        $clean = preg_replace("/^(Women|Womwn|woman|women)['\x{2019}]?s?\s*/ui", "نسائي ", $key);
+        $replacements = array(
+            'blouse' => 'بلوزة', 'dress' => 'فستان', 'pants' => 'بنطال', 'pant' => 'بنطال',
+            'chemise' => 'قمیص', 'coat' => 'معطف', 'skirt' => 'تنورة', 'top' => 'توب',
+            'tunic' => 'تونيك', 'sundress' => 'فستان صيفي', 'sweater' => 'سترة', 'shorts' => 'شورت',
+            'set' => 'طقم', 'pleated' => 'بكسرات', 'plaited' => 'بكسرات',
+            'silk' => 'حرير', 'cotton' => 'قطن', 'chiffon' => 'شيفون', 'linen' => 'كتان', 'satin' => 'ساتان'
+        );
+        return str_ireplace(array_keys($replacements), array_values($replacements), (string) $clean);
+    }
+    return $key;
+}
+
+function t(string $key, string $default = ''): string
+{
+    static $translations = null;
+    if ($translations === null) {
+        $file = __DIR__ . '/translations.php';
+        if (is_file($file)) {
+            $translations = require $file;
+        } else {
+            $translations = array();
+        }
+    }
+    $lang = get_current_lang();
+    if ($lang === 'en') {
+        return $default !== '' ? $default : $key;
+    }
+    if (isset($translations[$lang][$key])) {
+        return $translations[$lang][$key];
+    }
+    if (preg_match("/^(Women|Womwn|woman|women)['\x{2019}]?s?\b/ui", $key)) {
+        return translate_product_title($key, $lang);
+    }
+    return $default !== '' ? $default : $key;
+}

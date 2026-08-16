@@ -76,6 +76,11 @@ function admin_handle_request(string $path, string $method, array $config, Catal
         admin_settings($repository, $config, $method, $user);
         return true;
     }
+    if ($section === 'audit') {
+        admin_require_permission($repository, $user, 'audit.view');
+        admin_audit($repository, $config, $method, $user);
+        return true;
+    }
     if ($section === 'users') {
         if (isset($_POST['admin_action']) && $_POST['admin_action'] === 'deactivate_user') {
             admin_require_permission($repository, $user, 'users.deactivate');
@@ -1280,6 +1285,25 @@ function admin_render(string $view, array $data = array()): void
     require $file;
     $content = (string) ob_get_clean();
     require APP_DIR . '/templates/admin/layout.php';
+}
+
+function admin_audit(AdminRepository $repository, array $config, string $method, array $user): void
+{
+    if ($method !== 'GET' && $method !== 'HEAD') {
+        admin_method_not_allowed('GET, HEAD');
+    }
+    $page = positive_int($_GET['page'] ?? 1);
+    $data = array('items' => array(), 'total' => 0, 'page' => 1, 'pages' => 1, 'per_page' => 25);
+    $adminError = $repository->isReady() ? '' : $repository->statusMessage();
+    if ($repository->isReady()) {
+        try {
+            $data = $repository->listAuditLogs($page);
+        } catch (Throwable $exception) {
+            error_log('Admin audit list failed: ' . get_class($exception));
+            $adminError = 'Audit logs could not be loaded from MySQL.';
+        }
+    }
+    admin_render('audit', array('page_title' => 'گزارش رویدادها', 'admin_repository' => $repository, 'audit_logs' => $data, 'admin_error' => $adminError));
 }
 
 function admin_method_not_allowed(string $allow): void
