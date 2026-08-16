@@ -176,6 +176,19 @@ $primaryImg = $form['primary_image_path'] ?? ($imagesList[0] ?? '');
     object-fit: contain;
     border-radius: 4px;
 }
+.variation-generator-box {
+    background: #f0f6fc;
+    border: 1px dashed #2271b1;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+.attribute-input-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin-bottom: 8px;
+}
 </style>
 
 <header class="admin-page-head compact-head">
@@ -227,7 +240,7 @@ $primaryImg = $form['primary_image_path'] ?? ($imagesList[0] ?? '');
                 <div class="wp-box-header">
                     <h2>اطلاعات محصول (WooCommerce Product Data)</h2>
                     <span style="font-size:0.8rem; color:#666;">نوع محصول:
-                        <select name="product_type" style="padding:2px 6px; font-size:0.82rem;" <?= $disabled ?>>
+                        <select name="product_type" id="wp_product_type_select" onchange="toggleProductType()" style="padding:2px 6px; font-size:0.82rem;" <?= $disabled ?>>
                             <option value="simple" <?= $value('product_type', 'simple') === 'simple' ? 'selected' : '' ?>>محصول ساده (Simple)</option>
                             <option value="variable" <?= $value('product_type') === 'variable' ? 'selected' : '' ?>>محصول متغیر (Variable)</option>
                         </select>
@@ -239,8 +252,9 @@ $primaryImg = $form['primary_image_path'] ?? ($imagesList[0] ?? '');
                     <button type="button" class="wp-tab-btn active" onclick="openWpTab(event, 'tab-pricing')">قیمت‌گذاری</button>
                     <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-inventory')">موجودی و انبار</button>
                     <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-apparel')">مشخصات پوشاک</button>
+                    <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-attributes')">ویژگی‌ها (Attributes)</button>
+                    <button type="button" class="wp-tab-btn" id="btn-tab-variants" onclick="openWpTab(event, 'tab-variants')">متغیرها (Variations)</button>
                     <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-wholesale')">عمده‌فروشی & تحویل</button>
-                    <button type="button" class="wp-tab-btn" onclick="openWpTab(event, 'tab-variants')">متغیرها (Variants)</button>
                 </div>
 
                 <!-- Tab 1: Pricing -->
@@ -317,7 +331,53 @@ $primaryImg = $form['primary_image_path'] ?? ($imagesList[0] ?? '');
                     </div>
                 </div>
 
-                <!-- Tab 4: Wholesale & Delivery -->
+                <!-- Tab 4: Attributes (WooCommerce Style) -->
+                <div id="tab-attributes" class="wp-tab-content">
+                    <div class="variation-generator-box">
+                        <h4 style="margin:0 0 8px 0; font-size:0.9rem; color:#1d2327;">تعریف ویژگی‌های محصول (مانند سایز و رنگ)</h4>
+                        <p style="margin:0 0 10px 0; font-size:0.82rem; color:#50575e;">مقادیر هر ویژگی را با خط عمودی (|) جدا کنید. برای مثال: <code>S | M | L | XL</code> یا <code>قرمز | آبی | مشکی</code></p>
+
+                        <div class="wp-field-group">
+                            <label>سایزها (Sizes)</label>
+                            <input type="text" id="attr_sizes_input" placeholder="مثال: S | M | L | XL | 38 | 40" value="<?= e($value('size_range')) ?>" <?= $disabled ?>>
+                        </div>
+
+                        <div class="wp-field-group">
+                            <label>رنگ‌ها (Colors)</label>
+                            <input type="text" id="attr_colors_input" placeholder="مثال: مشکی | سرمه‌ای | کرم | قرمز" value="<?= e($value('color')) ?>" <?= $disabled ?>>
+                        </div>
+
+                        <button type="button" class="admin-primary-button" onclick="generateVariationsFromAttributes()" <?= $disabled ?>>⚡ ساخت ترکیبات متغیر به‌صورت خودکار</button>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Variations (WooCommerce Style) -->
+                <div id="tab-variants" class="wp-tab-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <p style="margin:0; font-size:0.85rem; color:#666;">لیست تمام متغیرهای محصول (ترکیب سایز، رنگ، قیمت و موجودی):</p>
+                        <button type="button" class="admin-light-button" onclick="addSingleVariantRow()" <?= $disabled ?>>+ افزودن دستی متغیر</button>
+                    </div>
+                    <div class="variant-list" id="wp_variant_container" data-variant-list>
+                        <?php foreach ((array) ($form['variants'] ?? array()) as $index => $variant): ?>
+                        <div class="variant-row" data-variant-row style="display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) 40px; gap:8px; background:#f9f9f9; padding:10px; border:1px solid #e0e0e0; border-radius:4px; margin-bottom:8px;">
+                            <label><span style="font-size:0.75rem;">SKU</span><input name="variants[<?= (int) $index ?>][variant_sku]" value="<?= e($variant['variant_sku'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">سایز</span><input name="variants[<?= (int) $index ?>][size]" value="<?= e($variant['size'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">رنگ</span><input name="variants[<?= (int) $index ?>][color]" value="<?= e($variant['color'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">تعداد</span><input type="number" min="0" name="variants[<?= (int) $index ?>][stock_quantity]" value="<?= e($variant['stock_quantity'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">قیمت</span><input name="variants[<?= (int) $index ?>][price_override]" value="<?= e($variant['price_override'] ?? '') ?>" <?= $disabled ?>></label>
+                            <label><span style="font-size:0.75rem;">وضعیت</span>
+                                <select name="variants[<?= (int) $index ?>][stock_status]" <?= $disabled ?>>
+                                    <option value="instock" <?= ($variant['stock_status'] ?? '') === 'instock' ? 'selected' : '' ?>>موجود</option>
+                                    <option value="outofstock" <?= ($variant['stock_status'] ?? '') === 'outofstock' ? 'selected' : '' ?>>ناموجود</option>
+                                </select>
+                            </label>
+                            <button type="button" class="icon-action danger" onclick="this.closest('.variant-row').remove()" style="align-self:end; margin-bottom:4px;">✕</button>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <!-- Tab 6: Wholesale & Delivery -->
                 <div id="tab-wholesale" class="wp-tab-content">
                     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px;">
                         <div class="wp-field-group">
@@ -336,32 +396,6 @@ $primaryImg = $form['primary_image_path'] ?? ($imagesList[0] ?? '');
                             <label>یادداشت‌های ویژه عمده‌فروشی</label>
                             <textarea name="wholesale_notes" rows="3" <?= $disabled ?>><?= e($value('wholesale_notes')) ?></textarea>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Tab 5: Variants -->
-                <div id="tab-variants" class="wp-tab-content">
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                        <p style="margin:0; font-size:0.85rem; color:#666;">متغیرها برای مدیریت سایزها و رنگ‌های مختلف محصول استفاده می‌شوند.</p>
-                        <button type="button" class="admin-light-button" data-add-variant <?= $disabled ?>>+ افزودن متغیر جدید</button>
-                    </div>
-                    <div class="variant-list" data-variant-list>
-                        <?php foreach ((array) ($form['variants'] ?? array()) as $index => $variant): ?>
-                        <div class="variant-row" data-variant-row style="display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) 40px; gap:8px; background:#f9f9f9; padding:10px; border:1px solid #e0e0e0; border-radius:4px; margin-bottom:8px;">
-                            <label><span style="font-size:0.75rem;">SKU</span><input name="variants[<?= (int) $index ?>][variant_sku]" value="<?= e($variant['variant_sku'] ?? '') ?>" <?= $disabled ?>></label>
-                            <label><span style="font-size:0.75rem;">سایز</span><input name="variants[<?= (int) $index ?>][size]" value="<?= e($variant['size'] ?? '') ?>" <?= $disabled ?>></label>
-                            <label><span style="font-size:0.75rem;">رنگ</span><input name="variants[<?= (int) $index ?>][color]" value="<?= e($variant['color'] ?? '') ?>" <?= $disabled ?>></label>
-                            <label><span style="font-size:0.75rem;">تعداد</span><input type="number" min="0" name="variants[<?= (int) $index ?>][stock_quantity]" value="<?= e($variant['stock_quantity'] ?? '') ?>" <?= $disabled ?>></label>
-                            <label><span style="font-size:0.75rem;">قیمت</span><input name="variants[<?= (int) $index ?>][price_override]" value="<?= e($variant['price_override'] ?? '') ?>" <?= $disabled ?>></label>
-                            <label><span style="font-size:0.75rem;">وضعیت</span>
-                                <select name="variants[<?= (int) $index ?>][stock_status]" <?= $disabled ?>>
-                                    <option value="instock" <?= ($variant['stock_status'] ?? '') === 'instock' ? 'selected' : '' ?>>موجود</option>
-                                    <option value="outofstock" <?= ($variant['stock_status'] ?? '') === 'outofstock' ? 'selected' : '' ?>>ناموجود</option>
-                                </select>
-                            </label>
-                            <button type="button" class="icon-action danger" data-remove-variant style="align-self:end; margin-bottom:4px;">✕</button>
-                        </div>
-                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -543,5 +577,80 @@ function openWpTab(evt, tabId) {
     }
     document.getElementById(tabId).classList.add("active");
     evt.currentTarget.classList.add("active");
+}
+
+function toggleProductType() {
+    var type = document.getElementById("wp_product_type_select").value;
+    var variantTabBtn = document.getElementById("btn-tab-variants");
+    if (type === "variable") {
+        variantTabBtn.style.display = "inline-block";
+        openWpTab({ currentTarget: variantTabBtn }, "tab-variants");
+    }
+}
+
+function addSingleVariantRow(skuVal, sizeVal, colorVal) {
+    var container = document.getElementById("wp_variant_container");
+    var index = container.children.length;
+    skuVal = skuVal || "";
+    sizeVal = sizeVal || "";
+    colorVal = colorVal || "";
+
+    var row = document.createElement("div");
+    row.className = "variant-row";
+    row.style.cssText = "display:grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) 40px; gap:8px; background:#f9f9f9; padding:10px; border:1px solid #e0e0e0; border-radius:4px; margin-bottom:8px;";
+    row.innerHTML = `
+        <label><span style="font-size:0.75rem;">SKU</span><input name="variants[${index}][variant_sku]" value="${skuVal}"></label>
+        <label><span style="font-size:0.75rem;">سایز</span><input name="variants[${index}][size]" value="${sizeVal}"></label>
+        <label><span style="font-size:0.75rem;">رنگ</span><input name="variants[${index}][color]" value="${colorVal}"></label>
+        <label><span style="font-size:0.75rem;">تعداد</span><input type="number" min="0" name="variants[${index}][stock_quantity]" value="10"></label>
+        <label><span style="font-size:0.75rem;">قیمت</span><input name="variants[${index}][price_override]" value=""></label>
+        <label><span style="font-size:0.75rem;">وضعیت</span>
+            <select name="variants[${index}][stock_status]">
+                <option value="instock" selected>موجود</option>
+                <option value="outofstock">ناموجود</option>
+            </select>
+        </label>
+        <button type="button" class="icon-action danger" onclick="this.closest('.variant-row').remove()" style="align-self:end; margin-bottom:4px;">✕</button>
+    `;
+    container.appendChild(row);
+}
+
+function generateVariationsFromAttributes() {
+    var sizesRaw = document.getElementById("attr_sizes_input").value;
+    var colorsRaw = document.getElementById("attr_colors_input").value;
+
+    var sizes = sizesRaw.split("|").map(s => s.trim()).filter(Boolean);
+    var colors = colorsRaw.split("|").map(c => c.trim()).filter(Boolean);
+
+    if (sizes.length === 0 && colors.length === 0) {
+        alert("لطفاً حداقل مقادیر یک ویژگی (سایز یا رنگ) را وارد کنید.");
+        return;
+    }
+
+    var baseSku = document.querySelector('input[name="sku"]').value || "VAR";
+    document.getElementById("wp_product_type_select").value = "variable";
+    toggleProductType();
+
+    var container = document.getElementById("wp_variant_container");
+    container.innerHTML = ""; // Clear existing
+
+    if (sizes.length > 0 && colors.length > 0) {
+        sizes.forEach(size => {
+            colors.forEach(color => {
+                var sku = `${baseSku}-${size}-${color}`;
+                addSingleVariantRow(sku, size, color);
+            });
+        });
+    } else if (sizes.length > 0) {
+        sizes.forEach(size => {
+            var sku = `${baseSku}-${size}`;
+            addSingleVariantRow(sku, size, "");
+        });
+    } else if (colors.length > 0) {
+        colors.forEach(color => {
+            var sku = `${baseSku}-${color}`;
+            addSingleVariantRow(sku, "", color);
+        });
+    }
 }
 </script>
