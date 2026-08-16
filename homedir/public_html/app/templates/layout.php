@@ -10,6 +10,8 @@ $siteStylesheet = asset('css/site.css') . '?v=' . rawurlencode($cssVersion);
 $siteScript = asset('js/site.js') . '?v=' . rawurlencode($jsVersion);
 $rtlStylesheet = asset('css/rtl-fix.css') . '?v=' . rawurlencode($cssVersion);
 $catalogFeatureStylesheet = asset('css/catalog-feature.css') . '?v=' . rawurlencode($cssVersion);
+$langDropdownStylesheet = asset('css/lang-dropdown.css') . '?v=' . rawurlencode($cssVersion);
+
 $organizationSchema = array(
     '@context' => 'https://schema.org',
     '@type' => 'Organization',
@@ -23,6 +25,8 @@ $organizationSchema = array(
 );
 
 $current_lang = get_current_lang();
+$langLabels = array('en' => 'English (EN)', 'ru' => 'Русский (RU)', 'ar' => 'العربية (AR)');
+$currentLangLabel = $langLabels[$current_lang] ?? 'Language';
 ?>
 <!doctype html>
 <html lang="<?= e($current_lang) ?>" dir="<?= $current_lang === 'ar' ? 'rtl' : 'ltr' ?>">
@@ -44,6 +48,7 @@ $current_lang = get_current_lang();
     <link rel="preload" href="<?= e($siteStylesheet) ?>" as="style">
     <link rel="stylesheet" href="<?= e($siteStylesheet) ?>">
     <link rel="stylesheet" href="<?= e($catalogFeatureStylesheet) ?>">
+    <link rel="stylesheet" href="<?= e($langDropdownStylesheet) ?>">
     <?php if ($current_lang === 'ar'): ?>
     <link rel="stylesheet" href="<?= e($rtlStylesheet) ?>">
     <?php endif; ?>
@@ -91,13 +96,17 @@ $current_lang = get_current_lang();
 
         <!-- Header Actions (Right) -->
         <div class="header-actions">
-            <!-- Language Switcher -->
-            <div class="lang-switcher" style="display: flex; gap: 0.5rem; font-family: monospace; font-size: 0.85rem; margin-right: 0.5rem; margin-left: 0.5rem; align-items: center;">
-                <a href="<?= e(lang_url('en')) ?>" style="<?= $current_lang === 'en' ? 'opacity: 1; font-weight: bold; text-decoration: underline;' : 'opacity: 0.5; text-decoration: none;' ?> color: inherit;">EN</a>
-                <span style="opacity: 0.3;">|</span>
-                <a href="<?= e(lang_url('ru')) ?>" style="<?= $current_lang === 'ru' ? 'opacity: 1; font-weight: bold; text-decoration: underline;' : 'opacity: 0.5; text-decoration: none;' ?> color: inherit;">RU</a>
-                <span style="opacity: 0.3;">|</span>
-                <a href="<?= e(lang_url('ar')) ?>" style="<?= $current_lang === 'ar' ? 'opacity: 1; font-weight: bold; text-decoration: underline;' : 'opacity: 0.5; text-decoration: none;' ?> color: inherit;">AR</a>
+            <!-- Language Dropdown Button -->
+            <div class="lang-dropdown" data-lang-dropdown aria-expanded="false">
+                <button type="button" class="lang-dropdown-btn" data-lang-toggle aria-label="Select website language">
+                    <span><?= e(strtoupper($current_lang)) ?></span>
+                    <span class="lang-arrow" aria-hidden="true">▼</span>
+                </button>
+                <div class="lang-dropdown-menu" role="menu">
+                    <a href="<?= e(lang_url('en')) ?>" class="<?= $current_lang === 'en' ? 'is-active' : '' ?>"><span>English</span> <b>EN</b></a>
+                    <a href="<?= e(lang_url('ru')) ?>" class="<?= $current_lang === 'ru' ? 'is-active' : '' ?>"><span>Русский</span> <b>RU</b></a>
+                    <a href="<?= e(lang_url('ar')) ?>" class="<?= $current_lang === 'ar' ? 'is-active' : '' ?>"><span>العربية</span> <b>AR</b></a>
+                </div>
             </div>
 
             <button class="header-action search-toggle" type="button" aria-label="Open product search" data-search-open aria-haspopup="dialog" aria-expanded="false" aria-controls="site-search-dialog">

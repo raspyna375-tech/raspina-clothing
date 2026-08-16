@@ -246,6 +246,26 @@
             });
         }
 
+        var langDropdown = one('[data-lang-dropdown]');
+        var langToggle = one('[data-lang-toggle]', langDropdown || document);
+        if (langDropdown && langToggle) {
+            langToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                var isExpanded = langDropdown.getAttribute('aria-expanded') === 'true';
+                langDropdown.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+            });
+            document.addEventListener('click', function (e) {
+                if (!langDropdown.contains(e.target)) {
+                    langDropdown.setAttribute('aria-expanded', 'false');
+                }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    langDropdown.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
         if (searchButton && searchDialog) {
             searchButton.setAttribute('aria-expanded', 'false');
             searchButton.addEventListener('click', function () {
