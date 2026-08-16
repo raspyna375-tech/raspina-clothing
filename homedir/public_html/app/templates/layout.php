@@ -8,6 +8,8 @@ $cssVersion = (string) (@filemtime(dirname(__DIR__, 2) . '/assets/css/site.css')
 $jsVersion = (string) (@filemtime(dirname(__DIR__, 2) . '/assets/js/site.js') ?: '20260723');
 $siteStylesheet = asset('css/site.css') . '?v=' . rawurlencode($cssVersion);
 $siteScript = asset('js/site.js') . '?v=' . rawurlencode($jsVersion);
+$rtlStylesheet = asset('css/rtl-fix.css') . '?v=' . rawurlencode($cssVersion);
+$catalogFeatureStylesheet = asset('css/catalog-feature.css') . '?v=' . rawurlencode($cssVersion);
 $organizationSchema = array(
     '@context' => 'https://schema.org',
     '@type' => 'Organization',
@@ -41,6 +43,10 @@ $current_lang = get_current_lang();
     <link rel="icon" href="<?= e(asset('images/brand/raspina-logo.png')) ?>">
     <link rel="preload" href="<?= e($siteStylesheet) ?>" as="style">
     <link rel="stylesheet" href="<?= e($siteStylesheet) ?>">
+    <link rel="stylesheet" href="<?= e($catalogFeatureStylesheet) ?>">
+    <?php if ($current_lang === 'ar'): ?>
+    <link rel="stylesheet" href="<?= e($rtlStylesheet) ?>">
+    <?php endif; ?>
     <script type="application/ld+json"><?= json_for_html($organizationSchema) ?></script>
     <?php if (isset($product)): ?>
         <?php
