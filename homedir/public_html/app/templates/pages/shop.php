@@ -22,7 +22,7 @@ $showcaseDescription = isset($current_category) && $current_category['descriptio
 
 <nav class="quick-categories" aria-label="Popular categories">
     <?php foreach (array_slice($categories, 0, 8) as $category): ?>
-        <a href="<?= e(url('/collection/' . $category['slug'])) ?>"><?= e($category['name']) ?><span><?= e($category['product_count']) ?></span></a>
+        <a href="<?= e(url('/collection/' . $category['slug'])) ?>"><?= e(t($category['name'])) ?><span><?= e($category['product_count']) ?></span></a>
     <?php endforeach; ?>
 </nav>
 
@@ -38,7 +38,7 @@ $showcaseDescription = isset($current_category) && $current_category['descriptio
         <form method="get" action="<?= e(isset($current_category) ? url('/collection/' . $current_category['slug']) : url('/shop')) ?>" data-filter-form>
             <label><span><?= e(t('Search')) ?></span><input type="search" name="q" maxlength="80" value="<?= e($filters['q']) ?>" placeholder="<?= e(t('Name or SKU')) ?>"></label>
             <?php if (!isset($current_category)): ?>
-            <label><span><?= e(t('Collection')) ?></span><select name="category"><option value=""><?= e(t('All collections')) ?></option><?php foreach ($categories as $category): ?><option value="<?= e($category['slug']) ?>"<?= $filters['category'] === $category['slug'] ? ' selected' : '' ?>><?= e($category['name']) ?> (<?= e($category['product_count']) ?>)</option><?php endforeach; ?></select></label>
+            <label><span><?= e(t('Collection')) ?></span><select name="category"><option value=""><?= e(t('All collections')) ?></option><?php foreach ($categories as $category): ?><option value="<?= e($category['slug']) ?>"<?= $filters['category'] === $category['slug'] ? ' selected' : '' ?>><?= e(t($category['name'])) ?> (<?= e($category['product_count']) ?>)</option><?php endforeach; ?></select></label>
             <?php endif; ?>
             <label><span><?= e(t('Availability')) ?></span><select name="stock"><option value=""><?= e(t('All pieces')) ?></option><option value="instock"<?= $filters['stock'] === 'instock' ? ' selected' : '' ?>><?= e(t('Available to quote')) ?></option><option value="onbackorder"<?= $filters['stock'] === 'onbackorder' ? ' selected' : '' ?>><?= e(t('Confirm production timing')) ?></option><option value="outofstock"<?= $filters['stock'] === 'outofstock' ? ' selected' : '' ?>><?= e(t('Archive items')) ?></option></select></label>
             <label><span><?= e(t('Order by')) ?></span><select name="sort"><option value="latest"<?= $filters['sort'] === 'latest' ? ' selected' : '' ?>><?= e(t('Latest')) ?></option><option value="az"<?= $filters['sort'] === 'az' ? ' selected' : '' ?>><?= e(t('Name A–Z')) ?></option><option value="za"<?= $filters['sort'] === 'za' ? ' selected' : '' ?>><?= e(t('Name Z–A')) ?></option><option value="sku"<?= $filters['sort'] === 'sku' ? ' selected' : '' ?>><?= e(t('SKU')) ?></option><option value="price-low"<?= $filters['sort'] === 'price-low' ? ' selected' : '' ?>><?= e(t('Reference price: low')) ?></option><option value="price-high"<?= $filters['sort'] === 'price-high' ? ' selected' : '' ?>><?= e(t('Reference price: high')) ?></option></select></label>

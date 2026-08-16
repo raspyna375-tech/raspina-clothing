@@ -9,8 +9,8 @@ foreach ($heroPool as $heroProduct) {
     $heroCategory = product_category($heroProduct);
     $heroData[] = array(
         'src' => $heroImage,
-        'category' => (string) $heroCategory['name'],
-        'title' => (string) $heroProduct['name'],
+        'category' => (string) t($heroCategory['name']),
+        'title' => (string) t($heroProduct['name']),
         'text' => product_meta_description($heroProduct),
     );
 }
@@ -62,7 +62,7 @@ $totalProducts = count($catalog->allProducts());
         <?php foreach ($home_collections as $index => $collection): ?>
             <a class="collection-row reveal" href="<?= e(url('/collection/' . $collection['slug'])) ?>">
                 <span class="collection-number"><?= str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) ?></span>
-                <span class="collection-name"><?= e($collection['name']) ?></span>
+                <span class="collection-name"><?= e(t($collection['name'])) ?></span>
                 <span class="collection-count"><?= e($collection['product_count']) ?> <?= e(t('products')) ?></span>
                 <?php if ($collection['image'] !== ''): ?><img src="<?= e($collection['image']) ?>" alt="" loading="lazy"><?php endif; ?>
                 <span class="collection-arrow" aria-hidden="true">↗</span>
