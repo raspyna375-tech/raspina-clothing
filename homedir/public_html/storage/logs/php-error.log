@@ -915,3 +915,5 @@
 [16-Aug-2026 17:04:00 Asia/Tehran] Catalogue database unavailable; JSON fallback selected. SQLSTATE[HY000] [2002] No such file or directory
 [16-Aug-2026 23:22:43 Asia/Tehran] Site settings unavailable; configured fallbacks selected. SQLSTATE[HY000] [2002] No such file or directory
 [16-Aug-2026 23:22:43 Asia/Tehran] Catalogue database unavailable; JSON fallback selected. SQLSTATE[HY000] [2002] No such file or directory
+[16-Aug-2026 23:57:55 Asia/Tehran] Site settings unavailable; configured fallbacks selected. SQLSTATE[HY000] [2002] No such file or directory
+[16-Aug-2026 23:57:55 Asia/Tehran] Catalogue database unavailable; JSON fallback selected. SQLSTATE[HY000] [2002] No such file or directory

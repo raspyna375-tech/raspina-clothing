@@ -4,6 +4,8 @@ declare(strict_types=1);
 return array(
     'ru' => array(
         // General / Header / Navigation
+        'Raspina Clothing' => 'Raspina Clothing',
+        'No. 22, Ground Floor, Shahamati Alley, Valiasr Sq., Tehran, Iran' => '№ 22, 1-й этаж, переулок Шахамати, пл. Валиаср, Тегеран, Иран',
         'International women’s clothing wholesale' => 'Международная оптовая торговля женской одеждой',
         'Start an enquiry' => 'Начать запрос',
         'Home' => 'Главная',
@@ -224,6 +226,8 @@ return array(
     ),
     'ar' => array(
         // General / Header / Navigation
+        'Raspina Clothing' => 'ملابس راسبينا',
+        'No. 22, Ground Floor, Shahamati Alley, Valiasr Sq., Tehran, Iran' => 'رقم ٢٢، الطابق الأرضي، زقاق شهامتي، ساحة وليعصر، طهران، إيران',
         'International women’s clothing wholesale' => 'بيع ملابس نسائية بالجملة دولياً',
         'Start an enquiry' => 'ابدأ استفساراً',
         'Home' => 'الرئيسية',

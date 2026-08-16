@@ -171,7 +171,7 @@ $current_lang = get_current_lang();
 
         <div class="footer-directory footer-reveal">
             <div class="footer-provenance">
-                <p class="footer-kicker">Raspina Clothing</p>
+                <p class="footer-kicker"><?= e(t('Raspina Clothing')) ?></p>
                 <p><?= e(t('Women’s fashion shaped in Tehran and prepared for independent boutiques and international wholesale partners.')) ?></p>
             </div>
 
@@ -193,7 +193,7 @@ $current_lang = get_current_lang();
 
                 <address>
                     <p class="footer-label"><?= e(t('Direct contact')) ?></p>
-                    <span><?= e($config['site']['address']) ?></span>
+                    <span><?= e(t($config['site']['address'])) ?></span>
                     <a href="tel:<?= e($config['site']['phone_link']) ?>"><?= e($config['site']['phone_display']) ?> <span aria-hidden="true">↗</span></a>
                     <a href="mailto:<?= e($config['site']['email']) ?>"><?= e($config['site']['email']) ?> <span aria-hidden="true">↗</span></a>
                     <a href="<?= e($config['site']['instagram']) ?>" rel="noopener noreferrer" target="_blank">Instagram <span aria-hidden="true">↗</span></a>
